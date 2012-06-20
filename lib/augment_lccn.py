@@ -1,6 +1,9 @@
 '''
-lccn_decorator - takes an Exhibit JSON with LCCN URLs and augments them with the info from that record
+augment_lccn - augments the base layer of JSON, adding to each record what it can glean from Dublin Core sourced at lccn.log.gov
+
 '''
+#lccn_decorator - takes an Exhibit JSON with LCCN URLs and augments them with the info from that record
+
 
 import os
 import time

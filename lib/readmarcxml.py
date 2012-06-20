@@ -1,6 +1,7 @@
 '''
-marccruncher - takes a MARCXML file, interprets its records, and does some augmentation, creating multiple Exhibit JSON files
+readmarcml - the main MARCXML parser, produces the base layer of JSON
 '''
+#take a MARCXML file, interprets its records, and does some augmentation, creating multiple Exhibit JSON files
 
 import re
 import os
@@ -13,6 +14,7 @@ import itertools
 import requests # http://docs.python-requests.org/en/latest/index.html
 import requests_cache # pip install requests_cache
 
+import amara
 from amara.lib.util import coroutine
 from amara.thirdparty import httplib2, json
 from amara.lib import U
@@ -43,6 +45,9 @@ requests_cache.configure(os.path.join(CACHEDIR, 'cache'))
 
 #http://findingaids.loc.gov/mastermets/mss/2009/ms009216.xml
 
+PREFIXES = {u'ma': 'http://www.loc.gov/MARC21/slim', u'me': 'http://www.loc.gov/METS/'}
+
+#RSS1_PREFIXES = {u'rss': ''}
 
 
 def dcxml2json(source):
@@ -58,10 +63,78 @@ def dcxml2json(source):
         yield elem.xml_local, U(elem)
 
 
-def records2json(recs, sink1, sink2, logger=logging):
+def lucky_viaf_template(qfunc):
+    '''
+    Used for searching OCLC for VIAF records
+    '''
+    def lucky_viaf(item):
+        q = qfunc(item)
+        query = urllib.urlencode({'query' : q, 'maximumRecords': 1, 'httpAccept': 'application/rss+xml'})
+        url = 'http://viaf.org/viaf/search?' + query
+        print >> sys.stderr, url
+        doc = amara.parse(url)
+        answer = U(doc.xml_select(u'/rss/channel/item/link'))
+        print >> sys.stderr, answer
+        time.sleep(5) #Be polite!
+        return answer
+    return lucky_viaf
+
+
+#FORGET IT LUCKY GOOGLE IS DEAD!
+#http://code.google.com/p/google-ajax-apis/issues/detail?id=43#c103
+def lucky_google_template(qfunc):
+    def lucky_google(item):
+        q = qfunc(item)
+        query = urllib.urlencode({'q' : q})
+        url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&' + query
+        print >> sys.stderr, url
+        json_content = json.load(urllib.urlopen(url))
+        results = json_content['responseData']['results']
+        answer = results[0]['url'].encode('utf-8') + '\n'
+        time.sleep(5) #Be polite!
+        return answer
+    return lucky_google
+
+
+AUGMENTATIONS = {
+    #('600', ('a', 'd'), lucky_google_template(lambda item: 'site:viaf.org {0}, {1}'.format(item['a'], item['d'])), u'viaf_guess'), #VIAF Cooper, Samuel, 1798-1876
+    ('600', ('a', 'd'), lucky_viaf_template(lambda item: 'cql.any all "{0}, {1}"'.format(item['a'].encode('utf-8'), item['d'].encode('utf-8'))), u'viaf_guess'), #VIAF Cooper, Samuel, 1798-1876
+}
+
+
+class subfield_handler(object):
+    def __init__(self, exhibit_sink):
+        self.ix = 0
+        self.exhibit_sink = exhibit_sink
+        return      
+
+    def add(self, code, pairs):
+        objid = 'obj_' + str(self.ix + 1)
+        item = {
+            u'id': objid,
+            u'code': code,
+            u'type': 'Object',
+        }
+        for k, v in pairs:
+            item[k] = v
+            #item[key+code] = sfval
+
+        for (acode, aparams, afunc, key) in AUGMENTATIONS:
+            if code == acode and all(( item.get(p) for p in aparams )):
+                #Meets the criteria for this augmentation
+                val = afunc(item)
+                item[key] = val
+
+        self.exhibit_sink.send(item)
+        self.ix += 1
+        return objid
+
+
+def records2json(recs, sink1, sink2, sink3, logger=logging):
     '''
     
     '''
+    sfhandler = subfield_handler(sink3)
     @coroutine
     def receive_items():
         '''
@@ -95,13 +168,12 @@ def records2json(recs, sink1, sink2, logger=logging):
                     item[key] = val
 
             for df in rec.xml_select(u'ma:datafield', prefixes=PREFIXES):
-                key = u'dftag_' + U(df.xml_select(u'@tag'))
+                code = U(df.xml_select(u'@tag'))
+                key = u'dftag_' + code
                 val = U(df)
                 if list(df.xml_select(u'ma:subfield', prefixes=PREFIXES)):
-                    for sf in df.xml_select(u'ma:subfield', prefixes=PREFIXES):
-                        code = U(sf.xml_select(u'@code'))
-                        sfval = U(sf)
-                        item[key+code] = sfval
+                    subid = sfhandler.add(code, ( (U(sf.xml_select(u'@code')), U(sf)) for sf in df.xml_select(u'ma:subfield', prefixes=PREFIXES) ))
+                    item.setdefault(key, []).append(subid)
                 else:
                     item[key] = val
 
@@ -156,23 +228,22 @@ class loc_findingaids(object):
         return data
 
 
-
-PREFIXES = {u'ma': 'http://www.loc.gov/MARC21/slim', u'me': 'http://www.loc.gov/METS/'}
-
-import amara
 from datachef.exhibit import emitter
 
 if __name__ == "__main__":
-    #python -m btframework.marccuncher sample-files.xml > /tmp/lcsample.json
+    #python readmarcxml.py sample-files.xml lcsample
+    #python -m btframework.marccuncher sample-files.xml /tmp/lcsample
 
     import sys
     indoc = amara.parse(sys.argv[1])
     name_base = sys.argv[2]
-    outf1 = open(name_base + '.json', 'w')
-    outf2 = open(name_base + '.lccat.json', 'w')
+    outf1 = open(name_base + '.base.json', 'w')
+    outf2 = open(name_base + '.stub.json', 'w')
+    outf3 = open(name_base + '.object.json', 'w')
 
     emitter1 = emitter.emitter(outf1)
     emitter2 = emitter.emitter(outf2)
+    emitter3 = emitter.emitter(outf3)
 
     recs = indoc.xml_select(u'/ma:collection/ma:record', prefixes=PREFIXES)
 
@@ -181,12 +252,15 @@ if __name__ == "__main__":
         count = int(sys.argv[3])
         recs = itertools.islice(recs, count)
 
-    records2json(recs, emitter1, emitter2)
+    records2json(recs, emitter1, emitter2, emitter3)
     emitter1.send(emitter.ITEMS_DONE_SIGNAL)
     emitter2.send(emitter.ITEMS_DONE_SIGNAL)
+    emitter3.send(emitter.ITEMS_DONE_SIGNAL)
 
     #emitter.send(TYPES1)
     emitter1.send(None)
     emitter2.send(None)
+    emitter3.send(None)
     emitter1.close()
     emitter2.close()
+    emitter3.close()
