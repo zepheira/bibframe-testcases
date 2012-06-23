@@ -3,6 +3,8 @@ readmarcml - the main MARCXML parser, produces the base layer of JSON
 '''
 #take a MARCXML file, interprets its records, and does some augmentation, creating multiple Exhibit JSON files
 
+#Authority files: http://en.wikipedia.org/wiki/Authority_control
+
 import re
 import os
 import time
@@ -20,6 +22,7 @@ from amara.thirdparty import httplib2, json
 from amara.lib import U
 from amara.lib.util import element_subtree_iter
 
+from btframework.marc import process_leader, process_008
 
 #SLUGCHARS = r'a-zA-Z0-9\-\_'
 #OMIT_FROM_SLUG_PAT = re.compile('[^%s]'%SLUGCHARS)
@@ -27,8 +30,82 @@ from amara.lib.util import element_subtree_iter
 #slug_from_title = lambda t: OMIT_FROM_SLUG_PAT.sub('_', t).lower().decode('utf-8')
 
 FALINKFIELD = u'856u'
-CATLINKFIELD = u'010a'
+#CATLINKFIELD = u'010a'
+CATLINKFIELD = u'LCCN'
 CACHEDIR = os.path.expanduser('~/tmp')
+
+VIAF_GUESS_FNAME = u'viafFromHeuristic'
+IDLC_GUESS_FNAME = u'idlcFromHeuristic'
+
+FRIENDLY_FIELD_OLD = {
+'010a': 'LCCN',
+'020a': 'ISBN',
+'100a': ('authorName', {'type': 'Person'}),
+'100d': 'date',
+'110a': ('authorName', {'type': 'Organization'}),
+'110d': 'date',
+'111a': ('authorName', {'type': 'Meeting'}),
+'111d': 'date',
+'300a': 'physicalDescription',
+'245a': 'title',
+'250a': 'edition',
+'260b': ('publisherName', {'type': 'Organization'}),
+'260c': 'publishedOn',
+'260a': ('publishedAt', {'type': 'Place'}),
+'500a': 'generalNote',
+'520a': 'summary',
+'600a': ('subject', {'type': 'Person'}),
+'600d': 'date',
+'610a': ('subject', {'type': 'Organization'}),
+'610d': 'date',
+'650a': ('subject', {'type': 'Topic'}),
+'650d': 'date',
+'651a': ('subject', {'type': 'Place'}),
+'651d': 'date',
+}
+
+
+FRIENDLY_FIELD = {
+'010': 'LCCN',
+'010a': 'LCCN',
+'020': 'ISBN',
+'020a': 'ISBN',
+'100': 'author',
+'100a': ('name', {'marcType': 'Person'}),
+'100d': 'date',
+'110': 'author',
+'110a': ('name', {'marcType': 'Organization'}),
+'110d': 'date',
+'111': 'author',
+'111a': ('name', {'marcType': 'Meeting'}),
+'111d': 'date',
+'300': 'physicalDescription',
+'300a': 'physicalDescription',
+'245': 'title',
+'245a': 'title',
+'250': 'edition',
+'250a': 'edition',
+'260': 'publisher',
+'260b': ('name', {'marcType': 'Organization'}),
+'260c': 'publishedOn',
+'260a': ('publishedAt', {'marcType': 'Place'}),
+'500a': 'generalNote',
+'520': 'summary',
+'520a': 'summary',
+'600': 'subject',
+'610': 'subject',
+'650': 'subject',
+'651': 'subject',
+'600a': ('name', {'marcType': 'Person'}),
+'600d': 'date',
+'610a': ('name', {'marcType': 'Organization'}),
+'610d': 'date',
+'650a': ('name', {'marcType': 'Topic'}),
+'650d': 'date',
+'651a': ('name', {'marcType': 'Place'}),
+'651d': 'date',
+}
+
 
 requests_cache.configure(os.path.join(CACHEDIR, 'cache'))
 
@@ -72,12 +149,30 @@ def lucky_viaf_template(qfunc):
         query = urllib.urlencode({'query' : q, 'maximumRecords': 1, 'httpAccept': 'application/rss+xml'})
         url = 'http://viaf.org/viaf/search?' + query
         print >> sys.stderr, url
-        doc = amara.parse(url)
+        r = requests.get(url)
+        doc = amara.parse(r.content)
         answer = U(doc.xml_select(u'/rss/channel/item/link'))
         print >> sys.stderr, answer
-        time.sleep(5) #Be polite!
+        time.sleep(2) #Be polite!
         return answer
     return lucky_viaf
+
+
+def lucky_idlc_template(qfunc):
+    '''
+    Used for searching OCLC for VIAF records
+    '''
+    def lucky_idlc(item):
+        q = qfunc(item)
+        query = urllib.quote(q)
+        url = 'http://id.loc.gov/authorities/label/' + query
+        r = requests.head(url)
+        print >> sys.stderr, url
+        answer = r.headers['X-URI']
+        print >> sys.stderr, answer
+        time.sleep(7) #Be polite!
+        return answer
+    return lucky_idlc
 
 
 #FORGET IT LUCKY GOOGLE IS DEAD!
@@ -87,7 +182,7 @@ def lucky_google_template(qfunc):
         q = qfunc(item)
         query = urllib.urlencode({'q' : q})
         url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&' + query
-        print >> sys.stderr, url
+        print >> 'Searching:', sys.stderr, url
         json_content = json.load(urllib.urlopen(url))
         results = json_content['responseData']['results']
         answer = results[0]['url'].encode('utf-8') + '\n'
@@ -98,7 +193,10 @@ def lucky_google_template(qfunc):
 
 AUGMENTATIONS = {
     #('600', ('a', 'd'), lucky_google_template(lambda item: 'site:viaf.org {0}, {1}'.format(item['a'], item['d'])), u'viaf_guess'), #VIAF Cooper, Samuel, 1798-1876
-    ('600', ('a', 'd'), lucky_viaf_template(lambda item: 'cql.any all "{0}, {1}"'.format(item['a'].encode('utf-8'), item['d'].encode('utf-8'))), u'viaf_guess'), #VIAF Cooper, Samuel, 1798-1876
+
+    ('600', ('name', 'date'), lucky_viaf_template(lambda item: 'cql.any all "{0}, {1}"'.format(item['name'].encode('utf-8'), item['date'].encode('utf-8'))), VIAF_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
+    ('600', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
+    ('110', ('name'), lucky_idlc_template(lambda item: '{0}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
 }
 
 
@@ -106,7 +204,7 @@ class subfield_handler(object):
     def __init__(self, exhibit_sink):
         self.ix = 0
         self.exhibit_sink = exhibit_sink
-        return      
+        return
 
     def add(self, code, pairs):
         objid = 'obj_' + str(self.ix + 1)
@@ -116,8 +214,25 @@ class subfield_handler(object):
             u'type': 'Object',
         }
         for k, v in pairs:
+            #Try to substitute Marc field code names with friendlier property names
+            lookup = code+k
+            if lookup in FRIENDLY_FIELD:
+                subst = FRIENDLY_FIELD[lookup]
+                #Handle the simple substitution of a label name for a MARC code
+                if type(subst) != str:
+                    #Break out the substitution name and the other properties, e.g. type
+                    subst, other_properties = subst
+                    item.update(other_properties)
+                k = subst
+            #print >> sys.stderr, lookup, k
             item[k] = v
             #item[key+code] = sfval
+
+        #Work out the item's catalogue link
+        lcid = item.get(CATLINKFIELD)
+        if code == '010' and lcid:
+            item['catLink'] = 'http://lccn.loc.gov/' + ''.join(lcid.split())
+
 
         for (acode, aparams, afunc, key) in AUGMENTATIONS:
             if code == acode and all(( item.get(p) for p in aparams )):
@@ -147,8 +262,6 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
             recid = u'_' + str(ix)
 
             leader = U(rec.xml_select(u'ma:leader', prefixes=PREFIXES))
-            #leader = rec.xml_select(u'ma:leader', prefixes=PREFIXES)
-
             item = {
                 u'id': recid,
                 u'label': recid,
@@ -156,6 +269,10 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
                 u'leader': leader,
                 u'type': u'MarcRecord',
             }
+
+            for k, v in process_leader(leader):
+                item[k] = v
+
             for cf in rec.xml_select(u'ma:controlfield', prefixes=PREFIXES):
                 key = u'cftag_' + U(cf.xml_select(u'@tag'))
                 val = U(cf)
@@ -163,7 +280,8 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
                     for sf in cf.xml_select(u'ma:subfield', prefixes=PREFIXES):
                         code = U(sf.xml_select(u'@code'))
                         sfval = U(sf)
-                        item[key+code] = sfval
+                        #item[key+'.'+code] = sfval
+                        item[key + code] = sfval
                 else:
                     item[key] = val
 
@@ -173,9 +291,19 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
                 val = U(df)
                 if list(df.xml_select(u'ma:subfield', prefixes=PREFIXES)):
                     subid = sfhandler.add(code, ( (U(sf.xml_select(u'@code')), U(sf)) for sf in df.xml_select(u'ma:subfield', prefixes=PREFIXES) ))
+                    #Try to substitute Marc field code names with friendlier property names
+                    lookup = code
+                    if lookup in FRIENDLY_FIELD:
+                        subst = FRIENDLY_FIELD[lookup]
+                        #Handle the simple substitution of a label name for a MARC code
+                        key = subst
+                    print >> sys.stderr, lookup, key
                     item.setdefault(key, []).append(subid)
                 else:
                     item[key] = val
+
+            #link = item.get(u'cftag_008')
+
 
             #Work out the item's finding aid link
             link = item.get(u'dftag_' + FALINKFIELD)
@@ -186,6 +314,11 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
                     resolvedlink = r.history[-1].headers['location']
                     item['fa_resolvedlink'] = resolvedlink
 
+            #reduce lists of just one item
+            for k, v in item.items():
+                if type(v) is list and len(v) == 1:
+                    item[k] = v[0]
+
             sink1.send(item)
 
             item2 = {
@@ -193,11 +326,6 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
                 u'label': recid,
                 u'type': u'MarcRecord',
             }
-
-            #Work out the item's catalogue link
-            lcid = item.get(u'dftag_' + CATLINKFIELD)
-            if lcid:
-                item2['cat_link'] = 'http://lccn.loc.gov/' + ''.join(lcid.split())
 
             sink2.send(item2)
             ix += 1

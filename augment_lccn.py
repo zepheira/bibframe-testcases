@@ -99,7 +99,7 @@ def records2json(recs, sink, logger=logging):
             #submit a total of no more than 10 requests per minute, regardless of the number of machines
             #used to submit requests.
             #http://www.loc.gov/homepage/legal.html#security
-            time.sleep(10)
+            time.sleep(7)
 
         return
 
