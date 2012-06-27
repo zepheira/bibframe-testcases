@@ -4,7 +4,7 @@ def process_leader(leader):
 
     >>> from btframework.marc import process_leader
     >>> list(process_leader('03495cpcaa2200673 a 4500'))
-    [('Type', 'Collection'), ('Type', 'mixed materials'), ('Type', 'Collection')]
+    [('resourceType', 'Collection'), ('resourceType', 'mixed materials'), ('resourceType', 'Collection')]
     """
     broad_06 = dict(
         a="Text",
@@ -38,11 +38,11 @@ def process_leader(leader):
     
     _06 = leader[6]
     if _06 in broad_06.keys():
-        yield 'Type', broad_06[_06]
+        yield 'resourceType', broad_06[_06]
     if _06 in detailed_06.keys():
-        yield 'Type', detailed_06[_06]
+        yield 'resourceType', detailed_06[_06]
     if leader[7] in ('c', 's'):
-        yield 'Type', 'Collection'
+        yield 'resourceType', 'Collection'
 
 
 def process_008(info):
@@ -142,19 +142,19 @@ def process_008(info):
             elif i == 23:
                 yield 'medium', media[info[23]]
             elif i >= 24 and i <= 27:
-                yield 'Type', types[info[i]]
+                yield 'resourceType', types[info[i]]
             elif i == 28:
-                yield 'Type', govt_publication[info[28]]
+                yield 'resourceType', govt_publication[info[28]]
             elif i == 29 and field == '1':
-                yield 'Type', 'conference publication'
+                yield 'resourceType', 'conference publication'
             elif i == 30 and field == '1':
-                yield 'Type', 'festschrift'
+                yield 'resourceType', 'festschrift'
             elif i == 33:
                 if field != 'u': #unknown
-                        yield 'Type', genres[info[33]]
+                        yield 'resourceType', genres[info[33]]
             elif i == 34:
                 try:
-                    yield 'Type', biographical[info[34]]
+                    yield 'resourceType', biographical[info[34]]
                 except KeyError :
                     # logging.warn('something')
                     pass

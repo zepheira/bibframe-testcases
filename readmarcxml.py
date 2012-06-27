@@ -37,35 +37,54 @@ CACHEDIR = os.path.expanduser('~/tmp')
 VIAF_GUESS_FNAME = u'viafFromHeuristic'
 IDLC_GUESS_FNAME = u'idlcFromHeuristic'
 
-FRIENDLY_FIELD_OLD = {
-'010a': 'LCCN',
-'020a': 'ISBN',
-'100a': ('authorName', {'type': 'Person'}),
+RENAME = {
+'100a': 'name',
 '100d': 'date',
-'110a': ('authorName', {'type': 'Organization'}),
+'110a': 'name',
 '110d': 'date',
-'111a': ('authorName', {'type': 'Meeting'}),
+'111a': 'name',
 '111d': 'date',
-'300a': 'physicalDescription',
-'245a': 'title',
-'250a': 'edition',
-'260b': ('publisherName', {'type': 'Organization'}),
-'260c': 'publishedOn',
-'260a': ('publishedAt', {'type': 'Place'}),
-'500a': 'generalNote',
-'520a': 'summary',
-'600a': ('subject', {'type': 'Person'}),
+'600a': 'name',
 '600d': 'date',
-'610a': ('subject', {'type': 'Organization'}),
-'610d': 'date',
-'650a': ('subject', {'type': 'Topic'}),
+'610a': 'name',
+'650a': 'name',
 '650d': 'date',
-'651a': ('subject', {'type': 'Place'}),
+'651a': 'name',
 '651d': 'date',
+'260b': 'name',
+'260c': 'publishedOn',
 }
 
 
-FRIENDLY_FIELD = {
+MATERIALIZE = {
+'100': ('author', {'marcType': 'Person'}),
+'110': ('author', {'marcType': 'Organization'}),
+'111': ('author', {'marcType': 'Meeting'}),
+'260': ('publisher', {'marcType': 'Organization'}),
+'600': ('subject', {'marcType': 'Person'}),
+'610': ('subject', {'marcType': 'Organization'}),
+'650': ('subject', {'marcType': 'Topic'}),
+'651': ('subject', {'marcType': 'Place'}),
+'260a': ('publishedAt', {'marcType': 'Place'}),
+}
+
+
+DEMATERIALIZE = {
+'010a': 'LCCN',
+'020a': 'ISBN',
+'300a': 'physicalDescription',
+'245a': 'title',
+'250a': 'edition',
+'260c': 'publishedOn',
+'500a': 'generalNote',
+'520a': 'summary',
+'245a': 'title',
+'250a': 'edition',
+'520a': 'summary',
+}
+
+
+XXX = {
 '010': 'LCCN',
 '010a': 'LCCN',
 '020': 'ISBN',
@@ -88,7 +107,6 @@ FRIENDLY_FIELD = {
 '260': 'publisher',
 '260b': ('name', {'marcType': 'Organization'}),
 '260c': 'publishedOn',
-'260a': ('publishedAt', {'marcType': 'Place'}),
 '500a': 'generalNote',
 '520': 'summary',
 '520a': 'summary',
@@ -106,6 +124,9 @@ FRIENDLY_FIELD = {
 '651d': 'date',
 }
 
+#These are rules that are applied to extract one subobject from another
+TERTIARY_RULES = {
+}
 
 requests_cache.configure(os.path.join(CACHEDIR, 'cache'))
 
@@ -175,22 +196,6 @@ def lucky_idlc_template(qfunc):
     return lucky_idlc
 
 
-#FORGET IT LUCKY GOOGLE IS DEAD!
-#http://code.google.com/p/google-ajax-apis/issues/detail?id=43#c103
-def lucky_google_template(qfunc):
-    def lucky_google(item):
-        q = qfunc(item)
-        query = urllib.urlencode({'q' : q})
-        url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&' + query
-        print >> 'Searching:', sys.stderr, url
-        json_content = json.load(urllib.urlopen(url))
-        results = json_content['responseData']['results']
-        answer = results[0]['url'].encode('utf-8') + '\n'
-        time.sleep(5) #Be polite!
-        return answer
-    return lucky_google
-
-
 AUGMENTATIONS = {
     #('600', ('a', 'd'), lucky_google_template(lambda item: 'site:viaf.org {0}, {1}'.format(item['a'], item['d'])), u'viaf_guess'), #VIAF Cooper, Samuel, 1798-1876
 
@@ -200,30 +205,34 @@ AUGMENTATIONS = {
 }
 
 
-class subfield_handler(object):
+class subobjects(object):
     def __init__(self, exhibit_sink):
         self.ix = 0
         self.exhibit_sink = exhibit_sink
         return
 
-    def add(self, code, pairs):
+    def add(self, props):
         objid = 'obj_' + str(self.ix + 1)
+        code = props[u'code']
         item = {
             u'id': objid,
-            u'code': code,
             u'type': 'Object',
         }
-        for k, v in pairs:
+        for k, v in props.items():
             #Try to substitute Marc field code names with friendlier property names
-            lookup = code+k
-            if lookup in FRIENDLY_FIELD:
-                subst = FRIENDLY_FIELD[lookup]
-                #Handle the simple substitution of a label name for a MARC code
-                if type(subst) != str:
-                    #Break out the substitution name and the other properties, e.g. type
-                    subst, other_properties = subst
-                    item.update(other_properties)
+            lookup = code + k
+            #Handle the simple substitution of a label name for a MARC code
+            if lookup in RENAME:
+                subst = RENAME[lookup]
                 k = subst
+
+            if lookup in MATERIALIZE:
+                (subst, extra_props) = MATERIALIZE[lookup]
+                props = {u'code': code, subst: v}
+                props.update(extra_props)
+                subid = self.add(props)
+                #item[RENAME.get(lookup, lookup)] = subid
+                item[subst] = subid
             #print >> sys.stderr, lookup, k
             item[k] = v
             #item[key+code] = sfval
@@ -249,7 +258,7 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
     '''
     
     '''
-    sfhandler = subfield_handler(sink3)
+    subobjs = subobjects(sink3)
     @coroutine
     def receive_items():
         '''
@@ -290,15 +299,30 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
                 key = u'dftag_' + code
                 val = U(df)
                 if list(df.xml_select(u'ma:subfield', prefixes=PREFIXES)):
-                    subid = sfhandler.add(code, ( (U(sf.xml_select(u'@code')), U(sf)) for sf in df.xml_select(u'ma:subfield', prefixes=PREFIXES) ))
+                    subfields = dict(( (U(sf.xml_select(u'@code')), U(sf)) for sf in df.xml_select(u'ma:subfield', prefixes=PREFIXES) ))
                     #Try to substitute Marc field code names with friendlier property names
                     lookup = code
-                    if lookup in FRIENDLY_FIELD:
-                        subst = FRIENDLY_FIELD[lookup]
+                    if lookup in RENAME:
+                        subst = RENAME[lookup]
                         #Handle the simple substitution of a label name for a MARC code
                         key = subst
+
+                    if lookup in MATERIALIZE:
+                        (subst, extra_props) = MATERIALIZE[lookup]
+                        props = {u'code': code}
+                        props.update(extra_props)
+                        #props.update(other_properties)
+                        props.update(subfields)
+                        subid = subobjs.add(props)
+                        #item[RENAME.get(lookup, lookup)] = subid
+                        item.setdefault(subst, []).append(subid)
+                        #item.setdefault(RENAME.get(lookup, lookup), []).append(subid)
+
+                    for k, v in subfields.items():
+                        if lookup+k in DEMATERIALIZE:
+                            item[DEMATERIALIZE[lookup+k]] = v
+
                     print >> sys.stderr, lookup, key
-                    item.setdefault(key, []).append(subid)
                 else:
                     item[key] = val
 
