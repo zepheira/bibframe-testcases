@@ -51,6 +51,7 @@ RENAME = {
 '650d': 'date',
 '651a': 'name',
 '651d': 'date',
+'260a': 'name',
 '260b': 'name',
 '260c': 'publishedOn',
 }
@@ -60,12 +61,11 @@ MATERIALIZE = {
 '100': ('author', {'marcType': 'Person'}),
 '110': ('author', {'marcType': 'Organization'}),
 '111': ('author', {'marcType': 'Meeting'}),
-'260': ('publisher', {'marcType': 'Organization'}),
+'260': {('a',): ('publishedAt', {'marcType': 'Place'}), ('b',): ('publisher', {'marcType': 'Organization'})},
 '600': ('subject', {'marcType': 'Person'}),
 '610': ('subject', {'marcType': 'Organization'}),
 '650': ('subject', {'marcType': 'Topic'}),
 '651': ('subject', {'marcType': 'Place'}),
-'260a': ('publishedAt', {'marcType': 'Place'}),
 }
 
 
@@ -84,47 +84,8 @@ DEMATERIALIZE = {
 }
 
 
-XXX = {
-'010': 'LCCN',
-'010a': 'LCCN',
-'020': 'ISBN',
-'020a': 'ISBN',
-'100': 'author',
-'100a': ('name', {'marcType': 'Person'}),
-'100d': 'date',
-'110': 'author',
-'110a': ('name', {'marcType': 'Organization'}),
-'110d': 'date',
-'111': 'author',
-'111a': ('name', {'marcType': 'Meeting'}),
-'111d': 'date',
-'300': 'physicalDescription',
-'300a': 'physicalDescription',
-'245': 'title',
-'245a': 'title',
-'250': 'edition',
-'250a': 'edition',
-'260': 'publisher',
-'260b': ('name', {'marcType': 'Organization'}),
-'260c': 'publishedOn',
-'500a': 'generalNote',
-'520': 'summary',
-'520a': 'summary',
-'600': 'subject',
-'610': 'subject',
-'650': 'subject',
-'651': 'subject',
-'600a': ('name', {'marcType': 'Person'}),
-'600d': 'date',
-'610a': ('name', {'marcType': 'Organization'}),
-'610d': 'date',
-'650a': ('name', {'marcType': 'Topic'}),
-'650d': 'date',
-'651a': ('name', {'marcType': 'Place'}),
-'651d': 'date',
-}
-
-#These are rules that are applied to extract one subobject from another
+#These are rules that are applied to materialize one subobject from another
+#None for now
 TERTIARY_RULES = {
 }
 
@@ -188,10 +149,10 @@ def lucky_idlc_template(qfunc):
         query = urllib.quote(q)
         url = 'http://id.loc.gov/authorities/label/' + query
         r = requests.head(url)
-        print >> sys.stderr, url
+        print >> sys.stderr, url, item[u'code']
         answer = r.headers['X-URI']
         print >> sys.stderr, answer
-        time.sleep(7) #Be polite!
+        time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
         return answer
     return lucky_idlc
 
@@ -201,7 +162,12 @@ AUGMENTATIONS = {
 
     ('600', ('name', 'date'), lucky_viaf_template(lambda item: 'cql.any all "{0}, {1}"'.format(item['name'].encode('utf-8'), item['date'].encode('utf-8'))), VIAF_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
     ('600', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-    ('110', ('name'), lucky_idlc_template(lambda item: '{0}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
+    ('100', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
+    ('110', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
+    ('111', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
+    ('610', ('name',), lucky_idlc_template(lambda item: item['name'].encode('utf-8')), IDLC_GUESS_FNAME),
+    ('650', ('name',), lucky_idlc_template(lambda item: item['name'].encode('utf-8')), IDLC_GUESS_FNAME),
+    ('651', ('name',), lucky_idlc_template(lambda item: item['name'].encode('utf-8')), IDLC_GUESS_FNAME),
 }
 
 
@@ -221,18 +187,27 @@ class subobjects(object):
         for k, v in props.items():
             #Try to substitute Marc field code names with friendlier property names
             lookup = code + k
+            if lookup in MATERIALIZE:
+                subst = None
+                materialize_params = MATERIALIZE[lookup]
+                if isinstance(materialize_params, dict):
+                    for k, v in materialize_params.items():
+                        if all(( item.get(p) for p in key_subcodes )):
+                            (subst, extra_props) = v
+                else:
+                    (subst, extra_props) = materialize_params
+                if subst:
+                    props = {u'code': code, subst: v}
+                    props.update(extra_props)
+                    subid = self.add(props)
+                    #item[RENAME.get(lookup, lookup)] = subid
+                    item[subst] = subid
+
             #Handle the simple substitution of a label name for a MARC code
             if lookup in RENAME:
                 subst = RENAME[lookup]
                 k = subst
 
-            if lookup in MATERIALIZE:
-                (subst, extra_props) = MATERIALIZE[lookup]
-                props = {u'code': code, subst: v}
-                props.update(extra_props)
-                subid = self.add(props)
-                #item[RENAME.get(lookup, lookup)] = subid
-                item[subst] = subid
             #print >> sys.stderr, lookup, k
             item[k] = v
             #item[key+code] = sfval
@@ -247,7 +222,7 @@ class subobjects(object):
             if code == acode and all(( item.get(p) for p in aparams )):
                 #Meets the criteria for this augmentation
                 val = afunc(item)
-                item[key] = val
+                if val is not None: item[key] = val
 
         self.exhibit_sink.send(item)
         self.ix += 1
@@ -302,27 +277,36 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
                     subfields = dict(( (U(sf.xml_select(u'@code')), U(sf)) for sf in df.xml_select(u'ma:subfield', prefixes=PREFIXES) ))
                     #Try to substitute Marc field code names with friendlier property names
                     lookup = code
+                    if lookup in MATERIALIZE:
+                        subst = None
+                        materialize_params = MATERIALIZE[lookup]
+                        if isinstance(materialize_params, dict):
+                            for k, v in materialize_params.items():
+                                if all(( subfields.get(p) for p in k )):
+                                    (subst, extra_props) = v
+                            print >> sys.stderr, 'MATERIALIZE_WITH_CRITERIA', (materialize_params.keys(), subfields.keys(), subst)
+                        else:
+                            (subst, extra_props) = materialize_params
+                        if subst:
+                            props = {u'code': code}
+                            props.update(extra_props)
+                            #props.update(other_properties)
+                            props.update(subfields)
+                            subid = subobjs.add(props)
+                            #item[RENAME.get(lookup, lookup)] = subid
+                            item.setdefault(subst, []).append(subid)
+                            #item.setdefault(RENAME.get(lookup, lookup), []).append(subid)
+
                     if lookup in RENAME:
                         subst = RENAME[lookup]
                         #Handle the simple substitution of a label name for a MARC code
                         key = subst
 
-                    if lookup in MATERIALIZE:
-                        (subst, extra_props) = MATERIALIZE[lookup]
-                        props = {u'code': code}
-                        props.update(extra_props)
-                        #props.update(other_properties)
-                        props.update(subfields)
-                        subid = subobjs.add(props)
-                        #item[RENAME.get(lookup, lookup)] = subid
-                        item.setdefault(subst, []).append(subid)
-                        #item.setdefault(RENAME.get(lookup, lookup), []).append(subid)
-
                     for k, v in subfields.items():
                         if lookup+k in DEMATERIALIZE:
                             item[DEMATERIALIZE[lookup+k]] = v
 
-                    print >> sys.stderr, lookup, key
+                    #print >> sys.stderr, lookup, key
                 else:
                     item[key] = val
 
