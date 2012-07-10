@@ -5,9 +5,25 @@ See also:
 
 [[http://www.loc.gov/bibliographic-future/rda/|Updates on RDA from LC]]
 
+[[http://journal.code4lib.org/articles/5468|MARC21 as Data: A Start]] by Karen Coyle
+
+[[http://catalogablog.blogspot.com/2008/02/lccn-permalink.html|"LCCN Permalink"]] -- A quick bit of info about the service
+
+[[http://www.oclc.org/developer/documentation/virtual-international-authority-file-viaf/using-api|Using the VIAF API]]
+
+[[http://bibwild.wordpress.com/2010/03/29/scope-of-id-loc-gov-and-viaf/|"authorities missing in gap between id.loc.gov and viaf?"]] -- An interesting bit of investigation re: authorities
+
+https://www.zotero.org/groups/lod-lam - Useful software and some group discussion at the LOD-LAM section in Zotero Community
+
 = History =
 
-In 2011 LC decided to make a transition from MARC to a more modern bibliographic framework.
+[[http://www.loc.gov/marc/transition/news/modeling-052212.html|"The Library of Congress Announces Modeling Initiative (May 22, 2012)"]]
+
+''The Library of Congress has asked Zepheira to provide a model (or models) that can serve as a strong starting point for discussion, and an analysis of related initiatives underway that will be useful to this effort.  LC expects that the proposed model(s) will change and be further tuned based on valuable feedback from the community and a natural progression of requirements as they are addressed. The initial model(s) will serve as a basis for work focused on a demonstration system/service which will then, in turn, be used to further refine the model(s). The expectation is that such iterative feedback loops will eventually ensure a flexible bibliographic framework, a robust reference code, a supporting infrastructure for deployment, and an effective migration plan to support the community in making a transition from MARC to a new framework.''
+
+----
+
+This follows from late 2011 when LC decided to make a transition from MARC to a more modern bibliographic framework.
 
 viz. [[http://www.loc.gov/marc/transition/news/framework-103111.html|A Bibliographic Framework for the Digital Age (October 31, 2011)]]
 

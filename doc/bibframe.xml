@@ -1,0 +1,193 @@
+<model>
+  <class id='resource'> 
+    <label>Resource</label>
+    <tagline>Conceptual Resource.</tagline>
+    <property id='name'>
+      <label>name</label>
+      <typedesc>Text</typedesc>
+      <description>Name of the item.</description>
+      <marcref></marcref>
+    </property>
+    <property id='description'>
+      <label>description</label>
+      <typedesc>Text</typedesc>
+      <description>Short description of the item.</description>
+      <marcref></marcref>
+    </property>
+    <property id='image'>
+      <label>image</label>
+      <typedesc>URL</typedesc>
+      <description>URL of an image of the item.</description>
+      <marcref></marcref>
+    </property>
+    <property id='link'>
+      <label>link</label>
+      <typedesc>URL</typedesc>
+      <description>URL of the item.</description>
+      <marcref></marcref>
+    </property>
+  </class>
+
+  <class id='biblio' isa='resource'> 
+    <label>Bibliographic Resource</label>
+    <tagline>Bibliographic Resource.</tagline>
+    <property id='lccn'>
+      <label>LCCN</label>
+      <typedesc>Text</typedesc>
+      <description>LCCN of the item.</description>
+      <marcref>010 $a</marcref>
+    </property>
+    <property id='isbn'>
+      <label>ISBN</label>
+      <typedesc>Text</typedesc>
+      <description>ISBN of the item.</description>
+      <marcref>020 $a</marcref>
+    </property>
+    <property id='language'>
+      <label>language</label>
+      <typedesc>Language</typedesc>
+      <description>Language associated with a Bibliographic Resource.</description>
+      <marcref>041 $a</marcref>
+    </property>
+    <property id='author'>
+      <label>author</label>
+      <typedesc>@person or @organization or @meeting</typedesc>
+      <description>The author associated with the Bibliograhic Resource.</description>
+      <marcref>100, 110, 111</marcref>
+    </property>
+    <property id='title'>
+      <label>title</label>
+      <typedesc>Text</typedesc>
+      <description>Title associated with a Bibliographic Resource</description>
+      <marcref>245</marcref>
+    </property>
+    <property id='edition'>
+      <label>edition</label>
+      <typedesc>Text</typedesc>
+      <description>Edition of a Bibliographic Resource</description>
+      <marcref>250</marcref>
+    </property>
+    <property id='publisher'>
+      <label>publisher</label>
+      <typedesc>Organization</typedesc>
+      <description>rganization responsible for publishing the Bibliograhic Resource.</description>
+      <marcref>260 $b</marcref>
+    </property>
+    <property id='publishedAt'>
+      <label>publishedAt</label>
+      <typedesc>Place</typedesc>
+      <description>Place of publication.</description>
+      <marcref>260 $a</marcref>
+    </property>
+    <property id='publishedOn'>
+      <label>publishedOn</label>
+      <typedesc>Date</typedesc>
+      <description>Date(s) associated with the publication of the Resource.</description>
+      <marcref>260 $c</marcref>
+    </property>
+    <property id='isPartOf'>
+      <label>isPartOf</label>
+      <typedesc>Series</typedesc>
+      <description>Series of the Bibliograhic Resource.</description>
+      <marcref>100 $a</marcref>
+    </property>
+    <property id='generalNote'>
+      <label>generalNote</label>
+      <typedesc>Text</typedesc>
+      <description>Note that provides general information.</description>
+      <marcref>500</marcref>
+    </property>
+    <property id='summary'>
+      <label>summary</label>
+      <typedesc>Text</typedesc>
+      <description>Text of the summary, abstract or review.</description>
+      <marcref>520</marcref>
+    </property>
+    <property id='subject'>
+      <label>subject</label>
+      <typedesc>Person or Place or Organization or Topic</typedesc>
+      <description>Subject associated with the Bibliograhic Resource.</description>
+      <marcref>6XX</marcref>
+    </property>
+  </class>
+
+  <class id='physical' isa='biblio'> 
+    <label>Physical</label>
+    <tagline>A physical bibliographic resource.</tagline>
+    <property id='extent'>
+      <label>extent</label>
+      <typedesc>Text</typedesc>
+      <description>Number of physical pages, volumes, cassettes, total playing time, etc. of each type of item.</description>
+      <marcref>300 $a</marcref>
+    </property>
+    <property id='otherPhysicalDetails'>
+      <label>otherPhysicalDetails</label>
+      <typedesc>Text</typedesc>
+      <description>Physical characteristics such as illustrative matter, coloration, playing speed, groove characteristics, etc.</description>
+      <marcref>300 $b</marcref>
+    </property>
+    <property id='dimensions'>
+      <label>dimensions</label>
+      <typedesc>Text</typedesc>
+      <description>Expressed in centimeters, millimeters or inches</description>
+      <marcref>300 $c</marcref>
+    </property>
+  </class>
+
+  <class id='cartographic' isa='physical'> 
+    <label>Cartographic</label>
+    <tagline>A physical cartographic bibliographic resource.</tagline>
+    <property id='scale'>
+      <label>scale</label>
+      <typedesc>Text</typedesc>
+      <description>Scale of cartographic content.</description>
+      <marcref>034, 255</marcref>
+    </property>
+    <property id='projection'>
+      <label>projection</label>
+      <typedesc>Text</typedesc>
+      <description>Projection of cartographic content</description>
+      <marcref>255 $b</marcref>
+    </property>
+    <property id='latLong'>
+      <label>latLong</label>
+      <typedesc>Text</typedesc>
+      <description>Longitude and latitude of cartographic content.</description>
+      <marcref>034 ($d $e $f $g), 255</marcref>
+    </property>
+  </class>
+
+  <class id='person'> 
+    <label>Person</label>
+    <tagline>Individual human.</tagline>
+    <property id='foo'>
+      <label>foo</label>
+      <typedesc>Text</typedesc>
+      <description>Foo.</description>
+      <marcref></marcref>
+    </property>
+  </class>
+
+  <class id='organization'> 
+    <label>Organization</label>
+    <tagline>Organized group of persons.</tagline>
+    <property id='foo'>
+      <label>foo</label>
+      <typedesc>Text</typedesc>
+      <description>Foo.</description>
+      <marcref></marcref>
+    </property>
+  </class>
+
+  <class id='meeting'> 
+    <label>Meeting</label>
+    <tagline>Gathering of persons for purpose.</tagline>
+    <property id='foo'>
+      <label>foo</label>
+      <typedesc>Text</typedesc>
+      <description>Foo.</description>
+      <marcref></marcref>
+    </property>
+  </class>
+
+</model>

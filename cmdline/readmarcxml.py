@@ -54,6 +54,9 @@ RENAME = {
 '260a': 'name',
 '260b': 'name',
 '260c': 'publishedOn',
+'260e': 'name',
+'260f': 'name',
+'260g': 'manufacturerOn',
 }
 
 
@@ -61,7 +64,10 @@ MATERIALIZE = {
 '100': ('author', {'marcType': 'Person'}),
 '110': ('author', {'marcType': 'Organization'}),
 '111': ('author', {'marcType': 'Meeting'}),
-'260': {('a',): ('publishedAt', {'marcType': 'Place'}), ('b',): ('publisher', {'marcType': 'Organization'})},
+'260a': ('publishedAt', {'marcType': 'Place'}),
+'260b': ('publisher', {'marcType': 'Organization'}),
+'260e': ('manufacturedAt', {'marcType': 'Place'}),
+'260f': ('manufacturer', {'marcType': 'Organization'}),
 '600': ('subject', {'marcType': 'Person'}),
 '610': ('subject', {'marcType': 'Organization'}),
 '650': ('subject', {'marcType': 'Topic'}),
@@ -130,11 +136,11 @@ def lucky_viaf_template(qfunc):
         q = qfunc(item)
         query = urllib.urlencode({'query' : q, 'maximumRecords': 1, 'httpAccept': 'application/rss+xml'})
         url = 'http://viaf.org/viaf/search?' + query
-        print >> sys.stderr, url
+        #print >> sys.stderr, url
         r = requests.get(url)
         doc = amara.parse(r.content)
         answer = U(doc.xml_select(u'/rss/channel/item/link'))
-        print >> sys.stderr, answer
+        #print >> sys.stderr, answer
         time.sleep(2) #Be polite!
         return answer
     return lucky_viaf
@@ -149,9 +155,9 @@ def lucky_idlc_template(qfunc):
         query = urllib.quote(q)
         url = 'http://id.loc.gov/authorities/label/' + query
         r = requests.head(url)
-        print >> sys.stderr, url, item[u'code']
+        #print >> sys.stderr, url, item[u'code']
         answer = r.headers['X-URI']
-        print >> sys.stderr, answer
+        #print >> sys.stderr, answer
         time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
         return answer
     return lucky_idlc
@@ -187,23 +193,6 @@ class subobjects(object):
         for k, v in props.items():
             #Try to substitute Marc field code names with friendlier property names
             lookup = code + k
-            if lookup in MATERIALIZE:
-                subst = None
-                materialize_params = MATERIALIZE[lookup]
-                if isinstance(materialize_params, dict):
-                    for k, v in materialize_params.items():
-                        if all(( item.get(p) for p in key_subcodes )):
-                            (subst, extra_props) = v
-                else:
-                    (subst, extra_props) = materialize_params
-                if subst:
-                    props = {u'code': code, subst: v}
-                    props.update(extra_props)
-                    subid = self.add(props)
-                    #item[RENAME.get(lookup, lookup)] = subid
-                    item[subst] = subid
-
-            #Handle the simple substitution of a label name for a MARC code
             if lookup in RENAME:
                 subst = RENAME[lookup]
                 k = subst
@@ -278,24 +267,24 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
                     #Try to substitute Marc field code names with friendlier property names
                     lookup = code
                     if lookup in MATERIALIZE:
-                        subst = None
-                        materialize_params = MATERIALIZE[lookup]
-                        if isinstance(materialize_params, dict):
-                            for k, v in materialize_params.items():
-                                if all(( subfields.get(p) for p in k )):
-                                    (subst, extra_props) = v
-                            print >> sys.stderr, 'MATERIALIZE_WITH_CRITERIA', (materialize_params.keys(), subfields.keys(), subst)
-                        else:
-                            (subst, extra_props) = materialize_params
-                        if subst:
-                            props = {u'code': code}
+                        (subst, extra_props) = MATERIALIZE[lookup]
+                        props = {u'code': code}
+                        props.update(extra_props)
+                        #props.update(other_properties)
+                        props.update(subfields)
+                        subid = subobjs.add(props)
+                        #item[RENAME.get(lookup, lookup)] = subid
+                        item.setdefault(subst, []).append(subid)
+                        #item.setdefault(RENAME.get(lookup, lookup), []).append(subid)
+
+                    for k, v in subfields.items():
+                        if lookup+k in MATERIALIZE:
+                            (subst, extra_props) = MATERIALIZE[lookup+k]
+                            props = {u'code': code, k: v}
                             props.update(extra_props)
-                            #props.update(other_properties)
-                            props.update(subfields)
+                            print >> sys.stderr, lookup, k, props, 
                             subid = subobjs.add(props)
-                            #item[RENAME.get(lookup, lookup)] = subid
                             item.setdefault(subst, []).append(subid)
-                            #item.setdefault(RENAME.get(lookup, lookup), []).append(subid)
 
                     if lookup in RENAME:
                         subst = RENAME[lookup]

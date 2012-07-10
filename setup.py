@@ -11,4 +11,5 @@ setup(
     package_dir={'btframework': 'lib'},
     #packages = ['btframework', 'btframework.akara'],
     packages = ['btframework', 'btframework.contrib'],
+    scripts = ['cmdline/readmarcxml.py', 'cmdline/augment_lccn.py', 'cmdline/build_model.py'],
 )
