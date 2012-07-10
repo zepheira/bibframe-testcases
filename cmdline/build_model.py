@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import sys
 import os
 import re
@@ -105,7 +107,7 @@ T2 = '''        <div class="row-fluid vocabulary-display-section">
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href = "../../../">Resource</a></div>
+        <div class="section-text parent">{0}</div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -118,7 +120,7 @@ T2 = '''        <div class="row-fluid vocabulary-display-section">
           </thead>
               <tbody>
 
-{0}
+{1}
 
               </tbody>
             </table>
@@ -142,7 +144,7 @@ T3 = '''\
 CLASSES = {}
 
 if __name__ == "__main__":
-    #python builder.py bibframe.xml /tmp/bibframe
+    #build_model.py bibframe.xml /tmp/bibframe
     indoc = bindery.parse(sys.argv[1])
     name_base = sys.argv[2]
 
@@ -193,7 +195,8 @@ if __name__ == "__main__":
                     description,
                     U(prop.marcref)))
 
-            class_chunks.append(T2.format(''.join(property_chunks)))
+            header = 'Properties from <A href="/{0}/index.html">{1}</a>'.format(U(outcls.id), U(outcls.label))
+            class_chunks.append(T2.format(header, ''.join(property_chunks)))
             if outcls == cls:
                 breadcrumb_chunks.append('<li class="active">{0}</li>'.format(U(outcls.label)))
             else:
