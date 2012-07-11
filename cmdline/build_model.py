@@ -16,12 +16,12 @@ T0 = '''<!DOCTYPE html>
     <title>MARC21 :: Link Data Vocabulary</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link href="/css/bootstrap.css" rel="stylesheet" />
-    <link href="/css/bootstrap-responsive.css" rel="stylesheet" />
-    <link href="/css/style.css" rel="stylesheet" />
+    <link href="{base}/css/bootstrap.css" rel="stylesheet" />
+    <link href="{base}/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="{base}/css/style.css" rel="stylesheet" />
     
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="{base}/js/jquery.js"></script>
+    <script type="text/javascript" src="{base}/js/bootstrap-modal.js"></script>
     
     <script type="text/javascript">
       $('#myModal').modal(options)
@@ -63,22 +63,22 @@ T0 = '''<!DOCTYPE html>
       <div class="this-nav row-fluid">
         <div class="span12" style="margin-top: 50px;">
           <ul class="breadcrumb">
-{0}
+{breadcrumbs}
           </ul>
         </div>
       </div>
 
       <div class="this row-fluid">
     <div class="span12">
-      <h1 class="this-name">{1}</h1>
-      <h3 class="this-description">{2}</h3>
+      <h1 class="this-name">{clslabel}</h1>
+      <h3 class="this-description">{clstag}</h3>
       <br />
     </div>
       </div>
 
       <div class="vocabulary-display">
 
-{3}
+{tables}
 
       </div> <!-- vocabulary-display -->
 
@@ -95,15 +95,7 @@ T0 = '''<!DOCTYPE html>
 '''#.format(vocabulary_display_sections)
 
 
-T1 = '''
-            <li><a href="../../index.html">Resource</a> <span class="divider">/</span></li>
-            <li><a href="../index.html">Bibliographic</a> <span class="divider">/</span></li>
-            <li><a href="../index.html">Physical</a> <span class="divider">/</span></li>
-            <li class="active">Cartographic</li>
-'''
-
-
-T2 = '''        <div class="row-fluid vocabulary-display-section">
+T1 = '''        <div class="row-fluid vocabulary-display-section">
       
       <div class="span12">
         
@@ -131,7 +123,7 @@ T2 = '''        <div class="row-fluid vocabulary-display-section">
 '''#.format(properties)
 
 
-T3 = '''\
+T2 = '''\
             <tr>
           <td>{0}</td>
           <td>{1}</td>
@@ -143,11 +135,8 @@ T3 = '''\
 
 CLASSES = {}
 
-if __name__ == "__main__":
-    #build_model.py bibframe.xml /tmp/bibframe
-    indoc = bindery.parse(sys.argv[1])
-    name_base = sys.argv[2]
-
+def run(modelsource=None, output=None, base=''):
+    indoc = bindery.parse(modelsource)
     #Build a graph of the classes
     for cls in indoc.model.class_:
         CLASSES[cls.id] = (cls, U(cls.isa).split() if cls.isa else [])
@@ -163,7 +152,7 @@ if __name__ == "__main__":
         '''
         def replace(match):
             eid = match.group(1)
-            return '<a href"{0}">{1}</a>'.format('../' + eid, CLASSES[eid][0].label)
+            return '<a href"../{0}/index.html">{1}</a>'.format('../' + eid, CLASSES[eid][0].label)
         return LINK_PAT.sub(replace, text)
 
 
@@ -176,7 +165,7 @@ if __name__ == "__main__":
             ancestors.append(cls)
             return
         add_ancestors(cls)
-        basedir = os.path.join(name_base, U(cls.id).encode('utf-8'))
+        basedir = os.path.join(output, U(cls.id).encode('utf-8'))
         if not os.path.exists(basedir):
             os.makedirs(basedir)
         outf = open(os.path.join(basedir, 'index.html'), 'w')
@@ -189,20 +178,43 @@ if __name__ == "__main__":
             for prop in outcls.property:
                 typedesc = handle_inline_links(U(prop.typedesc))
                 description = handle_inline_links(U(prop.description))
-                property_chunks.append(T3.format(
+                property_chunks.append(T2.format(
                     U(prop.label),
                     typedesc,
                     description,
                     U(prop.marcref)))
 
-            header = 'Properties from <A href="/{0}/index.html">{1}</a>'.format(U(outcls.id), U(outcls.label))
-            class_chunks.append(T2.format(header, ''.join(property_chunks)))
+            header = 'Properties from <A href="../{0}/index.html">{1}</a>'.format(U(outcls.id), U(outcls.label))
+            class_chunks.append(T1.format(header, ''.join(property_chunks)))
             if outcls == cls:
                 breadcrumb_chunks.append('<li class="active">{0}</li>'.format(U(outcls.label)))
             else:
-                breadcrumb_chunks.append('<li><a href="/{0}/index.html">{1}</a> <span class="divider">/</span></li>'.format(U(outcls.id), U(outcls.label)))
+                breadcrumb_chunks.append('<li><a href="../{0}/index.html">{1}</a> <span class="divider">/</span></li>'.format(U(outcls.id), U(outcls.label)))
 
-        outf.write(T0.format(''.join(breadcrumb_chunks), cls.label, cls.tagline, ''.join(class_chunks)))
+        outf.write(T0.format(
+            base=base,
+            breadcrumbs=''.join(breadcrumb_chunks),
+            clslabel=cls.label,
+            clstag=cls.tagline,
+            tables=''.join(class_chunks)))
 
         outf.close()
+
+
+from akara.thirdparty import argparse #Yes! Yes! Import not at top
+
+if __name__ == '__main__':
+    #build_model.py --base=/vocab bibframe.xml /tmp/bibframe
+    parser = argparse.ArgumentParser()
+    #parser.add_argument('-o', '--output')
+    parser.add_argument('model', metavar='source', type=argparse.FileType('r'),
+                        help='The model file')
+    parser.add_argument('output_root', metavar='output_base',
+                        help='Root directory for the output (will be created if not present)')
+    parser.add_argument('-b', '--base', metavar="SITE_BASE_URL", dest="baseurl", default='',
+                        help="Base URL for the generated site")
+    args = parser.parse_args()
+    run(modelsource=args.model, output=args.output_root, base=args.baseurl)
+    #indoc = bindery.parse(sys.argv[1])
+    args.model.close()
 
