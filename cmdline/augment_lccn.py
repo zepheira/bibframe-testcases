@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 '''
 augment_lccn - augments the base layer of JSON, adding to each record what it can glean from Dublin Core sourced at lccn.log.gov
 

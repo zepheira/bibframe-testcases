@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 '''
 readmarcml - the main MARCXML parser, produces the base layer of JSON
 '''
@@ -22,7 +23,8 @@ from amara.thirdparty import httplib2, json
 from amara.lib import U
 from amara.lib.util import element_subtree_iter
 
-from btframework.marc import process_leader, process_008
+from btframework.marc import process_leader, process_008, FIELD_RENAMINGS, MATERIALIZE
+from btframework.marc import DEMATERIALIZE, INSTANCE_FIELDS, WORK_FIELDS
 
 #SLUGCHARS = r'a-zA-Z0-9\-\_'
 #OMIT_FROM_SLUG_PAT = re.compile('[^%s]'%SLUGCHARS)
@@ -36,64 +38,6 @@ CACHEDIR = os.path.expanduser('~/tmp')
 
 VIAF_GUESS_FNAME = u'viafFromHeuristic'
 IDLC_GUESS_FNAME = u'idlcFromHeuristic'
-
-RENAME = {
-'100a': 'name',
-'100d': 'date',
-'110a': 'name',
-'110d': 'date',
-'111a': 'name',
-'111d': 'date',
-'600a': 'name',
-'600d': 'date',
-'610a': 'name',
-'650a': 'name',
-'650d': 'date',
-'651a': 'name',
-'651d': 'date',
-'260a': 'name',
-'260b': 'name',
-'260c': 'publishedOn',
-'260e': 'name',
-'260f': 'name',
-'260g': 'manufacturerOn',
-}
-
-
-MATERIALIZE = {
-'100': ('author', {'marcType': 'Person'}),
-'110': ('author', {'marcType': 'Organization'}),
-'111': ('author', {'marcType': 'Meeting'}),
-'260a': ('publishedAt', {'marcType': 'Place'}),
-'260b': ('publisher', {'marcType': 'Organization'}),
-'260e': ('manufacturedAt', {'marcType': 'Place'}),
-'260f': ('manufacturer', {'marcType': 'Organization'}),
-'600': ('subject', {'marcType': 'Person'}),
-'610': ('subject', {'marcType': 'Organization'}),
-'650': ('subject', {'marcType': 'Topic'}),
-'651': ('subject', {'marcType': 'Place'}),
-}
-
-
-DEMATERIALIZE = {
-'010a': 'LCCN',
-'020a': 'ISBN',
-'300a': 'physicalDescription',
-'245a': 'title',
-'250a': 'edition',
-'260c': 'publishedOn',
-'500a': 'generalNote',
-'520a': 'summary',
-'245a': 'title',
-'250a': 'edition',
-'520a': 'summary',
-}
-
-
-#These are rules that are applied to materialize one subobject from another
-#None for now
-TERTIARY_RULES = {
-}
 
 requests_cache.configure(os.path.join(CACHEDIR, 'cache'))
 
@@ -193,8 +137,8 @@ class subobjects(object):
         for k, v in props.items():
             #Try to substitute Marc field code names with friendlier property names
             lookup = code + k
-            if lookup in RENAME:
-                subst = RENAME[lookup]
+            if lookup in FIELD_RENAMINGS:
+                subst = FIELD_RENAMINGS[lookup]
                 k = subst
 
             #print >> sys.stderr, lookup, k
@@ -215,14 +159,15 @@ class subobjects(object):
 
         self.exhibit_sink.send(item)
         self.ix += 1
+        print >> sys.stderr, '.',
         return objid
 
 
-def records2json(recs, sink1, sink2, sink3, logger=logging):
+def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger=logging):
     '''
     
     '''
-    subobjs = subobjects(sink3)
+    subobjs = subobjects(objects_sink)
     @coroutine
     def receive_items():
         '''
@@ -235,16 +180,22 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
             recid = u'_' + str(ix)
 
             leader = U(rec.xml_select(u'ma:leader', prefixes=PREFIXES))
-            item = {
+            work_item = {
                 u'id': recid,
                 u'label': recid,
                 #u'label': u'{0}, {1}'.format(row['TPNAML'], row['TPNAMF']),
-                u'leader': leader,
                 u'type': u'MarcRecord',
             }
 
+            #Instance starts with same as work, with leader added
+            instance_item = {
+                u'leader': leader,
+            }
+            instance_item.update(work_item)
+
             for k, v in process_leader(leader):
-                item[k] = v
+                #For now assume all leader fields are instance level
+                instance_item[k] = v
 
             for cf in rec.xml_select(u'ma:controlfield', prefixes=PREFIXES):
                 key = u'cftag_' + U(cf.xml_select(u'@tag'))
@@ -253,10 +204,11 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
                     for sf in cf.xml_select(u'ma:subfield', prefixes=PREFIXES):
                         code = U(sf.xml_select(u'@code'))
                         sfval = U(sf)
-                        #item[key+'.'+code] = sfval
-                        item[key + code] = sfval
+                        #For now assume all leader fields are instance level
+                        instance_item[key + code] = sfval
                 else:
-                    item[key] = val
+                    #For now assume all leader fields are instance level
+                    instance_item[key] = val
 
             for df in rec.xml_select(u'ma:datafield', prefixes=PREFIXES):
                 code = U(df.xml_select(u'@tag'))
@@ -264,69 +216,88 @@ def records2json(recs, sink1, sink2, sink3, logger=logging):
                 val = U(df)
                 if list(df.xml_select(u'ma:subfield', prefixes=PREFIXES)):
                     subfields = dict(( (U(sf.xml_select(u'@code')), U(sf)) for sf in df.xml_select(u'ma:subfield', prefixes=PREFIXES) ))
-                    #Try to substitute Marc field code names with friendlier property names
                     lookup = code
-                    if lookup in MATERIALIZE:
-                        (subst, extra_props) = MATERIALIZE[lookup]
+                    #See if any of the field codes represents a reference to an object which can be materialized
+                    if code in MATERIALIZE:
+                        (subst, extra_props) = MATERIALIZE[code]
                         props = {u'code': code}
                         props.update(extra_props)
                         #props.update(other_properties)
                         props.update(subfields)
                         subid = subobjs.add(props)
-                        #item[RENAME.get(lookup, lookup)] = subid
-                        item.setdefault(subst, []).append(subid)
-                        #item.setdefault(RENAME.get(lookup, lookup), []).append(subid)
+                        #work_item[FIELD_RENAMINGS.get(code, code)] = subid
+                        print >> sys.stderr, code, code in INSTANCE_FIELDS, code in WORK_FIELDS
+                        if code in INSTANCE_FIELDS:
+                            instance_item.setdefault(subst, []).append(subid)
+                        elif code in WORK_FIELDS:
+                            work_item.setdefault(subst, []).append(subid)
+                        #work_item.setdefault(FIELD_RENAMINGS.get(code, code), []).append(subid)
 
+                    #See if any of the field+subfield codes represents a reference to an object which can be materialized
                     for k, v in subfields.items():
-                        if lookup+k in MATERIALIZE:
-                            (subst, extra_props) = MATERIALIZE[lookup+k]
+                        lookup = code + k
+                        if lookup in MATERIALIZE:
+                            (subst, extra_props) = MATERIALIZE[lookup]
                             props = {u'code': code, k: v}
                             props.update(extra_props)
-                            print >> sys.stderr, lookup, k, props, 
+                            #print >> sys.stderr, lookup, k, props, 
                             subid = subobjs.add(props)
-                            item.setdefault(subst, []).append(subid)
+                            print >> sys.stderr, lookup, lookup in INSTANCE_FIELDS, lookup in WORK_FIELDS
+                            if lookup in INSTANCE_FIELDS:
+                                instance_item.setdefault(subst, []).append(subid)
+                            elif lookup in WORK_FIELDS:
+                                work_item.setdefault(subst, []).append(subid)
 
-                    if lookup in RENAME:
-                        subst = RENAME[lookup]
+                    #Try to substitute Marc field code names with friendlier property names
+                    if code in FIELD_RENAMINGS:
+                        subst = FIELD_RENAMINGS[code]
                         #Handle the simple substitution of a label name for a MARC code
                         key = subst
 
                     for k, v in subfields.items():
-                        if lookup+k in DEMATERIALIZE:
-                            item[DEMATERIALIZE[lookup+k]] = v
+                        if code+k in DEMATERIALIZE:
+                            DEMATERIALIZE[code+k] = v
 
                     #print >> sys.stderr, lookup, key
                 else:
-                    item[key] = val
+                    if code in INSTANCE_FIELDS:
+                        instance_item[key] = val
+                    elif code in WORK_FIELDS:
+                        work_item[key] = val
 
-            #link = item.get(u'cftag_008')
+            #link = work_item.get(u'cftag_008')
 
 
             #Work out the item's finding aid link
-            link = item.get(u'dftag_' + FALINKFIELD)
+            link = work_item.get(u'dftag_' + FALINKFIELD)
             if link:
-                item['fa_link'] = link
+                work_item['fa_link'] = link
                 r = requests.get(link)
                 if r.history: #If redirects were encountered
                     resolvedlink = r.history[-1].headers['location']
-                    item['fa_resolvedlink'] = resolvedlink
+                    work_item['fa_resolvedlink'] = resolvedlink
 
             #reduce lists of just one item
-            for k, v in item.items():
+            for k, v in work_item.items():
                 if type(v) is list and len(v) == 1:
-                    item[k] = v[0]
+                    work_item[k] = v[0]
 
-            sink1.send(item)
+            for k, v in instance_item.items():
+                if type(v) is list and len(v) == 1:
+                    instance_item[k] = v[0]
 
-            item2 = {
+            work_sink.send(work_item)
+            instance_sink.send(instance_item)
+
+            stub_item = {
                 u'id': recid,
                 u'label': recid,
                 u'type': u'MarcRecord',
             }
 
-            sink2.send(item2)
+            stub_sink.send(stub_item)
             ix += 1
-            print >> sys.stderr, '.',
+            print >> sys.stderr, '+',
 
         return
 
@@ -362,13 +333,15 @@ if __name__ == "__main__":
     import sys
     indoc = amara.parse(sys.argv[1])
     name_base = sys.argv[2]
-    outf1 = open(name_base + '.base.json', 'w')
-    outf2 = open(name_base + '.stub.json', 'w')
-    outf3 = open(name_base + '.object.json', 'w')
+    work_outf = open(name_base + '.work.json', 'w')
+    instance_outf = open(name_base + '.instance.json', 'w')
+    stub_outf = open(name_base + '.stub.json', 'w')
+    objects_outf = open(name_base + '.object.json', 'w')
 
-    emitter1 = emitter.emitter(outf1)
-    emitter2 = emitter.emitter(outf2)
-    emitter3 = emitter.emitter(outf3)
+    work_emitter = emitter.emitter(work_outf)
+    instance_emitter = emitter.emitter(instance_outf)
+    stub_emitter = emitter.emitter(stub_outf)
+    objects_emitter = emitter.emitter(objects_outf)
 
     recs = indoc.xml_select(u'/ma:collection/ma:record', prefixes=PREFIXES)
 
@@ -377,15 +350,19 @@ if __name__ == "__main__":
         count = int(sys.argv[3])
         recs = itertools.islice(recs, count)
 
-    records2json(recs, emitter1, emitter2, emitter3)
-    emitter1.send(emitter.ITEMS_DONE_SIGNAL)
-    emitter2.send(emitter.ITEMS_DONE_SIGNAL)
-    emitter3.send(emitter.ITEMS_DONE_SIGNAL)
+    records2json(recs, work_emitter, instance_emitter, stub_emitter, objects_emitter)
+    work_emitter.send(emitter.ITEMS_DONE_SIGNAL)
+    instance_emitter.send(emitter.ITEMS_DONE_SIGNAL)
+    stub_emitter.send(emitter.ITEMS_DONE_SIGNAL)
+    objects_emitter.send(emitter.ITEMS_DONE_SIGNAL)
 
     #emitter.send(TYPES1)
-    emitter1.send(None)
-    emitter2.send(None)
-    emitter3.send(None)
-    emitter1.close()
-    emitter2.close()
-    emitter3.close()
+    work_emitter.send(None)
+    instance_emitter.send(None)
+    stub_emitter.send(None)
+    objects_emitter.send(None)
+    work_emitter.close()
+    instance_emitter.close()
+    stub_emitter.close()
+    objects_emitter.close()
+    #print >> sys.stderr, requests_cache.get_cache()
