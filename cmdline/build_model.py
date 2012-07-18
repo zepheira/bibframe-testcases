@@ -82,6 +82,23 @@ T0 = '''<!DOCTYPE html>
 
       </div> <!-- vocabulary-display -->
 
+      <div class="specific-types-display">
+
+        <div class="row-fluid">
+         <div class="span12">
+
+          <h3 class="specific-types-text">More specific types</h3>
+
+      <ul class="list">
+{specifictypes}
+      </ul>
+      
+    </div>
+
+  </div>
+
+      </div> <!-- specific-types-display -->
+
     </div> <!-- container-fluid -->
     
     <div class="footer">
@@ -108,6 +125,7 @@ T1 = '''        <div class="row-fluid vocabulary-display-section">
         <th class="span2">Expected Value</th>
         <th class="span6">Description</th>
         <th class="span2">Related MARC Code</th>
+        <th class="span2">Related RDA Code</th>
                 </tr>
           </thead>
               <tbody>
@@ -129,6 +147,7 @@ T2 = '''\
           <td>{1}</td>
           <td>{2}</td>
           <td>{3}</td>
+          <td>{4}</td>
             </tr>
 '''
 
@@ -157,22 +176,22 @@ def run(modelsource=None, output=None, base=''):
 
 
     #Now build the pages
-    for clsid, (cls, parents) in CLASSES.items():
+    for clsid, (maincls, parents) in CLASSES.items():
         ancestors = []
         def add_ancestors(cls):
             for p in CLASSES[cls.id][1]:
                 add_ancestors(p)
             ancestors.append(cls)
             return
-        add_ancestors(cls)
-        basedir = os.path.join(output, U(cls.id).encode('utf-8'))
+        add_ancestors(maincls)
+        basedir = os.path.join(output, U(maincls.id).encode('utf-8'))
         if not os.path.exists(basedir):
             os.makedirs(basedir)
         outf = open(os.path.join(basedir, 'index.html'), 'w')
 
         class_chunks = []
         breadcrumb_chunks = []
-        #for outcls in ancestors + [cls]:
+        #for outcls in ancestors + [maincls]:
         for outcls in ancestors:
             property_chunks = []
             for prop in outcls.property:
@@ -182,21 +201,28 @@ def run(modelsource=None, output=None, base=''):
                     U(prop.label),
                     typedesc,
                     description,
-                    U(prop.marcref)))
+                    U(prop.marcref),
+                    U(prop.rdaref)))
 
             header = 'Properties from <A href="../{0}/index.html">{1}</a>'.format(U(outcls.id), U(outcls.label))
             class_chunks.append(T1.format(header, ''.join(property_chunks)))
-            if outcls == cls:
+            if outcls == maincls:
                 breadcrumb_chunks.append('<li class="active">{0}</li>'.format(U(outcls.label)))
             else:
                 breadcrumb_chunks.append('<li><a href="../{0}/index.html">{1}</a> <span class="divider">/</span></li>'.format(U(outcls.id), U(outcls.label)))
 
+        childclasses = [ cls for (clsid, (cls, parents)) in CLASSES.items() if maincls in parents ]
+
+        specific_chunks = [ '<li><a href="../{0}/index.html">{1}</a></li>\n'.format(U(cls.id), U(cls.label)) for cls in childclasses ]
+
         outf.write(T0.format(
             base=base,
             breadcrumbs=''.join(breadcrumb_chunks),
-            clslabel=cls.label,
-            clstag=cls.tagline,
-            tables=''.join(class_chunks)))
+            clslabel=maincls.label,
+            clstag=maincls.tagline,
+            tables=''.join(class_chunks),
+            specifictypes=(''.join(specific_chunks if specific_chunks else '(None)')),
+            ))
 
         outf.close()
 

@@ -243,9 +243,9 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                             #print >> sys.stderr, lookup, k, props, 
                             subid = subobjs.add(props)
                             print >> sys.stderr, lookup, lookup in INSTANCE_FIELDS, lookup in WORK_FIELDS
-                            if lookup in INSTANCE_FIELDS:
+                            if lookup in INSTANCE_FIELDS or code in INSTANCE_FIELDS:
                                 instance_item.setdefault(subst, []).append(subid)
-                            elif lookup in WORK_FIELDS:
+                            elif lookup in WORK_FIELDS or code in WORK_FIELDS:
                                 work_item.setdefault(subst, []).append(subid)
 
                     #Try to substitute Marc field code names with friendlier property names
