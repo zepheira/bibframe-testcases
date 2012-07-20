@@ -22,21 +22,33 @@ FIELD_RENAMINGS = {
 '260e': 'name',
 '260f': 'name',
 '260g': 'manufacturerOn',
+
+
+'010a': 'LCCN',
+'020a': 'ISBN',
+'300a': 'physicalDescription',
+'245a': 'title',
+'250a': 'edition',
+'260c': 'publishedOn',
+'500a': 'generalNote',
+'520a': 'summary',
+'245a': 'title',
+'250a': 'edition',
 }
 
 
 MATERIALIZE = {
-'100': ('author', {'marcType': 'Person'}),
-'110': ('author', {'marcType': 'Organization'}),
-'111': ('author', {'marcType': 'Meeting'}),
-'260a': ('publishedAt', {'marcType': 'Place'}),
-'260b': ('publisher', {'marcType': 'Organization'}),
-'260e': ('manufacturedAt', {'marcType': 'Place'}),
-'260f': ('manufacturer', {'marcType': 'Organization'}),
-'600': ('subject', {'marcType': 'Person'}),
-'610': ('subject', {'marcType': 'Organization'}),
-'650': ('subject', {'marcType': 'Topic'}),
-'651': ('subject', {'marcType': 'Place'}),
+'100': ('author', {'marcrType': 'Person'}),
+'110': ('author', {'marcrType': 'Organization'}),
+'111': ('author', {'marcrType': 'Meeting'}),
+'260a': ('publishedAt', {'marcrType': 'Place'}),
+'260b': ('publisher', {'marcrType': 'Organization'}),
+'260e': ('manufacturedAt', {'marcrType': 'Place'}),
+'260f': ('manufacturer', {'marcrType': 'Organization'}),
+'600': ('subject', {'marcrType': 'Person'}),
+'610': ('subject', {'marcrType': 'Organization'}),
+'650': ('subject', {'marcrType': 'Topic'}),
+'651': ('subject', {'marcrType': 'Place'}),
 }
 
 
@@ -51,7 +63,6 @@ DEMATERIALIZE = {
 '520a': 'summary',
 '245a': 'title',
 '250a': 'edition',
-'520a': 'summary',
 }
 
 

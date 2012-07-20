@@ -181,10 +181,10 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
 
             leader = U(rec.xml_select(u'ma:leader', prefixes=PREFIXES))
             work_item = {
-                u'id': recid,
+                u'id': u'work' + recid,
                 u'label': recid,
                 #u'label': u'{0}, {1}'.format(row['TPNAML'], row['TPNAMF']),
-                u'type': u'MarcRecord',
+                u'type': u'WorkRecord',
             }
 
             #Instance starts with same as work, with leader added
@@ -192,6 +192,9 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                 u'leader': leader,
             }
             instance_item.update(work_item)
+            instance_item[u'id'] = u'instance' + recid
+            instance_item[u'type'] = u'InstanceRecord'
+            work_item[u'instance'] = u'instance' + recid
 
             for k, v in process_leader(leader):
                 #For now assume all leader fields are instance level
@@ -218,6 +221,7 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                     subfields = dict(( (U(sf.xml_select(u'@code')), U(sf)) for sf in df.xml_select(u'ma:subfield', prefixes=PREFIXES) ))
                     lookup = code
                     #See if any of the field codes represents a reference to an object which can be materialized
+                    handled = False
                     if code in MATERIALIZE:
                         (subst, extra_props) = MATERIALIZE[code]
                         props = {u'code': code}
@@ -226,39 +230,57 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                         props.update(subfields)
                         subid = subobjs.add(props)
                         #work_item[FIELD_RENAMINGS.get(code, code)] = subid
-                        print >> sys.stderr, code, code in INSTANCE_FIELDS, code in WORK_FIELDS
                         if code in INSTANCE_FIELDS:
                             instance_item.setdefault(subst, []).append(subid)
                         elif code in WORK_FIELDS:
                             work_item.setdefault(subst, []).append(subid)
+                        handled = True
+
                         #work_item.setdefault(FIELD_RENAMINGS.get(code, code), []).append(subid)
 
                     #See if any of the field+subfield codes represents a reference to an object which can be materialized
-                    for k, v in subfields.items():
-                        lookup = code + k
-                        if lookup in MATERIALIZE:
-                            (subst, extra_props) = MATERIALIZE[lookup]
-                            props = {u'code': code, k: v}
-                            props.update(extra_props)
-                            #print >> sys.stderr, lookup, k, props, 
-                            subid = subobjs.add(props)
-                            print >> sys.stderr, lookup, lookup in INSTANCE_FIELDS, lookup in WORK_FIELDS
-                            if lookup in INSTANCE_FIELDS or code in INSTANCE_FIELDS:
-                                instance_item.setdefault(subst, []).append(subid)
-                            elif lookup in WORK_FIELDS or code in WORK_FIELDS:
-                                work_item.setdefault(subst, []).append(subid)
+                    if not handled:
+                        for k, v in subfields.items():
+                            lookup = code + k
+                            if lookup in MATERIALIZE:
+                                (subst, extra_props) = MATERIALIZE[lookup]
+                                props = {u'code': code, k: v}
+                                props.update(extra_props)
+                                #print >> sys.stderr, lookup, k, props, 
+                                subid = subobjs.add(props)
+                                if lookup in INSTANCE_FIELDS or code in INSTANCE_FIELDS:
+                                    instance_item.setdefault(subst, []).append(subid)
+                                elif lookup in WORK_FIELDS or code in WORK_FIELDS:
+                                    work_item.setdefault(subst, []).append(subid)
+                                handled = True
 
-                    #Try to substitute Marc field code names with friendlier property names
-                    if code in FIELD_RENAMINGS:
-                        subst = FIELD_RENAMINGS[code]
-                        #Handle the simple substitution of a label name for a MARC code
-                        key = subst
+                            else:
+                                field_name = lookup
+                                if lookup in FIELD_RENAMINGS:
+                                    field_name = FIELD_RENAMINGS[lookup]
+                                #Handle the simple field_nameitution of a label name for a MARC code
+                                if lookup in INSTANCE_FIELDS or code in INSTANCE_FIELDS:
+                                    instance_item.setdefault(field_name, []).append(v)
+                                elif lookup in WORK_FIELDS or code in WORK_FIELDS:
+                                    work_item.setdefault(field_name, []).append(v)
 
-                    for k, v in subfields.items():
-                        if code+k in DEMATERIALIZE:
-                            DEMATERIALIZE[code+k] = v
 
-                    #print >> sys.stderr, lookup, key
+                    # for k, v in subfields.items():
+                    #     lookup = code + k
+                    #     if lookup in DEMATERIALIZE:
+                    #         key = DEMATERIALIZE[]
+                    #         print >> sys.stderr, lookup, lookup in INSTANCE_FIELDS, lookup in WORK_FIELDS
+                    #         if lookup in INSTANCE_FIELDS:
+                    #             instance_item[key] = v
+                    #         elif lookup in WORK_FIELDS:
+                    #             work_item[key] = v
+
+                #print >> sys.stderr, lookup, key
+                elif not handled:
+                    if code in INSTANCE_FIELDS:
+                        instance_item[key] = val
+                    elif code in WORK_FIELDS:
+                        work_item[key] = val
                 else:
                     if code in INSTANCE_FIELDS:
                         instance_item[key] = val
