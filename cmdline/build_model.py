@@ -171,7 +171,7 @@ def run(modelsource=None, output=None, base=''):
         '''
         def replace(match):
             eid = match.group(1)
-            return '<a href"../{0}/index.html">{1}</a>'.format(eid, CLASSES[eid][0].label)
+            return '<a href="{0}/{1}/index.html">{2}</a>'.format(base, eid, CLASSES[eid][0].label)
         return LINK_PAT.sub(replace, text)
 
 

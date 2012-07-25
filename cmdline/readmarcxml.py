@@ -24,7 +24,7 @@ from amara.lib import U
 from amara.lib.util import element_subtree_iter
 
 from btframework.marc import process_leader, process_008, FIELD_RENAMINGS, MATERIALIZE
-from btframework.marc import DEMATERIALIZE, INSTANCE_FIELDS, WORK_FIELDS
+from btframework.marc import INSTANCE_FIELDS, WORK_FIELDS
 
 #SLUGCHARS = r'a-zA-Z0-9\-\_'
 #OMIT_FROM_SLUG_PAT = re.compile('[^%s]'%SLUGCHARS)
