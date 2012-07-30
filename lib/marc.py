@@ -3,9 +3,9 @@ Declarations used to elucidate MARC model
 '''
 
 MATERIALIZE = {
-'100a': ('creator', {'marcrType': 'Person'}),
-'110a': ('creator', {'marcrType': 'Person'}),
-'111a': ('creator', {'marcrType': 'Person'}),
+'100': ('creator', {'marcrType': 'Person'}),
+'110': ('creator', {'marcrType': 'Organization'}),
+'111': ('creator', {'marcrType': 'Meeting'}),
 
 '260a': ('publishedAt', {'marcrType': 'Place'}),
 '260b': ('publisher', {'marcrType': 'Organization'}),
@@ -15,31 +15,20 @@ MATERIALIZE = {
 '260g': ('manufactureDate', {'marcrType': 'Temporal'}),
 '263a': ('projectedPublicationDate', {'marcrType': 'Temporal'}),
 
+'300': ('physicalDescription', {'marcrType': 'Measurement'}),
 '310b': ('publicationDateFreq', {'marcrType': 'Temporal'}),
 
-'600a': ('subject', {'marcrType': 'Person'}),
-'610a': ('subject', {'marcrType': 'Organization'}),
-'611a': ('subject', {'marcrType': 'Meeting'}),
-'630v': ('subject', {'marcrType': 'Genre'}),
-'630h': ('subject', {'marcrType': 'Medium'}),
-'630x': ('subject', {'marcrType': 'Topic'}),
-'630y': ('subject', {'marcrType': 'Temporal'}),
-'630z': ('subject', {'marcrType': 'Place'}),
-'650a': ('subject', {'marcrType': 'Topic'}),
-'650c': ('subject', {'marcrType': 'Place'}),
-'650v': ('subject', {'marcrType': 'Genre'}),
-'650x': ('subject', {'marcrType': 'Topic'}),
-'650y': ('subject', {'marcrType': 'Temporal'}),
-'650z': ('subject', {'marcrType': 'Place'}),
-'651a': ('subject', {'marcrType': 'Place'}),
-'651v': ('subject', {'marcrType': 'Genre'}),
-'651x': ('subject', {'marcrType': 'Topic'}),
-'651y': ('subject', {'marcrType': 'Temporal'}),
-'651z': ('subject', {'marcrType': 'Topic'}),
+'600': ('subject', {'marcrType': 'Person'}),
+'610': ('subject', {'marcrType': 'Organization'}),
+'611': ('subject', {'marcrType': 'Meeting'}),
 
-'700a': ('creator', {'marcrType': 'Person'}),
-'710a': ('creator', {'marcrType': 'Person'}),
-'711a': ('creator', {'marcrType': 'Person'}),
+'630': ('uniformTitle', {'marcrType': 'Title'}),
+'650': ('subject', {'marcrType': 'Topic'}),
+'651': ('subject', {'marcrType': 'Topic'}),
+
+'700': ('creator', {'marcrType': 'Person'}),
+'710': ('creator', {'marcrType': 'Organization'}),
+'711': ('creator', {'marcrType': 'Meeting'}),
 }
 
 
@@ -63,6 +52,7 @@ FIELD_RENAMINGS = {
 '240a': 'uniformTitle',
 '243a': 'collectiveUniformTitle',
 '245a': 'title',
+'245f': 'titleInclusiveDate',
 '247a': 'formerTitle',
 '250a': 'edition',
 '250b': 'edition',
@@ -76,8 +66,7 @@ FIELD_RENAMINGS = {
 '260f': 'name',
 '260g': 'manufacturerOn',
 
-#'300a': 'physicalDescription',
-'300a': 'Extent',
+'300a': 'extent',
 '300b': 'physicalDesc',
 '300c': 'dimensions',
 '300e': 'accompanyingMaterial',
@@ -146,6 +135,26 @@ FIELD_RENAMINGS = {
 '651d': 'date',
 '630a': 'uniformTitle',
 '630l': 'language',
+
+'630a': 'name',
+'630h': 'medium',
+'630v': 'formSubdivision',
+'630x': 'generalSubdivision',
+'630y': 'chronologicalSubdivision',
+'630z': 'geographicSubdivision',
+
+'650a': 'name',
+'650c': 'locationOfEvent',
+'650v': 'formSubdivision',
+'650x': 'generalSubdivision',
+'650y': 'chronologicalSubdivision',
+'650z': 'geographicSubdivision',
+
+'651a': 'name',
+'651v': 'formSubdivision',
+'651x': 'generalSubdivision',
+'651y': 'chronologicalSubdivision',
+'651z': 'geographicSubdivision',
 }
 
 

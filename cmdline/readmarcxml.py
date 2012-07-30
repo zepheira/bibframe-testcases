@@ -145,12 +145,6 @@ class subobjects(object):
             item[k] = v
             #item[key+code] = sfval
 
-        #Work out the item's catalogue link
-        lcid = item.get(CATLINKFIELD)
-        if code == '010' and lcid:
-            item['catLink'] = 'http://lccn.loc.gov/' + ''.join(lcid.split())
-
-
         for (acode, aparams, afunc, key) in AUGMENTATIONS:
             if code == acode and all(( item.get(p) for p in aparams )):
                 #Meets the criteria for this augmentation
@@ -161,6 +155,13 @@ class subobjects(object):
         self.ix += 1
         print >> sys.stderr, '.',
         return objid
+
+
+        #Work out the item's catalogue link
+        lcid = item.get(CATLINKFIELD)
+        if code == '010' and lcid:
+            item['catLink'] = 'http://lccn.loc.gov/' + ''.join(lcid.split())
+
 
 
 def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger=logging):
@@ -255,7 +256,7 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                                 handled = True
 
                             else:
-                                field_name = lookup
+                                field_name = u'dftag_' + lookup
                                 if lookup in FIELD_RENAMINGS:
                                     field_name = FIELD_RENAMINGS[lookup]
                                 #Handle the simple field_nameitution of a label name for a MARC code
@@ -288,6 +289,8 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                         work_item[key] = val
 
             #link = work_item.get(u'cftag_008')
+
+
 
 
             #Work out the item's finding aid link
