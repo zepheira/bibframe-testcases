@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <title>MARCR Linked Data Library - Authority centric view</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    
+    <link rel="exhibit/data" href="./marcr-ld-library.json" />
+
+    <script src="http://trunk.simile-widgets.org/exhibit/api/exhibit-api.js"></script>
+    <script src="http://trunk.simile-widgets.org/exhibit/api/extensions/map/map-extension.js?service=google"></script>
+
+    <!-- 
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-collapse.js"></script>
+
+    <script type="text/javascript">
+      $('.accordion').collapse()
+    </script>
+    -->
+
+  </head>
+  
+  <body>
+
+    <!-- restrict exhibit to NAF (Person, Organizations) -->
+    <div ex:role="exhibit-collection" ex:itemTypes="Person, Organization, Topic"></div>
+
+    <!-- nav bar -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+
+        <div class="container">
+          <a class="brand" href="#">MARCR.org
+            <span class="tagline">
+              <span style="padding-left: 20px; font-size: 70%; color: grey;">MARC Resources</span>
+            </span>
+          </a> 
+	  
+          <ul class="nav pull-right">
+            <li><a href="/">Overview</a></li>
+            <li><a href="/vocab/">Vocabulary</a></li>
+            <li><a href="/demos/">Demos</a></li>
+            <li class="active"><a href="/library/">Library</a></li>
+            <li><a href="/contribute/">Contribute</a></li>
+            <li class="divider-vertical"></li>
+            <li>
+              <form class="navbar-search pull-right">
+                <input type="text" class="search-query" placeholder="Search">
+              </form>
+            </li>
+          </ul>
+          
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="body container-fluid">
+      
+      <div class="this-nav row-fluid">
+        <div class="span12" style="margin-top: 50px;">
+          <ul class="breadcrumb">
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+            <li><a href="./">Library</a> <span class="divider">/</span></li>
+            <li class="active">Authority View</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="this-exhibit row-fluid">
+        
+        <div class="span3">
+          
+          <div class="well facets">
+            
+            <div ex:role="facet" ex:facetclass="TextSearch" ex:facetLabel="Search"></div>
+            <br />
+            
+            <div ex:role="facet" ex:expression=".type" ex:facetLabel="Authority Type" ex:sortMode="count"></div>
+
+            <div ex:role="facet" ex:expression="union(!creator.subject.name, !publisher!hasInstance.subject.name)" ex:facetLabel="Subject" ex:sortMode="count"></div>
+
+          </div>
+          
+        </div>
+        
+        <div class="span9">
+          
+          <div class="results" ex:role="viewPanel">
+              
+            <div ex:role="view" 
+                 ex:label="List">
+
+              <!-- Authority Topic display lens -->
+
+	      <div ex:role="lens" ex:itemTypes="Topic" style="display: none">
+		  
+		<h3><i class="icon-header" ex:class-subcontent="icon-{{.marcrType}}"></i> <span ex:content=".name"></span></h3>
+		<br />
+
+                <table class="table table-condensed">
+
+                  <div ex:if-exists="!subject">
+                    <span class="has-subject">
+                      <tr>
+                        <td class="property span2">is Subject Of</td>
+                        <td>
+                          <ul ex:content="!subject" class="value instance">
+                            <li>
+                              <!-- <span class="title" ex:content=".title"></span> -->
+                              <i ex:class-subcontent="icon-{{.hasInstance.resourceType}}"></i> 
+                              <a class="name" ex:href-content=".hasInstance.identifier"><span class="title" ex:content=".title"></span></a> 
+                              (<span class="format" ex:content=".hasInstance.format"></span>) 
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </span>
+                    <span class="no subject"></span>
+                  </div>
+
+                </table>
+              </div>
+
+              <!-- Authority Person display lens -->
+
+	      <div ex:role="lens" ex:itemTypes="Person" style="display: none">
+		  
+		<h3><i class="icon-header" ex:class-subcontent="icon-{{.marcrType}}"></i> <span ex:content=".name"></span></h3>
+		<br />
+                
+                <table class="table table-condensed">
+                  
+                  <div ex:if-exists="!creator">
+                    <span class="has-creator">
+                      <tr>
+                        <td class="property span2">has Authored</td>
+                        <td>
+                          <ul ex:content="!creator" class="value instance">
+                            <li>
+                              <!-- <span class="title" ex:content=".title"></span> -->
+                              <i ex:class-subcontent="icon-{{.hasInstance.resourceType}}"></i> 
+                              <a class="name" ex:href-content=".hasInstance.identifier"><span class="title" ex:content=".title"></span></a> 
+                              (<span class="format" ex:content=".hasInstance.format"></span>) 
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </span>
+                    <span class="no creator"></span>
+                  </div>
+
+                </table>
+              </div>
+
+
+              <!-- Authority Organization display lens -->
+
+	      <div ex:role="lens" ex:itemTypes="Organization" style="display: none">
+		  
+		<h3><i class="icon-header" ex:class-subcontent="icon-{{.marcrType}}"></i> <span ex:content=".name"></span></h3>
+		<br />
+
+                <table class="table table-condensed">
+                                  
+                  <div ex:if-exists="!creator">
+                    <span class="has-creator">
+                      <tr>
+                        <td class="property span2">has Authored</td>
+                        <td>
+                          <ul ex:content="!creator" class="value instance">
+                            <li>
+                              <!-- <span class="title" ex:content=".title"></span> -->
+                              <i ex:class-subcontent="icon-{{.hasInstance.resourceType}}"></i> 
+                              <a class="name" ex:href-content=".hasInstance.identifier"><span class="title" ex:content=".title"></span></a> 
+                              (<span class="format" ex:content=".hasInstance.format"></span>) 
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </span>
+                    <span class="no creator"></span>
+                  </div>
+
+                  <div ex:if-exists="!publisher">
+                    <span class="has-publisher">
+                      <tr>
+                        <td class="property span2">has Published</td>
+                        <td>
+                          <ul ex:content="!publisher" class="value instance">
+                            <li>
+                              <!-- <span class="title" ex:content="!hasInstance.title"></span> -->
+                              
+                              <i ex:class-subcontent="icon-{{.resourceType}}"></i> 
+                              <a class="name" ex:href-content=".identifier"><span class="title" ex:content="!hasInstance.title"></span></a> 
+                              (<span class="format" ex:content=".format"></span>) 
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </span>
+                    <span class="no publisher"></span>
+                  </div>
+
+                </table>
+              </div>
+              
+            </div>
+	    
+          </div> <!-- viewPanel -->
+          
+        </div> <!-- span -->
+        
+      </div> <!-- row fluid -->
+              
+    </div> <!-- container -->
+    
+    <div class="footer">
+      <div class="container">
+        <p>MARCR.org is a joint effort of <a href = "http://loc.gov/">US Library of Congress</a> and <a href="http://zepheira.com/">Zepheira</a></p>
+      </div>
+    </div>
+    
+  </body>
+</html>

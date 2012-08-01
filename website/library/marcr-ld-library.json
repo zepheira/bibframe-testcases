@@ -1,0 +1,220 @@
+{
+    "items" : [
+	{
+        	"id": "marcr:rda-2007-09-20",
+	        "title" : "Resource Description and Access (RDA):Cataloging Rules for the 20th Century",
+		"label" : "Resource Description and Access (RDA): Cataloging Rules for the 20th Century",
+           	"type" : "Work",
+           	"marcrType" : "Work",
+                "creator" : [ "marcr:karen_coyle", "marcr:diane_hillman" ],
+                "subject": [ "marcr:RDA", "marcr:cataloging_rules" ],
+                "abstract": "There is evidence that many individuals and organizations in the library world do not support the work taking place to develop a next generation of the library cataloging rules. The authors describe the tensions existing between those advocating an incremental change to cataloging process and others who desire a bolder library entry into the digital era.",
+                "hasInstance": [ "marcr:rda-2007-09-20:1" ]
+        },
+        {
+                "id": "marcr:rda-2007-09-20:1",
+                "type": "Instance",
+                "marcrType": "Instance",
+                "resourceType": "Article",
+                "identifier" :	"http://www.dlib.org/dlib/january07/coyle/01coyle.html",
+                "format" :	"HTML",
+                "publishedOn" :	"2007-09-20",
+                "publisher" : [ "marcr:dlib_magazine" ],
+                "volume": "13",
+                "number": "1/2",
+                "ISSN": "1082-9873"
+	},
+        {
+           "id": "marcr:karen_coyle",
+           "type": "Person",
+           "marcrType": "Person",
+           "label" : "Karen Coyle",
+           "name": "Karen Coyle"
+        },        
+        {
+           "id": "marcr:diane_hillman",
+           "type": "Person",
+           "marcrType": "Person",
+           "label" : "Diane Hillman",
+           "name": "Diane Hillman"
+        },        
+        {
+           "id": "marcr:RDA",
+           "type": "Topic",
+           "marcrType": "Topic",
+           "label": "RDA",
+           "name": "RDA"
+        },        
+        {
+           "id": "marcr:cataloging_rules",
+           "type": "Topic",
+           "marcrType": "Topic",
+           "label": "Cataloging Rules",
+           "name": "Cataloging Rules"
+        },        
+        {
+           "id": "marcr:dlib_magazine",
+           "type": "Organization",
+           "marcrType": "Organization",
+           "label": "DLib Magazine",
+           "name": "DLib Magazine"
+        },
+	{
+        	"id": "marcr:frbr-1997-09-01",
+	        "title" : "Functional Requirements for Bibliographic Records: Final Report",
+		"label" : "Functional Requirements for Bibliographic Records: Final Report",
+           	"type" : "Work",
+           	"marcrType" : "Work",
+                "creator" : [ "marcr:ifla" ],
+                "subject": [ "marcr:frbr" ],
+                "abstract": "The purpose of this study is to delineate in clearly defined terms the functions performed by the bibliographic record with respect to various media, various applications, and various user needs. The study is to cover the full range of functions for the bibliographic record in its widest sense- i.e., a record that encompasses not only descriptive elements, but access points (name, title, subject, etc.), other 'organizing' elements (classification, etc.), and annotations.",
+                "hasInstance": [ "marcr:frbr-1997-09-01:1", "marcr:frbr-1997-09-01:2" ]
+        },
+        {
+                "id": "marcr:frbr-1997-09-01:1",
+                "marcrType": "Instance",
+                "resourceType": "Report",
+                "identifier" :	"http://www.ifla.org/files/cataloguing/frbr/frbr_2008.pdf",
+                "format" :	"PDF",
+                "publishedOn" :	"1997-09-01",
+                "publisher" : [ "marcr:ifla" ]
+	},
+        {
+                "id": "marcr:frbr-1997-09-01:2",
+                "marcrType": "Instance",
+                "resourceType": "Site",
+                "identifier" :	"http://archive.ifla.org/VII/s13/frbr/frbr_current_toc.htm",
+                "format" :	"HTML",
+                "publishedOn" :	"2007-12-26",
+                "publisher" : [ "marcr:ifla" ]
+	},
+        {
+           "id": "marcr:frbr",
+           "type": "Topic",
+           "marcrType": "Topic",
+           "label": "FRBR",
+           "name": "FRBR",
+	   "hasAuthorityLink": "http://id.loc.gov/authorities/subjects/sh2007002541"
+        },
+        {
+           "id": "marcr:ifla",
+           "type": "Organization",
+           "marcrType": "Organization",
+           "label": "International Federation of Library Associations and Institutions",
+           "name": "International Federation of Library Associations and Institutions",
+	   "hasAuthorityLink": "http://id.loc.gov/authorities/names/n80121204"
+        },
+	{
+        	"id": "marcr:rda-2011-06-13",
+	        "title" : "Testing Resource Description and Access (RDA)",
+		"label" : "Testing Resource Description and Access (RDA)",
+           	"type" : "Work",
+           	"marcrType" : "Work",
+                "creator" : "marcr:library_of_congress",
+                "subject": [ "marcr:RDA", "marcr:cataloging_rules" ],
+                "abstract": "The Library of Congress, the National Agricultural Library, and the National Library of Medicine are pleased to issue a statement from the Executives of the three libraries regarding the Report and Recommendations of the U.S. RDA Test Coordinating Committee on the implementation of RDA—Resource Description & Access.  This statement and the Executive Summary of the Committee’s Report and Recommendations are being issued to allow interested parties sufficient time to review prior to the upcoming Annual Conference of the American Library Association in New Orleans, June 23 -28.  ",
+                "hasInstance": [ "marcr:rda-2011-06-13:1" ]
+        },
+        {
+                "id": "marcr:rda-2011-06-13:1",
+                "marcrType": "Instance",
+                "resourceType": "Report",
+                "format": "HTML",
+                "identifier" :	"http://www.loc.gov/bibliographic-future/rda/",
+                "publishedOn" :	"2011-06-13",
+                "publisher" : [ "marcr:library_of_congress" ]
+       },
+        {
+           "id": "marcr:library_of_congress",
+           "type": "Organization",
+           "marcrType": "Organization",
+           "label": "Library of Congress",
+           "name": "Library of Congress"
+        },    
+	{
+        	"id": "marcr:marc-2008-22-04",
+	        "title" : "Semantic MARC, MARC21 and the Semantic Web",
+		"label" : "Semantic MARC, MARC21 and the Semantic Web",
+           	"type" : "Work",
+           	"marcrType" : "Work",
+                "creator" : [ "marcr:rob_styles", "marcr:danny_ayers", "marcr:nadeem_shabir" ],
+                "subject": [ "marcr:MARC_21", "marcr:cataloging_rules", "marcr:semantic_web", "marcr:RDF" ],
+                "abstract": "The MARC standard for exchanging bibliographic data has been in use for several decades and is used by major libraries worldwide. This paper discusses the possibilities of representing the most prevalent form of MARC, MARC21, as RDF for the Semantic Web, and aims to understand the tradeoffs, if any, resulting from transforming the data. Critically our approach goes beyond a simple transliteration of the MARC21 record syntax to develop rich semantic descriptions of the varied things which may be described using bibliographic records. We present an algorithmic approach for consistently generating URIs from textual data, discuss the algorithmic matching of author names and suggest how RDF generated from MARC records may be linked to other data sources on the Web.",
+                "hasInstance": [ "marcr:marc-2008-22-04:1","marcr:marc-2008-22-04:2"  ]
+        },
+        {
+                "id": "marcr:marc-2008-22-04:1",
+                "type": "Instance",
+                "marcrType": "Instance",
+                "resourceType": "Article",
+                "identifier" :	"http://ebookbrowse.com/02-styles-ayers-semantic-marc-pdf-d1286",
+                "format" :	"e-book",
+                "publishedOn" :	"2008-22-04",
+                "publisher" : [ "marcr:linked_data_on_web_2008" ]
+	},
+	    {
+                "id": "marcr:marc-2008-22-04:2",
+                "type": "Instance",
+                "marcrType": "Instance",
+                "resourceType": "Article",
+                "identifier" :	"http://ebookbrowse.com/02-styles-ayers-semantic-marc-pdf-d1286",
+                "format" :	"PDF",
+                "publishedOn" :	"2008-22-04",
+                "publisher" : [ "marcr:linked_data_on_web_2008" ]
+	},
+        {
+           "id": "marcr:rob_styles",
+           "type": "Person",
+           "marcrType": "Person",
+           "label" : "Rob Styles",
+           "name": "Rob Styles",
+		   "email": "rob.styles@talis.com"
+        },        
+        {
+           "id": "marcr:danny_ayers",
+           "type": "Person",
+           "marcrType": "Person",
+           "label" : "Danny Ayers",
+           "name": "Danny Ayers",
+		    "email": "danny.ayers@talis.com"
+        },        
+      {
+           "id": "marcr:nadeem_shabir",
+           "type": "Person",
+           "marcrType": "Person",
+           "label" : "Nadeem Shabir",
+           "name": "Nadeem Shabir",
+		    "email": "nadeem.shabir@talis.com"
+        },
+        {
+           "id": "marcr:MARC_21",
+           "type": "Topic",
+           "marcrType": "Topic",
+           "label": "MARC 21",
+           "name": "MARC 21"
+        },        
+        {
+           "id": "marcr:RDF",
+           "type": "Topic",
+           "marcrType": "Topic",
+           "label": "RDF",
+           "name": "RDF"
+        },  
+        {
+           "id": "marcr:semantic_web",
+           "type": "Topic",
+           "marcrType": "Topic",
+           "label": "Semantic Web",
+           "name": "Semantic Web"
+        },      
+        {
+           "id": "marcr:linked_data_on_web_2008",
+           "type": "Meeting",
+           "marcrType": "Meeting",
+           "label": "Linked Data on the Web Workshop 2008",
+           "name": "Linked Data on the Web Workshop 2008"
+        },
+	{
+	}
+	]
+	}
