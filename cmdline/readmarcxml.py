@@ -118,6 +118,10 @@ AUGMENTATIONS = {
     ('610', ('name',), lucky_idlc_template(lambda item: item['name'].encode('utf-8')), IDLC_GUESS_FNAME),
     ('650', ('name',), lucky_idlc_template(lambda item: item['name'].encode('utf-8')), IDLC_GUESS_FNAME),
     ('651', ('name',), lucky_idlc_template(lambda item: item['name'].encode('utf-8')), IDLC_GUESS_FNAME),
+
+    ('700', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
+    ('710', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
+    ('711', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
 }
 
 

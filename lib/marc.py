@@ -11,6 +11,7 @@ MATERIALIZE = {
 '260b': ('publisher', {'marcrType': 'Organization'}),
 '260e': ('manufacturedAt', {'marcrType': 'Place'}),
 '260f': ('manufacturer', {'marcrType': 'Organization'}),
+'263a': ('projectedPublicationDate', {'marcrType': 'Temporal'}),
 
 '300': ('physicalDescription', {'marcrType': 'Measurement'}),
 
