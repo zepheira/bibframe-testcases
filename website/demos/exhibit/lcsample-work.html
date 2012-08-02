@@ -65,7 +65,7 @@
           <ul class="nav pull-right">
             <li><a href="/">Overview</a></li>
             <li><a href="/vocab/">Vocabulary</a></li>
-            <li class="active"><a href="/demos/">Demos</a></li>
+            <li class="active"><a href="/tools/">Tools</a></li>
             <li><a href="/library/">Library</a></li>
             <li><a href="/contribute/">Contribute</a></li>
             <li class="divider-vertical"></li>
@@ -87,12 +87,11 @@
         <div class="span12" style="margin-top: 50px;">
           <ul class="breadcrumb">
             <li><a href="../../index.html">Home</a> <span class="divider">/</span></li>
-            <li><a href="../index.html">Demos</a> <span class="divider">/</span></li>
+            <li><a href="../index.html">Tools</a> <span class="divider">/</span></li>
             <li class="active">Linked Data Navigator</li>
           </ul>
         </div>
       </div>
-
       
       <div class="row-fluid">
 
@@ -129,7 +128,7 @@
               <!-- Work display lens -->
 	      <div ex:role="lens" ex:itemTypes="Work" style="display: none">
 		  
-		<h3><span ex:content=".title"></span> <span ex:content=".subTitle"></span> <span ex:content=".titleInclusiveDate"></span></h3>
+		<h3 class="titleWork"><span ex:content=".title"></span> <span ex:content=".subTitle"></span> <span ex:content=".titleInclusiveDate"></span></h3>
 		<br />
 		
 		<table class="table table-condensed">
@@ -176,11 +175,11 @@
                             <i ex:class-subcontent="icon-default icon-{{.resourceType}}"  ex:title-subcontent="{{.resourceType}}"></i>
 
                             <span ex:if="exists(.link)">
-                              <a ex:href-content=".link"><span ex:content="!instance.title"></span> <span ex:content="!instance.subTitle"></span> <span ex:content="!instance.titleInclusiveDate"></span></a>
+                              <span class="title"><a ex:href-content=".link"><span ex:content="!instance.title"></span> <span ex:content="!instance.subTitle"></span> <span ex:content="!instance.titleInclusiveDate"></span></a></span>
                             </span>
 
                             <span ex:if="not(exists(.link))">
-                              <span ex:content="!instance.title"></span> <span ex:content="!instance.subTitle"></span> <span ex:content="!instance.titleInclusiveDate"></span>
+                              <span class="title"><span ex:content="!instance.title"></span> <span ex:content="!instance.subTitle"></span> <span ex:content="!instance.titleInclusiveDate"></span></span>
                             </span>
                           </h4>
                           
