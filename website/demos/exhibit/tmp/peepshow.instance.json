@@ -1,0 +1,19 @@
+{"items": [
+{
+    "cftag_005": "20120716164112.0", 
+    "lcCallNumber": "GV1525", 
+    "cftag_001": "17293028", 
+    "publisher": "ps_obj_2", 
+    "resourceType": "language material", 
+    "cftag_008": "120510s1851    gw af         000 0 mul d", 
+    "publishedAt": "ps_obj_1", 
+    "label": "ps_1", 
+    "manufacturedAt": "ps_obj_3", 
+    "physicalDescription": "ps_obj_5", 
+    "id": "ps_instance_1", 
+    "dftag_050b": ".I55 1851", 
+    "publishedOn": "1851]", 
+    "type": "InstanceRecord", 
+    "leader": "02444cam a2200409 a 4500", 
+    "manufacturer": "ps_obj_4"
+}] }

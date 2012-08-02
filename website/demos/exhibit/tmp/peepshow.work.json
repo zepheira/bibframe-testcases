@@ -1,0 +1,37 @@
+{"items": [
+{
+    "dftag_5005": "DLC", 
+    "subTitle": "The interior of the Crystal Palace in London : a view into the life and doings of London during the Great Industrial Exhibition.", 
+    "dftag_2465": "DLC", 
+    "title": "Das Innere des Glaspalastes in London =", 
+    "lccn": "  2012659481", 
+    "dftag_040c": "LUS", 
+    "creator": "ps_obj_12", 
+    "label": "ps_1", 
+    "note": [
+        "Title from hand-colored first leaf.", 
+        "The title forms the front cover with a single open peep hole in center. The leaves are hand-colored cutout panels, connected at the sides by folded paper panels, accordion style folded to 18 x 23 cm. When unfolded, full length extends to 44 cm and forms a telescopic \"peep show\" of views of the interior of the Crystal Palace exhibition hall in London from 1851.", 
+        "German title is listed first: Innere des Glaspalastes in London : ein Blick in das Leben und Treiben bei der grossen Weltausstellung. French title: Inte\u0301rieur du Palais de cristal de Londres. Italian title: Interno del Palazzo di cristallo in Londra.", 
+        "On front cover: \"Original-Eigenthum G.W.F.\"", 
+        "LC copy in clam-shell box signed \"Horton Bindery\" with label on spine: The great exhibition, 1851."
+    ], 
+    "instance": "ps_instance_1", 
+    "dftag_246a": [
+        "Interior of the Crystal Palace in London", 
+        "Great exhibition, 1851"
+    ], 
+    "dftag_041a": "ita", 
+    "dftag_035a": "(OCoLC)ocn426035137", 
+    "dftag_040d": "DLC", 
+    "type": "Work", 
+    "id": "ps_work_1", 
+    "dftag_040a": "LUS", 
+    "subject": [
+        "ps_obj_6", 
+        "ps_obj_7", 
+        "ps_obj_8", 
+        "ps_obj_9", 
+        "ps_obj_10", 
+        "ps_obj_11"
+    ]
+}] }
