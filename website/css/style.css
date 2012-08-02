@@ -46,12 +46,13 @@ margin-left: 30px;
 line-height: 150%;
 }
 
+.overview h1 {
+padding-top: 10px;
+padding-bottom: 20px;
+}
 
 ul
 {
- list-style-type: none;
- padding: 0px;
- margin: 0px;
 }
 
 ul.instance li {

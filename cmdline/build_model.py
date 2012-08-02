@@ -43,7 +43,7 @@ T0 = '''<!DOCTYPE html>
           </a> 
       
           <ul class="nav pull-right">
-            <li class="active"><a href="#">Overview</a></li>
+            <li><a href="#">Overview</a></li>
             <li class="active"><a href="/vocab/">Vocabulary</a></li>
             <li><a href="/demos/">Demos</a></li>
             <li><a href="/library/">Library</a></li>
