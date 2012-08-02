@@ -136,6 +136,7 @@ class subobjects(object):
         code = props[u'code']
         item = {
             u'id': objid,
+            u'label': objid,
             u'type': 'Object',
         }
         for k, v in props.items():
@@ -199,7 +200,7 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
             instance_item.update(work_item)
             instance_item[u'id'] = u'instance' + recid
             instance_item[u'type'] = u'InstanceRecord'
-            work_item[u'instance'] = u'instance' + recid
+            work_item[u'instances'] = u'instance' + recid
 
             for k, v in process_leader(leader):
                 #For now assume all leader fields are instance level
@@ -295,8 +296,6 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
             #link = work_item.get(u'cftag_008')
 
 
-
-
             #Work out the item's finding aid link
             link = work_item.get(u'dftag_' + FALINKFIELD)
             if link:
@@ -305,6 +304,31 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                 if r.history: #If redirects were encountered
                     resolvedlink = r.history[-1].headers['location']
                     work_item['fa_resolvedlink'] = resolvedlink
+
+
+            #Handle ISBNs
+            isbns = instance_item.get('isbn', [])
+            if len(isbns) > 1:
+                base_instance = instance_item[u'id']
+                instances = [base_instance]
+                subscript = ord(u'b')
+                for subix, subisbn in enumerate(isbns):
+                    subitem = instance_item.copy()
+                    isbnparts = subisbn.split()
+                    subitem[u'isbn'] = isbnparts[0]
+                    subitem[u'id'] = base_instance + chr(subscript + subix)
+                    if len(isbnparts) > 1:
+                        subitem[u'isbnType'] = '.'.join(subisbn.split()[1:])
+                    if subix:
+                        instances.append(subitem[u'id'])
+                        instance_sink.send(subitem)
+                    else:
+                        #FIXME: Clean up this logic a bit re: DRY
+                        instance_item[u'isbn'] = isbnparts[0]
+                        if len(isbnparts) > 1:
+                            instance_item[u'isbnType'] = '.'.join(subisbn.split()[1:])
+                #instance_item[u'isbn'] = isbns[0]
+                work_item[u'instances'] = instances
 
             #reduce lists of just one item
             for k, v in work_item.items():
