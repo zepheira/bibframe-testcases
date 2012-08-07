@@ -74,18 +74,22 @@ T0 = '''<!DOCTYPE html>
       </div>
 
       <div class="this row-fluid">
-    <div class="span12">
-      <h1 class="this-name">{clslabel}</h1>
-      <h3 class="this-description">{clstag}</h3>
-      <br />
-    </div>
+        <div class="span12">
+          <h1 class="this-name">{clslabel}</h1>
+          <h3 class="this-description">{clstag}</h3>
+          <br />
+        </div>
       </div>
+
+      <div class="well">
 
       <div class="vocabulary-display">
 
 {tables}
 
       </div> <!-- vocabulary-display -->
+  
+      </div>
 
       <div class="specific-types-display">
 
@@ -108,7 +112,7 @@ T0 = '''<!DOCTYPE html>
     
     <div class="footer">
       <div class="container">
-        <p>MARCR.org is a joint effort of <a href = "http://loc.gov/">US Library of Congress</a> and <a href="http://zepheira.com/">Zepheira</a></p>
+        <p>MARCR.org is a joint effort of <a href = "http://loc.gov/">US Library of Congress</a> and <a href="http://zepheira.com/">Zepheira</a> and <a href = "/contrib/">You!</a></p>
       </div>
     </div>
 

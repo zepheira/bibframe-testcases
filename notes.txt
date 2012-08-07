@@ -1,3 +1,5 @@
+python ./cmdline/build_model.py --base=/~eric/vocab ./doc/bibframe.xml ~/Sites/vocab  /* internal testing */ 
+
 python ./cmdline/build_model.py --base=/vocab ./doc/bibframe.xml ./website/vocab
 
 python ./cmdline/readmarcxml.py ../btframework/data/sample-files-20120725-small.xml ../btframework/marcr/lcsample

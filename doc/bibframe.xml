@@ -34,6 +34,18 @@
     </property>
   </class>
 
+  <class id='Authority' isa='Resource'> 
+    <label>Authority</label>
+    <tagline>Authority</tagline>
+    <property id='hasAuthorityLink'>
+      <label>hasAuthorityLink</label>
+      <typedesc>URL</typedesc>
+      <description>A authoritative link to a MARCR authority record.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
   <class id='CreativeWork' isa='Resource'> 
     <label>Creative Work</label>
     <tagline>The most generic kind of creative work, including bibliographic resources, movies, photographs, software programs, etc.</tagline>
@@ -305,61 +317,76 @@
     </property>
   </class>
 
-  <class id='Person' isa='Resource'> 
+  <class id='Person' isa='Authority'> 
     <label>Person</label>
     <tagline>Individual human.</tagline>
-    <property id='hasAuthorityLink'>
-      <label>hasAuthorityLink</label>
+    <property id='hasIDLink'>
+      <label>hasIDLink</label>
       <typedesc>URL</typedesc>
-      <description>A authoritative link to a MARCR authority record.</description>
+      <description>A authoritative link to a id.loc.gov record.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='hasAuthorityLink'>
+      <label>hasViafLink</label>
+      <typedesc>URL</typedesc>
+      <description>A authoritative link to a VIAF authority record.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
   </class>
 
-  <class id='Place' isa='Resource'> 
+
+  <class id='Place' isa='Authority'> 
     <label>Place</label>
     <tagline>A physical place</tagline>
-    <property id='hasAuthorityLink'>
-      <label>hasAuthorityLink</label>
+    <property id='hasIDLink'>
+      <label>hasIDLink</label>
       <typedesc>URL</typedesc>
-      <description>A authoritative link to a MARCR authority record.</description>
+      <description>A authoritative link to a id.loc.gov record.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
   </class>
 
-  <class id='Organization' isa='Resource'> 
+  <class id='Organization' isa='Authority'> 
     <label>Organization</label>
     <tagline>Organized group of persons.</tagline>
-    <property id='hasAuthorityLink'>
-      <label>hasAuthorityLink</label>
+    <property id='hasIDLink'>
+      <label>hasIDLink</label>
       <typedesc>URL</typedesc>
-      <description>A authoritative link to a MARCR authority record.</description>
+      <description>A authoritative link to a id.loc.gov record.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='hasAuthorityLink'>
+      <label>hasViafLink</label>
+      <typedesc>URL</typedesc>
+      <description>A authoritative link to a VIAF authority record.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
   </class>
 
-  <class id='Meeting' isa='Resource'> 
+  <class id='Meeting' isa='Authority'> 
     <label>Meeting</label>
     <tagline>Gathering of persons for purpose.</tagline>
-    <property id='hasAuthorityLink'>
-      <label>hasAuthorityLink</label>
+    <property id='hasIDLink'>
+      <label>hasIDLink</label>
       <typedesc>URL</typedesc>
-      <description>A authoritative link to a MARCR authority record.</description>
+      <description>A authoritative link to a id.loc.gov record.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
   </class>
 
-  <class id='Topic' isa='Resource'> 
+  <class id='Topic' isa='Authority'> 
     <label>Topic</label>
     <tagline>A Topic</tagline>
-    <property id='hasAuthorityLink'>
-      <label>hasAuthorityLink</label>
+    <property id='hasIDLink'>
+      <label>hasIDLink</label>
       <typedesc>URL</typedesc>
-      <description>A authoritative link to a MARCR authority record.</description>
+      <description>A authoritative link to a id.loc.gov record.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
