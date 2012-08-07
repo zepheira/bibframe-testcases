@@ -58,26 +58,56 @@
 
         <div class="prose">
 
-          <h1>The MARCR Model</h1>
+          <div class="row-fluid">
+          <div class="span7">
+            
+            <h1>The MARCR Model</h1>
+            
+            <p>In translating the MARC 21 format to a Linked Data
+              model it is important to deconstruct and then
+              reconstruct the informational assets that comprise
+              MARC. The core classes related to the MARCR model are
+              defined in three main categories:</p>
+            
+            <p>
+              <ul>
+                
+                <li><strong><a href = "./CreativeWork/">Work</a></strong> - a resource reflecting a conceptual essence of the cataloging item. Roughly equivalent to work or expression in FRBR. </li>
+                
+                <li><strong><a href = "./Instance/">Instance</a></strong> - a resource reflecting an individual, material embodiment of the Work. Roughly equivalent to manifestation or item in FRBR.</li>
+                
+                <li><strong>Authority</strong> - a resource reflecting key authority concepts that have defined relationships reflected in the Work and Instance. Example of Authority Resources include <a href = "./Person/">People</a>, <a href = "./Place/">Places</a>, <a href = "./Topic/">Topics</a>, <a href = "./Organization/">Organizations</a>, etc. One important concept in Authority is domain, which is the entity taking responsibility for the recognition, organization and maintenance (to ensure integrity) of the authoritative resources.
+                  
+              </ul>
+            </p>
+            
+            <p> These "MARC Resources" can then be re-assembled into
+              a coherent architecture that allows for cooperative
+              cataloging at a far more granular level than before.
+              Then, as we leverage the Web as an architecture,
+              whenever updates to these MARC Resources are performed
+              (e.g. someone adds new information about a Person, new
+              mappings related to a Subject, etc.) notification events
+              can occur to automatically update systems that reference
+              these Resources.  Further, these information assets can
+              now be more effectively utilized at a granular level and
+              provide a richer substrate in which local collections,
+              special collections and third party data can easily
+              annotate and contextualize cooperative library
+              content. </p>
+            
+          </div>
           
-          <p>In translating the MARC 21 format to a Linked Data model it is important to deconstruct and then reconstruct the informational assets that comprise MARC. The core classes related to the MARCR model are defined in three main categories:</p>
-
-          <p>
-            <ul>
-            <li><strong><a href = "./CreativeWork/">Work</a></strong> - a resource reflecting a conceptual essence of the cataloging item. Roughly equivalent to work or expression in FRBR. </li>
-            <li><strong><a href = "./Instance/">Instance</a></strong> - a resource reflecting an individual, material embodiment of the Work. Roughly equivalent to manifestation or item in FRBR.</li>
-            <li><strong>Authority</strong> - a resource reflecting key authority concepts that have defined relationships reflected in the Work and Instance. Example of Authority Resources include <a href = "./Person/">People</a>, <a href = "./Place/">Places</a>, <a href = "./Topic/">Topics</a>, <a href = "./Organization/">Organizations</a>, etc. One important concept in Authority is domain, which is the entity taking responsibility for the recognition, organization and maintenance (to ensure integrity) of the authoritative resources.
-
-          </ul>
-          </p>
+          <div class="span3">
+            <img src = "../img/marcr.png" />
+          </div>
           
-          <p> These "MARC Resources" can then be re-assembled into a coherent architecture that allows for cooperative cataloging at a far more granular level than before.   Then, as we leverage the Web as an architecture, whenever updates to these MARC Resources are performed (e.g. someone adds new information about a Person, new mappings related to a Subject, etc.) notification events can occur to automatically update systems that reference these Resources.   Further, these information assets can now be more effectively utilized at a granular level and provide a richer substrate in which local collections,  special collections and third party data can easily annotate and contextualize cooperative library content. </p>
-          
+          </div>
         </div>
+      </div> <!-- prose -->
         
-      </div> <!-- row fluid -->
+    </div> <!-- row fluid -->
       
-    </div> <!-- container -->
     
     <div class="footer">
       <div class="container">
