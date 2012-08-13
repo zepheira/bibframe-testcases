@@ -10,7 +10,6 @@ import re
 import os
 import time
 import logging
-import urllib
 import string
 import itertools
 
@@ -25,6 +24,7 @@ from amara.lib.util import element_subtree_iter
 
 from btframework.marc import process_leader, process_008, FIELD_RENAMINGS, MATERIALIZE
 from btframework.marc import INSTANCE_FIELDS, WORK_FIELDS
+from btframework.augment import lucky_viaf_template, lucky_idlc_template
 
 #SLUGCHARS = r'a-zA-Z0-9\-\_'
 #OMIT_FROM_SLUG_PAT = re.compile('[^%s]'%SLUGCHARS)
@@ -71,41 +71,10 @@ def dcxml2json(source):
     for elem in elems:
         yield elem.xml_local, U(elem)
 
-
-def lucky_viaf_template(qfunc):
-    '''
-    Used for searching OCLC for VIAF records
-    '''
-    def lucky_viaf(item):
-        q = qfunc(item)
-        query = urllib.urlencode({'query' : q, 'maximumRecords': 1, 'httpAccept': 'application/rss+xml'})
-        url = 'http://viaf.org/viaf/search?' + query
-        #print >> sys.stderr, url
-        r = requests.get(url)
-        doc = amara.parse(r.content)
-        answer = U(doc.xml_select(u'/rss/channel/item/link'))
-        #print >> sys.stderr, answer
-        time.sleep(2) #Be polite!
-        return answer
-    return lucky_viaf
-
-
-def lucky_idlc_template(qfunc):
-    '''
-    Used for searching OCLC for VIAF records
-    '''
-    def lucky_idlc(item):
-        q = qfunc(item)
-        query = urllib.quote(q)
-        url = 'http://id.loc.gov/authorities/label/' + query
-        r = requests.head(url)
-        #print >> sys.stderr, url, item[u'code']
-        answer = r.headers['X-URI']
-        #print >> sys.stderr, answer
-        time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
-        return answer
-    return lucky_idlc
-
+#ISBNNU_PAT = 'http://isbn.nu/{0}.xml'
+ISBNNU_PAT = 'http://isbn.nu/{0}'
+OPENLIBRARY_COVER_PAT = 'http://covers.openlibrary.org/b/isbn/{0}-M.jpg'
+http://catalog.hathitrust.org/api/volumes/brief/json/isbn:0030110408 -> http://catalog.hathitrust.org/Record/000578050
 
 AUGMENTATIONS = {
     #('600', ('a', 'd'), lucky_google_template(lambda item: 'site:viaf.org {0}, {1}'.format(item['a'], item['d'])), u'viaf_guess'), #VIAF Cooper, Samuel, 1798-1876
@@ -200,7 +169,7 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
             instance_item.update(work_item)
             instance_item[u'id'] = u'instance' + recid
             instance_item[u'type'] = u'InstanceRecord'
-            work_item[u'instances'] = u'instance' + recid
+            work_item[u'instance'] = u'instance' + recid
 
             for k, v in process_leader(leader):
                 #For now assume all leader fields are instance level
@@ -306,41 +275,65 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                     work_item['fa_resolvedlink'] = resolvedlink
 
 
-            #Handle ISBNs
+            #Handle ISBNs re: https://foundry.zepheira.com/issues/1976
+            new_instances = []
+
             isbns = instance_item.get('isbn', [])
-            if len(isbns) > 1:
-                base_instance = instance_item[u'id']
-                instances = [base_instance]
-                subscript = ord(u'b')
-                for subix, subisbn in enumerate(isbns):
-                    subitem = instance_item.copy()
-                    isbnparts = subisbn.split()
-                    subitem[u'isbn'] = isbnparts[0]
-                    subitem[u'id'] = base_instance + chr(subscript + subix)
-                    if len(isbnparts) > 1:
-                        subitem[u'isbnType'] = '.'.join(subisbn.split()[1:])
-                    if subix:
-                        instances.append(subitem[u'id'])
-                        instance_sink.send(subitem)
+            def isbn_list(isbns):
+                isbnset = set()
+                for isbn in isbns:
+                    parts = isbn.split(None, 1)
+                    if len(parts) == 1:
+                        isbnset.add((parts[0], None))
                     else:
-                        #FIXME: Clean up this logic a bit re: DRY
-                        instance_item[u'isbn'] = isbnparts[0]
-                        if len(isbnparts) > 1:
-                            instance_item[u'isbnType'] = '.'.join(subisbn.split()[1:])
+                        isbnset.add((parts[0], parts[1]))
+                return list(isbnset)
+
+            base_instance_id = instance_item[u'id']
+            instance_ids = []
+            subscript = ord(u'a')
+            for subix, (inum, itype) in enumerate(isbn_list(isbns)):
+                #print >> sys.stderr, subix, inum, itype
+                subitem = instance_item.copy()
+                subitem[u'isbn'] = inum
+                subitem[u'id'] = base_instance_id + (unichr(subscript + subix) if subix else u'')
+                if itype: subitem[u'isbnType'] = itype
+                instance_ids.append(subitem[u'id'])
+                new_instances.append(subitem)
+                isbnnu_url = ISBNNU_PAT.format(inum)
+                #q = qfunc(item)
+                #print >> sys.stderr, url
+                #r = requests.get(url)
+                #doc = amara.parse(r.content)
+                #print >> sys.stderr, answer
+                subitem[u'isbnnu'] = isbnnu_url
+                #U(doc.xml_select(u'/rss/channel/item/link'))
+                subitem[u'openlibcover'] = OPENLIBRARY_COVER_PAT.format(inum)
+                #time.sleep(2) #Be polite!
+
                 #instance_item[u'isbn'] = isbns[0]
-                work_item[u'instances'] = instances
+
+            if not new_instances:
+                #Make sure it's created as an instance even if it has no ISBN
+                new_instances.append(instance_item)
+                instance_ids.append(base_instance_id)
+
+            work_item[u'instance'] = instance_ids
 
             #reduce lists of just one item
             for k, v in work_item.items():
                 if type(v) is list and len(v) == 1:
                     work_item[k] = v[0]
-
-            for k, v in instance_item.items():
-                if type(v) is list and len(v) == 1:
-                    instance_item[k] = v[0]
-
             work_sink.send(work_item)
-            instance_sink.send(instance_item)
+
+            def send_instance(instance):
+                for k, v in instance.items():
+                    if type(v) is list and len(v) == 1:
+                        instance[k] = v[0]
+                instance_sink.send(instance)
+
+            for ninst in new_instances:
+                send_instance(ninst)
 
             stub_item = {
                 u'id': recid,
