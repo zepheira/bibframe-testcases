@@ -9,9 +9,9 @@
     <link href="./css/bootstrap-responsive.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
     
-    <link rel="exhibit/data" href="./lcsample1.work.json" />
-    <link rel="exhibit/data" href="./lcsample1.instance.json" />
-    <link rel="exhibit/data" href="./lcsample1.object.json" />
+    <link rel="exhibit/data" href="./lcsample-publib.work.json" />
+    <link rel="exhibit/data" href="./lcsample-publib.instance.json" />
+    <link rel="exhibit/data" href="./lcsample-publib.object.json" />
 
     <link rel="exhibit/data" href="./tmp/peepshow.work.json" />
     <link rel="exhibit/data" href="./tmp/peepshow.instance.json" />
@@ -47,7 +47,7 @@
   <body>
     
     <!-- restrict exhibit to Works -->
-    <div ex:role="exhibit-collection" ex:itemTypes="Work"></div>
+    <div ex:role="exhibit-collection" ex:itemTypes="WorkRecord"></div>
 
 
     <!-- nav bar -->
@@ -102,9 +102,9 @@
             <div ex:role="facet" ex:facetclass="TextSearch" ex:facetLabel="Search"></div>
             <br />
 
-            <div ex:role="facet" ex:expression=".instance.resourceType" ex:facetLabel="Resource Type" ex:sortMode="count" ex:height="40px"></div>
+            <div ex:role="facet" ex:expression=".instance.resourceType" ex:facetLabel="Resource Type" ex:sortMode="count"></div>
 
-            <div ex:role="facet" ex:expression=".instance.isbnType" ex:facetLabel="Book Type" ex:sortMode="count"></div>
+            <!-- <div ex:role="facet" ex:expression=".instance.isbnType" ex:facetLabel="Book Type" ex:sortMode="count"></div> -->
 
             <div ex:role="facet" ex:expression=".creator.name" ex:facetLabel="Creator" ex:sortMode="count"></div>
 
@@ -112,7 +112,7 @@
 
             <div ex:role="facet" ex:expression=".instance.publisher.name" ex:facetLabel="Publisher" ex:sortMode="count"></div>
 
-            <div ex:role="facet" ex:expression="union(.subject.idlcFromHeuristic, .creator.idlcFromHeuristic)" ex:facetLabel="id.loc.gov lookup" ex:sortMode="count"></div>
+            <!-- <div ex:role="facet" ex:expression="union(.subject.idlcFromHeuristic, .creator.idlcFromHeuristic)" ex:facetLabel="id.loc.gov lookup" ex:sortMode="count"></div> -->
             
           </div>
           
@@ -126,7 +126,7 @@
                  ex:label="List">
               
               <!-- Work display lens -->
-	      <div ex:role="lens" ex:itemTypes="Work" style="display: none">
+	      <div ex:role="lens" ex:itemTypes="WorkRecord" style="display: none">
 		  
 		<h3 class="titleWork"><span ex:content=".title"></span> <span ex:content=".subTitle"></span> <span ex:content=".titleInclusiveDate"></span></h3>
 		<br />
