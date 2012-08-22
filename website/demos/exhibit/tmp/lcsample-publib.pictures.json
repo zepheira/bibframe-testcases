@@ -1,0 +1,43 @@
+{"items": [
+{
+    "id": "picture_2", 
+    "type": "AnnotationRecord", 
+    "person": "person_1",
+    "pictureOf": "instance_1c",
+    "thumbnail": "./tmp/thumbnail_instance_1.png",
+    "link": "./tmp/image_instance_1.png"
+},
+{
+    "id": "picture_3", 
+    "type": "AnnotationRecord", 
+    "person": "person_1",
+    "pictureOf": "instance_10",
+    "thumbnail": "./tmp/thumbnail_instance_10.png",
+    "link": "./tmp/image_instance_10.png"
+},
+{
+    "id": "picture_4", 
+    "type": "AnnotationRecord", 
+    "person": "person_1",
+    "pictureOf": "instance_100",
+    "thumbnail": "./tmp/thumbnail_instance_100.png",
+    "link": "./tmp/image_instance_100.png"
+},
+{
+    "id": "picture_5", 
+    "type": "AnnotationRecord", 
+    "person": "person_1",
+    "pictureOf": "instance_1000",
+    "thumbnail": "./tmp/thumbnail_instance_1000.png",
+    "link": "./tmp/image_instance_1000.png"
+},
+{
+   "marcrType": "Person",  
+   "type": "Object",
+   "id": "person_1",
+   "name": "Eric Miller",
+   "link": "http://zepheira.com/people/eric-miller"
+}
+]
+}
+
