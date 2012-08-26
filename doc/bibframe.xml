@@ -49,11 +49,18 @@
   <class id='CreativeWork' isa='Resource'> 
     <label>Creative Work</label>
     <tagline>The most generic kind of creative work, including bibliographic resources, movies, photographs, software programs, etc.</tagline>
-    <property id='creator'>
-      <label>creator</label>
+    <property id='mainEntry'>
+      <label>mainEntry</label>
       <typedesc>@Person or @Organization or @Meeting</typedesc>
-      <description>The creator associated with the creative work.</description>
+      <description>The primary entity associated with the creative work. Refinement relationships will be defined as subproperties of this property.</description>
       <marcref>100, 110, 111</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='addedEntry'>
+      <label>addedEntry</label>
+      <typedesc>@Person or @Organization or @Meeting</typedesc>
+      <description>The additinoal entities associated with the creative work. Refinement relationships will be defined as subproperties of this parent.</description>
+      <marcref>700, 710, 711</marcref>
       <rdaref></rdaref>
     </property>
     <property id='uniformTitle'>
@@ -68,20 +75,6 @@
       <typedesc>Text</typedesc>
       <description>Intended audience of the instance.</description>
       <marcref>008 / 22</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='formatedContentsNote'>
-      <label>formatedContentsNote</label>
-      <typedesc>Text</typedesc>
-      <description>Formated content notes including table of contents, etc.</description>
-      <marcref>505</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='summary'>
-      <label>summary</label>
-      <typedesc>Text</typedesc>
-      <description>Text of the summary, abstract or review.</description>
-      <marcref>520</marcref>
       <rdaref></rdaref>
     </property>
     <property id='note'>
@@ -100,9 +93,174 @@
     </property>
     <property id='hasInstance'>
       <label>hasInstance</label>
-      <typedesc>@Book or @Image or @Music or @Software or @Map</typedesc>
+      <typedesc>@PhysicalBook or @PhysicalMap or @ComputerFile or @PhysicalMusic or @Application or @Audio or @Image or @Video or @Text</typedesc>
       <description>An instantiation of a creative work.</description>
       <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='relatedTo'>
+      <label>relatedTo</label>
+      <typedesc>@CreativeWork</typedesc>
+      <description>A related Creative Work. Refinement relationships will be defined as subproperties of this property.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+  
+  <class id='Collection' isa='CreativeWork'> 
+    <label>Collection</label>
+    <tagline>A collection of Creative Works. Examples of collections include continuing resources, journal serials, etc.</tagline>
+    <property id='seriesStatement'>
+      <label>seriesStatement</label>
+      <typedesc>Text</typedesc>
+      <description>Series statement for a series title.</description>
+      <marcref>490a</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='hasWork'>
+      <label>hasWork</label>
+      <typedesc>@CreativeWork</typedesc>
+      <description>A creative work.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='Article' isa='CreativeWork'> 
+    <label>Article</label>
+    <tagline>An article</tagline>
+    <property id='abstract'>
+      <label>abstract</label>
+      <typedesc>Text</typedesc>
+      <description>Text of the abstract</description>
+      <marcref>520</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='Book' isa='CreativeWork'> 
+    <label>Book</label>
+    <tagline>A book, monograph</tagline>
+    <property id='formatedContentsNote'>
+      <label>formatedContentsNote</label>
+      <typedesc>Text</typedesc>
+      <description>Formated content notes including table of contents, etc.</description>
+      <marcref>505</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='summary'>
+      <label>summary</label>
+      <typedesc>Text</typedesc>
+      <description>Text of the summary, abstract or review.</description>
+      <marcref>520</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='Map' isa='CreativeWork'> 
+    <label>Map</label>
+    <tagline>A map, cartagraphic work</tagline>
+    <property id='note'>
+      <label>note</label>
+      <typedesc>Text</typedesc>
+      <description>summary</description>
+      <marcref>520</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='MediaObject' isa='CreativeWork'> 
+    <label>Media Object</label>
+    <tagline>A media object</tagline>
+    <property id='note'>
+      <label>note</label>
+      <typedesc>Text</typedesc>
+      <description>summary</description>
+      <marcref>520</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='Movie' isa='CreativeWork'> 
+    <label>Movie</label>
+    <tagline>A movie or video</tagline>
+    <property id='note'>
+      <label>note</label>
+      <typedesc>Text</typedesc>
+      <description>summary</description>
+      <marcref>520</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='MusicRecording' isa='CreativeWork'> 
+    <label>Music Recording</label>
+    <tagline>A music recording</tagline>
+    <property id='note'>
+      <label></label>
+      <typedesc>Text</typedesc>
+      <description>summary</description>
+      <marcref>520</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='Painting' isa='CreativeWork'> 
+    <label>Painting</label>
+    <tagline>A painting</tagline>
+    <property id='note'>
+      <label>note</label>
+      <typedesc>Text</typedesc>
+      <description>summary</description>
+      <marcref>520</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='Photograph' isa='CreativeWork'> 
+    <label>Photograph</label>
+    <tagline>A photograph</tagline>
+    <property id='note'>
+      <label>note</label>
+      <typedesc>Text</typedesc>
+      <description>summary</description>
+      <marcref>520</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='Sculpture' isa='CreativeWork'> 
+    <label>Scuplture</label>
+    <tagline>A sculpture</tagline>
+    <property id='note'>
+      <label>note</label>
+      <typedesc>Text</typedesc>
+      <description>summary</description>
+      <marcref>520</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='SoftwareApplication' isa='CreativeWork'> 
+    <label>Scuplture</label>
+    <tagline>A sculpture</tagline>
+    <property id='note'>
+      <label>note</label>
+      <typedesc>Text</typedesc>
+      <description>summary</description>
+      <marcref>520</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='WebPage' isa='CreativeWork'> 
+    <label>WebPage</label>
+    <tagline>A web page</tagline>
+    <property id='note'>
+      <label>note</label>
+      <typedesc>Text</typedesc>
+      <description>summary</description>
+      <marcref>520</marcref>
       <rdaref></rdaref>
     </property>
   </class>
@@ -180,27 +338,27 @@
     </property>
   </class>
 
-  <class id='Music' isa='Instance'> 
-    <label>Music</label>
-    <tagline>Music</tagline>
+  <class id='Audio' isa='Instance'> 
+    <label>Audio</label>
+    <tagline>Audio</tagline>
     <property id='extent'>
       <label>extent</label>
       <typedesc>Text</typedesc>
-      <description>Number of physical pages, volumes, cassettes, total playing time, etc. of each type of item.</description>
+      <description>Total playing time, etc. of each type of item.</description>
       <marcref>300 $a</marcref>
       <rdaref></rdaref>
     </property>
-    <property id='otherPhysicalDetails'>
-      <label>otherPhysicalDetails</label>
+    <property id='format'>
+      <label>format</label>
       <typedesc>Text</typedesc>
-      <description>Physical characteristics such as playing speed, groove characteristics, etc.</description>
-      <marcref>300 $b</marcref>
+      <description>The format of the application</description>
+      <marcref></marcref>
       <rdaref></rdaref>
     </property>
   </class>
 
-  <class id='Software' isa='Instance'>
-    <label>Software</label>
+  <class id='Application' isa='Instance'>
+    <label>Application</label>
     <tagline>A computer file / software</tagline>
     <property id='systemDetails'>
       <label>systemDetails</label>
@@ -209,16 +367,54 @@
       <marcref>538 $a</marcref>
       <rdaref></rdaref>
     </property>
+    <property id='format'>
+      <label>format</label>
+      <typedesc>Text</typedesc>
+      <description>The format of the application</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='Video' isa='Instance'>
+    <label>Video</label>
+    <tagline>A video</tagline>
+    <property id='extent'>
+      <label>extent</label>
+      <typedesc>Text</typedesc>
+      <description>Total playing time, etc. of each type of item.</description>
+      <marcref>300 $a</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='format'>
+      <label>format</label>
+      <typedesc>Text</typedesc>
+      <description>The format of the video</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='Text' isa='Instance'>
+    <label>Text</label>
+    <tagline>An image</tagline>
+    <property id='format'>
+      <label>format</label>
+      <typedesc>Text</typedesc>
+      <description>The format of the video</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
   </class>
 
   <class id='Image' isa='Instance'>
     <label>Image</label>
     <tagline>An image</tagline>
-    <property id='fileType'>
-      <label>fileType</label>
+    <property id='format'>
+      <label>format</label>
       <typedesc>Text</typedesc>
-      <description>The type of file (tiff, png, etc.)</description>
-      <marcref>347 $a</marcref>
+      <description>The format of the video</description>
+      <marcref></marcref>
       <rdaref></rdaref>
     </property>
     <property id='resolution'>
@@ -249,18 +445,11 @@
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='systemDetails'>
-      <label>systemDetails</label>
-      <typedesc>Text</typedesc>
-      <description>Technical information about an item, such as the presence or absence of certain kinds of codes; or the physical characteristics of a computer file, such as recording densities, parity, blocking factors, mode of access, software programming language, computer requirements, peripheral requirements, trade name or recording systems, number of lines of resolution, and modulation frequency.</description>
-      <marcref>538 $a</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
-  <class id='Book' isa='Instance'> 
-    <label>Book</label>
-    <tagline>A physical Book.</tagline>
+  <class id='PhysicalBook' isa='Instance'> 
+    <label>Physical Book</label>
+    <tagline>A physical book.</tagline>
     <property id='isbn'>
       <label>ISBN</label>
       <typedesc>Text</typedesc>
@@ -291,9 +480,41 @@
     </property>
   </class>
 
-  <class id='Map' isa='Instance'> 
-    <label>Map</label>
-    <tagline>A physical cartographic resource.</tagline>
+  <class id='PhysicalMusic' isa='Instance'> 
+    <label>Physical Music</label>
+    <tagline>Physical Music such as records, CDs, cassettes, etc.</tagline>
+    <property id='extent'>
+      <label>extent</label>
+      <typedesc>Text</typedesc>
+      <description>Number of physical pages, volumes, cassettes, total playing time, etc. of each type of item.</description>
+      <marcref>300 $a</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='otherPhysicalDetails'>
+      <label>otherPhysicalDetails</label>
+      <typedesc>Text</typedesc>
+      <description>Physical characteristics such as playing speed, groove characteristics, etc.</description>
+      <marcref>300 $b</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='ComputerFile' isa='Instance'>
+    <label>Computer File</label>
+    <tagline>A computer file / software</tagline>
+    <property id='systemDetails'>
+      <label>systemDetails</label>
+      <typedesc>Text</typedesc>
+      <description>Technical information about an item, such as the presence or absence of certain kinds of codes; or the physical characteristics of a computer file, such as recording densities, parity, blocking factors, mode of access, software programming language, computer requirements, peripheral requirements, trade name or recording systems, number of lines of resolution, and modulation frequency.</description>
+      <marcref>538 $a</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+
+  <class id='PhysicalMap' isa='Instance'> 
+    <label>Physical Map</label>
+    <tagline>A physical cartographic resource such as a paper map, globe, etc.</tagline>
     <property id='scale'>
       <label>scale</label>
       <typedesc>Text</typedesc>
@@ -316,6 +537,8 @@
       <rdaref></rdaref>
     </property>
   </class>
+
+
 
   <class id='Person' isa='Authority'> 
     <label>Person</label>

@@ -147,10 +147,17 @@
               <tbody>
 
             <tr>
-          <td>creator</td>
+          <td>mainEntry</td>
           <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
-          <td>The creator associated with the creative work.</td>
+          <td>The primary entity associated with the creative work. Refinement relationships will be defined as subproperties of this property.</td>
           <td>100, 110, 111</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>addedEntry</td>
+          <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
+          <td>The additinoal entities associated with the creative work. Refinement relationships will be defined as subproperties of this parent.</td>
+          <td>700, 710, 711</td>
           <td></td>
             </tr>
             <tr>
@@ -165,20 +172,6 @@
           <td>Text</td>
           <td>Intended audience of the instance.</td>
           <td>008 / 22</td>
-          <td></td>
-            </tr>
-            <tr>
-          <td>formatedContentsNote</td>
-          <td>Text</td>
-          <td>Formated content notes including table of contents, etc.</td>
-          <td>505</td>
-          <td></td>
-            </tr>
-            <tr>
-          <td>summary</td>
-          <td>Text</td>
-          <td>Text of the summary, abstract or review.</td>
-          <td>520</td>
           <td></td>
             </tr>
             <tr>
@@ -197,8 +190,15 @@
             </tr>
             <tr>
           <td>hasInstance</td>
-          <td><a href="/vocab/Book/index.html">Book</a> or <a href="/vocab/Image/index.html">Image</a> or <a href="/vocab/Music/index.html">Music</a> or <a href="/vocab/Software/index.html">Software</a> or <a href="/vocab/Map/index.html">Map</a></td>
+          <td><a href="/vocab/PhysicalBook/index.html">Physical Book</a> or <a href="/vocab/PhysicalMap/index.html">Physical Map</a> or <a href="/vocab/ComputerFile/index.html">Computer File</a> or <a href="/vocab/PhysicalMusic/index.html">Physical Music</a> or <a href="/vocab/Application/index.html">Application</a> or <a href="/vocab/Audio/index.html">Audio</a> or <a href="/vocab/Image/index.html">Image</a> or <a href="/vocab/Video/index.html">Video</a> or <a href="/vocab/Text/index.html">Text</a></td>
           <td>An instantiation of a creative work.</td>
+          <td></td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>relatedTo</td>
+          <td><a href="/vocab/CreativeWork/index.html">Creative Work</a></td>
+          <td>A related Creative Work. Refinement relationships will be defined as subproperties of this property.</td>
           <td></td>
           <td></td>
             </tr>
@@ -224,7 +224,18 @@
           <h3 class="specific-types-text">More specific types</h3>
 
       <ul class="list">
+<li><a href="../Movie/index.html">Movie</a></li>
+<li><a href="../MediaObject/index.html">Media Object</a></li>
+<li><a href="../Book/index.html">Book</a></li>
+<li><a href="../MusicRecording/index.html">Music Recording</a></li>
+<li><a href="../Map/index.html">Map</a></li>
+<li><a href="../Painting/index.html">Painting</a></li>
 <li><a href="../Collection/index.html">Collection</a></li>
+<li><a href="../SoftwareApplication/index.html">Scuplture</a></li>
+<li><a href="../Article/index.html">Article</a></li>
+<li><a href="../Photograph/index.html">Photograph</a></li>
+<li><a href="../WebPage/index.html">WebPage</a></li>
+<li><a href="../Sculpture/index.html">Scuplture</a></li>
 
       </ul>
       
