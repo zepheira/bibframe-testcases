@@ -1,0 +1,9 @@
+<annotations>
+  <annotation on='Resource'> 
+    <p>Here is an example of a <strong>Resource</strong></p>
+  </annotation> 
+
+  <annotation on='Resource/name'> 
+    <p>Here is how to set up a <strong>Resource's</strong> name</p>
+  </annotation> 
+</annotations>

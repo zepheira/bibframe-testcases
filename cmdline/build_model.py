@@ -5,7 +5,8 @@ import os
 import re
 
 from amara import bindery
-from amara.lib import U
+from amara.lib import U, inputsource
+from amara.lib.iri import absolutize
 
 LINK_PAT = re.compile('@(\w+)')
 
@@ -116,7 +117,7 @@ T1 = '''        <div class="row-fluid vocabulary-display-section">
       
       <div class="span12">
         
-        <div class="section-text parent">{0}</div>
+        <div class="section-text parent">{0}{1}</div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -130,7 +131,7 @@ T1 = '''        <div class="row-fluid vocabulary-display-section">
           </thead>
               <tbody>
 
-{1}
+{2}
 
               </tbody>
             </table>
@@ -143,19 +144,46 @@ T1 = '''        <div class="row-fluid vocabulary-display-section">
 
 T2 = '''\
             <tr>
-          <td>{0}</td>
-          <td>{1}</td>
+          <td>{0}{1}</td>
           <td>{2}</td>
           <td>{3}</td>
           <td>{4}</td>
+          <td>{5}</td>
             </tr>
 '''
+
+
+AT0 = '''<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <title>MARC21 :: Link Data Vocabulary</title>
+  </head>
+  
+  <body>
+  {0}
+  </body>
+</html>
+'''#.format(annotations)
 
 
 CLASSES = {}
 
 def run(modelsource=None, output=None, base=''):
+    modelsource = inputsource(modelsource)
     indoc = bindery.parse(modelsource)
+    annotations = {}
+    #First find the annotation files
+    for annfile in indoc.model.annotations:
+        #print modelsource.resolver.absolutize(U(annfile.path))
+        anndoc = bindery.parse(modelsource.resolve(U(annfile.path), indoc.xml_base))
+        for ann in anndoc.annotations.annotation:
+            target = ann.on.split(u'/', 1)
+            target_cls, target_prop = (target[0], None) if len(target) == 1 else target
+            #Build the HTML from the children of the annotation element
+            htmlfromchildren = ''.join([ a.xml_encode() for a in ann.xml_children ])
+            annotations.setdefault((target_cls, target_prop), []).append(htmlfromchildren)
+
     #Build a graph of the classes
     for cls in indoc.model.class_:
         CLASSES[cls.id] = (cls, U(cls.isa).split() if cls.isa else [])
@@ -167,7 +195,7 @@ def run(modelsource=None, output=None, base=''):
 
     def handle_inline_links(text):
         '''
-        A transform that takes inline links and expamnds them
+        Transform that takes inline links and expands them
         '''
         def replace(match):
             eid = match.group(1)
@@ -191,21 +219,33 @@ def run(modelsource=None, output=None, base=''):
 
         class_chunks = []
         breadcrumb_chunks = []
+        #Iterate over each ancestor class to inherit properties
         #for outcls in ancestors + [maincls]:
         for outcls in ancestors:
             property_chunks = []
+            #Check for reference to annotations at class level
+            ann_html = ''
+            if (outcls.id, None) in annotations:
+                ann_html = ' <a href="notes.html#{0}">[*]</a>\n'.format(U(outcls.id))
             for prop in outcls.property:
                 typedesc = handle_inline_links(U(prop.typedesc))
                 description = handle_inline_links(U(prop.description))
+
+                #Check for reference to annotations at property level
+                prop_ann_html = ''
+                if (outcls.id, prop.id) in annotations:
+                    prop_ann_html = ' <a href="notes.html#{0}.{1}">[*]</a>\n'.format(outcls.id, prop.id)
+
                 property_chunks.append(T2.format(
                     U(prop.label),
+                    prop_ann_html,
                     typedesc,
                     description,
                     U(prop.marcref),
                     U(prop.rdaref)))
 
             header = 'Properties from <A href="../{0}/index.html">{1}</a>'.format(U(outcls.id), U(outcls.label))
-            class_chunks.append(T1.format(header, ''.join(property_chunks)))
+            class_chunks.append(T1.format(header, ann_html, ''.join(property_chunks)))
             if outcls == maincls:
                 breadcrumb_chunks.append('<li class="active">{0}</li>'.format(U(outcls.label)))
             else:
@@ -226,15 +266,40 @@ def run(modelsource=None, output=None, base=''):
 
         outf.close()
 
+        #Write annotations file
+        current_annotations = []
+        for outcls in ancestors:
+            #Is there an annotation for this class?
+            if (outcls.id, None) in annotations:
+                #Build the accumulated HTML annotations into one chunk
+                htmlchunk = '\n'.join(annotations[(outcls.id, None)])
+                #Then format it for the notes.html
+                ann_html = '<div class="annotations"><a name="{0}">{0}</a>{1}</div>\n'.format(U(outcls.id), htmlchunk)
+                current_annotations.append(ann_html)
+            #Is there an annotation for any of its properties?
+            for prop in outcls.property:
+                if (outcls.id, prop.id) in annotations:
+                    #Build the accumulated HTML annotations into one chunk
+                    htmlchunk = '\n'.join(annotations[(outcls.id, prop.id)])
+                    #Then format it for the notes.html
+                    ann_html = '<div class="annotations"><a name="{0}.{1}">{0}.{1}</a>{2}</div>\n'.format(U(outcls.id), prop.id, htmlchunk)
+                    current_annotations.append(ann_html)
 
-from akara.thirdparty import argparse #Yes! Yes! Import not at top
+        if current_annotations:
+            annf = open(os.path.join(basedir, 'notes.html'), 'w')
+            annf.write(AT0.format('\n'.join([ann for ann in current_annotations])))
+            annf.close()
+
 
 if __name__ == '__main__':
+    from akara.thirdparty import argparse #Yes! Yes! Import not at top
     #build_model.py --base=/vocab bibframe.xml /tmp/bibframe
     parser = argparse.ArgumentParser()
     #parser.add_argument('-o', '--output')
-    parser.add_argument('model', metavar='source', type=argparse.FileType('r'),
-                        help='The model file')
+    parser.add_argument('model', metavar='source', help='The model file')
+    #Don't let argparse convert to stream because we need the base URI
+    #parser.add_argument('model', metavar='source', type=argparse.FileType('r'),
+    #                    help='The model file')
     parser.add_argument('output_root', metavar='output_base',
                         help='Root directory for the output (will be created if not present)')
     parser.add_argument('-b', '--base', metavar="SITE_BASE_URL", dest="baseurl", default='',
@@ -242,5 +307,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
     run(modelsource=args.model, output=args.output_root, base=args.baseurl)
     #indoc = bindery.parse(sys.argv[1])
-    args.model.close()
+    #args.model.close()
 

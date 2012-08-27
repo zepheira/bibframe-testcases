@@ -74,7 +74,7 @@ def dcxml2json(source):
 #ISBNNU_PAT = 'http://isbn.nu/{0}.xml'
 ISBNNU_PAT = 'http://isbn.nu/{0}'
 OPENLIBRARY_COVER_PAT = 'http://covers.openlibrary.org/b/isbn/{0}-M.jpg'
-http://catalog.hathitrust.org/api/volumes/brief/json/isbn:0030110408 -> http://catalog.hathitrust.org/Record/000578050
+#http://catalog.hathitrust.org/api/volumes/brief/json/isbn:0030110408 -> http://catalog.hathitrust.org/Record/000578050
 
 AUGMENTATIONS = {
     #('600', ('a', 'd'), lucky_google_template(lambda item: 'site:viaf.org {0}, {1}'.format(item['a'], item['d'])), u'viaf_guess'), #VIAF Cooper, Samuel, 1798-1876
@@ -170,10 +170,6 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
             instance_item[u'id'] = u'instance' + recid
             instance_item[u'type'] = u'InstanceRecord'
             work_item[u'instance'] = u'instance' + recid
-
-            for k, v in process_leader(leader):
-                #For now assume all leader fields are instance level
-                instance_item[k] = v
 
             for cf in rec.xml_select(u'ma:controlfield', prefixes=PREFIXES):
                 key = u'cftag_' + U(cf.xml_select(u'@tag'))
@@ -319,6 +315,23 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                 instance_ids.append(base_instance_id)
 
             work_item[u'instance'] = instance_ids
+
+
+            special_properties = {}
+            for k, v in process_leader(leader):
+                #For now assume all leader fields are instance level
+                special_properties.setdefault(k, set()).add(v)
+
+            for k, v in process_008(instance_item[u'cftag_008']):
+                #For now assume all leader fields are instance level
+                special_properties.setdefault(k, set()).add(v)
+
+            #We get some repeated values out of leader & 008 processing, and we want to
+            #Remove dupes so we did so by working with sets then converting to lists
+            for k, v in special_properties.items():
+                special_properties[k] = list(v)
+
+            instance_item.update(special_properties)
 
             #reduce lists of just one item
             for k, v in work_item.items():
