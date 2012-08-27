@@ -67,9 +67,16 @@
     </property>
     <property id='uniformTitle'>
       <label>uniformTitle</label>
-      <typedesc>Text</typedesc>
+      <typedesc>@Title</typedesc>
       <description>Uniform title printed or displayed</description>
       <marcref>130, 240 $a</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='language'>
+      <label>language</label>
+      <typedesc>Language</typedesc>
+      <description>Language associated with the instance.</description>
+      <marcref>008 / 35-37</marcref>
       <rdaref></rdaref>
     </property>
     <property id='audience'>
@@ -294,13 +301,6 @@
       <typedesc>Text</typedesc>
       <description>Title added entry</description>
       <marcref>245 $a</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='language'>
-      <label>language</label>
-      <typedesc>Language</typedesc>
-      <description>Language associated with the instance.</description>
-      <marcref>008 / 35-37</marcref>
       <rdaref></rdaref>
     </property>
     <property id='edition'>
@@ -612,6 +612,18 @@
       <label>hasIDLink</label>
       <typedesc>URL</typedesc>
       <description>A authoritative link to a id.loc.gov record.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='Title' isa='Authority'> 
+    <label>Title</label>
+    <tagline>A Title</tagline>
+    <property id='hasIDLink'>
+      <label>hasIDLink</label>
+      <typedesc>URL</typedesc>
+      <description>A authoritative link to a uniformed title.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>

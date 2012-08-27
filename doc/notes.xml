@@ -1,6 +1,6 @@
 <annotations>
   <annotation on='CreativeWork.mainEntry'> 
-    <p>In the development of MODS LC found that in some contexts it's essential to separate a main item associated with the creative work.  In MODS this became the principal or primary name.  Note the conflation of person & family here. RDA makes that distinction.<!--<strong>Resource</strong>--></p>
+    <p>In the development of MODS LC found that in some contexts it's essential to separate a main item associated with the creative work.  In MODS this became the principal or primary name.  Note the conflation of person &amp; family here. RDA makes that distinction.<!--<strong>Resource</strong>--></p>
   </annotation> 
 
   <annotation on='CreativeWork.addedEntry'> 
