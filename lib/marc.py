@@ -236,6 +236,7 @@ INSTANCE_FIELDS = set([
 def process_leader(leader):
     """
     http://www.loc.gov/marc/marc2dc.html#ldr06conversionrules
+    http://www.loc.gov/marc/bibliographic/bdleader.html
 
     >>> from btframework.marc import process_leader
     >>> list(process_leader('03495cpcaa2200673 a 4500'))
@@ -369,7 +370,7 @@ def process_008(info):
     #ARE YOU FRIGGING KIDDING ME?! NON-Y2K SAFE?!
     year = info[0:2]
     century = '19' if int(year) > 30 else '20' #I guess we can give an 18 year berth before this breaks ;)
-    yield 'date', '{}{}-{}-{}'.format(century, year, info[2:4], info[4:6])
+    yield 'date_008', '{}{}-{}-{}'.format(century, year, info[2:4], info[4:6])
     for i, field in enumerate(info):
         try:
             if i < 23 or field in ('#',  ' ', '|'):

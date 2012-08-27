@@ -1,6 +1,8 @@
 <model>
   <!-- General Class of Resource -->
   
+  <annotations path='notes.xml'/> 
+
   <class id='Resource'> 
     <label>Resource</label>
     <tagline>Conceptual Resource.</tagline>
