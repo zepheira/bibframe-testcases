@@ -2,6 +2,24 @@
 Treatment of certain special MARC fields
 '''
 
+#TODO: Also split on multiple 260 fields
+
+def canonicalize_isbns(isbns):
+    #http://www.hahnlibrary.net/libraries/isbncalc.html
+    canonicalized = {}
+    for isbn in isbns:
+        if len(isbn) == 9: #ISBN-10 without check digit
+            c14ned = u'978' + isbn
+        elif len(isbn) == 10: #ISBN-10 with check digit
+            c14ned = u'978' + isbn[:-1]
+        elif len(isbn) == 12: #ISBN-13 without check digit
+            c14ned = isbn
+        elif len(isbn) == 13: #ISBN-13 with check digit
+            c14ned = isbn[:-1]
+        canonicalized[isbn] = c14ned
+    return canonicalized
+
+
 def process_leader(leader):
     """
     http://www.loc.gov/marc/marc2dc.html#ldr06conversionrules

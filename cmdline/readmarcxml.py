@@ -22,7 +22,8 @@ from amara.thirdparty import httplib2, json
 from amara.lib import U
 from amara.lib.util import element_subtree_iter
 
-from btframework.marc import process_leader, process_008, FIELD_RENAMINGS, MATERIALIZE
+from btframework.marc import FIELD_RENAMINGS, MATERIALIZE
+from btframework.marcspecialfields import canonicalize_isbns, process_leader, process_008
 from btframework.marc import INSTANCE_FIELDS, WORK_FIELDS
 from btframework.augment import lucky_viaf_template, lucky_idlc_template
 
@@ -41,6 +42,16 @@ IDLC_GUESS_FNAME = u'idlcFromHeuristic'
 
 requests_cache.configure(os.path.join(CACHEDIR, 'cache'))
 
+
+def invert_dict(d):
+    #http://code.activestate.com/recipes/252143-invert-a-dictionary-one-liner/#c3
+    #See also: http://pypi.python.org/pypi/bidict
+        #Though note: http://code.activestate.com/recipes/576968/#c2
+    inv = {}
+    for k, v in d.iteritems():
+        keys = inv.setdefault(v, [])
+        keys.append(k)
+    return inv
 
 #One of the records gives us:
 
@@ -276,14 +287,19 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
 
             isbns = instance_item.get('isbn', [])
             def isbn_list(isbns):
-                isbnset = set()
+                isbn_tags = {}
                 for isbn in isbns:
                     parts = isbn.split(None, 1)
                     if len(parts) == 1:
-                        isbnset.add((parts[0], None))
+                        isbn_tags[parts[0]] = None
                     else:
-                        isbnset.add((parts[0], parts[1]))
-                return list(isbnset)
+                        isbn_tags[parts[0]] = parts[1]
+                c14ned = canonicalize_isbns(isbn_tags.keys())
+                for c14nisbn, variants in invert_dict(c14ned).items():
+                    #We'll use the heuristic that the longest ISBN number is the best
+                    variants.sort(key=len, reverse=True) # sort by descending length
+                    yield variants[0], isbn_tags[variants[0]]
+                return# list(isbnset)
 
             base_instance_id = instance_item[u'id']
             instance_ids = []

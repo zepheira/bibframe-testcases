@@ -1,28 +1,10 @@
-<annotations>
-  <annotation on='CreativeWork.mainEntry'> 
-    <p>In the development of MODS LC found that in some contexts it's essential to separate a main item associated with the creative work.  In MODS this became the principal or primary name.  Note the conflation of person &amp; family here. RDA makes that distinction.<!--<strong>Resource</strong>--></p>
-  </annotation> 
-
-  <annotation on='CreativeWork.addedEntry'> 
-    <p>In MODS this became just a name, but not the principal or primary name.</p>
-  </annotation> 
-
-  <annotation on='CreativeWork.relatedTo'> 
-    <p>Can use <a href="http://www.loc.gov/marc/relators/">MARC relators</a> or FRBR-defined relationships to clarify the nature of the relationships</p>
-  </annotation> 
-
-  <annotation on='Instance.publisher'> 
-    <p>We might have to consider publication statement, which is basically focus on the event associated with publication, rather than the entity. So this could be called "publication".</p>
-  </annotation> 
-
-  <annotation on='.'> 
-    <p></p>
-  </annotation> 
-
-----
-
-  <annotation on='CreativeWork.addedEntry'> 
-    <p></p>
+<annotations id='http://purl.org/com/zepheira/btframework/sample'>
+  <title>Sample BTFramework notes</title>
+  <description>
+    <p>Sample comments to illustrate how vocab notes work</p>
+  </description>
+  <annotation on='Resource'> 
+    <p>Not dissimilar to an <strong>RDF Resource</strong> <a href='http://www.w3.org/2003/glossary/subglossary/rdf-syntax.rdf/'>(viz.)</a></p>
   </annotation> 
   <annotation on='CreativeWork.addedEntry'> 
     <p></p>

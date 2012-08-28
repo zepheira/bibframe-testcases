@@ -23,7 +23,8 @@ MATERIALIZE = {
 
 '630': ('uniformTitle', {'marcrType': 'Title'}),
 '650': ('subject', {'marcrType': 'Topic'}),
-'651': ('subject', {'marcrType': 'Topic'}),
+'651': ('subject', {'marcrType': 'Geographic'}),
+#'655': ('genre', {'marcrType': 'Genre'}),
 
 '700': ('creator', {'marcrType': 'Person'}),
 '710': ('creator', {'marcrType': 'Organization'}),
@@ -35,6 +36,9 @@ FIELD_RENAMINGS = {
 '010a': 'lccn',
 '020a': 'isbn',
 '022a': 'issn',
+'034a': 'cartographicMathematicalDataScaleStatement', #Rebecca & Sally suggested this should effectively be a merge with 034a
+'034b': 'cartographicMathematicalDataProjectionStatement',
+'034c': 'cartographicMathematicalDataCoordinateStatement',
 '050a': 'lcCallNumber',
 '0503': 'material',
 '082a': 'deweyNumber',
@@ -55,7 +59,9 @@ FIELD_RENAMINGS = {
 '250a': 'edition',
 '250b': 'edition',
 '254a': 'musicalPresentation',
-'255a': 'cartographicMathemiticalData',
+'255a': 'cartographicMathematicalDataScaleStatement',
+'255b': 'cartographicMathematicalDataProjectionStatement',
+'255c': 'cartographicMathematicalDataCoordinateStatement',
 '256a': 'computerFilecharacteristics',
 '260a': 'name',
 '260b': 'name',
@@ -158,6 +164,7 @@ WORK_FIELDS = set([
 '035',
 '040',
 '041',
+'050a', #Note: should be able to link directly to authority @ id.loc.gov authority/classification/####
 '100',
 '110',
 '111',
@@ -209,7 +216,6 @@ WORK_FIELDS = set([
 INSTANCE_FIELDS = set([
 '020',
 '022',
-'050',
 '055',
 '060',
 '070',
@@ -232,5 +238,10 @@ INSTANCE_FIELDS = set([
 '850',
 '852',
 '856',
+])
+
+
+HOLDINGS_FIELDS = set([
+'050',
 ])
 
