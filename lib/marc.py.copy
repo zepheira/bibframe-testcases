@@ -1,0 +1,39 @@
+MATERIALIZE = {
+'852': ('heldBy', {'marcrType': 'Organization'}),
+}
+
+
+FIELD_RENAMINGS = {
+'852a': 'name',
+'852b': 'collection',
+'852d': 'shelving',
+'852e': 'address',
+}
+
+
+HOLDINGS_FIELDS = set([
+'852',
+])
+
+I'm not sure i've codified the the mappings right per se as part of these properties I'd like to see in a holdings file and the others (organization) can go in the objects.json file... the pattern i think we're after however is something similar to this:
+
+{
+    "id": "holdings_1",
+    "type": "HoldingsRecord",
+    "holds": "instance_1",
+    "heldBy": "obj_1",
+    "shelving": "GV1525 .I55 1851",
+    "collection": "Science Library"
+},
+
+...
+
+{
+    "id": "obj_1",
+    "type": "Organization",
+    "name": "foo",
+    "address": "bar",
+},
+
+
+
