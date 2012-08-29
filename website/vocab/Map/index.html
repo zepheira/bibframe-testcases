@@ -57,15 +57,15 @@
           <ul class="breadcrumb">
             <li><a href = "/">Home</a> <span class="divider">/</span></li>
             <li><a href = "/vocab/">Vocab</a> <span class="divider">/</span></li>
-<li><a href="../Resource/index.html">Resource</a> <span class="divider">/</span></li><li><a href="../CreativeWork/index.html">Creative Work</a> <span class="divider">/</span></li><li class="active">Map</li>
+<li><a href="../Resource/index.html">Resource</a> <span class="divider">/</span></li><li><a href="../Instance/index.html">Instance</a> <span class="divider">/</span></li><li><a href="../PhysicalResource/index.html">Physical Resource</a> <span class="divider">/</span></li><li class="active">A Paper Map</li>
           </ul>
         </div>
       </div>
 
       <div class="this row-fluid">
         <div class="span12">
-          <h1 class="this-name">Map</h1>
-          <h3 class="this-description">A map, cartagraphic work</h3>
+          <h1 class="this-name">A Paper Map</h1>
+          <h3 class="this-description">A physical cartographic resource such as a paper map, globe, etc.</h3>
           <br />
         </div>
       </div>
@@ -78,7 +78,8 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../Resource/index.html">Resource</a></div>
+        <div class="section-text parent">Properties from <A href="../Resource/index.html">Resource</a> <a href="notes.html#Resource">[*]</a>
+</div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -93,15 +94,15 @@
               <tbody>
 
             <tr>
-          <td>name</td>
-          <td>Text</td>
-          <td>Name of the item.</td>
+          <td>label</td>
+          <td>Literal</td>
+          <td>Label of the item.</td>
           <td></td>
           <td></td>
             </tr>
             <tr>
           <td>description</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Short description of the item.</td>
           <td></td>
           <td></td>
@@ -132,7 +133,7 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../CreativeWork/index.html">Creative Work</a></div>
+        <div class="section-text parent">Properties from <A href="../Instance/index.html">Instance</a></div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -147,66 +148,45 @@
               <tbody>
 
             <tr>
-          <td>mainEntry</td>
-          <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
-          <td>The primary entity associated with the creative work. Refinement relationships will be defined as subproperties of this property.</td>
-          <td>100, 110, 111</td>
+          <td>title</td>
+          <td>Literal</td>
+          <td>Title added entry</td>
+          <td>245 $a</td>
           <td></td>
             </tr>
             <tr>
-          <td>addedEntry</td>
-          <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
-          <td>The additinoal entities associated with the creative work. Refinement relationships will be defined as subproperties of this parent.</td>
-          <td>700, 710, 711</td>
-          <td></td>
-            </tr>
-            <tr>
-          <td>uniformTitle</td>
-          <td><a href="/vocab/Title/index.html">Title</a></td>
-          <td>Uniform title printed or displayed</td>
-          <td>130, 240 $a</td>
-          <td></td>
-            </tr>
-            <tr>
-          <td>language</td>
-          <td>Language</td>
-          <td>Language associated with the instance.</td>
-          <td>008 / 35-37</td>
-          <td></td>
-            </tr>
-            <tr>
-          <td>audience</td>
-          <td>Text</td>
-          <td>Intended audience of the instance.</td>
-          <td>008 / 22</td>
+          <td>edition</td>
+          <td>Literal</td>
+          <td>Edition of a creative work</td>
+          <td>250</td>
           <td></td>
             </tr>
             <tr>
           <td>note</td>
-          <td>Text</td>
-          <td>Note that provides general information regarding the work.</td>
+          <td>Literal</td>
+          <td>Note that provides specific information regarding the instance.</td>
           <td>5XX</td>
           <td></td>
             </tr>
             <tr>
-          <td>subject</td>
-          <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Place/index.html">Place</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Topic/index.html">Topic</a></td>
-          <td>Subject associated with the Bibliographic Resource.</td>
-          <td>6XX</td>
+          <td>publisher</td>
+          <td><a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
+          <td>Entity responsible for publishing the Resource.</td>
+          <td>260 $b</td>
           <td></td>
             </tr>
             <tr>
-          <td>hasInstance</td>
-          <td><a href="/vocab/PhysicalBook/index.html">Physical Book</a> or <a href="/vocab/PhysicalMap/index.html">Physical Map</a> or <a href="/vocab/ComputerFile/index.html">Computer File</a> or <a href="/vocab/PhysicalMusic/index.html">Physical Music</a> or <a href="/vocab/Application/index.html">Application</a> or <a href="/vocab/Audio/index.html">Audio</a> or <a href="/vocab/Image/index.html">Image</a> or <a href="/vocab/Video/index.html">Video</a> or <a href="/vocab/Text/index.html">Text</a></td>
-          <td>An instantiation of a creative work.</td>
-          <td></td>
+          <td>publishedAt</td>
+          <td><a href="/vocab/Place/index.html">Place</a></td>
+          <td>Place of publication.</td>
+          <td>260 $a</td>
           <td></td>
             </tr>
             <tr>
-          <td>relatedTo</td>
-          <td><a href="/vocab/CreativeWork/index.html">Creative Work</a></td>
-          <td>A related Creative Work. Refinement relationships will be defined as subproperties of this property.</td>
-          <td></td>
+          <td>publishedOn</td>
+          <td>Date</td>
+          <td>Date(s) associated with the publication of the Resource.</td>
+          <td>260 $c</td>
           <td></td>
             </tr>
 
@@ -221,7 +201,7 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../Map/index.html">Map</a></div>
+        <div class="section-text parent">Properties from <A href="../PhysicalResource/index.html">Physical Resource</a></div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -236,10 +216,92 @@
               <tbody>
 
             <tr>
-          <td>note</td>
-          <td>Text</td>
-          <td>summary</td>
-          <td>520</td>
+          <td>ISBN</td>
+          <td>Literal</td>
+          <td>ISBN of the item.</td>
+          <td>020 $a</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>ISSN</td>
+          <td>Literal</td>
+          <td>ISSN of the item.</td>
+          <td></td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>extent</td>
+          <td>Literal</td>
+          <td>Number of physical pages, volumes, cassettes, total playing time, etc. of each type of item.</td>
+          <td>300 $a</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>otherPhysicalDetails</td>
+          <td>Literal</td>
+          <td>Physical characteristics such as illustrative matter, coloration, playing speed, groove characteristics, etc.</td>
+          <td>300 $b</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>dimensions</td>
+          <td>Literal</td>
+          <td>Expressed in centimeters, millimeters or inches</td>
+          <td>300 $c</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>systemDetails</td>
+          <td>Literal</td>
+          <td>Technical information about an item, such as the presence or absence of certain kinds of codes; or the physical characteristics of a computer file, such as recording densities, parity, blocking factors, mode of access, software programming language, computer requirements, peripheral requirements, trade name or recording systems, number of lines of resolution, and modulation frequency.</td>
+          <td>538 $a</td>
+          <td></td>
+            </tr>
+
+
+              </tbody>
+            </table>
+        
+      </div> <!-- span12 -->
+      
+    </div> <!-- vocabulary-display-section -->
+        <div class="row-fluid vocabulary-display-section">
+      
+      <div class="span12">
+        
+        <div class="section-text parent">Properties from <A href="../Map/index.html">A Paper Map</a></div>
+        
+        <table class="table table-striped table-bordered">
+          <thead>
+                <tr>
+        <th class="span2">Property</th>
+        <th class="span2">Expected Value</th>
+        <th class="span6">Description</th>
+        <th class="span2">Related MARC Code</th>
+        <th class="span2">Related RDA Code</th>
+                </tr>
+          </thead>
+              <tbody>
+
+            <tr>
+          <td>scale</td>
+          <td>Literal</td>
+          <td>Scale of cartographic content.</td>
+          <td>034, 255</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>projection</td>
+          <td>Literal</td>
+          <td>Projection of cartographic content</td>
+          <td>255 $b</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>latLong</td>
+          <td>Literal</td>
+          <td>Longitude and latitude of cartographic content.</td>
+          <td>034 ($d $e $f $g), 255</td>
           <td></td>
             </tr>
 

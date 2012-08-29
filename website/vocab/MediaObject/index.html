@@ -78,7 +78,8 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../Resource/index.html">Resource</a></div>
+        <div class="section-text parent">Properties from <A href="../Resource/index.html">Resource</a> <a href="notes.html#Resource">[*]</a>
+</div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -93,15 +94,15 @@
               <tbody>
 
             <tr>
-          <td>name</td>
-          <td>Text</td>
-          <td>Name of the item.</td>
+          <td>label</td>
+          <td>Literal</td>
+          <td>Label of the item.</td>
           <td></td>
           <td></td>
             </tr>
             <tr>
           <td>description</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Short description of the item.</td>
           <td></td>
           <td></td>
@@ -147,16 +148,17 @@
               <tbody>
 
             <tr>
-          <td>mainEntry</td>
+          <td>name</td>
           <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
-          <td>The primary entity associated with the creative work. Refinement relationships will be defined as subproperties of this property.</td>
+          <td>The primary entity associated with the creation of the work. Refinement relationships will be defined as subproperties of this property.</td>
           <td>100, 110, 111</td>
           <td></td>
             </tr>
             <tr>
-          <td>addedEntry</td>
+          <td>addedname <a href="notes.html#CreativeWork.addedName">[*]</a>
+</td>
           <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
-          <td>The additinoal entities associated with the creative work. Refinement relationships will be defined as subproperties of this parent.</td>
+          <td>The additinoal entities associated with creation of the work. Refinement relationships will be defined as subproperties of this parent.</td>
           <td>700, 710, 711</td>
           <td></td>
             </tr>
@@ -170,20 +172,41 @@
             <tr>
           <td>language</td>
           <td>Language</td>
-          <td>Language associated with the instance.</td>
+          <td>Language associated with the Creative Work.</td>
           <td>008 / 35-37</td>
           <td></td>
             </tr>
             <tr>
+          <td>classification</td>
+          <td>Literal (URL)</td>
+          <td>Classification of the Creative Work.</td>
+          <td>050a</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>ddc</td>
+          <td>Literal (URL)</td>
+          <td>Dewey Decimal Classification of the Creative Work.</td>
+          <td>XXX</td>
+          <td></td>
+            </tr>
+            <tr>
           <td>audience</td>
-          <td>Text</td>
-          <td>Intended audience of the instance.</td>
+          <td>Literal</td>
+          <td>Intended audience of the Creative Work..</td>
+          <td>008 / 22</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>genre</td>
+          <td>Literal</td>
+          <td>Genre of the Creative Work.</td>
           <td>008 / 22</td>
           <td></td>
             </tr>
             <tr>
           <td>note</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Note that provides general information regarding the work.</td>
           <td>5XX</td>
           <td></td>
@@ -197,7 +220,7 @@
             </tr>
             <tr>
           <td>hasInstance</td>
-          <td><a href="/vocab/PhysicalBook/index.html">Physical Book</a> or <a href="/vocab/PhysicalMap/index.html">Physical Map</a> or <a href="/vocab/ComputerFile/index.html">Computer File</a> or <a href="/vocab/PhysicalMusic/index.html">Physical Music</a> or <a href="/vocab/Application/index.html">Application</a> or <a href="/vocab/Audio/index.html">Audio</a> or <a href="/vocab/Image/index.html">Image</a> or <a href="/vocab/Video/index.html">Video</a> or <a href="/vocab/Text/index.html">Text</a></td>
+          <td><a href="/vocab/PhysicalResource/index.html">Physical Resource</a> or <a href="/vocab/DigitalResource/index.html">Digital Resouce</a></td>
           <td>An instantiation of a creative work.</td>
           <td></td>
           <td></td>
@@ -237,7 +260,7 @@
 
             <tr>
           <td>note</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>summary</td>
           <td>520</td>
           <td></td>

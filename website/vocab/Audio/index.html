@@ -57,7 +57,7 @@
           <ul class="breadcrumb">
             <li><a href = "/">Home</a> <span class="divider">/</span></li>
             <li><a href = "/vocab/">Vocab</a> <span class="divider">/</span></li>
-<li><a href="../Resource/index.html">Resource</a> <span class="divider">/</span></li><li><a href="../Instance/index.html">Instance</a> <span class="divider">/</span></li><li class="active">Audio</li>
+<li><a href="../Resource/index.html">Resource</a> <span class="divider">/</span></li><li><a href="../CreativeWork/index.html">Creative Work</a> <span class="divider">/</span></li><li class="active">Audio</li>
           </ul>
         </div>
       </div>
@@ -65,7 +65,7 @@
       <div class="this row-fluid">
         <div class="span12">
           <h1 class="this-name">Audio</h1>
-          <h3 class="this-description">Audio</h3>
+          <h3 class="this-description">An audio resource including sound recording.</h3>
           <br />
         </div>
       </div>
@@ -78,7 +78,8 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../Resource/index.html">Resource</a></div>
+        <div class="section-text parent">Properties from <A href="../Resource/index.html">Resource</a> <a href="notes.html#Resource">[*]</a>
+</div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -93,15 +94,15 @@
               <tbody>
 
             <tr>
-          <td>name</td>
-          <td>Text</td>
-          <td>Name of the item.</td>
+          <td>label</td>
+          <td>Literal</td>
+          <td>Label of the item.</td>
           <td></td>
           <td></td>
             </tr>
             <tr>
           <td>description</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Short description of the item.</td>
           <td></td>
           <td></td>
@@ -132,7 +133,7 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../Instance/index.html">Instance</a></div>
+        <div class="section-text parent">Properties from <A href="../CreativeWork/index.html">Creative Work</a></div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -147,45 +148,88 @@
               <tbody>
 
             <tr>
-          <td>title</td>
-          <td>Text</td>
-          <td>Title added entry</td>
-          <td>245 $a</td>
+          <td>name</td>
+          <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
+          <td>The primary entity associated with the creation of the work. Refinement relationships will be defined as subproperties of this property.</td>
+          <td>100, 110, 111</td>
           <td></td>
             </tr>
             <tr>
-          <td>edition</td>
-          <td>Text</td>
-          <td>Edition of a creative work</td>
-          <td>250</td>
+          <td>addedname <a href="notes.html#CreativeWork.addedName">[*]</a>
+</td>
+          <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
+          <td>The additinoal entities associated with creation of the work. Refinement relationships will be defined as subproperties of this parent.</td>
+          <td>700, 710, 711</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>uniformTitle</td>
+          <td><a href="/vocab/Title/index.html">Title</a></td>
+          <td>Uniform title printed or displayed</td>
+          <td>130, 240 $a</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>language</td>
+          <td>Language</td>
+          <td>Language associated with the Creative Work.</td>
+          <td>008 / 35-37</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>classification</td>
+          <td>Literal (URL)</td>
+          <td>Classification of the Creative Work.</td>
+          <td>050a</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>ddc</td>
+          <td>Literal (URL)</td>
+          <td>Dewey Decimal Classification of the Creative Work.</td>
+          <td>XXX</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>audience</td>
+          <td>Literal</td>
+          <td>Intended audience of the Creative Work..</td>
+          <td>008 / 22</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>genre</td>
+          <td>Literal</td>
+          <td>Genre of the Creative Work.</td>
+          <td>008 / 22</td>
           <td></td>
             </tr>
             <tr>
           <td>note</td>
-          <td>Text</td>
-          <td>Note that provides specific information regarding the instance.</td>
+          <td>Literal</td>
+          <td>Note that provides general information regarding the work.</td>
           <td>5XX</td>
           <td></td>
             </tr>
             <tr>
-          <td>publisher</td>
-          <td><a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
-          <td>Entity responsible for publishing the Resource.</td>
-          <td>260 $b</td>
+          <td>subject</td>
+          <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Place/index.html">Place</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Topic/index.html">Topic</a></td>
+          <td>Subject associated with the Bibliographic Resource.</td>
+          <td>6XX</td>
           <td></td>
             </tr>
             <tr>
-          <td>publishedAt</td>
-          <td><a href="/vocab/Place/index.html">Place</a></td>
-          <td>Place of publication.</td>
-          <td>260 $a</td>
+          <td>hasInstance</td>
+          <td><a href="/vocab/PhysicalResource/index.html">Physical Resource</a> or <a href="/vocab/DigitalResource/index.html">Digital Resouce</a></td>
+          <td>An instantiation of a creative work.</td>
+          <td></td>
           <td></td>
             </tr>
             <tr>
-          <td>publishedOn</td>
-          <td>Date</td>
-          <td>Date(s) associated with the publication of the Resource.</td>
-          <td>260 $c</td>
+          <td>relatedTo</td>
+          <td><a href="/vocab/CreativeWork/index.html">Creative Work</a></td>
+          <td>A related Creative Work. Refinement relationships will be defined as subproperties of this property.</td>
+          <td></td>
           <td></td>
             </tr>
 
@@ -215,17 +259,10 @@
               <tbody>
 
             <tr>
-          <td>extent</td>
-          <td>Text</td>
-          <td>Total playing time, etc. of each type of item.</td>
-          <td>300 $a</td>
-          <td></td>
-            </tr>
-            <tr>
-          <td>format</td>
-          <td>Text</td>
-          <td>The format of the application</td>
-          <td></td>
+          <td>note</td>
+          <td>Literal</td>
+          <td>summary</td>
+          <td>520</td>
           <td></td>
             </tr>
 
