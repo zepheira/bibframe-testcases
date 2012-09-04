@@ -57,15 +57,15 @@
           <ul class="breadcrumb">
             <li><a href = "/">Home</a> <span class="divider">/</span></li>
             <li><a href = "/vocab/">Vocab</a> <span class="divider">/</span></li>
-<li><a href="../Resource/index.html">Resource</a> <span class="divider">/</span></li><li><a href="../Instance/index.html">Instance</a> <span class="divider">/</span></li><li class="active">Physical Book</li>
+<li><a href="../Resource/index.html">Resource</a> <span class="divider">/</span></li><li><a href="../Instance/index.html">Instance</a> <span class="divider">/</span></li><li><a href="../PhysicalResource/index.html">Physical Resource</a> <span class="divider">/</span></li><li class="active">A Physical Book</li>
           </ul>
         </div>
       </div>
 
       <div class="this row-fluid">
         <div class="span12">
-          <h1 class="this-name">Physical Book</h1>
-          <h3 class="this-description">A physical book.</h3>
+          <h1 class="this-name">A Physical Book</h1>
+          <h3 class="this-description">A physical, paper book</h3>
           <br />
         </div>
       </div>
@@ -78,7 +78,8 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../Resource/index.html">Resource</a></div>
+        <div class="section-text parent">Properties from <A href="../Resource/index.html">Resource</a> <a href="notes.html#Resource">[*]</a>
+</div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -93,15 +94,15 @@
               <tbody>
 
             <tr>
-          <td>name</td>
-          <td>Text</td>
-          <td>Name of the item.</td>
+          <td>label</td>
+          <td>Literal</td>
+          <td>Label of the item.</td>
           <td></td>
           <td></td>
             </tr>
             <tr>
           <td>description</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Short description of the item.</td>
           <td></td>
           <td></td>
@@ -148,21 +149,21 @@
 
             <tr>
           <td>title</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Title added entry</td>
           <td>245 $a</td>
           <td></td>
             </tr>
             <tr>
           <td>edition</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Edition of a creative work</td>
           <td>250</td>
           <td></td>
             </tr>
             <tr>
           <td>note</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Note that provides specific information regarding the instance.</td>
           <td>5XX</td>
           <td></td>
@@ -200,7 +201,7 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../PhysicalBook/index.html">Physical Book</a></div>
+        <div class="section-text parent">Properties from <A href="../PhysicalResource/index.html">Physical Resource</a></div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -216,30 +217,70 @@
 
             <tr>
           <td>ISBN</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>ISBN of the item.</td>
           <td>020 $a</td>
           <td></td>
             </tr>
             <tr>
+          <td>ISSN</td>
+          <td>Literal</td>
+          <td>ISSN of the item.</td>
+          <td></td>
+          <td></td>
+            </tr>
+            <tr>
           <td>extent</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Number of physical pages, volumes, cassettes, total playing time, etc. of each type of item.</td>
           <td>300 $a</td>
           <td></td>
             </tr>
             <tr>
           <td>otherPhysicalDetails</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Physical characteristics such as illustrative matter, coloration, playing speed, groove characteristics, etc.</td>
           <td>300 $b</td>
           <td></td>
             </tr>
             <tr>
           <td>dimensions</td>
-          <td>Text</td>
+          <td>Literal</td>
           <td>Expressed in centimeters, millimeters or inches</td>
           <td>300 $c</td>
+          <td></td>
+            </tr>
+
+
+              </tbody>
+            </table>
+        
+      </div> <!-- span12 -->
+      
+    </div> <!-- vocabulary-display-section -->
+        <div class="row-fluid vocabulary-display-section">
+      
+      <div class="span12">
+        
+        <div class="section-text parent">Properties from <A href="../PhysicalBook/index.html">A Physical Book</a></div>
+        
+        <table class="table table-striped table-bordered">
+          <thead>
+                <tr>
+        <th class="span2">Property</th>
+        <th class="span2">Expected Value</th>
+        <th class="span6">Description</th>
+        <th class="span2">Related MARC Code</th>
+        <th class="span2">Related RDA Code</th>
+                </tr>
+          </thead>
+              <tbody>
+
+            <tr>
+          <td>ISBN</td>
+          <td>Literal</td>
+          <td>ISBN of the item.</td>
+          <td>020 $a</td>
           <td></td>
             </tr>
 

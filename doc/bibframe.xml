@@ -551,7 +551,7 @@
       <marcref>020 $a</marcref>
       <rdaref></rdaref>
     </property>
-    <property id='isbn'>
+    <property id='issn'>
       <label>ISSN</label>
       <typedesc>Literal</typedesc>
       <description>ISSN of the item.</description>
@@ -579,17 +579,55 @@
       <marcref>300 $c</marcref>
       <rdaref></rdaref>
     </property>
-    <property id='systemDetails'>
-      <label>systemDetails</label>
+  </class>
+
+  <class id='PhysicalBook' isa='PhysicalResource'> 
+    <label>A Physical Book</label>
+    <tagline>A physical, paper book</tagline>
+    <property id='isbn'>
+      <label>ISBN</label>
       <typedesc>Literal</typedesc>
-      <description>Technical information about an item, such as the presence or absence of certain kinds of codes; or the physical characteristics of a computer file, such as recording densities, parity, blocking factors, mode of access, software programming language, computer requirements, peripheral requirements, trade name or recording systems, number of lines of resolution, and modulation frequency.</description>
-      <marcref>538 $a</marcref>
+      <description>ISBN of the item.</description>
+      <marcref>020 $a</marcref>
       <rdaref></rdaref>
     </property>
   </class>
 
-  <class id='Map' isa='PhysicalResource'> 
-    <label>A Paper Map</label>
+  <class id='Serial' isa='PhysicalResource'> 
+    <label>A Serial</label>
+    <tagline>A physical, periodical publication</tagline>
+    <property id='issn'>
+      <label>ISSN</label>
+      <typedesc>Literal</typedesc>
+      <description>ISSN of the item.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='volume'>
+      <label>Volume</label>
+      <typedesc>Literal</typedesc>
+      <description>The volume of the serial.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='issue'>
+      <label>Issue</label>
+      <typedesc>Literal</typedesc>
+      <description>The issue of the serial.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='number'>
+      <label>Number</label>
+      <typedesc>Literal</typedesc>
+      <description>The number of the serial.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='PhysicalMap' isa='PhysicalResource'> 
+    <label>A Physical Map</label>
     <tagline>A physical cartographic resource such as a paper map, globe, etc.</tagline>
     <property id='scale'>
       <label>scale</label>
@@ -746,8 +784,8 @@
       <marcref></marcref>
       <rdaref></rdaref>
     </property>    
-    <property id='shelvingLocation'>
-      <label>Shelving Location</label>
+    <property id='callNumber'>
+      <label>Call Number</label>
       <typedesc>Literal</typedesc>
       <description>The location on the shelf.</description>
       <marcref></marcref>
@@ -767,7 +805,7 @@
     <tagline>CoverArt</tagline>
     <property id='image'>
       <label>image</label>
-      <typedesc>ImageObject</typedesc>
+      <typedesc>@ImageObject</typedesc>
       <description>An image annotation.</description>
       <marcref></marcref>
       <rdaref></rdaref>
