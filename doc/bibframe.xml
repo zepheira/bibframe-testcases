@@ -544,20 +544,6 @@
   <class id='PhysicalResource' isa='Instance'> 
     <label>Physical Resource</label>
     <tagline>A physical resource.</tagline>
-    <property id='isbn'>
-      <label>ISBN</label>
-      <typedesc>Literal</typedesc>
-      <description>ISBN of the item.</description>
-      <marcref>020 $a</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='issn'>
-      <label>ISSN</label>
-      <typedesc>Literal</typedesc>
-      <description>ISSN of the item.</description>
-      <marcref></marcref>
-      <rdaref></rdaref>
-    </property>
     <property id='extent'>
       <label>extent</label>
       <typedesc>Literal</typedesc>
