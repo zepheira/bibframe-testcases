@@ -42,6 +42,7 @@ IDLC_GUESS_FNAME = u'idlcFromHeuristic'
 
 requests_cache.configure(os.path.join(CACHEDIR, 'cache'))
 
+NON_ISBN_CHARS = re.compile(u'\D')
 
 def invert_dict(d):
     #http://code.activestate.com/recipes/252143-invert-a-dictionary-one-liner/#c3
@@ -290,10 +291,13 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                 isbn_tags = {}
                 for isbn in isbns:
                     parts = isbn.split(None, 1)
+                    #Remove any cruft from ISBNs. Leave just the digits
+                    cleaned_isbn = NON_ISBN_CHARS.subn(u'', parts[0])[0]
                     if len(parts) == 1:
-                        isbn_tags[parts[0]] = None
+                        #FIXME: More generally strip non-digit chars from ISBNs
+                        isbn_tags[cleaned_isbn] = None
                     else:
-                        isbn_tags[parts[0]] = parts[1]
+                        isbn_tags[cleaned_isbn] = parts[1]
                 c14ned = canonicalize_isbns(isbn_tags.keys())
                 for c14nisbn, variants in invert_dict(c14ned).items():
                     #We'll use the heuristic that the longest ISBN number is the best

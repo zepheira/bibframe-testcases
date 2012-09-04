@@ -2,6 +2,7 @@
   <!-- General Class of Resource -->
   
   <annotations path='notes.xml'/> 
+  <annotations path='notes-bibframe.xml'/> 
 
   <class id='Resource'> 
     <label>Resource</label>
@@ -190,6 +191,7 @@
   <class id='MediaObject' isa='CreativeWork'> 
     <label>Media Object</label>
     <tagline>A media object</tagline>
+    <!--
     <property id='note'>
       <label>note</label>
       <typedesc>Literal</typedesc>
@@ -197,6 +199,7 @@
       <marcref>520</marcref>
       <rdaref></rdaref>
     </property>
+  -->
   </class>
 
   <class id='MusicRecording' isa='CreativeWork'> 

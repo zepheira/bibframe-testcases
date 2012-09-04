@@ -16,7 +16,11 @@ def canonicalize_isbns(isbns):
             c14ned = isbn
         elif len(isbn) == 13: #ISBN-13 with check digit
             c14ned = isbn[:-1]
-        canonicalized[isbn] = c14ned
+        else:
+            import sys; print >> sys.stderr, 'BAD ISBN:', isbn
+            isbn = None
+        if isbn:
+            canonicalized[isbn] = c14ned
     return canonicalized
 
 

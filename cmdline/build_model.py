@@ -236,7 +236,7 @@ def run(modelsource=None, output=None, base=''):
             ann_html = ''
             if (outcls.id, None) in annotations:
                 ann_html = ' <a href="notes.html#{0}">[*]</a>\n'.format(U(outcls.id))
-            for prop in outcls.property:
+            for prop in (outcls.property or []):
                 typedesc = handle_inline_links(U(prop.typedesc))
                 description = handle_inline_links(U(prop.description))
 
@@ -286,7 +286,7 @@ def run(modelsource=None, output=None, base=''):
                 ann_html = '<div class="annotations"><a name="{0}">{0}</a>{1}</div>\n'.format(U(outcls.id), htmlchunk)
                 current_annotations.append(ann_html)
             #Is there an annotation for any of its properties?
-            for prop in outcls.property:
+            for prop in (outcls.property or []):
                 if (outcls.id, prop.id) in annotations:
                     #Build the accumulated HTML annotations into one chunk
                     htmlchunk = '\n'.join(annotations[(outcls.id, prop.id)])
@@ -302,7 +302,7 @@ def run(modelsource=None, output=None, base=''):
 
 if __name__ == '__main__':
     from akara.thirdparty import argparse #Yes! Yes! Import not at top
-    #build_model.py --base=/vocab bibframe.xml /tmp/bibframe
+    #build_model.py --base=/vocab doc/bibframe.xml /tmp/bibframe
     parser = argparse.ArgumentParser()
     #parser.add_argument('-o', '--output')
     parser.add_argument('model', metavar='source', help='The model file')
