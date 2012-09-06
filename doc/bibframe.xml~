@@ -84,14 +84,14 @@
       <label>classification</label>
       <typedesc>Literal (URL)</typedesc>
       <description>Classification of the Creative Work.</description>
-      <marcref>050a</marcref>
+      <marcref>050 $a</marcref>
       <rdaref></rdaref>
     </property>
     <property id='ddc'>
       <label>ddc</label>
       <typedesc>Literal (URL)</typedesc>
       <description>Dewey Decimal Classification of the Creative Work.</description>
-      <marcref>XXX</marcref>
+      <marcref>082 $a</marcref>
       <rdaref></rdaref>
     </property>
     <property id='audience'>
@@ -191,87 +191,36 @@
   <class id='MediaObject' isa='CreativeWork'> 
     <label>Media Object</label>
     <tagline>A media object</tagline>
-    <!--
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
-  -->
   </class>
 
   <class id='MusicRecording' isa='CreativeWork'> 
     <label>Music Recording</label>
     <tagline>A music recording</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Painting' isa='CreativeWork'> 
     <label>Painting</label>
     <tagline>A painting</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Photograph' isa='CreativeWork'> 
     <label>Photograph</label>
     <tagline>A photograph</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Sculpture' isa='CreativeWork'> 
     <label>Scuplture</label>
     <tagline>A sculpture</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='SoftwareApplication' isa='CreativeWork'> 
     <label>SoftwareApplication</label>
     <tagline>Software Application</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='WebPage' isa='CreativeWork'> 
     <label>WebPage</label>
     <tagline>A web page</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
   
   <class id='Collection' isa='CreativeWork'> 
@@ -296,145 +245,61 @@
   <class id='Artifact' isa='CreativeWork'>
     <label>Artifact</label>
     <tagline>A physical artifact including 3 dimensional objects.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Audio' isa='CreativeWork'>
     <label>Audio</label>
     <tagline>An audio resource including sound recording.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Cartographic' isa='CreativeWork'>
     <label>Cartographic</label>
     <tagline>A cartographic and / or map resource.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Dataset' isa='CreativeWork'>
     <label>Dataset</label>
     <tagline>A dataset.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Manuscript' isa='CreativeWork'>
     <label>Manuscript</label>
     <tagline>A manuscript.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='MixedMaterial' isa='CreativeWork'>
     <label>Mixed Material</label>
     <tagline>A mixed material resource.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='MovingImage' isa='CreativeWork'>
     <label>Moving Image</label>
     <tagline>A moving image, projected medium, film or video.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Multimedia' isa='CreativeWork'>
     <label>Multimedia</label>
     <tagline>A multimedia resource.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='NotatedMusic' isa='CreativeWork'>
     <label>Notated Music</label>
     <tagline>Notated music including sheet and / or printed music.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='StillImage' isa='CreativeWork'>
     <label>Still Image</label>
     <tagline>A still image including 2 dimensional, nonprojected graphic.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Tactile' isa='CreativeWork'>
     <label>Tactile</label>
     <tagline>A tactile resource.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Text' isa='CreativeWork'>
     <label>Text</label>
     <tagline>A text and / or language material resource.</tagline>
-    <property id='note'>
-      <label>note</label>
-      <typedesc>Literal</typedesc>
-      <description>summary</description>
-      <marcref>520</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Instance' isa='Resource'> 
