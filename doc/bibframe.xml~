@@ -790,6 +790,13 @@
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
+    <property id='content'>
+      <label>content</label>
+      <typedesc>Literal</typedesc>
+      <description>A textual annotation.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>    
     <property id='date'>
       <label>date</label>
       <typedesc>Date</typedesc>

@@ -84,14 +84,14 @@
       <label>classification</label>
       <typedesc>Literal (URL)</typedesc>
       <description>Classification of the Creative Work.</description>
-      <marcref>050a</marcref>
+      <marcref>050 $a</marcref>
       <rdaref></rdaref>
     </property>
     <property id='ddc'>
       <label>ddc</label>
       <typedesc>Literal (URL)</typedesc>
       <description>Dewey Decimal Classification of the Creative Work.</description>
-      <marcref>XXX</marcref>
+      <marcref>082 $a</marcref>
       <rdaref></rdaref>
     </property>
     <property id='audience'>
