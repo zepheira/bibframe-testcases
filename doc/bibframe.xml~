@@ -464,7 +464,7 @@
     <property id='name'>
       <label>name</label>
       <typedesc>@Organization or @Meeting</typedesc>
-      <description>Name of entity responsible for production, publication, distribution, manufacture, etc. of the instance.</description>
+      <description>Name of entity responsible for production, publication, distribution, manufacture, etc. of the instance. Refinement relationships will be defined as subproperties of this property.</description>
       <marcref>260 $b</marcref>
       <rdaref></rdaref>
     </property>
