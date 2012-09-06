@@ -9,8 +9,8 @@
   <annotation on='Annotation'> 
     <p>Based on the W3C Annotea Annotation Schema <a href='http://www.w3.org/2000/10/annotation-ns#'>(viz.)</a></p>
   </annotation> 
-  <annotation on='CreativeWork/name'> 
-    <p>Cardinatlity and manadatory constraints are overlayed as a community defined profile of this model.</p>
+  <annotation on='CreativeWork/addedName'> 
+    <p>An additional creator</p>
   </annotation> 
 
 </annotations>

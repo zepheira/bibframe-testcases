@@ -246,7 +246,7 @@ def run(modelsource=None, output=None, base=''):
             ann_html = ''
             if (outcls.id, None) in annotations:
                 #ann_html = ' <a class="notes" data-toggle="modal" href="notes.html#{0}" data-target="#myModal">[*]</a>\n'.format(U(outcls.id))
-                ann_html = ' <a class="notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></a>\n'.format(U(outcls.id))
+                ann_html = ' <a class="notes" data-toggle="modal" href="notes.html" data-target="#myModal">[<i class="icon-asterisk"></i>]</a>\n'.format(U(outcls.id))
             for prop in (outcls.property or []):
                 typedesc = handle_inline_links(U(prop.typedesc))
                 description = handle_inline_links(U(prop.description))
@@ -255,7 +255,7 @@ def run(modelsource=None, output=None, base=''):
                 prop_ann_html = ''
                 if (outcls.id, prop.id) in annotations:
                     #prop_ann_html = ' <a class="notes" data-toggle="modal" href="notes.html#{0}.{1}" data-target="#myModal">[*]</a>\n'.format(outcls.id, prop.id)
-                    prop_ann_html = ' <a class="notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></a>\n'.format(outcls.id, prop.id)
+                    prop_ann_html = ' <a class="notes" data-toggle="modal" href="notes.html" data-target="#myModal">[<i class="icon-asterisk"></i>]</a>\n'.format(outcls.id, prop.id)
 
                 property_chunks.append(T2.format(
                     U(prop.label),

@@ -10,12 +10,8 @@
     <link href="/vocab/css/style.css" rel="stylesheet" />
     
     <script type="text/javascript" src="/vocab/js/jquery.js"></script>
-    <script type="text/javascript" src="/vocab/js/bootstrap-modal.js"></script>
-    
-    <script type="text/javascript">
-      $('#myModal').modal(options)
-    </script>
-    
+    <script type="text/javascript" src="/vocab/js/bootstrap.min.js"></script>
+        
   </head>
   
   <body>
@@ -78,7 +74,7 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../Resource/index.html">Resource</a> <a href="notes.html#Resource">[*]</a>
+        <div class="section-text parent">Properties from <A href="../Resource/index.html">Resource</a> <a class="notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></a>
 </div>
         
         <table class="table table-striped table-bordered">
@@ -148,18 +144,11 @@
               <tbody>
 
             <tr>
-          <td>name</td>
-          <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
-          <td>The primary entity associated with the creation of the work. Refinement relationships will be defined as subproperties of this property.</td>
-          <td>100, 110, 111</td>
-          <td></td>
-            </tr>
-            <tr>
-          <td>addedname <a href="notes.html#CreativeWork.addedName">[*]</a>
+          <td>name <a class="notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></a>
 </td>
           <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
-          <td>The additinoal entities associated with creation of the work. Refinement relationships will be defined as subproperties of this parent.</td>
-          <td>700, 710, 711</td>
+          <td>The entity (or entities) associated with the creation of the work. Refinement relationships will be defined as subproperties of this property.</td>
+          <td>100, 110, 111 / 700, 710, 711</td>
           <td></td>
             </tr>
             <tr>
@@ -167,6 +156,13 @@
           <td><a href="/vocab/Title/index.html">Title</a></td>
           <td>Uniform title printed or displayed</td>
           <td>130, 240 $a</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>title</td>
+          <td>Literal</td>
+          <td>The title of the creative work.</td>
+          <td>245 $a</td>
           <td></td>
             </tr>
             <tr>
@@ -264,7 +260,7 @@
 <li><a href="../Sculpture/index.html">Scuplture</a></li>
 <li><a href="../Collection/index.html">Collection</a></li>
 <li><a href="../MovingImage/index.html">Moving Image</a></li>
-<li><a href="../SoftwareApplication/index.html">Scuplture</a></li>
+<li><a href="../SoftwareApplication/index.html">SoftwareApplication</a></li>
 <li><a href="../Article/index.html">Article</a></li>
 <li><a href="../Photograph/index.html">Photograph</a></li>
 <li><a href="../WebPage/index.html">WebPage</a></li>
@@ -286,7 +282,21 @@
       </div> <!-- specific-types-display -->
 
     </div> <!-- container-fluid -->
-    
+ 
+    <!-- Modal -->
+
+    <div class="modal hide" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h3 id="myModalLabel">Notes</h3>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>   
+  
     <div class="footer">
       <div class="container">
         <p>MARCR.org is a joint effort of <a href = "http://loc.gov/">US Library of Congress</a> and <a href="http://zepheira.com/">Zepheira</a> and <a href = "/contrib/">You!</a></p>
