@@ -102,13 +102,11 @@
 
             <!-- <div ex:role="facet" ex:expression=".instance.isbnType" ex:facetLabel="Book Type" ex:sortMode="count"></div> -->
 
-            <div ex:role="facet" ex:expression=".creator.name" ex:facetLabel="Creator" ex:sortMode="count"></div>
+            <div ex:role="facet" ex:expression=".name.label" ex:facetLabel="Creator" ex:sortMode="count"></div>
 
-            <div ex:role="facet" ex:expression=".subject.name" ex:facetLabel="Subject" ex:sortMode="count"></div>
+            <div ex:role="facet" ex:expression=".subject.label" ex:facetLabel="Subject" ex:sortMode="count"></div>
 
-            <div ex:role="facet" ex:expression=".instance.publisher.name" ex:facetLabel="Publisher" ex:sortMode="count"></div>
-
-            <!-- <div ex:role="facet" ex:expression="union(.subject.idlcFromHeuristic, .creator.idlcFromHeuristic)" ex:facetLabel="id.loc.gov lookup" ex:sortMode="count"></div> -->
+            <div ex:role="facet" ex:expression=".instance.name.label" ex:facetLabel="Publisher" ex:sortMode="count"></div>
             
           </div>
           
@@ -128,10 +126,10 @@
 		<br />
 		
 		<table class="table table-condensed">
-                  <tr ex:if-exists=".creator">
+                  <tr ex:if-exists=".name">
                     <td class="property span2">Creator</td>
                     <td>
-		      <ul ex:content=".creator" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".name"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
+		      <ul ex:content=".name" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".label"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
                     </td>
                   </tr>
                   <tr ex:if-exists=".formatedContentsNote">
@@ -153,7 +151,7 @@
                   <tr ex:if-exists=".subject">
                     <td class="property span2">Subject</td>
                     <td>
-		      <ul ex:content=".subject" class="value subject"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".name"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span> 
+		      <ul ex:content=".subject" class="value subject"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".label"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span> 
                           <span ex:if-exists=".generalSubdivision"> <span class="divider">/</span> <span class="subdivision general" ex:content=".generalSubdivision"></span></span>
                           <span ex:if-exists=".geographicSubdivision"> <span class="divider">/</span> <span class="subdivision geographic" ex:content=".geographicSubdivision"></span></span>
                           <span ex:if-exists=".chronologicalSubdivision"> <span class="divider">/</span> <span class="subdivision chronological" ex:content=".chronologicalSubdivision"></span></span>
@@ -184,12 +182,12 @@
                             <div class="span8">
                               
                               <table class="table table-condensed">
-                                <tr ex:if-exists=".publisher">
+                                <tr ex:if-exists=".name">
                                   <td class="property span2">Publisher</td>
                                   <td class="value">
-                                    <span class="publishedAt" ex:content=".publishedAt.name"></span> 
-                                    <span class="publisher" ex:content=".publisher.name"></span> 
-                                    <span class="publishedOn" ex:content=".publishedOn"></span> 
+                                    <span class="publishedAt" ex:content=".place.label"></span> 
+                                    <span class="publisher" ex:content=".name.label"></span> 
+                                    <span class="publishedOn" ex:content=".date"></span> 
                                   </td>
                                 </tr>
                                 <tr ex:if-exists=".isbn">
@@ -250,7 +248,7 @@
                                       <span ex:content="!holds.access"></span></br>
                                       <span ex:content="!holds.shelving"></span></br>
                                       <span ex:content="!holds.shelvingDetails"></span></br>                                      
-                                      <a ex:href-content="!holds.institution.link"><span ex:content="!holds.institution.name"></span></a><br /> 
+                                      <a ex:href-content="!holds.institution.link"><span ex:content="!holds.institution.label"></span></a><br /> 
                                       <span ex:content="!holds.institution.address"></span><br />                            
                                     </div>
                                   </div>
@@ -266,7 +264,7 @@
                                     <div class="accordion-inner">
                                       <div class="thumbnail">
                                         <a ex:href-content="!pictureOf.link"><img ex:src-content="!pictureOf.thumbnail" /></a><br />
-                                        <span>credit: <a ex:href-content="!pictureOf.person.link"><span ex:content="!pictureOf.person.name"></span></a></span>
+                                        <span>credit: <a ex:href-content="!pictureOf.person.link"><span ex:content="!pictureOf.person.label"></span></a></span>
                                       </div>
                                     </div>
                                   </div>

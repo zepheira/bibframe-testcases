@@ -1,12 +1,14 @@
 {"items": [
 {
+    "lcCallNumber": "GV1525", 
     "dftag_5005": "DLC", 
     "subTitle": "The interior of the Crystal Palace in London : a view into the life and doings of London during the Great Industrial Exhibition.", 
     "dftag_2465": "DLC", 
+    "language": "ita", 
     "title": "Das Innere des Glaspalastes in London =", 
     "lccn": "  2012659481", 
     "dftag_040c": "LUS", 
-    "creator": "ps_obj_12", 
+    "name": "ps_obj_12", 
     "label": "ps_1", 
     "note": [
         "Title from hand-colored first leaf.", 
@@ -20,7 +22,6 @@
         "Interior of the Crystal Palace in London", 
         "Great exhibition, 1851"
     ], 
-    "dftag_041a": "ita", 
     "dftag_035a": "(OCoLC)ocn426035137", 
     "dftag_040d": "DLC", 
     "type": "WorkRecord", 

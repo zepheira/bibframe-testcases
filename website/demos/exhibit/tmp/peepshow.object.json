@@ -2,90 +2,89 @@
 {
     "marcrType": "Place", 
     "code": "260", 
-    "type": "ps_object", 
+    "type": "object", 
     "id": "ps_obj_1", 
-    "name": "[Germany? :"
+    "label": "[Germany? :"
 },{
     "marcrType": "Organization", 
     "code": "260", 
-    "type": "ps_object", 
+    "type": "object", 
     "id": "ps_obj_2", 
-    "name": "s.n.,"
+    "label": "s.n.,"
 },{
-    "marcrType": "Place", 
     "code": "260", 
-    "type": "ps_object", 
-    "id": "ps_obj_3", 
-    "name": "(Nuremberg? :"
+    "label": "ps_obj_3", 
+    "place": "(Nuremberg? :", 
+    "marcrType": "Place", 
+    "type": "object", 
+    "id": "ps_obj_3"
 },{
     "marcrType": "Organization", 
     "code": "260", 
-    "type": "ps_object", 
+    "type": "object", 
     "id": "ps_obj_4", 
-    "name": "G.W.F.)"
+    "label": "G.W.F.)"
 },{
     "code": "300", 
     "dimensions": "18 x 23 x 44 cm folded to 18 x 23 x 2 cm.", 
     "physicalDesc": "col. ill. ;", 
+    "label": "ps_obj_5", 
     "extent": "1 item ([4] leaves) :", 
     "marcrType": "Measurement", 
-    "type": "ps_object", 
+    "type": "object", 
     "id": "ps_obj_5"
 },{
     "code": "650", 
-    "name": "Tunnel books", 
-    "idlcFromHeuristic": "http://id.loc.gov/authorities/subjects/sh2011003981", 
     "formSubdivision": "Specimens.", 
+    "label": "Tunnel books", 
     "marcrType": "Topic", 
-    "type": "ps_object", 
+    "type": "object", 
     "id": "ps_obj_6"
 },{
     "code": "610", 
-    "name": "Crystal Palace (London, England)", 
-    "idlcFromHeuristic": "http://id.loc.gov/authorities/names/nb2009021778", 
+    "label": "Crystal Palace (London, England)", 
     "v": "Pictorial works.", 
     "marcrType": "Organization", 
-    "type": "ps_object", 
+    "type": "object", 
     "id": "ps_obj_7"
 },{
     "code": "651", 
-    "name": "Great Britain", 
+    "generalSubdivision": "History", 
     "chronologicalSubdivision": "Victoria, 1837-1901", 
     "formSubdivision": "Pictorial works.", 
-    "idlcFromHeuristic": "http://id.loc.gov/authorities/subjects/sh85056605", 
-    "marcrType": "Topic", 
-    "type": "ps_object", 
-    "id": "ps_obj_8", 
-    "generalSubdivision": "History"
+    "label": "Great Britain", 
+    "marcrType": "Geographic", 
+    "type": "object", 
+    "id": "ps_obj_8"
 },{
-    "name": "Great Exhibition", 
+    "a": "Great Exhibition", 
     "c": "London, England)", 
     "code": "611", 
     "d": "(1851 :", 
+    "label": "ps_obj_9", 
     "v": "Pictorial works.", 
     "marcrType": "Meeting", 
-    "type": "ps_object", 
+    "type": "object", 
     "id": "ps_obj_9"
 },{
     "marcrType": "Topic", 
     "code": "650", 
-    "type": "ps_object", 
+    "type": "object", 
     "id": "ps_obj_10", 
-    "name": "Toy and movable books."
+    "label": "Toy and movable books."
 },{
     "code": "650", 
-    "name": "Peepshows", 
     "chronologicalSubdivision": "1850-1860.", 
+    "label": "Peepshows", 
     "2": "lctgm", 
-    "idlcFromHeuristic": "http://id.loc.gov/authorities/subjects/sh97005572", 
     "marcrType": "Topic", 
-    "type": "ps_object", 
+    "type": "object", 
     "id": "ps_obj_11"
 },{
     "code": "700", 
     "e": "lithographer.", 
-    "name": "Faber, G. W.,", 
+    "label": "Faber, G. W.,", 
     "marcrType": "Person", 
-    "type": "ps_object", 
+    "type": "object", 
     "id": "ps_obj_12"
 }] }
