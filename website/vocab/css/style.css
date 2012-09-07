@@ -16,9 +16,7 @@
 .section-text {
  font-weight: bold;
  padding: 10px 10px 15px 10px;
- font-size: 115%;
 }
-
 
 .footer .container p {
 	border-top: 1px solid grey;
@@ -31,7 +29,6 @@
 
 .overview .prose p {
 padding-left: 20px;
-font-size: 120%;
 line-height: 150%;
 }
 
@@ -82,6 +79,11 @@ font-weight: bold;
 color: slategrey;
 }
 
+.annotations a.annotationTitle {
+font-size: %120;
+font-weight: bold;
+text-decoration: none;
+}
 
 
 /* icons for MARC classes (builds off of bootstrap icon patterns) */

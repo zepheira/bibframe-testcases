@@ -295,7 +295,7 @@ def run(modelsource=None, output=None, base=''):
                 #Build the accumulated HTML annotations into one chunk
                 htmlchunk = '\n'.join(annotations[(outcls.id, None)])
                 #Then format it for the notes.html
-                ann_html = '<div class="annotations"><a name="{0}">{0}</a>{1}</div>\n'.format(U(outcls.id), htmlchunk)
+                ann_html = '<div class="annotations"><a class="annotationTitle" name="{0}">{0}</a>{1}</div>\n'.format(U(outcls.id), htmlchunk)
                 current_annotations.append(ann_html)
             #Is there an annotation for any of its properties?
             for prop in (outcls.property or []):
@@ -303,7 +303,7 @@ def run(modelsource=None, output=None, base=''):
                     #Build the accumulated HTML annotations into one chunk
                     htmlchunk = '\n'.join(annotations[(outcls.id, prop.id)])
                     #Then format it for the notes.html
-                    ann_html = '<div class="annotations"><a name="{0}.{1}">{0}.{1}</a>{2}</div>\n'.format(U(outcls.id), prop.id, htmlchunk)
+                    ann_html = '<div class="annotations"><a class="annotationTitle" name="{0}.{1}">{0}.{1}</a>{2}</div>\n'.format(U(outcls.id), prop.id, htmlchunk)
                     current_annotations.append(ann_html)
 
         if current_annotations:
