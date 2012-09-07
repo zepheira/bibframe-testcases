@@ -718,14 +718,7 @@
 
   <class id='Review' isa='Annotation'>
     <label>Review</label>
-    <tagline>Review</tagline>
-    <property id='content'>
-      <label>content</label>
-      <typedesc>Literal</typedesc>
-      <description>A textual annotation.</description>
-      <marcref></marcref>
-      <rdaref></rdaref>
-    </property>    
+    <tagline>A review</tagline>
   </class>
 
 </model>

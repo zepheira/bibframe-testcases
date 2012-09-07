@@ -5,15 +5,14 @@ Declarations used to elucidate MARC model
 #Full MARC field list: http://www.loc.gov/marc/bibliographic/ecbdlist.html
 
 MATERIALIZE = {
-'100': ('creator', {'marcrType': 'Person'}),
-'110': ('creator', {'marcrType': 'Organization'}),
-'111': ('creator', {'marcrType': 'Meeting'}),
+'100': ('name', {'marcrType': 'Person'}),
+'110': ('name', {'marcrType': 'Organization'}),
+'111': ('name', {'marcrType': 'Meeting'}),
 
-'260a': ('publishedAt', {'marcrType': 'Place'}),
-'260b': ('publisher', {'marcrType': 'Organization'}),
-'260e': ('manufacturedAt', {'marcrType': 'Place'}),
-'260f': ('manufacturer', {'marcrType': 'Organization'}),
-'263a': ('projectedPublicationDate', {'marcrType': 'Temporal'}),
+'260a': ('place', {'marcrType': 'Place'}),
+'260b': ('name', {'marcrType': 'Organization'}),
+'260e': ('place', {'marcrType': 'Place'}),
+'260f': ('name', {'marcrType': 'Organization'}),
 
 '300': ('physicalDescription', {'marcrType': 'Measurement'}),
 
@@ -26,9 +25,11 @@ MATERIALIZE = {
 '651': ('subject', {'marcrType': 'Geographic'}),
 #'655': ('genre', {'marcrType': 'Genre'}),
 
-'700': ('creator', {'marcrType': 'Person'}),
-'710': ('creator', {'marcrType': 'Organization'}),
-'711': ('creator', {'marcrType': 'Meeting'}),
+'700': ('name', {'marcrType': 'Person'}),
+'710': ('name', {'marcrType': 'Organization'}),
+'711': ('name', {'marcrType': 'Meeting'}),
+
+'852a': ('institution', {'marcrType': 'Organization'}),
 }
 
 
@@ -43,14 +44,15 @@ FIELD_RENAMINGS = {
 '0503': 'material',
 '082a': 'deweyNumber',
 
-'100a': 'name',
+'100a': 'label',
 '100d': 'date',
-'110a': 'name',
+'110a': 'label',
 '110d': 'date',
-'111a': 'name',
+'111a': 'label',
 '111d': 'date',
 '130a': 'uniformTitle',
 '130l': 'language',
+'041a': 'language',
 
 '245a': 'title',
 '245b': 'subTitle',
@@ -63,12 +65,12 @@ FIELD_RENAMINGS = {
 '255b': 'cartographicMathematicalDataProjectionStatement',
 '255c': 'cartographicMathematicalDataCoordinateStatement',
 '256a': 'computerFilecharacteristics',
-'260a': 'name',
-'260b': 'name',
-'260c': 'publishedOn',
-'260e': 'name',
-'260f': 'name',
-'260g': 'manufacturerOn',
+'260a': 'label',
+'260b': 'label',
+'260c': 'date',
+'260e': 'place',
+'260f': 'label',
+'260g': 'date',
 
 '300a': 'extent',
 '300b': 'physicalDesc',
@@ -117,42 +119,45 @@ FIELD_RENAMINGS = {
 '522a': 'coverage',
 '525a': 'note',
 
-'600a': 'name',
+'600a': 'label',
 '600d': 'date',
-'610a': 'name',
-'650a': 'name',
+'610a': 'label',
+'650a': 'label',
 '650d': 'date',
-'651a': 'name',
+'651a': 'label',
 '651d': 'date',
 '630a': 'uniformTitle',
 '630l': 'language',
 
-'630a': 'name',
+'630a': 'label',
 '630h': 'medium',
 '630v': 'formSubdivision',
 '630x': 'generalSubdivision',
 '630y': 'chronologicalSubdivision',
 '630z': 'geographicSubdivision',
 
-'650a': 'name',
+'650a': 'label',
 '650c': 'locationOfEvent',
 '650v': 'formSubdivision',
 '650x': 'generalSubdivision',
 '650y': 'chronologicalSubdivision',
 '650z': 'geographicSubdivision',
 
-'651a': 'name',
+'651a': 'label',
 '651v': 'formSubdivision',
 '651x': 'generalSubdivision',
 '651y': 'chronologicalSubdivision',
 '651z': 'geographicSubdivision',
 
-'700a': 'name',
+'700a': 'label',
 '700d': 'date',
-'710a': 'name',
+'710a': 'label',
 '710d': 'date',
-'711a': 'name',
+'711a': 'label',
 '711d': 'date',
+
+'852a': 'institution',
+'852h': 'callNumber',
 
 '856u': 'link',
 }
@@ -165,6 +170,7 @@ WORK_FIELDS = set([
 '040',
 '041',
 '050a', #Note: should be able to link directly to authority @ id.loc.gov authority/classification/####
+'082',
 '100',
 '110',
 '111',
@@ -219,7 +225,6 @@ INSTANCE_FIELDS = set([
 '055',
 '060',
 '070',
-'082',
 '086',
 '250',
 '254',
@@ -242,6 +247,6 @@ INSTANCE_FIELDS = set([
 
 
 HOLDINGS_FIELDS = set([
-'050',
+'852',
 ])
 

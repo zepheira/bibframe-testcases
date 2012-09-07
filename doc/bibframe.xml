@@ -80,15 +80,15 @@
       <marcref>008 / 35-37</marcref>
       <rdaref></rdaref>
     </property>
-    <property id='classification'>
-      <label>classification</label>
+    <property id='lcCallNumber'>
+      <label>lcCallNumber</label>
       <typedesc>Literal (URL)</typedesc>
-      <description>Classification of the Creative Work.</description>
+      <description>LC Classification of the Creative Work.</description>
       <marcref>050 $a</marcref>
       <rdaref></rdaref>
     </property>
-    <property id='ddc'>
-      <label>ddc</label>
+    <property id='deweyNumber'>
+      <label>deweyNumber</label>
       <typedesc>Literal (URL)</typedesc>
       <description>Dewey Decimal Classification of the Creative Work.</description>
       <marcref>082 $a</marcref>
@@ -696,9 +696,16 @@
       <rdaref></rdaref>
     </property>    
     <property id='access'>
-      <label>Access</label>
+      <label>access</label>
       <typedesc>Literal</typedesc>
-      <description>The access policy of the resource.</description>
+      <description>The access of the resource (e.g. circulating, etc.).</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>    
+    <property id='status'>
+      <label>status</label>
+      <typedesc>Literal</typedesc>
+      <description>The status of the resource (e.g. available, etc.).</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>    
