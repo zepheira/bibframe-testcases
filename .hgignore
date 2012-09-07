@@ -1,2 +1,7 @@
+syntax: regexp
 ^scratch
 ^build
+
+syntax: glob
+*~
+*.pyc
