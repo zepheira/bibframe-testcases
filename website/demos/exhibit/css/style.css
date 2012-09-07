@@ -132,6 +132,10 @@ padding-bottom: 5px;
   background-position: -24px -72px;
 }
 
+.icon-Geographic {                                   /* icon-map-marker */
+  background-position: -24px -72px;
+}
+
 /* icons for MARC type */
 
 .icon-Article {                                   /* icon-book */

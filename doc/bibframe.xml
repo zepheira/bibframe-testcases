@@ -55,7 +55,7 @@
     <property id='name'>
       <label>name</label>
       <typedesc>@Person or @Organization or @Meeting</typedesc>
-      <description>The entity (or entities) associated with the creation of the work. Refinement relationships will be defined as subproperties of this property.</description>
+      <description>The entity (or entities) associated with the creation of the work.</description>
       <marcref>100, 110, 111 / 700, 710, 711</marcref>
       <rdaref></rdaref>
     </property>
@@ -132,7 +132,7 @@
     <property id='relatedTo'>
       <label>relatedTo</label>
       <typedesc>@CreativeWork</typedesc>
-      <description>A related Creative Work. Refinement relationships will be defined as subproperties of this property.</description>
+      <description>A related Creative Work.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
@@ -329,7 +329,7 @@
     <property id='name'>
       <label>name</label>
       <typedesc>@Organization or @Meeting</typedesc>
-      <description>Name of entity responsible for production, publication, distribution, manufacture, etc. of the instance. Refinement relationships will be defined as subproperties of this property.</description>
+      <description>Name of entity responsible for production, publication, distribution, manufacture, etc. of the instance.</description>
       <marcref>260 $b</marcref>
       <rdaref></rdaref>
     </property>
@@ -672,7 +672,7 @@
     <property id='relatedTo'>
       <label>relatedTo</label>
       <typedesc>@Annotation</typedesc>
-      <description>A related Annotation. Refinement relationships will be defined as subproperties of this property.</description>
+      <description>A related Annotation.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
