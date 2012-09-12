@@ -49,12 +49,31 @@ def lucky_idlc_template(qpattern):
     return lucky_idlc
 
 
+def lucky_idlc_org_template(qpattern):
+    '''
+    Used for searching OCLC for VIAF records
+    '''
+    if not callable(qpattern):
+        qpattern = lambda item, qp=qpattern: qp.format(**dict([ (k, v.encode('utf-8')) for k, v in item.iteritems() ]))
+
+    def lucky_idlc(item):
+        q = qpattern(item)
+        query = urllib.quote(q)
+        url = 'http://id.loc.gov/vocabulary/organizations/{0}.html'.format(query)
+        r = requests.head(url)
+        #print >> sys.stderr, url, item[u'code']
+        answer = r.headers['X-URI']
+        #print >> sys.stderr, answer
+        time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
+        return answer
+    return lucky_idlc
+
+
 def lucky_viaf_template(qpattern):
     '''
     Used for searching OCLC for VIAF records
     '''
     if not callable(qpattern):
-        print >> sys.stderr, qpattern, callable(qpattern)
         qpattern = lambda item, qp=qpattern: qp.format(**dict([ (k, v.encode('utf-8')) for k, v in item.iteritems() ]))
 
     def lucky_viaf(item):
@@ -86,7 +105,11 @@ def lucky_viaf_template(qpattern):
 DEFAULT_AUGMENTATIONS = {
     #('600', ('a', 'd'), lucky_google_template(lambda item: 'site:viaf.org {0}, {1}'.format(item['a'], item['d'])), u'viaf_guess'), #VIAF Cooper, Samuel, 1798-1876
 
+    #First the easy ones
     ('600', ('label', 'date'), lucky_viaf_template('cql.any all "{label}, {date}"'), VIAF_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
+    ('852', ('label', 'date'), lucky_idlc_org_template('{code}'), IDLC_GUESS_FNAME),
+
+    #These need some extra preprocessing for successful lookup in ID.LOC.GOV, so are a bit more complex
     ('600', ('label', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['label'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME),
     ('100', ('label', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['label'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME),
     ('110', ('label', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['label'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME),
@@ -99,6 +122,6 @@ DEFAULT_AUGMENTATIONS = {
     ('700', ('label', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['label'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME),
     ('710', ('label', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['label'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME),
     ('711', ('label', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['label'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME),
+
 }
 #852a': ('institution
-
