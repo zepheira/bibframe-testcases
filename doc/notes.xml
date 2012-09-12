@@ -9,7 +9,10 @@
   <annotation on='Annotation'> 
     <p>Based on the W3C Annotea Annotation Schema <a href='http://www.w3.org/2000/10/annotation-ns#'>(viz.)</a></p>
   </annotation> 
-  <annotation on='CreativeWork/name'> 
+  <annotation on='CreativeWork'> 
+    <p>Refinements of CreativeWorks are derived from a combination of LoC 'Classes and captions for resource types (11/28/11)' and subclasses of Schema.org <a href = "http://schema.org/CreativeWork">CreativeWork</a>.</p>
+  </annotation> 
+  <annotation on='CreativeWork/creator'> 
     <p>Refinement relationships (author, illustrator, sculptor, etc.) are defined as subproperties of this property. As a start, I suggest we focus on a subset of the <a href = "http://www.loc.gov/marc/relators/relaterm.html">MARC relator terms</a> what might be applicable to Works. Cardinatlity and manadatory constraints are overlayed as a community defined profile of this model. </p>
   </annotation> 
   <annotation on='Annotation/relatedTo'>
@@ -18,7 +21,10 @@
   <annotation on='CreativeWork/relatedTo'>
     <p>Refinement relationships (hasTranslation, isBasedOn, etc.) are defined as subproperties of this property.</p>
   </annotation>
-  <annotation on='Instance/name'>
-    <p>Refinement relationships (publisher, distributor, manufacturer, etc.) are defined as subproperties of this property. As a start, I suggest we focus on a subset of the <a href = "http://www.loc.gov/marc/relators/relaterm.html">MARC relator terms</a> what might be applicable to Instances. If we decide there is the need for more than a single entitiy associated with an Instance (an instance has more than one publisher / publishedAt / publishedOn combination of assertions) we'll need to materilize this pattern.</p>
+  <annotation on='Instance/actor'>
+    <p>Refinement relationships (producer, publisher, distributor, manufacturer, etc.) are defined as subproperties of this property. As a start, I suggest we focus on a subset of the <a href = "http://www.loc.gov/marc/relators/relaterm.html">MARC relator terms</a> what might be applicable to Instances. If we decide there is the need for more than a single entitiy associated with an Instance (an instance has more than one publisher / publishedAt / publishedOn combination of assertions) we'll need to materilize this pattern.</p>
+  </annotation>
+  <annotation on='Carrier'>
+    <p>Derived from the OCLC <a href = "http://purl.org/library/">library extension</a> to the schema.org vocabulary.</p>
   </annotation>
 </annotations>

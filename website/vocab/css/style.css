@@ -80,10 +80,18 @@ color: slategrey;
 }
 
 .annotations a.annotationTitle {
-font-size: %120;
-font-weight: bold;
-text-decoration: none;
+  font-size: 120%;
+  font-weight: bold;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+  color: black;
 }
+
+.annotations p {
+  padding: 10px 10px;
+}
+
 
 
 /* icons for MARC classes (builds off of bootstrap icon patterns) */

@@ -52,8 +52,8 @@
   <class id='CreativeWork' isa='Resource'> 
     <label>Creative Work</label>
     <tagline>The most generic kind of creative work, including bibliographic resources, movies, photographs, software programs, etc.</tagline>
-    <property id='name'>
-      <label>name</label>
+    <property id='creator'>
+      <label>creator</label>
       <typedesc>@Person or @Organization or @Meeting</typedesc>
       <description>The entity (or entities) associated with the creation of the work.</description>
       <marcref>100, 110, 111 / 700, 710, 711</marcref>
@@ -326,10 +326,10 @@
       <marcref>5XX</marcref>
       <rdaref></rdaref>
     </property>
-    <property id='name'>
-      <label>name</label>
+    <property id='actor'>
+      <label>actor</label>
       <typedesc>@Organization or @Meeting</typedesc>
-      <description>Name of entity responsible for production, publication, distribution, manufacture, etc. of the instance.</description>
+      <description>The entity responsible for the production, publication, distribution, manufacture, etc. of the instance associated with a creative work.</description>
       <marcref>260 $b</marcref>
       <rdaref></rdaref>
     </property>
@@ -349,18 +349,108 @@
     </property>
   </class>
 
-
   <class id='DigitalResource' isa='Instance'> 
     <label>Digital Resouce</label>
     <tagline>A digital resouce.</tagline>
-    <property id='format'>
-      <label>format</label>
-      <typedesc>Literal</typedesc>
-      <description>The format of the application</description>
+    <property id='carrier'>
+      <label>carrier</label>
+      <typedesc>@Carrier</typedesc>
+      <description>The carrier of the instance.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
   </class>
+
+  <class id='EBook' isa='DigitalResource'>
+    <label>EBook</label>
+    <tagline>An EBook (kindle, google book, etc.)</tagline>
+  </class>
+
+  <class id='HardcoverBook' isa='PhysicalBook'>
+    <label>Hardcover Book</label>
+    <tagline>A hardcover Book</tagline>
+  </class>
+
+  <class id='PaperbackBook' isa='PhysicalBook'>
+    <label>Paperback Book</label>
+    <tagline>A paperback book</tagline>
+  </class>
+
+  <class id='Audiobook' isa='PhysicalBook'>
+    <label>Audio Book</label>
+    <tagline>An audio book.</tagline>
+  </class>
+
+  <class id='BrailleBook' isa='PhysicalBook'>
+    <label>Braille Book</label>
+    <tagline>A braille book.</tagline>
+  </class>
+
+  <class id='ContinuallyUpdatedBook' isa='PhysicalBook'>
+    <label>Continually Updated Book</label>
+    <tagline>A continually updated book.</tagline>
+  </class>
+
+  <class id='LargePrintBook' isa='PhysicalBook'>
+    <label>Large Print Book</label>
+    <tagline>A large print book.</tagline>
+  </class>
+
+  <class id='Carrier' isa='Resource'>
+    <label>Carrier</label>
+    <tagline>This class contains a controlled list of &quot;carriers&quot; that can be used to contain an instance.</tagline>
+  </class>
+
+  <class id='BlurayDisc' isa='Carrier'>
+    <label>Bluray Disk</label>
+    <tagline>An optical disc format that offers more than five times the storage capacity of traditional DVDs</tagline>
+  </class>
+
+  <class id='DVD' isa='Carrier'>
+    <label>DVD</label>
+    <tagline>An optical disc format.</tagline>
+  </class>
+
+  <class id='CD' isa='Carrier'>
+    <label>CD</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='CassetteTape' isa='Carrier'>
+    <label>Cassette Tape</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='FilmReel' isa='Carrier'>
+    <label>Film Reel</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='LP' isa='Carrier'>
+    <label>LP</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='Microform' isa='Carrier'>
+    <label>Microform</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='VHSTape' isa='Carrier'>
+    <label>VHS Tape</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='Volume' isa='Carrier'>
+    <label>Volume</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='WWW' isa='Carrier'>
+    <label>WWW</label>
+    <tagline></tagline>
+  </class>
+
 
   <class id='ImageObject' isa='DigitalResource'>
     <label>Image Object</label>
@@ -431,6 +521,13 @@
       <typedesc>Literal</typedesc>
       <description>Expressed in centimeters, millimeters or inches</description>
       <marcref>300 $c</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='carrier'>
+      <label>carrier</label>
+      <typedesc>@Carrier</typedesc>
+      <description>The carrier of the instance.</description>
+      <marcref></marcref>
       <rdaref></rdaref>
     </property>
   </class>
