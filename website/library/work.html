@@ -10,18 +10,20 @@
     <link href="../css/style.css" rel="stylesheet" />
     
     <link rel="exhibit/data" href="./marcr-ld-library.json" />
+    <link rel="exhibit/data" href="./marcr-ld-library-holdings.json" />
 
     <script src="http://trunk.simile-widgets.org/exhibit/api/exhibit-api.js"></script>
-    <script src="http://trunk.simile-widgets.org/exhibit/api/extensions/map/map-extension.js?service=google"></script>
 
-    <!-- 
+    <!--
+    <script src="http://api.simile-widgets.org/exhibit/3.0.0rc1/exhibit-api.js"></script>
+    -->
+
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/bootstrap-collapse.js"></script>
 
     <script type="text/javascript">
-      $('.accordion').collapse()
+      $('.collapse').collapse()
     </script>
-    -->
 
   </head>
   
@@ -29,7 +31,6 @@
     
     <!-- restrict exhibit to Works -->
     <div ex:role="exhibit-collection" ex:itemTypes="Work"></div>
-
 
     <!-- nav bar -->
     <div class="navbar navbar-fixed-top">
@@ -46,7 +47,7 @@
           <ul class="nav pull-right">
             <li><a href="/">Overview</a></li>
             <li><a href="/vocab/">Vocabulary</a></li>
-            <li><a href="/demos/">Demos</a></li>
+            <li><a href="/tools/">Tools</a></li>
             <li class="active"><a href="/library/">Library</a></li>
             <li><a href="/contribute/">Contribute</a></li>
             <li class="divider-vertical"></li>
@@ -64,16 +65,17 @@
     
     <div class="body container-fluid">
 
+
       <div class="this-nav row-fluid">
         <div class="span12" style="margin-top: 50px;">
           <ul class="breadcrumb">
-            <li><a href="/">Home</a> <span class="divider">/</span></li>
-            <li><a href="./">Library</a> <span class="divider">/</span></li>
+            <li><a href="../../index.html">Home</a> <span class="divider">/</span></li>
+            <li><a href="../index.html">Library</a> <span class="divider">/</span></li>
             <li class="active">Work View</li>
           </ul>
         </div>
       </div>
-      
+
       <div class="row-fluid">
 
         <div class="span3">
@@ -83,9 +85,9 @@
             <div ex:role="facet" ex:facetclass="TextSearch" ex:facetLabel="Search"></div>
             <br />
 
-            <div ex:role="facet" ex:expression=".hasInstance.resourceType" ex:facetLabel="Type" ex:sortMode="count"></div>
+            <div ex:role="facet" ex:expression=".marcrType" ex:facetLabel="Resource Type" ex:sortMode="count"></div>
 
-            <div ex:role="facet" ex:expression=".creator.name" ex:facetLabel="Author" ex:sortMode="count"></div>
+            <div ex:role="facet" ex:expression=".creator.name" ex:facetLabel="Creator" ex:sortMode="count"></div>
 
             <div ex:role="facet" ex:expression=".subject.name" ex:facetLabel="Subject" ex:sortMode="count"></div>
 
@@ -97,56 +99,158 @@
 
         <div class="span9">
 
-            <div class="results" ex:role="viewPanel">
-              
-              <div ex:role="view" 
+          <div class="results" ex:role="viewPanel">
+            
+            <div ex:role="view" 
                  ex:label="List">
-
-                <!-- Work display lens -->
-		<div ex:role="lens" ex:itemTypes="Work" style="display: none">
+              
+              <!-- Work display lens -->
+	      <div ex:role="lens" ex:itemTypes="Work" style="display: none">
 		  
-		  <h3><span ex:content=".title"></span></h3>
-		  <br />
-		  
-		  <table class="table table-condensed">
-                    <tr>
-                      <td class="property span2">Creator</td>
-                      <td>
-			<ul ex:content=".creator" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}"></i> <span class="name" ex:content=".name"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="property span2">Abstract</td>
-                      <td><div ex:content=".abstract"></div></td>
-                    </tr>                    
-                    <tr>
-                      <td class="property span2">Subject</td>
-                      <td>
-			<ul ex:content=".subject" class="value subject"><li><i ex:class-subcontent="icon-{{.marcrType}}"></i> <span class="name" ex:content=".name"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="property span2">Instance(s)</td>
-		      <td>
-                        <ul ex:content=".hasInstance" class="value instance">
-                          <li><i ex:class-subcontent="icon-{{.resourceType}}"></i> 
-                            <a class="name" ex:href-content=".identifier"><span class="title" ex:content="!hasInstance.title"></span></a> 
-                            (<span class="format" ex:content=".format"></span>), 
-                            <span class="publisher" ex:content=".publisher.name"></span> <span class="publishedOn" ex:content=".publishedOn"></span> 
-                            <span class="volume" ex:if-exists=".volume"> v. <span class="volume" ex:content=".volume"></span>, </span> 
-                            <span class="number" ex:if-exists=".number"> n. <span class="number" ex:content=".number"></span>, </span>
-                            <span class="ISSN" ex:if-exists=".ISSN"> ISSN:<span class="ISSN" ex:content=".ISSN"></span></span>
-                          </li>
-                        </ul>
-                      </td>
-                  </table>
-		  
-		</div>
+		<div class="workTitle"><span ex:content=".title"></span> <span ex:content=".subTitle"></span> <span ex:content=".titleInclusiveDate"></span></div>
+		<br />
 		
-              </div>
+		<table class="table table-condensed">
+                  <tr ex:if-exists=".creator">
+                    <td class="property">Creator</td>
+                    <td>
+		      <ul ex:content=".creator" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".name"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
+                    </td>
+                  </tr>
+                  <tr ex:if-exists=".abstract">
+                    <td class="property">Abstract</td>
+                    <td><div ex:content=".abstract" class="value abstract"></div></td>
+                  </tr>                    
+                  <tr ex:if-exists=".language">
+                    <td class="property">Language</td>
+                    <td><div ex:content=".language" class="value language"></div></td>
+                  </tr>                    
+                  <tr ex:if-exists=".classification">
+                    <td class="property">Classification</td>
+                    <td><div ex:content=".classification" class="value classification"></div></td>
+                  </tr>                    
+                  <tr ex:if-exists=".subject">
+                    <td class="property">Subject</td>
+                    <td>
+		      <ul ex:content=".subject" class="value subject"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".name"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span> 
+                          <span ex:if-exists=".generalSubdivision"> <span class="divider">/</span> <span class="subdivision general" ex:content=".generalSubdivision"></span></span>
+                          <span ex:if-exists=".geographicSubdivision"> <span class="divider">/</span> <span class="subdivision geographic" ex:content=".geographicSubdivision"></span></span>
+                          <span ex:if-exists=".chronologicalSubdivision"> <span class="divider">/</span> <span class="subdivision chronological" ex:content=".chronologicalSubdivision"></span></span>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  
+                  <tr ex:if-exists=".hasInstance">
+                    <td class="property">Instance(s)</td>
+		    <td>
+                      <ul ex:content=".hasInstance" class="value instance">
+                        <li>
+                              
+                          <div class="span5">
+                                
+                                <table class="table table-condensed instance-table">
+                                  <tr>
+                                    <td class="titleInstance" colspan="2">
+                                      <div class="instanceTitle">
+                                        <i ex:class-subcontent="icon-default icon-{{.marcrType}}-{{.carrier}}"  ex:title-subcontent="{{.marcrType}}, {{.carrier}}"></i>
+                                        
+                                        <span ex:if="exists(.link)">
+                                          <span class="title"><a ex:href-content=".link"><span ex:content="!hasInstance.title"></span> <span ex:content="!hasInstance.subTitle"></span> <span ex:content="!hasInstance.titleInclusiveDate"></span></a></span>
+                                        </span>
+                                        
+                                        <span ex:if="not(exists(.link))">
+                                          <span class="title"><span ex:content="!hasInstance.title"></span> <span ex:content="!hasInstance.subTitle"></span> <span ex:content="!hasInstance.titleInclusiveDate"></span></span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr ex:if-exists=".publisher">
+                                    <td class="property">Publisher</td>
+                                    <td class="value">
+                                      <span class="publishedAt" ex:content=".publishedAt.name"></span> 
+                                      <span class="publisher" ex:content=".publisher.name"></span> 
+                                      <span class="publishedOn" ex:content=".publishedOn"></span> 
+                                    </td>
+                                  </tr>
+                                  <tr ex:if-exists=".format">
+                                    <td class="property">Format</td>
+                                    <td class="value">
+                                      <span class="format" ex:content=".format"></span>
+                                    </td>
+                                  </tr>
+                                  <tr ex:if-exists=".ISBN">
+                                    <td class="property">ISBN</td>
+                                    <td class="value">
+                                      <span class="isbn" ex:content=".ISBN"></span>
+                                    </td>
+                                  </tr>
+                                  <tr ex:if-exists=".edition">
+                                    <td class="property">Edition</td>
+                                    <td class="value">
+                                      <span class="publishedOn" ex:content=".edition"></span> 
+                                    </td>
+                                  </tr>
+                                  <tr ex:if-exists=".physicalDescription">
+                                    <td class="property">Physical Description</td>
+                                    <td class="value">
+                                      <ul ex:content=".physicalDescription" class="value physicalDescription">
+                                        <li><span ex:content=".extent"></span> <span ex:content=".physicalDesc"></span> <span ex:content=".dimensions"></span></li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr ex:if-exists=".note">
+                                    <td class="property">Note(s)</td>
+                                    <td>
+                                      <ul class="value allNotes" ex:content=".note">
+                                        <li class="specificNote"><span ex:content="value"></span></li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                </table>
+                                
+                              </div>
+                              
+                              <div class="span2">
+                                
+                                <!-- holdings -->
+                                
+                                <div ex:if="contains(!annotates.marcrType, 'HoldingsAnnotation')">
+                                  
+                                  <div ex:id-subcontent="holdingsAnnotation-{{.hasInstance}}" class="holdingsAnnotation">
+                                    
+                                    <div class="annotation-heading">
+                                      <button type="button" class="btn-small btn-info" data-toggle="collapse" ex:data-target-subcontent="#collapse-{{!annotates.label}}">
+                                        <i class="icon-comment"></i><span class="text">Holdings</span>
+                                      </button>
+                                    </div>
+                                    
+                                    <div ex:id-subcontent="collapse-{{!annotates.label}}" class="collapse">
+                                      <div class="annotation-body well">
+                                        <span class="institution" ex:content="!annotates.institution.name"></span><br />
+                                        <span class="callNumber" ex:content="!annotates.callNumber"></span><br />
+                                        <span class="access" ex:content="!annotates.access"></span>, <span class="status" ex:content="!annotates.status"></span>
+                                      </div>
+                                    </div>
+                                    
+                                  </div>
+                                  
+                                </div>
+                          
+                              </div>
+                            </div> <!-- row -->
+                          </div> <!-- container -->
+
+                        </li>
+                      </ul>
+                    </td>
+                </table>
+		
+	      </div>
 	      
-            </div> <!-- viewPanel -->
+            </div>
+	    
+          </div> <!-- viewPanel -->
           
         </div> <!-- span -->
         
@@ -156,7 +260,7 @@
     
     <div class="footer">
       <div class="container">
-        <p>MARCR.org is a joint effort of <a href = "http://loc.gov/">US Library of Congress</a> and <a href="http://zepheira.com/">Zepheira</a></p>
+        <p>Sample interface from <a href="http://zepheira.com/">Zepheira</a></p>
       </div>
     </div>
     
