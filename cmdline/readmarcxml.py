@@ -25,7 +25,7 @@ from amara.lib.util import element_subtree_iter
 from btframework.marc import FIELD_RENAMINGS, MATERIALIZE
 from btframework.marcspecialfields import canonicalize_isbns, process_leader, process_008
 from btframework.marc import INSTANCE_FIELDS, WORK_FIELDS
-from btframework.augment import lucky_viaf_template, lucky_idlc_template
+from btframework.augment import lucky_viaf_template, lucky_idlc_template, DEFAULT_AUGMENTATIONS
 
 #SLUGCHARS = r'a-zA-Z0-9\-\_'
 #OMIT_FROM_SLUG_PAT = re.compile('[^%s]'%SLUGCHARS)
@@ -36,9 +36,6 @@ FALINKFIELD = u'856u'
 #CATLINKFIELD = u'010a'
 CATLINKFIELD = u'LCCN'
 CACHEDIR = os.path.expanduser('~/tmp')
-
-VIAF_GUESS_FNAME = u'viafFromHeuristic'
-IDLC_GUESS_FNAME = u'idlcFromHeuristic'
 
 requests_cache.configure(os.path.join(CACHEDIR, 'cache'))
 
@@ -88,24 +85,6 @@ ISBNNU_PAT = 'http://isbn.nu/{0}'
 OPENLIBRARY_COVER_PAT = 'http://covers.openlibrary.org/b/isbn/{0}-M.jpg'
 #http://catalog.hathitrust.org/api/volumes/brief/json/isbn:0030110408 -> http://catalog.hathitrust.org/Record/000578050
 
-AUGMENTATIONS = {
-    #('600', ('a', 'd'), lucky_google_template(lambda item: 'site:viaf.org {0}, {1}'.format(item['a'], item['d'])), u'viaf_guess'), #VIAF Cooper, Samuel, 1798-1876
-
-    ('600', ('name', 'date'), lucky_viaf_template(lambda item: 'cql.any all "{0}, {1}"'.format(item['name'].encode('utf-8'), item['date'].encode('utf-8'))), VIAF_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-    ('600', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-    ('100', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-    ('110', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-    ('111', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-    ('610', ('name',), lucky_idlc_template(lambda item: item['name'].encode('utf-8')), IDLC_GUESS_FNAME),
-    ('650', ('name',), lucky_idlc_template(lambda item: item['name'].encode('utf-8')), IDLC_GUESS_FNAME),
-    ('651', ('name',), lucky_idlc_template(lambda item: item['name'].encode('utf-8')), IDLC_GUESS_FNAME),
-
-    ('700', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-    ('710', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-    ('711', ('name', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['name'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-}
-
-
 class subobjects(object):
     def __init__(self, exhibit_sink):
         self.ix = 0
@@ -131,7 +110,8 @@ class subobjects(object):
             item[k] = v
             #item[key+code] = sfval
 
-        for (acode, aparams, afunc, key) in AUGMENTATIONS:
+        for (acode, aparams, afunc, key) in DEFAULT_AUGMENTATIONS:
+            #if code == acode: print >> sys.stderr, (item, aparams)
             if code == acode and all(( item.get(p) for p in aparams )):
                 #Meets the criteria for this augmentation
                 val = afunc(item)
@@ -336,14 +316,11 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
 
             work_item[u'instance'] = instance_ids
 
-
             special_properties = {}
             for k, v in process_leader(leader):
-                #For now assume all leader fields are instance level
                 special_properties.setdefault(k, set()).add(v)
 
             for k, v in process_008(instance_item[u'cftag_008']):
-                #For now assume all leader fields are instance level
                 special_properties.setdefault(k, set()).add(v)
 
             #We get some repeated values out of leader & 008 processing, and we want to
