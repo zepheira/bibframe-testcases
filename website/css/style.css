@@ -32,13 +32,13 @@
 
 .overview .prose p {
 padding-left: 20px;
-font-size: 120%;
+font-size: 110%;
 line-height: 150%;
 }
 
 .overview .prose ul {
 padding-top: 10px;
-font-size: 120%;
+font-size: 110%;
 line-height: 150%;
 }
 
@@ -52,14 +52,16 @@ padding-top: 10px;
 padding-bottom: 20px;
 }
 
-ul
-{
+
+/* exhibit styles */
+
+.results ul {
 list-style-type: none;
 padding: 0px;
 margin: 0px;
 }
 
-ul.instance li {
+.results ul.instance li {
  padding-top: 3px;
 }
 
