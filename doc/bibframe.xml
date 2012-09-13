@@ -136,6 +136,13 @@
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
+    <property id='illustrator' refines="creator">
+      <label>illustrator</label>
+      <typedesc>@Person or @Organization or @Meeting</typedesc>
+      <description>The entity (or entities) who develops the graphic visual component of the work.</description>
+      <marcref>100, 110, 111 / 700, 710, 711</marcref>
+      <rdaref></rdaref>
+    </property>
   </class>
   
   <class id='Collection' isa='CreativeWork'> 

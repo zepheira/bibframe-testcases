@@ -163,11 +163,11 @@ T1 = '''        <div class="row-fluid vocabulary-display-section">
 
 T2 = '''\
             <tr>
-          <td>{0}{1}</td>
-          <td>{2}</td>
+          <td>{0}{1}{2}</td>
           <td>{3}</td>
           <td>{4}</td>
           <td>{5}</td>
+          <td>{6}</td>
             </tr>
 '''
 
@@ -257,9 +257,20 @@ def run(modelsource=None, output=None, base=''):
                     #prop_ann_html = ' <a class="notes" data-toggle="modal" href="notes.html#{0}.{1}" data-target="#myModal">[*]</a>\n'.format(outcls.id, prop.id)
                     prop_ann_html = ' <a class="notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></a>\n'.format(outcls.id, prop.id)
 
+                prop_refines_html = ''
+                if prop.refines:
+                    target = prop.refines.split(u'/', 1)
+                    target_cls, target_prop = (None, target[0]) if len(target) == 1 else target
+                    #FIXME: Add integrity check
+                    if target_cls:
+                        prop_refines_html = '<br> (refines <a href="../{0}/index.html">{1}</a>)\n'.format(target_cls, prop.refines)
+                    else:
+                        prop_refines_html = '<br> (refines {0})\n'.format(prop.refines)
+
                 property_chunks.append(T2.format(
                     U(prop.label),
                     prop_ann_html,
+                    prop_refines_html,
                     typedesc,
                     description,
                     U(prop.marcref),
