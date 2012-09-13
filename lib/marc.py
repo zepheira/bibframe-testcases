@@ -29,7 +29,7 @@ MATERIALIZE = {
 '710': ('name', {'marcrType': 'Organization'}),
 '711': ('name', {'marcrType': 'Meeting'}),
 
-'852a': ('institution', {'marcrType': 'Organization'}),
+'852': ('institution', {'marcrType': 'Organization'}),
 }
 
 
@@ -156,8 +156,10 @@ FIELD_RENAMINGS = {
 '711a': 'label',
 '711d': 'date',
 
-'852a': 'institution',
-'852h': 'callNumber',
+#'852a': 'institution',
+'852a': 'label',
+'852h': 'callNumber', #Need to verify this one, since it seems to contradict the rest of the 852 pattern
+'852n': 'code',
 
 '856u': 'link',
 }
