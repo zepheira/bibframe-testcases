@@ -16,6 +16,7 @@
 
 
 .section-text {
+ font-size: 110%;
  font-weight: bold;
  padding: 10px 10px 15px 10px;
 }
@@ -28,7 +29,6 @@
 	text-align: center;
 	color: grey;
 }        
-
 
 .overview .prose p {
 padding-left: 20px;

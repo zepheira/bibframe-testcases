@@ -1,19 +1,7 @@
-.specific-types-display {
- padding-top: 10px;
-}
-
-.specific-types-display ul {
- padding-top: 10px;
-}
-
-.specific-types-display ul li {
- font-size: 115%;
- font-weight: bold;
- padding: 5px 0px 5px 0px;
-}
-
+/* marcr.org vocab style */
 
 .section-text {
+ font-size: 115%;              
  font-weight: bold;
  padding: 10px 10px 15px 10px;
 }
@@ -94,20 +82,27 @@ color: slategrey;
 
 /* type refinements */
 
+.specific-types-display {
+ padding-top: 10px;
+}
+
 .specific-types-display ul {
-   display: inline-table;
-   text-align: center;
-   margin-left: 0;
+ padding-top: 10px;
+ display: inline-table;
+ text-align: center;
+ margin-left: 0;
 }
 
 .specific-types-display ul li {
-   border: solid 1px lightgrey;
-   padding: 10px 10px;
-   display: block;
-   float: left;
-   list-style-type: none;
-   margin: 5px;
-   text-align: center;
+ font-size: 115%;
+ font-weight: bold;
+ border: solid 1px lightgrey;
+ padding: 10px 10px;
+ display: block;
+ float: left;
+ list-style-type: none;
+ margin: 5px;
+ text-align: center;
 }
 
 
