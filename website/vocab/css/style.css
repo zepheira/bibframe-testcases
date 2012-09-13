@@ -92,6 +92,24 @@ color: slategrey;
   padding: 10px 10px;
 }
 
+/* type refinements */
+
+.specific-types-display ul {
+   display: inline-table;
+   text-align: center;
+   margin-left: 0;
+}
+
+.specific-types-display ul li {
+   border: solid 1px lightgrey;
+   padding: 10px 10px;
+   display: block;
+   float: left;
+   list-style-type: none;
+   margin: 5px;
+   text-align: center;
+}
+
 
 
 /* icons for MARC classes (builds off of bootstrap icon patterns) */
