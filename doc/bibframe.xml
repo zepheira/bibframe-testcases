@@ -354,7 +354,7 @@
     <tagline>A digital resouce.</tagline>
     <property id='carrier'>
       <label>carrier</label>
-      <typedesc>@Carrier</typedesc>
+      <typedesc>@DigitalCarrier</typedesc>
       <description>The carrier of the instance.</description>
       <marcref></marcref>
       <rdaref></rdaref>
@@ -396,59 +396,80 @@
     <tagline>A large print book.</tagline>
   </class>
 
-  <class id='Carrier' isa='Resource'>
-    <label>Carrier</label>
-    <tagline>This class contains a controlled list of &quot;carriers&quot; that can be used to contain an instance.</tagline>
+  <class id='PhysicalCarrier' isa='Resource'>
+    <label>Physical Carrier</label>
+    <tagline>This class contains a controlled list of &quot;carriers&quot; that can be used to contain physical instances.</tagline>
   </class>
 
-  <class id='BlurayDisc' isa='Carrier'>
+  <class id='BlurayDisc' isa='PhysicalCarrier'>
     <label>Bluray Disk</label>
     <tagline>An optical disc format that offers more than five times the storage capacity of traditional DVDs</tagline>
   </class>
 
-  <class id='DVD' isa='Carrier'>
+  <class id='DVD' isa='PhysicalCarrier'>
     <label>DVD</label>
     <tagline>An optical disc format.</tagline>
   </class>
 
-  <class id='CD' isa='Carrier'>
+  <class id='CD' isa='PhysicalCarrier'>
     <label>CD</label>
     <tagline></tagline>
   </class>
 
-  <class id='CassetteTape' isa='Carrier'>
+  <class id='CassetteTape' isa='PhysicalCarrier'>
     <label>Cassette Tape</label>
     <tagline></tagline>
   </class>
 
-  <class id='FilmReel' isa='Carrier'>
+  <class id='FilmReel' isa='PhysicalCarrier'>
     <label>Film Reel</label>
     <tagline></tagline>
   </class>
 
-  <class id='LP' isa='Carrier'>
+  <class id='LP' isa='PhysicalCarrier'>
     <label>LP</label>
     <tagline></tagline>
   </class>
 
-  <class id='Microform' isa='Carrier'>
+  <class id='Microform' isa='PhysicalCarrier'>
     <label>Microform</label>
     <tagline></tagline>
   </class>
 
-  <class id='VHSTape' isa='Carrier'>
+  <class id='VHSTape' isa='PhysicalCarrier'>
     <label>VHS Tape</label>
     <tagline></tagline>
   </class>
 
-  <class id='Volume' isa='Carrier'>
+  <class id='Volume' isa='PhysicalCarrier'>
     <label>Volume</label>
     <tagline></tagline>
   </class>
 
-  <class id='WWW' isa='Carrier'>
-    <label>WWW</label>
-    <tagline></tagline>
+
+  <class id='DigitalCarrier' isa='Resource'>
+    <label>Digitial Carrier</label>
+    <tagline>This class contains a controlled list of &quot;carriers&quot; that can be used to contain digital instances.</tagline>
+  </class>
+
+  <class id='WebPage' isa='DigitalCarrier'>
+    <label>Web Page</label>
+    <tagline>A Web Page</tagline>
+  </class>
+
+  <class id='Flash' isa='DigitalCarrier'>
+    <label>Flash</label>
+    <tagline>A Flash Page</tagline>
+  </class>
+
+  <class id='Kindle' isa='DigitalCarrier'>
+    <label>Kindle</label>
+    <tagline>A Kindle EBook</tagline>
+  </class>
+
+  <class id='GoogleEBook' isa='DigitalCarrier'>
+    <label>Google EBook</label>
+    <tagline>A Google EBook</tagline>
   </class>
 
 
@@ -525,7 +546,7 @@
     </property>
     <property id='carrier'>
       <label>carrier</label>
-      <typedesc>@Carrier</typedesc>
+      <typedesc>@PhysicalCarrier</typedesc>
       <description>The carrier of the instance.</description>
       <marcref></marcref>
       <rdaref></rdaref>

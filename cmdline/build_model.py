@@ -95,7 +95,7 @@ T0 = '''<!DOCTYPE html>
 
           <h3 class="specific-types-text">More specific types</h3>
 
-      <ul class="list">
+      <ul class="list well">
 {specifictypes}
       </ul>
       
