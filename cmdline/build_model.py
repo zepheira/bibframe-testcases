@@ -23,7 +23,10 @@ T0 = '''<!DOCTYPE html>
     
     <script type="text/javascript" src="{base}/js/jquery.js"></script>
     <script type="text/javascript" src="{base}/js/bootstrap.min.js"></script>
-        
+
+    <script type="text/javascript">
+      $(".collapse").collapse()
+    </script>
   </head>
   
   <body>
@@ -248,15 +251,18 @@ def run(modelsource=None, output=None, base=''):
 
         class_chunks = []
         breadcrumb_chunks = []
+
         #Iterate over each ancestor class to inherit properties
         #for outcls in ancestors + [maincls]:
         for outcls in ancestors:
             property_chunks = []
+
             #Check for reference to annotations at class level
             ann_html = ''
             if (outcls.id, None) in annotations:
                 #ann_html = ' <a class="notes" data-toggle="modal" href="notes.html#{0}" data-target="#myModal">[*]</a>\n'.format(U(outcls.id))
-                ann_html = ' <a class="notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></a>\n'.format(U(outcls.id))
+                ann_html = ' <button class="btn btn-mini notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></button>\n'.format(U(outcls.id))
+
             for prop in (outcls.property or []):
                 typedesc = handle_inline_links(U(prop.typedesc))
                 description = handle_inline_links(U(prop.description))
@@ -265,9 +271,13 @@ def run(modelsource=None, output=None, base=''):
                 prop_ann_html = ''
                 if (outcls.id, prop.id) in annotations:
                     #prop_ann_html = ' <a class="notes" data-toggle="modal" href="notes.html#{0}.{1}" data-target="#myModal">[*]</a>\n'.format(outcls.id, prop.id)
-                    prop_ann_html = ' <a class="notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></a>\n'.format(outcls.id, prop.id)
+                    prop_ann_html = ' <button class="btn btn-mini notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></button>\n'.format(outcls.id, prop.id)
 
+                #Check for refinements of the property
                 prop_refines_html = ''
+                if prop.refines:
+                    continue
+
                 #if prop.refines:
                 #    target = prop.refines.split(u'/', 1)
                 #    target_cls, target_prop = (None, target[0]) if len(target) == 1 else target
@@ -282,11 +292,13 @@ def run(modelsource=None, output=None, base=''):
                 if refs:
                     refs_html = ''.join(['<tr><td>{0}</td></tr>'.format(source_prop if outcls.id == source_cls else source_cls + '/' + source_prop) for (source_cls, source_prop) in refs])
                     prop_refinements_html = '''\
-                <div id="demo" class="collapse">
+                <button type="button" class="btn btn-mini" data-toggle="collapse" data-target="#refine-{0}"><i class="icon-plus"></i></button>
+
+                <div id="refine-{0}" class="collapse">
                   <table class="table">
-                    {0}
+                    {1}
                   </table>
-                </div>'''.format(refs_html)
+                </div>'''.format(U(prop.label), refs_html)
 
                 property_chunks.append(T2.format(
                     U(prop.label),
