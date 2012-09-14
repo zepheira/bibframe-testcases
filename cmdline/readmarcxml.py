@@ -93,7 +93,7 @@ class subobjects(object):
     def add(self, props, sink=None):
         sink = sink or self.exhibit_sink
         objid = 'obj_' + str(self.ix + 1)
-        code = props[u'code']
+        code = props[u'marccode']
         item = {
             u'id': objid,
             u'label': objid,
@@ -188,7 +188,7 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
                     handled = False
                     if code in MATERIALIZE:
                         (subst, extra_props) = MATERIALIZE[code]
-                        props = {u'code': code}
+                        props = {u'marccode': code}
                         props.update(extra_props)
                         #props.update(other_properties)
                         props.update(subfields)
@@ -203,7 +203,7 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
 
                     if code in MATERIALIZE_VIA_ANNOTATION:
                         (subst, extra_object_props, extra_annotation_props) = MATERIALIZE_VIA_ANNOTATION[code]
-                        object_props = {u'code': code}
+                        object_props = {u'marccode': code}
                         object_props.update(extra_object_props)
                         #props.update(other_properties)
 
@@ -255,7 +255,7 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
                             lookup = code + k
                             if lookup in MATERIALIZE:
                                 (subst, extra_props) = MATERIALIZE[lookup]
-                                props = {u'code': code, k: v}
+                                props = {u'marccode': code, k: v}
                                 props.update(extra_props)
                                 #print >> sys.stderr, lookup, k, props, 
                                 subid = subobjs.add(props)

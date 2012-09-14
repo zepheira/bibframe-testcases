@@ -107,7 +107,7 @@ DEFAULT_AUGMENTATIONS = {
 
     #First the easy ones
     ('600', ('label', 'date'), lucky_viaf_template('cql.any all "{label}, {date}"'), VIAF_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-    ('852', ('label'), lucky_idlc_org_template('{code}'), IDLC_GUESS_FNAME),
+    ('852', ('label',), lucky_idlc_org_template('{code}'), IDLC_GUESS_FNAME),
 
     #These need some extra preprocessing for successful lookup in ID.LOC.GOV, so are a bit more complex
     ('600', ('label', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['label'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME),
