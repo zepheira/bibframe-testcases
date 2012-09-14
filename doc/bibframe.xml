@@ -59,6 +59,27 @@
       <marcref>100, 110, 111 / 700, 710, 711</marcref>
       <rdaref></rdaref>
     </property>
+    <property id='illustrator' refines="creator">
+      <label>illustrator</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='sculptor' refines="creator">
+      <label>sculptor</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='carver' refines="creator">
+      <label>carver</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
     <property id='uniformTitle'>
       <label>uniformTitle</label>
       <typedesc>@Title</typedesc>
@@ -136,11 +157,65 @@
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='illustrator' refines="creator">
-      <label>illustrator</label>
-      <typedesc>@Person or @Organization or @Meeting</typedesc>
-      <description>The entity (or entities) who develops the graphic visual component of the work.</description>
-      <marcref>100, 110, 111 / 700, 710, 711</marcref>
+    <property id='isPartOf' refines="relatedTo">
+      <label>isPartOf</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='hasPart' refines="relatedTo">
+      <label>hasPart</label>
+      <typedesc></typedesc>
+      <description></description>
+      <rdaref></rdaref>
+    </property>
+    <property id='isVersionOf' refines="relatedTo">
+      <label>isVersionOf</label>
+      <typedesc></typedesc>
+      <description></description>
+      <rdaref></rdaref>
+    </property>
+    <property id='hasVersion' refines="relatedTo">
+      <label>hasVersion</label>
+      <typedesc></typedesc>
+      <description></description>
+      <rdaref></rdaref>
+    </property>
+    <property id='isBasedOn' refines="relatedTo">
+      <label>isBasedOn</label>
+      <typedesc></typedesc>
+      <description></description>
+      <rdaref></rdaref>
+    </property>
+    <property id='isBasisFor' refines="relatedTo">
+      <label>isBasisFor</label>
+      <typedesc></typedesc>
+      <description></description>
+      <rdaref></rdaref>
+    </property>
+    <property id='requires' refines="relatedTo">
+      <label>requires</label>
+      <typedesc></typedesc>
+      <description></description>
+      <rdaref></rdaref>
+    </property>
+    <property id='isRequiredBy' refines="relatedTo">
+      <label>isRequiredBy</label>
+      <typedesc></typedesc>
+      <description></description>
+      <rdaref></rdaref>
+    </property>
+    <property id='isTranslationOf' refines="relatedTo">
+      <label>isTranslationOf</label>
+      <typedesc></typedesc>
+      <description></description>
+      <rdaref></rdaref>
+    </property>
+    <property id='hasTranslation' refines="relatedTo">
+      <label>hasTranslation</label>
+      <typedesc></typedesc>
+      <description></description>
       <rdaref></rdaref>
     </property>
   </class>
@@ -338,6 +413,34 @@
       <typedesc>@Organization or @Meeting</typedesc>
       <description>The entity responsible for the production, publication, distribution, manufacture, etc. of the instance associated with a creative work.</description>
       <marcref>260 $b</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='publisher' refines='actor'>
+      <label>publisher</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='distributor' refines='actor'>
+      <label>distributor</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='manufacturer' refines='actor'>
+      <label>manufacterer</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='producer' refines='actor'>
+      <label>producer</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
       <rdaref></rdaref>
     </property>
     <property id='place'>
@@ -794,10 +897,24 @@
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='relatedTo'>
-      <label>relatedTo</label>
-      <typedesc>@Annotation</typedesc>
-      <description>A related Annotation.</description>
+    <property id='supports' refines='annotates'>
+      <label>supports</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='refutes' refines='annotates'>
+      <label>refutes</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='endorses' refines='annotates'>
+      <label>refutes</label>
+      <typedesc></typedesc>
+      <description></description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
