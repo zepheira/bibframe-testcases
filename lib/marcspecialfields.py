@@ -1,5 +1,5 @@
 '''
-Treatment of certain special MARC fields
+Treatment of certain special MARC fields, leader and 008
 '''
 
 #TODO: Also split on multiple 260 fields

@@ -22,9 +22,8 @@ from amara.thirdparty import httplib2, json
 from amara.lib import U
 from amara.lib.util import element_subtree_iter
 
-from btframework.marc import FIELD_RENAMINGS, MATERIALIZE
+from btframework.marc import *
 from btframework.marcspecialfields import canonicalize_isbns, process_leader, process_008
-from btframework.marc import INSTANCE_FIELDS, WORK_FIELDS
 from btframework.augment import lucky_viaf_template, lucky_idlc_template, DEFAULT_AUGMENTATIONS
 
 #SLUGCHARS = r'a-zA-Z0-9\-\_'
@@ -91,7 +90,8 @@ class subobjects(object):
         self.exhibit_sink = exhibit_sink
         return
 
-    def add(self, props):
+    def add(self, props, sink=None):
+        sink = sink or self.exhibit_sink
         objid = 'obj_' + str(self.ix + 1)
         code = props[u'code']
         item = {
@@ -117,7 +117,7 @@ class subobjects(object):
                 val = afunc(item)
                 if val is not None: item[key] = val
 
-        self.exhibit_sink.send(item)
+        sink.send(item)
         self.ix += 1
         print >> sys.stderr, '.',
         return objid
@@ -130,7 +130,8 @@ class subobjects(object):
 
 
 
-def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger=logging):
+#def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, annotations_sink, logger=logging):
+def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink, logger=logging):
     '''
     
     '''
@@ -191,13 +192,60 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                         props.update(extra_props)
                         #props.update(other_properties)
                         props.update(subfields)
-                        subid = subobjs.add(props)
                         #work_item[FIELD_RENAMINGS.get(code, code)] = subid
+                        subid = subobjs.add(props)
                         if code in INSTANCE_FIELDS:
                             instance_item.setdefault(subst, []).append(subid)
                         elif code in WORK_FIELDS:
                             work_item.setdefault(subst, []).append(subid)
+
                         handled = True
+
+                    if code in MATERIALIZE_VIA_ANNOTATION:
+                        (subst, extra_object_props, extra_annotation_props) = MATERIALIZE_VIA_ANNOTATION[code]
+                        object_props = {u'code': code}
+                        object_props.update(extra_object_props)
+                        #props.update(other_properties)
+
+                        #Separate annotation subfields from object subfields
+                        object_subfields = subfields.copy()
+                        annotation_subfields = {}
+                        for k, v in object_subfields.items():
+                            if code+k in ANNOTATIONS_FIELDS:
+                                annotation_subfields[k] = v
+                                del object_subfields[k]
+
+                        object_props.update(object_subfields)
+                        objectid = subobjs.add(object_props)
+
+                        annid = u'annotation' + recid
+                        annotation_item = {
+                            u'id': annid,
+                            u'label': recid,
+                            subst: objectid,
+                            #u'type': u'Annotation',
+                        }
+                        annotation_item.update(extra_annotation_props)
+                        annotation_item.update(annotation_subfields)
+
+                        annotations_sink.send(annotation_item)
+                        print >> sys.stderr, '.',
+
+                        if code in INSTANCE_FIELDS:
+                            instance_item.setdefault('annotation', []).append(annid)
+                        elif code in WORK_FIELDS:
+                            work_item.setdefault('annotation', []).append(annid)
+                        
+                        #The actual subfields go to the annotations sink
+                        #annotations_props = {u'annotates': instance_item[u'id']}
+                        #annotations_props.update(props)
+                        #subid = subobjs.add(annotations_props, annotations_sink)
+                        #The reference is from the instance ID
+                        #instance_item.setdefault(subst, []).append(subid)
+
+                        handled = True
+
+
 
                         #work_item.setdefault(FIELD_RENAMINGS.get(code, code), []).append(subid)
 
@@ -227,16 +275,6 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
                                 elif lookup in WORK_FIELDS or code in WORK_FIELDS:
                                     work_item.setdefault(field_name, []).append(v)
 
-
-                    # for k, v in subfields.items():
-                    #     lookup = code + k
-                    #     if lookup in DEMATERIALIZE:
-                    #         key = DEMATERIALIZE[]
-                    #         print >> sys.stderr, lookup, lookup in INSTANCE_FIELDS, lookup in WORK_FIELDS
-                    #         if lookup in INSTANCE_FIELDS:
-                    #             instance_item[key] = v
-                    #         elif lookup in WORK_FIELDS:
-                    #             work_item[key] = v
 
                 #print >> sys.stderr, lookup, key
                 elif not handled:
@@ -345,13 +383,13 @@ def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, logger
             for ninst in new_instances:
                 send_instance(ninst)
 
-            stub_item = {
-                u'id': recid,
-                u'label': recid,
-                u'type': u'MarcRecord',
-            }
+            #stub_item = {
+            #    u'id': recid,
+            #    u'label': recid,
+            #    u'type': u'MarcRecord',
+            #}
 
-            stub_sink.send(stub_item)
+            #stub_sink.send(stub_item)
             ix += 1
             print >> sys.stderr, '+',
 
@@ -391,13 +429,15 @@ if __name__ == "__main__":
     name_base = sys.argv[2]
     work_outf = open(name_base + '.work.json', 'w')
     instance_outf = open(name_base + '.instance.json', 'w')
-    stub_outf = open(name_base + '.stub.json', 'w')
+    #stub_outf = open(name_base + '.stub.json', 'w')
     objects_outf = open(name_base + '.object.json', 'w')
+    annotations_outf = open(name_base + '.annotations.json', 'w')
 
     work_emitter = emitter.emitter(work_outf)
     instance_emitter = emitter.emitter(instance_outf)
-    stub_emitter = emitter.emitter(stub_outf)
+    #stub_emitter = emitter.emitter(stub_outf)
     objects_emitter = emitter.emitter(objects_outf)
+    annotations_emitter = emitter.emitter(annotations_outf)
 
     recs = indoc.xml_select(u'/ma:collection/ma:record', prefixes=PREFIXES)
 
@@ -406,19 +446,23 @@ if __name__ == "__main__":
         count = int(sys.argv[3])
         recs = itertools.islice(recs, count)
 
-    records2json(recs, work_emitter, instance_emitter, stub_emitter, objects_emitter)
+    #records2json(recs, work_emitter, instance_emitter, stub_emitter, objects_emitter, annotations_emitter)
+    records2json(recs, work_emitter, instance_emitter, objects_emitter, annotations_emitter)
     work_emitter.send(emitter.ITEMS_DONE_SIGNAL)
     instance_emitter.send(emitter.ITEMS_DONE_SIGNAL)
-    stub_emitter.send(emitter.ITEMS_DONE_SIGNAL)
+    #stub_emitter.send(emitter.ITEMS_DONE_SIGNAL)
     objects_emitter.send(emitter.ITEMS_DONE_SIGNAL)
+    annotations_emitter.send(emitter.ITEMS_DONE_SIGNAL)
 
     #emitter.send(TYPES1)
     work_emitter.send(None)
     instance_emitter.send(None)
-    stub_emitter.send(None)
+    #stub_emitter.send(None)
     objects_emitter.send(None)
+    annotations_emitter.send(None)
     work_emitter.close()
     instance_emitter.close()
-    stub_emitter.close()
+    #stub_emitter.close()
     objects_emitter.close()
+    annotations_emitter.close()
     #print >> sys.stderr, requests_cache.get_cache()

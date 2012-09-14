@@ -2,6 +2,10 @@
 Declarations used to elucidate MARC model
 '''
 
+#Just set up some flags
+#BOUND_TO_WORK = object()
+#BOUND_TO_INSTANCE = object()
+
 #Full MARC field list: http://www.loc.gov/marc/bibliographic/ecbdlist.html
 
 MATERIALIZE = {
@@ -28,8 +32,12 @@ MATERIALIZE = {
 '700': ('name', {'marcrType': 'Person'}),
 '710': ('name', {'marcrType': 'Organization'}),
 '711': ('name', {'marcrType': 'Meeting'}),
+}
 
-'852': ('institution', {'marcrType': 'Organization'}),
+
+MATERIALIZE_VIA_ANNOTATION = {
+#'852': (BOUND_TO_INSTANCE, 'institution', {'marcrType': 'Organization'}),
+'852': ('institution', {'marcrType': 'Organization'}, {'type': 'Holdings', 'marcrType': 'HoldingsAnnotation'}),
 }
 
 
@@ -248,7 +256,11 @@ INSTANCE_FIELDS = set([
 ])
 
 
-HOLDINGS_FIELDS = set([
-'852',
+ANNOTATIONS_FIELDS = set([
+'852h',
 ])
+
+#HOLDINGS_FIELDS = set([
+#'852',
+#])
 

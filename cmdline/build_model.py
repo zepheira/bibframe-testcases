@@ -163,11 +163,11 @@ T1 = '''        <div class="row-fluid vocabulary-display-section">
 
 T2 = '''\
             <tr>
-          <td>{0}{1}{2}</td>
-          <td>{3}</td>
+          <td>{0}{1}{2}{3}</td>
           <td>{4}</td>
           <td>{5}</td>
           <td>{6}</td>
+          <td>{7}</td>
             </tr>
 '''
 
@@ -202,6 +202,16 @@ def run(modelsource=None, output=None, base=''):
             #Build the HTML from the children of the annotation element
             htmlfromchildren = ''.join([ a.xml_encode() for a in ann.xml_children ])
             annotations.setdefault((target_cls, target_prop), []).append(htmlfromchildren)
+
+    #Collect all the property refinements
+    refinements = {}
+    for prop in indoc.xml_select(u'//*[@refines]'):
+        prop.xml_parent 
+        source_cls, source_prop = prop.xml_parent.id, prop.id
+        target = prop.refines.split(u'/', 1)
+        #Target class is the same as source if not specified
+        target_cls, target_prop = (source_cls, target[0]) if len(target) == 1 else target
+        refinements.setdefault((target_cls, target_prop), []).append((source_cls, source_prop))
 
     #Build a graph of the classes
     for cls in indoc.model.class_:
@@ -258,19 +268,31 @@ def run(modelsource=None, output=None, base=''):
                     prop_ann_html = ' <a class="notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></a>\n'.format(outcls.id, prop.id)
 
                 prop_refines_html = ''
-                if prop.refines:
-                    target = prop.refines.split(u'/', 1)
-                    target_cls, target_prop = (None, target[0]) if len(target) == 1 else target
-                    #FIXME: Add integrity check
-                    if target_cls:
-                        prop_refines_html = '<br> (refines <a href="../{0}/index.html">{1}</a>)\n'.format(target_cls, prop.refines)
-                    else:
-                        prop_refines_html = '<br> (refines {0})\n'.format(prop.refines)
+                #if prop.refines:
+                #    target = prop.refines.split(u'/', 1)
+                #    target_cls, target_prop = (None, target[0]) if len(target) == 1 else target
+                #    #FIXME: Add integrity check
+                #    if target_cls:
+                #        prop_refines_html = '<br> (refines <a href="../{0}/index.html">{1}</a>)\n'.format(target_cls, prop.refines)
+                #    else:
+                #        prop_refines_html = '<br> (refines {0})\n'.format(prop.refines)
+
+                prop_refinements_html = ''
+                refs = refinements.get((outcls.id, prop.id))
+                if refs:
+                    refs_html = ''.join(['<tr><td>{0}</td></tr>'.format(source_prop if outcls.id == source_cls else source_cls + '/' + source_prop) for (source_cls, source_prop) in refs])
+                    prop_refinements_html = '''\
+                <div id="demo" class="collapse">
+                  <table class="table">
+                    {0}
+                  </table>
+                </div>'''.format(refs_html)
 
                 property_chunks.append(T2.format(
                     U(prop.label),
                     prop_ann_html,
                     prop_refines_html,
+                    prop_refinements_html,
                     typedesc,
                     description,
                     U(prop.marcref),
