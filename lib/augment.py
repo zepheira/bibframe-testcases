@@ -75,11 +75,15 @@ def lucky_idlc_org_template(qpattern):
         q = qpattern(item)
         query = urllib.quote(q)
         url = 'http://id.loc.gov/vocabulary/organizations/{0}.html'.format(query)
-        r = requests.head(url)
+        response, content = H.request(url, 'HEAD')
+        #answer = response['x-uri'] #['X-URI']
+        #r = requests.head(url)
         #print >> sys.stderr, url, item[u'code']
-        answer = r.headers['X-URI']
+        #answer = r.headers['X-URI']
+        answer = response['x-uri'] #['X-URI']
         #print >> sys.stderr, answer
-        time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
+        if not response.fromcache:
+            time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
         return answer
     return lucky_idlc
 
