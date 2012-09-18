@@ -3,9 +3,18 @@ Routines for various data fix-ups & lookups
 '''
 import urllib, time, sys
 
-import requests # http://docs.python-requests.org/en/latest/index.html
+#import requests # http://docs.python-requests.org/en/latest/index.html
+#import requests_cache # pip install requests_cache
 import amara
+from amara.thirdparty import httplib2, json
 from amara.lib import U
+
+#requests_cache.configure(os.path.join(CACHEDIR, 'cache'))
+
+CACHEDIR = '/tmp/.cache'
+
+H = httplib2.Http(CACHEDIR)
+H.follow_all_redirects = True
 
 VIAF_GUESS_FNAME = u'viafFromHeuristic'
 IDLC_GUESS_FNAME = u'idlcFromHeuristic'
@@ -20,11 +29,14 @@ def lucky_viaf_template(qfunc):
         query = urllib.urlencode({'query' : q, 'maximumRecords': 1, 'httpAccept': 'application/rss+xml'})
         url = 'http://viaf.org/viaf/search?' + query
         #print >> sys.stderr, url
-        r = requests.get(url)
-        doc = amara.parse(r.content)
+        #r = requests.get(url)
+        #doc = amara.parse(r.content)
+        response, content = H.request(url, 'GET')
+        doc = amara.parse(content)
         answer = U(doc.xml_select(u'/rss/channel/item/link'))
         #print >> sys.stderr, answer
-        time.sleep(2) #Be polite!
+        if not response.fromcache:
+            time.sleep(2) #Be polite!
         return answer
     return lucky_viaf
 
@@ -40,11 +52,14 @@ def lucky_idlc_template(qpattern):
         q = qpattern(item)
         query = urllib.quote(q)
         url = 'http://id.loc.gov/authorities/label/' + query
-        r = requests.head(url)
+        #r = requests.head(url)
         #print >> sys.stderr, url, item[u'code']
-        answer = r.headers['X-URI']
+        #answer = r.headers['X-URI']
         #print >> sys.stderr, answer
-        time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
+        response, content = H.request(url, 'HEAD')
+        answer = response['x-uri'] #['X-URI']
+        if not response.fromcache:
+            time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
         return answer
     return lucky_idlc
 
@@ -90,6 +105,27 @@ def lucky_viaf_template(qpattern):
     return lucky_viaf
 
 
+def finding_aid_lookup_template(qpattern):
+    '''
+    Used for searching OCLC for VIAF records
+    '''
+    if not callable(qpattern):
+        qpattern = lambda item, qp=qpattern: qp.format(**dict([ (k, v.encode('utf-8')) for k, v in item.iteritems() ]))
+
+    def lucky_viaf(item):
+        #Work out the item's finding aid link
+        link = work_item.get(u'dftag_' + FALINKFIELD)
+        if link:
+            work_item['fa_link'] = link
+
+            r = requests.get(link)
+            if r.history: #If redirects were encountered
+                resolvedlink = r.history[-1].headers['location']
+                work_item['fa_resolvedlink'] = resolvedlink
+
+
+
+
 #Getting book covers: & other info
 # * http://room329.com/2010/11/how-to-find-a-cover-image-for-a-book-with-an-isbn/
 # * http://stackoverflow.com/questions/106963/how-can-i-lookup-data-about-a-book-from-its-barcode-number
@@ -107,7 +143,7 @@ DEFAULT_AUGMENTATIONS = {
 
     #First the easy ones
     ('600', ('label', 'date'), lucky_viaf_template('cql.any all "{label}, {date}"'), VIAF_GUESS_FNAME), #VIAF Cooper, Samuel, 1798-1876
-    ('852', ('label',), lucky_idlc_org_template('{code}'), IDLC_GUESS_FNAME),
+    ('852', ('code',), lucky_idlc_org_template('{code}'), IDLC_GUESS_FNAME),
 
     #These need some extra preprocessing for successful lookup in ID.LOC.GOV, so are a bit more complex
     ('600', ('label', 'date'), lucky_idlc_template(lambda item: '{0}{1}'.format(item['label'].encode('utf-8'), item['date'].rstrip('.').encode('utf-8'))), IDLC_GUESS_FNAME),

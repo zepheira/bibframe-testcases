@@ -13,9 +13,6 @@ import logging
 import string
 import itertools
 
-import requests # http://docs.python-requests.org/en/latest/index.html
-import requests_cache # pip install requests_cache
-
 import amara
 from amara.lib.util import coroutine
 from amara.thirdparty import httplib2, json
@@ -35,8 +32,6 @@ FALINKFIELD = u'856u'
 #CATLINKFIELD = u'010a'
 CATLINKFIELD = u'LCCN'
 CACHEDIR = os.path.expanduser('~/tmp')
-
-requests_cache.configure(os.path.join(CACHEDIR, 'cache'))
 
 NON_ISBN_CHARS = re.compile(u'\D')
 
@@ -289,16 +284,6 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
                         work_item[key] = val
 
             #link = work_item.get(u'cftag_008')
-
-
-            #Work out the item's finding aid link
-            link = work_item.get(u'dftag_' + FALINKFIELD)
-            if link:
-                work_item['fa_link'] = link
-                r = requests.get(link)
-                if r.history: #If redirects were encountered
-                    resolvedlink = r.history[-1].headers['location']
-                    work_item['fa_resolvedlink'] = resolvedlink
 
 
             #Handle ISBNs re: https://foundry.zepheira.com/issues/1976
