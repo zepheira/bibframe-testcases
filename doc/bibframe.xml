@@ -94,6 +94,34 @@
       <marcref>245 $a</marcref>
       <rdaref></rdaref>
     </property>
+    <property id='titleRemainder' refines='title'>
+      <label>titleRemainder</label>
+      <typedesc>Literal</typedesc>
+      <description>The subtitle or remainder of title associated with the creative work.</description>
+      <marcref>245 $b</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='titleInclusiveDates' refines='title'>
+      <label>titleInclusiveDates</label>
+      <typedesc>Literal</typedesc>
+      <description>The sub title / remainder of title associated with the creative work.</description>
+      <marcref>245 $f</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='titleNumberParts' refines='title'>
+      <label>titleNumberParts</label>
+      <typedesc>Literal</typedesc>
+      <description>Number of part/section of a creative work.</description>
+      <marcref>245 $n</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='titleNameParts' refines='title'>
+      <label>titleNameParts</label>
+      <typedesc>Literal</typedesc>
+      <description>Name of part/section of a creative work.</description>
+      <marcref>245 $p</marcref>
+      <rdaref></rdaref>
+    </property>
     <property id='language'>
       <label>language</label>
       <typedesc>Language</typedesc>

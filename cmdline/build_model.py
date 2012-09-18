@@ -295,9 +295,9 @@ def run(modelsource=None, output=None, base=''):
                 <button type="button" class="btn btn-mini" data-toggle="collapse" data-target="#refine-{0}"><i class="icon-plus"></i></button>
 
                 <div id="refine-{0}" class="collapse">
-                  <table class="table">
-                    {1}
-                  </table>
+                    <table class="table">
+                         {1}
+                    </table>
                 </div>'''.format(U(prop.label), refs_html)
 
                 property_chunks.append(T2.format(
