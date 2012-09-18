@@ -20,27 +20,6 @@ VIAF_GUESS_FNAME = u'viafFromHeuristic'
 IDLC_GUESS_FNAME = u'idlcFromHeuristic'
 
 
-def lucky_viaf_template(qfunc):
-    '''
-    Used for searching OCLC for VIAF records
-    '''
-    def lucky_viaf(item):
-        q = qfunc(item)
-        query = urllib.urlencode({'query' : q, 'maximumRecords': 1, 'httpAccept': 'application/rss+xml'})
-        url = 'http://viaf.org/viaf/search?' + query
-        #print >> sys.stderr, url
-        #r = requests.get(url)
-        #doc = amara.parse(r.content)
-        response, content = H.request(url, 'GET')
-        doc = amara.parse(content)
-        answer = U(doc.xml_select(u'/rss/channel/item/link'))
-        #print >> sys.stderr, answer
-        if not response.fromcache:
-            time.sleep(2) #Be polite!
-        return answer
-    return lucky_viaf
-
-
 def lucky_idlc_template(qpattern):
     '''
     Used for searching OCLC for VIAF records
@@ -57,7 +36,7 @@ def lucky_idlc_template(qpattern):
         #answer = r.headers['X-URI']
         #print >> sys.stderr, answer
         response, content = H.request(url, 'HEAD')
-        answer = response['x-uri'] #['X-URI']
+        answer = response.get('x-uri')
         if not response.fromcache:
             time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
         return answer
@@ -80,7 +59,7 @@ def lucky_idlc_org_template(qpattern):
         #r = requests.head(url)
         #print >> sys.stderr, url, item[u'code']
         #answer = r.headers['X-URI']
-        answer = response['x-uri'] #['X-URI']
+        answer = response.get('x-uri')
         #print >> sys.stderr, answer
         if not response.fromcache:
             time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
@@ -100,11 +79,14 @@ def lucky_viaf_template(qpattern):
         query = urllib.urlencode({'query' : q, 'maximumRecords': 1, 'httpAccept': 'application/rss+xml'})
         url = 'http://viaf.org/viaf/search?' + query
         #print >> sys.stderr, url
-        r = requests.get(url)
-        doc = amara.parse(r.content)
+        #r = requests.get(url)
+        #doc = amara.parse(r.content)
+        response, content = H.request(url, 'GET')
+        doc = amara.parse(content)
         answer = U(doc.xml_select(u'/rss/channel/item/link'))
         #print >> sys.stderr, answer
-        time.sleep(2) #Be polite!
+        if not response.fromcache:
+            time.sleep(2) #Be polite!
         return answer
     return lucky_viaf
 
