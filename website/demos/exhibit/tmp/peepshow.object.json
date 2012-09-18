@@ -57,12 +57,12 @@
     "type": "object", 
     "id": "ps_obj_8"
 },{
-    "a": "Great Exhibition", 
-    "c": "London, England)", 
+    "label": "Great Exhibition", 
+    "geographicSubdivision": "London, England)", 
     "code": "611", 
-    "d": "(1851 :", 
+    "chronologicalSubdivision": "(1851 :", 
     "label": "ps_obj_9", 
-    "v": "Pictorial works.", 
+    "formSubdivision": "Pictorial works.", 
     "marcrType": "Meeting", 
     "type": "object", 
     "id": "ps_obj_9"
