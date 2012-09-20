@@ -454,6 +454,11 @@
     <tagline>A remove sensing image</tagline>
   </class>
 
+  <class id='Digital' isa='CreativeWork'>
+    <label>Digital</label>
+    <tagline>Digital</tagline>
+  </class>
+
   <class id='Dataset' isa='CreativeWork'>
     <label>Dataset</label>
     <tagline>A dataset.</tagline>
@@ -475,8 +480,18 @@
   </class>
 
   <class id='MovingImage' isa='CreativeWork'>
-    <label>Moving Image</label>
+    <label>MovingImage</label>
     <tagline>A moving image, projected medium, film or video.</tagline>
+  </class>
+
+  <class id='MotionPicture' isa='MovingImage'>
+    <label>Motion Pictute</label>
+    <tagline>A motion picture.</tagline>
+  </class>
+
+  <class id='VideoRecording' isa='MovingImage'>
+    <label>Video Recording</label>
+    <tagline>A video recording.</tagline>
   </class>
 
   <class id='Multimedia' isa='CreativeWork'>
