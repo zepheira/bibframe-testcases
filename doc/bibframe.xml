@@ -84,7 +84,7 @@
       <label>uniformTitle</label>
       <typedesc>@Title</typedesc>
       <description>Uniform title printed or displayed</description>
-      <marcref>130, 240 $a</marcref>
+      <marcref>130, 240, 243, 730, 830</marcref>
       <rdaref></rdaref>
     </property>
     <property id='title'>
@@ -991,7 +991,42 @@ v    </property>
 
   <class id='Title' isa='Authority'> 
     <label>Title</label>
-    <tagline>A Title</tagline>
+    <tagline>A uniform authority title.</tagline>
+    <property id='title'>
+      <label>title</label>
+      <typedesc>Literal</typedesc>
+      <description>The title associated with the uniform title authority.</description>
+      <marcref>130, 240, 243, 730, 830 $a</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='title'>
+      <label>title</label>
+      <typedesc>Literal</typedesc>
+      <description>The title associated with the uniform title authority.</description>
+      <marcref>130, 240, 243, 730, 830 $a</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='titleDate'>
+      <label>titleNumberParts</label>
+      <typedesc>Literal</typedesc>
+      <description>Date associated with the title.</description>
+      <marcref>130, 240, 243, 730, 830 $d / $f</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='titleNumberParts'>
+      <label>titleNumberParts</label>
+      <typedesc>Literal</typedesc>
+      <description>Number of part/section of a creative work.</description>
+      <marcref>130, 240, 243, 730, 830 $n</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='titleNameParts'>
+      <label>titleNameParts</label>
+      <typedesc>Literal</typedesc>
+      <description>Name of part/section of a creative work.</description>
+      <marcref>130, 240, 243, 730, 830 $p</marcref>
+      <rdaref></rdaref>
+    </property>
     <property id='hasIDLink'>
       <label>hasIDLink</label>
       <typedesc>URL</typedesc>
