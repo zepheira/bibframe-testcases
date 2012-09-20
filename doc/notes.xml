@@ -7,10 +7,19 @@
     <p>Not dissimilar to an <strong>RDF Resource</strong> <a href='http://www.w3.org/2003/glossary/subglossary/rdf-syntax.rdf/'>(viz.)</a></p>
   </annotation> 
   <annotation on='Annotation'> 
-    <p>Based on the W3C Annotea Annotation Schema <a href='http://www.w3.org/2000/10/annotation-ns#'>(viz.)</a></p>
+    <p>Based on the W3C Annotea Annotation Schema <a href='http://www.w3.org/2000/10/annotation-ns#'>(viz.)</a> and a subset of the work emerging in the W3C <a href="http://www.w3.org/community/openannotation/">Annotation Community Group</a></p>
   </annotation> 
   <annotation on='CreativeWork'> 
     <p>Refinements of CreativeWorks are derived from a combination of LoC 'Classes and captions for resource types (11/28/11)' and subclasses of Schema.org <a href = "http://schema.org/CreativeWork">CreativeWork</a>.</p>
+  </annotation> 
+  <annotation on='Article'> 
+    <p>Analogous to schema.org <a href = "http://schema.org/Article">Article</a>.</p>
+  </annotation> 
+  <annotation on='AudioMusical'> 
+    <p>Analogous to schema.org <a href = "http://schema.org/MusicRecording">Music Recording</a>.</p>
+  </annotation> 
+  <annotation on='WebSite'> 
+    <p>Analogous to schema.org <a href = "http://schema.org/WebPage">WebPage</a>.</p>
   </annotation> 
   <annotation on='CreativeWork/creator'> 
     <p>Refinement relationships (author, illustrator, sculptor, etc.) are defined as subproperties of this property. As a start, I suggest we focus on a subset of the <a href = "http://www.loc.gov/marc/relators/relaterm.html">MARC relator terms</a> what might be applicable to Works. Cardinatlity and manadatory constraints are overlayed as a community defined profile of this model. </p>
