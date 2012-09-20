@@ -9,14 +9,20 @@ Declarations used to elucidate MARC model
 #Full MARC field list: http://www.loc.gov/marc/bibliographic/ecbdlist.html
 
 MATERIALIZE = {
-'100': ('name', {'marcrType': 'Person'}),
-'110': ('name', {'marcrType': 'Organization'}),
-'111': ('name', {'marcrType': 'Meeting'}),
+'100': ('creator', {'marcrType': 'Person'}),
+'110': ('creator', {'marcrType': 'Organization'}),
+'111': ('creator', {'marcrType': 'Meeting'}),
+
+'130': ('uniformTitle', {'marcrType': 'Title'}),
+'240': ('uniformTitle', {'marcrType': 'Title'}),
+'243': ('uniformTitle', {'marcrType': 'Title'}),
+'730': ('uniformTitle', {'marcrType': 'Title'}),
+'830': ('uniformTitle', {'marcrType': 'Title'}),
 
 '260a': ('place', {'marcrType': 'Place'}),
-'260b': ('name', {'marcrType': 'Organization'}),
+'260b': ('actor', {'marcrType': 'Organization'}),
 '260e': ('place', {'marcrType': 'Place'}),
-'260f': ('name', {'marcrType': 'Organization'}),
+'260f': ('actor', {'marcrType': 'Organization'}),
 
 '300': ('physicalDescription', {'marcrType': 'Measurement'}),
 
@@ -53,18 +59,26 @@ FIELD_RENAMINGS = {
 '082a': 'deweyNumber',
 
 '100a': 'label',
-'100d': 'date',
+'100b': 'numeration',
+'100c': 'titles',
 '110a': 'label',
 '110d': 'date',
 '111a': 'label',
 '111d': 'date',
-'130a': 'uniformTitle',
+
+'130a': 'label',
+'240a': 'label',
+'730a': 'label',
+'830a': 'label',
+
 '130l': 'language',
 '041a': 'language',
 
 '245a': 'title',
-'245b': 'subTitle',
-'245f': 'titleInclusiveDate',
+'245b': 'titleRemainder',
+'245f': 'titleInclusiveDates',
+'245n': 'titleNumberParts',
+'245p': 'titleNameParts',
 '247a': 'formerTitle',
 '250a': 'edition',
 '250b': 'edition',
@@ -158,7 +172,8 @@ FIELD_RENAMINGS = {
 '651z': 'geographicSubdivision',
 
 '700a': 'label',
-'700d': 'date',
+'700b': 'numeration',
+'700c': 'titles',
 '710a': 'label',
 '710d': 'date',
 '711a': 'label',
