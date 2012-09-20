@@ -999,15 +999,8 @@ v    </property>
       <marcref>130, 240, 243, 730, 830 $a</marcref>
       <rdaref></rdaref>
     </property>
-    <property id='title'>
-      <label>title</label>
-      <typedesc>Literal</typedesc>
-      <description>The title associated with the uniform title authority.</description>
-      <marcref>130, 240, 243, 730, 830 $a</marcref>
-      <rdaref></rdaref>
-    </property>
     <property id='titleDate'>
-      <label>titleNumberParts</label>
+      <label>titleDate</label>
       <typedesc>Literal</typedesc>
       <description>Date associated with the title.</description>
       <marcref>130, 240, 243, 730, 830 $d / $f</marcref>
