@@ -10,7 +10,7 @@
     <p>Based on the W3C Annotea Annotation Schema <a href='http://www.w3.org/2000/10/annotation-ns#'>(viz.)</a> and a subset of the work emerging in the W3C <a href="http://www.w3.org/community/openannotation/">Annotation Community Group</a></p>
   </annotation> 
   <annotation on='CreativeWork'> 
-    <p>Refinements of CreativeWorks are derived from LoC 'Classes and captions for resource types (11/28/11)'. A draft analysis prepared for internal Library of Congress use in studying document types and facet names currently used in various LC systems.</p>
+    <p>Refinements of CreativeWorks are derived from LoC 'Classes and captions for resource types (11/28/11)'. A draft analysis prepared for internal Library of Congress use in studying document types and facet names currently used in various LC systems. Creative Work types are a plug point and specified by community defined application profiles.</p>
   </annotation> 
   <annotation on='Article'> 
     <p>Analogous to schema.org <a href = "http://schema.org/Article">Article</a>.</p>
@@ -29,6 +29,9 @@
   </annotation>
   <annotation on='CreativeWork/relatedTo'>
     <p>Refinement relationships (hasTranslation, isBasedOn, etc.) are defined as subproperties of this property.</p>
+  </annotation>
+  <annotation on='Instance'>
+    <p>Instance types are a combination of physical carrier listed under <a href = 'http://www.loc.gov/standards/valuelist/marccarrier.html'>MARC Code List for Carrier Types</a> and top level <a href = 'http://www.iana.org/assignments/media-types/index.html'>IANA media types</a> for digital resources. Instance types are a plug point and specified by community defined application profiles.</p>
   </annotation>
   <annotation on='Instance/actor'>
     <p>Refinement relationships (producer, publisher, distributor, manufacturer, etc.) are defined as subproperties of this property. As a start, I suggest we focus on a subset of the <a href = "http://www.loc.gov/marc/relators/relaterm.html">MARC relator terms</a> what might be applicable to Instances. If we decide there is the need for more than a single entitiy associated with an Instance (an instance has more than one publisher / publishedAt / publishedOn combination of assertions) we'll need to materilize this pattern.</p>
