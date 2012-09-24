@@ -173,7 +173,7 @@
     </property>
     <property id='hasInstance'>
       <label>hasInstance</label>
-      <typedesc>@PhysicalResource or @DigitalResource</typedesc>
+      <typedesc>@Instance</typedesc>
       <description>An instantiation of a creative work.</description>
       <marcref></marcref>
       <rdaref></rdaref>
@@ -582,133 +582,49 @@ v    </property>
     </property>
   </class>
 
-  <class id='DigitalResource' isa='Instance'> 
-    <label>Digital Resouce</label>
-    <tagline>A digital resouce.</tagline>
-    <property id='carrier'>
-      <label>carrier</label>
-      <typedesc>@DigitalCarrier</typedesc>
-      <description>The carrier of the instance.</description>
-      <marcref></marcref>
-      <rdaref></rdaref>
-    </property>
+  <!-- Instance types -->
+
+  <!-- IANA top level MIME types -->
+
+  <class id='DigitalApplication' isa='Instance'>
+    <label>Digital Application</label>
+    <tagline>A digital application based media type.</tagline>
   </class>
 
-  <class id='EBook' isa='DigitalResource'>
-    <label>EBook</label>
-    <tagline>An EBook (kindle, google book, etc.)</tagline>
+  <class id='DigitalAudio' isa='Instance'>
+    <label>Digital Audio</label>
+    <tagline>Digital Audio based media types.</tagline>
   </class>
 
-  <class id='HardcoverBook' isa='PhysicalBook'>
-    <label>Hardcover Book</label>
-    <tagline>A hardcover Book</tagline>
+  <class id='Message' isa='Instance'>
+    <label>Message</label>
+    <tagline>Message based media types.</tagline>
   </class>
 
-  <class id='PaperbackBook' isa='PhysicalBook'>
-    <label>Paperback Book</label>
-    <tagline>A paperback book</tagline>
+  <class id='Model' isa='Instance'>
+    <label>Model</label>
+    <tagline>Model based media types.</tagline>
   </class>
 
-  <class id='Audiobook' isa='PhysicalBook'>
-    <label>Audio Book</label>
-    <tagline>An audio book.</tagline>
+  <class id='Multipart' isa='Instance'>
+    <label>Multipart</label>
+    <tagline>Multipart media types.</tagline>
   </class>
 
-  <class id='BrailleBook' isa='PhysicalBook'>
-    <label>Braille Book</label>
-    <tagline>A braille book.</tagline>
+  <class id='DigitalText' isa='Instance'>
+    <label>Digital Text</label>
+    <tagline>Digital text based media types.</tagline>
   </class>
 
-  <class id='ContinuallyUpdatedBook' isa='PhysicalBook'>
-    <label>Continually Updated Book</label>
-    <tagline>A continually updated book.</tagline>
-  </class>
-
-  <class id='LargePrintBook' isa='PhysicalBook'>
-    <label>Large Print Book</label>
-    <tagline>A large print book.</tagline>
-  </class>
-
-  <class id='PhysicalCarrier' isa='Resource'>
-    <label>Physical Carrier</label>
-    <tagline>This class contains a controlled list of &quot;carriers&quot; that can be used to contain physical instances.</tagline>
-  </class>
-
-  <class id='BlurayDisc' isa='PhysicalCarrier'>
-    <label>Bluray Disk</label>
-    <tagline>An optical disc format that offers more than five times the storage capacity of traditional DVDs</tagline>
-  </class>
-
-  <class id='DVD' isa='PhysicalCarrier'>
-    <label>DVD</label>
-    <tagline>An optical disc format.</tagline>
-  </class>
-
-  <class id='CD' isa='PhysicalCarrier'>
-    <label>CD</label>
-    <tagline></tagline>
-  </class>
-
-  <class id='CassetteTape' isa='PhysicalCarrier'>
-    <label>Cassette Tape</label>
-    <tagline></tagline>
-  </class>
-
-  <class id='FilmReel' isa='PhysicalCarrier'>
-    <label>Film Reel</label>
-    <tagline></tagline>
-  </class>
-
-  <class id='LP' isa='PhysicalCarrier'>
-    <label>LP</label>
-    <tagline></tagline>
-  </class>
-
-  <class id='Microform' isa='PhysicalCarrier'>
-    <label>Microform</label>
-    <tagline></tagline>
-  </class>
-
-  <class id='VHSTape' isa='PhysicalCarrier'>
-    <label>VHS Tape</label>
-    <tagline></tagline>
-  </class>
-
-  <class id='Volume' isa='PhysicalCarrier'>
-    <label>Volume</label>
-    <tagline></tagline>
-  </class>
-
-
-  <class id='DigitalCarrier' isa='Resource'>
-    <label>Digitial Carrier</label>
-    <tagline>This class contains a controlled list of &quot;carriers&quot; that can be used to contain digital instances.</tagline>
-  </class>
-
-  <class id='WebPage' isa='DigitalCarrier'>
+  <class id='WebPage' isa='DigitalText'>
     <label>Web Page</label>
-    <tagline>A Web Page</tagline>
-  </class>
-
-  <class id='Flash' isa='DigitalCarrier'>
-    <label>Flash</label>
-    <tagline>A Flash Page</tagline>
-  </class>
-
-  <class id='Kindle' isa='DigitalCarrier'>
-    <label>Kindle</label>
-    <tagline>A Kindle EBook</tagline>
-  </class>
-
-  <class id='GoogleEBook' isa='DigitalCarrier'>
-    <label>Google EBook</label>
-    <tagline>A Google EBook</tagline>
+    <tagline>A Web Page.</tagline>
   </class>
 
 
-  <class id='ImageObject' isa='DigitalResource'>
-    <label>Image Object</label>
-    <tagline>An image file</tagline>
+  <class id='DigitalImage' isa='Instance'>
+    <label>Digitial Image</label>
+    <tagline>Digitial image based media types.</tagline>
     <property id='caption'>
       <label>caption</label>
       <typedesc>Literal</typedesc>
@@ -746,59 +662,63 @@ v    </property>
     </property>
     <property id='thumbnail'>
       <label>thumbnail</label>
-      <typedesc>@ImageObject</typedesc>
+      <typedesc>@DigitalImage</typedesc>
       <description>Thumbnail image.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
   </class>
 
-  <class id='PhysicalResource' isa='Instance'> 
-    <label>Physical Resource</label>
-    <tagline>A physical resource.</tagline>
-    <property id='extent'>
-      <label>extent</label>
-      <typedesc>Literal</typedesc>
-      <description>Number of physical pages, volumes, cassettes, total playing time, etc. of each type of item.</description>
-      <marcref>300 $a</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='otherPhysicalDetails'>
-      <label>otherPhysicalDetails</label>
-      <typedesc>Literal</typedesc>
-      <description>Physical characteristics such as illustrative matter, coloration, playing speed, groove characteristics, etc.</description>
-      <marcref>300 $b</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='dimensions'>
-      <label>dimensions</label>
-      <typedesc>Literal</typedesc>
-      <description>Expressed in centimeters, millimeters or inches</description>
-      <marcref>300 $c</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='carrier'>
-      <label>carrier</label>
-      <typedesc>@PhysicalCarrier</typedesc>
-      <description>The carrier of the instance.</description>
-      <marcref></marcref>
-      <rdaref></rdaref>
-    </property>
+  <!-- MARC Carrier Types -->
+
+  <class id='PhysicalAudio' isa='Instance'>
+    <label>Physical Audio</label>
+    <tagline>Physical Audio carriers</tagline>
+  </class>
+  
+  <class id='PhysicalComputer' isa='Instance'>
+    <label>Physical Computer</label>
+    <tagline>Physical Computer carriers </tagline>
+  </class>
+  
+  <class id='Microform' isa='Instance'>
+    <label>Microform</label>
+    <tagline>Microform carriers </tagline>
+  </class>
+  
+  <class id='Microscopic' isa='Instance'>
+    <label>Microscopic</label>
+    <tagline>Microscopic carriers </tagline>
+  </class>
+  
+  <class id='ProjectedImage' isa='Instance'>
+    <label>Projected Image</label>
+    <tagline>Projected image carriers </tagline>
+  </class>
+  
+  <class id='Stereographic' isa='Instance'>
+    <label>Stereographic</label>
+    <tagline>Stereographic carriers </tagline>
+  </class>
+  
+  <class id='Unmediated' isa='Instance'>
+    <label>Unmediated</label>
+    <tagline>Unmediated carriers </tagline>
+  </class>
+  
+  <class id='PhysicalVideo' isa='Instance'>
+    <label>Physical Video</label>
+    <tagline>Video carriers </tagline>
+  </class>
+  
+  <!-- Misc Library Carriers (because they seem to be missing) -->
+
+  <class id='EBook' isa='DigitalApplication'>
+    <label>EBook</label>
+    <tagline>An EBook (kindle, google book, etc.)</tagline>
   </class>
 
-  <class id='PhysicalBook' isa='PhysicalResource'> 
-    <label>A Physical Book</label>
-    <tagline>A physical, paper book</tagline>
-    <property id='isbn'>
-      <label>ISBN</label>
-      <typedesc>Literal</typedesc>
-      <description>ISBN of the item.</description>
-      <marcref>020 $a</marcref>
-      <rdaref></rdaref>
-    </property>
-  </class>
-
-  <class id='Serial' isa='PhysicalResource'> 
+  <class id='Serial' isa='PhysicalText'> 
     <label>A Serial</label>
     <tagline>A physical, periodical publication</tagline>
     <property id='issn'>
@@ -831,8 +751,8 @@ v    </property>
     </property>
   </class>
 
-  <class id='PhysicalMap' isa='PhysicalResource'> 
-    <label>A Physical Map</label>
+  <class id='PhysicalMap' isa='Instance'> 
+    <label>Physical Map</label>
     <tagline>A physical cartographic resource such as a paper map, globe, etc.</tagline>
     <property id='scale'>
       <label>scale</label>
@@ -856,6 +776,85 @@ v    </property>
       <rdaref></rdaref>
     </property>
   </class>
+
+  <class id='PhysicalText' isa='Instance'>
+    <label>Physical Text</label>
+    <tagline>Physical print based texts, book and journals.</tagline>
+  </class>
+
+  <class id='PhysicalBook' isa='PhysicalText'> 
+    <label>Physical Book</label>
+    <tagline>A physical, paper book</tagline>
+    <property id='isbn'>
+      <label>ISBN</label>
+      <typedesc>Literal</typedesc>
+      <description>ISBN of the item.</description>
+      <marcref>020 $a</marcref>
+      <rdaref></rdaref>
+    </property>
+  </class>
+
+  <class id='HardcoverBook' isa='PhysicalBook'>
+    <label>Hardcover Book</label>
+    <tagline>A hardcover Book</tagline>
+  </class>
+
+  <class id='PaperbackBook' isa='PhysicalBook'>
+    <label>Paperback Book</label>
+    <tagline>A paperback book</tagline>
+  </class>
+
+  <class id='Audiobook' isa='PhysicalAudio'>
+    <label>Audio Book</label>
+    <tagline>An audio book.</tagline>
+  </class>
+
+  <class id='BrailleBook' isa='PhysicalBook'>
+    <label>Braille Book</label>
+    <tagline>A braille book.</tagline>
+  </class>
+
+  <class id='LargePrintBook' isa='PhysicalBook'>
+    <label>Large Print Book</label>
+    <tagline>A large print book.</tagline>
+  </class>
+
+  <class id='BlurayDisc' isa='PhysicalVideo'>
+    <label>Bluray Disk</label>
+    <tagline>An optical disc format that offers more than five times the storage capacity of traditional DVDs</tagline>
+  </class>
+
+  <class id='DVD' isa='PhysicalVideo'>
+    <label>DVD</label>
+    <tagline>An optical disc format.</tagline>
+  </class>
+
+  <class id='CD' isa='PhysicalAudio'>
+    <label>CD</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='CassetteTape' isa='PhysicalAudio'>
+    <label>Cassette Tape</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='FilmReel' isa='ProjectedImage'>
+    <label>Film Reel</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='LP' isa='PhysicalAudio'>
+    <label>LP</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='VHSTape' isa='ProjectedImage'>
+    <label>VHS Tape</label>
+    <tagline></tagline>
+  </class>
+
+
 
   <class id='Person' isa='Authority'> 
     <label>Person</label>
@@ -1121,7 +1120,7 @@ v    </property>
     <tagline>CoverArt</tagline>
     <property id='image'>
       <label>image</label>
-      <typedesc>@ImageObject</typedesc>
+      <typedesc>@DigitalImage</typedesc>
       <description>An image annotation.</description>
       <marcref></marcref>
       <rdaref></rdaref>

@@ -56,7 +56,7 @@
           <ul class="breadcrumb">
             <li><a href = "/">Home</a> <span class="divider">/</span></li>
             <li><a href = "/vocab/">Vocab</a> <span class="divider">/</span></li>
-<li><a href="../Resource/index.html">Resource</a> <span class="divider">/</span></li><li><a href="../PhysicalCarrier/index.html">Physical Carrier</a> <span class="divider">/</span></li><li class="active">CD</li>
+<li><a href="../Resource/index.html">Resource</a> <span class="divider">/</span></li><li><a href="../Instance/index.html">Instance</a> <span class="divider">/</span></li><li><a href="../PhysicalAudio/index.html">Physical Audio</a> <span class="divider">/</span></li><li class="active">CD</li>
           </ul>
         </div>
       </div>
@@ -132,8 +132,82 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../PhysicalCarrier/index.html">Physical Carrier</a> <button class="btn btn-mini notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></button>
-</div>
+        <div class="section-text parent">Properties from <A href="../Instance/index.html">Instance</a></div>
+        
+        <table class="table table-striped table-bordered">
+          <thead>
+                <tr>
+        <th class="span2">Property</th>
+        <th class="span2">Expected Value</th>
+        <th class="span6">Description</th>
+        <th class="span2">Related MARC Code</th>
+        <th class="span2">Related RDA Code</th>
+                </tr>
+          </thead>
+              <tbody>
+
+            <tr>
+          <td>title</td>
+          <td>Literal</td>
+          <td>Title added entry</td>
+          <td>245 $a</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>edition</td>
+          <td>Literal</td>
+          <td>Edition of a creative work</td>
+          <td>250</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>note</td>
+          <td>Literal</td>
+          <td>Note that provides specific information regarding the instance.</td>
+          <td>5XX</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>actor <button class="btn btn-mini notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></button>
+                <button type="button" class="btn btn-mini" data-toggle="collapse" data-target="#refine-actor"><i class="icon-plus"></i></button>
+
+                <div id="refine-actor" class="collapse">
+                    <table class="table">
+                         <tr><td>publisher</td></tr><tr><td>distributor</td></tr><tr><td>manufacturer</td></tr><tr><td>producer</td></tr>
+                    </table>
+                </div></td>
+          <td><a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
+          <td>The entity responsible for the production, publication, distribution, manufacture, etc. of the instance associated with a creative work.</td>
+          <td>260 $b</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>place</td>
+          <td><a href="/vocab/Place/index.html">Place</a></td>
+          <td> Place of production, publication, distribution, manufacture, etc.</td>
+          <td>260 $a</td>
+          <td></td>
+            </tr>
+            <tr>
+          <td>date</td>
+          <td>Date</td>
+          <td>Date of production, publication, distribution, manufacture, etc.</td>
+          <td>260 $c</td>
+          <td></td>
+            </tr>
+
+
+              </tbody>
+            </table>
+        
+      </div> <!-- span12 -->
+      
+    </div> <!-- vocabulary-display-section -->
+        <div class="row-fluid vocabulary-display-section">
+      
+      <div class="span12">
+        
+        <div class="section-text parent">Properties from <A href="../PhysicalAudio/index.html">Physical Audio</a></div>
         
         <table class="table table-striped table-bordered">
           <thead>
