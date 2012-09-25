@@ -91,7 +91,7 @@ T0 = '''<!DOCTYPE html>
   
       </div>
 
-      <div class="specific-types-display types">
+      <div id="types" class="specific-types-display">
 
         <div class="row-fluid">
          <div class="span12">
