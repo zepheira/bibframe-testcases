@@ -671,19 +671,155 @@ v    </property>
 
   <!-- MARC Carrier Types -->
 
+  <!-- Audio carriers -->
+
   <class id='PhysicalAudio' isa='Instance'>
     <label>Physical Audio</label>
     <tagline>Physical Audio carriers</tagline>
   </class>
-  
+
+  <class id='AudioCartridge' isa='PhysicalAudio'>
+    <label>AudioCartridge</label>
+    <tagline>An audio cartridge </tagline>
+    <rdaref>338 $b = sg</rdaref>
+    <marcref>g - 007/01 (Sound recording)</marcref>
+  </class>
+    
+  <class id='AudioCylinder' isa='PhysicalAudio'>
+    <label>AudioCylinder</label>
+    <tagline>An audio cylinder </tagline>
+    <rdaref>338 $b = se</rdaref>
+    <marcref>e - 007/01 (Sound recording)</marcref>
+  </class>
+    
+  <class id='AudioDisc' isa='PhysicalAudio'>
+    <label>AudioDisc</label>
+    <tagline>An audio disc </tagline>
+    <rdaref>338 $b = sd</rdaref>
+    <marcref>d - 007/01 (Sound recording)</marcref>
+  </class>
+    
+  <class id='SoundTrackReel' isa='PhysicalAudio'>
+    <label>SoundTrackReel</label>
+    <tagline>An sound track reel </tagline>
+    <rdaref>338 $b = si</rdaref>
+    <marcref>i - 007/01 (Sound recording)</marcref>
+  </class>
+    
+  <class id='AudioRoll' isa='PhysicalAudio'>
+    <label>AudioRoll</label>
+    <tagline>An audio roll </tagline>
+    <rdaref>338 $b = sq</rdaref>
+    <marcref>q - 007/01 (Sound recording)</marcref>
+  </class>
+    
+  <class id='AudioCassette' isa='PhysicalAudio'>
+    <label>AudioCassette</label>
+    <tagline>An audiocassette</tagline>
+    <rdaref>338 $b = ss</rdaref>
+    <marcref>s - 007/01 (Sound recording)</marcref>
+  </class>
+    
+  <class id='AudioTapeReel' isa='PhysicalAudio'>
+    <label>Audio Tape Reel</label>
+    <tagline>An audiotape reel</tagline>
+    <rdaref>338 $b = st</rdaref>
+    <marcref>t - 007/01 (Sound recording)</marcref>
+  </class>
+
+  <!-- other -->
+    
+  <class id='Audiobook' isa='PhysicalAudio'>
+    <label>Audio Book</label>
+    <tagline>An audio book.</tagline>
+  </class>
+
+  <class id='CD' isa='PhysicalAudio'>
+    <label>CD</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='CassetteTape' isa='PhysicalAudio'>
+    <label>Cassette Tape</label>
+    <tagline></tagline>
+  </class>
+
+  <class id='LP' isa='PhysicalAudio'>
+    <label>LP</label>
+    <tagline></tagline>
+  </class>
+
+  <!-- Computer carriers -->
+
   <class id='PhysicalComputer' isa='Instance'>
     <label>Physical Computer</label>
-    <tagline>Physical Computer carriers </tagline>
+    <tagline>Physical Computer carriers</tagline>
   </class>
   
+  <class id='ComputerCard' isa='PhysicalComputer'>
+    <label>Computer Card</label>
+    <tagline>A computer card</tagline>
+    <rdaref>338 $b = ck</rdaref>
+    <marcref>k - 007/01 (Electronic resource)</marcref>
+  </class>
+
+  <class id='ComputerChipCartridge' isa='PhysicalComputer'>
+    <label>Computer Chip Cartridge</label>
+    <tagline>A computer chip cartridge</tagline>
+    <rdaref>338 $b = cb</rdaref>
+    <marcref>b - 007/01 (Electronic resource)</marcref>
+  </class>
+
+  <class id='ComputerDisc' isa='PhysicalComputer'>
+    <label>Computer Disc</label>
+    <tagline>A computer disc</tagline>
+    <rdaref>338 $b = cd</rdaref>
+    <marcref>d - 007/01 (Electronic resource)</marcref>
+  </class>
+
+  <class id='ComputerDiscCartridge' isa='PhysicalComputer'>
+    <label>Computer Disc Cartridge</label>
+    <tagline>A computer disc cartridge</tagline>
+    <rdaref>338 $b = ce</rdaref>
+    <marcref>e - 007/01 (Electronic resource)</marcref>
+  </class>
+
+  <class id='ComputerTapeCartridge' isa='PhysicalComputer'>
+    <label>Computer Tape Cartridge</label>
+    <tagline>A computer tape cartridge</tagline>
+    <rdaref>338 $b = ca</rdaref>
+    <marcref>a - 007/01 (Electronic resource)</marcref>
+  </class>
+
+  <class id='ComputerTapeCassette' isa='PhysicalComputer'>
+    <label>Computer Tape Cassette</label>
+    <tagline>A computer tape cassette</tagline>
+    <rdaref>338 $b = cf</rdaref>
+    <marcref>f - 007/01 (Electronic resource)</marcref>
+  </class>
+
+  <class id='ComputerTapeReel' isa='PhysicalComputer'>
+    <label>Computer Tape Reel</label>
+    <tagline>A computer tape reel</tagline>
+    <rdaref>338 $b = ch</rdaref>  
+    <marcref>h - 007/01 (Electronic resource)</marcref>
+  </class>
+
+  <class id='OnlineResource' isa='PhysicalComputer'>
+    <label>Online Resource</label>
+    <tagline>A online resource</tagline>
+    <rdaref>338 $b = cr</rdaref>
+    <marcref>r - 007/01 (Electronic resource)</marcref>
+  </class>
+
+  <!-- other -->
+
+
+  
+
   <class id='Microform' isa='Instance'>
     <label>Microform</label>
-    <tagline>Microform carriers </tagline>
+    <tagline>Microform carriers</tagline>
   </class>
   
   <class id='Microscopic' isa='Instance'>
@@ -804,10 +940,6 @@ v    </property>
     <tagline>A paperback book</tagline>
   </class>
 
-  <class id='Audiobook' isa='PhysicalAudio'>
-    <label>Audio Book</label>
-    <tagline>An audio book.</tagline>
-  </class>
 
   <class id='BrailleBook' isa='PhysicalBook'>
     <label>Braille Book</label>
@@ -829,25 +961,12 @@ v    </property>
     <tagline>An optical disc format.</tagline>
   </class>
 
-  <class id='CD' isa='PhysicalAudio'>
-    <label>CD</label>
-    <tagline></tagline>
-  </class>
-
-  <class id='CassetteTape' isa='PhysicalAudio'>
-    <label>Cassette Tape</label>
-    <tagline></tagline>
-  </class>
 
   <class id='FilmReel' isa='ProjectedImage'>
     <label>Film Reel</label>
     <tagline></tagline>
   </class>
 
-  <class id='LP' isa='PhysicalAudio'>
-    <label>LP</label>
-    <tagline></tagline>
-  </class>
 
   <class id='VHSTape' isa='ProjectedImage'>
     <label>VHS Tape</label>
