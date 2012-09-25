@@ -531,35 +531,35 @@ v    </property>
       <marcref>5XX</marcref>
       <rdaref></rdaref>
     </property>
-    <property id='actor'>
-      <label>actor</label>
+    <property id='provider'>
+      <label>provider</label>
       <typedesc>@Organization or @Meeting</typedesc>
       <description>The entity responsible for the production, publication, distribution, manufacture, etc. of the instance associated with a creative work.</description>
       <marcref>260 $b</marcref>
       <rdaref></rdaref>
     </property>
-    <property id='publisher' refines='actor'>
+    <property id='publisher' refines='provider'>
       <label>publisher</label>
       <typedesc></typedesc>
       <description></description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='distributor' refines='actor'>
+    <property id='distributor' refines='provider'>
       <label>distributor</label>
       <typedesc></typedesc>
       <description></description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='manufacturer' refines='actor'>
+    <property id='manufacturer' refines='provider'>
       <label>manufacterer</label>
       <typedesc></typedesc>
       <description></description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='producer' refines='actor'>
+    <property id='producer' refines='provider'>
       <label>producer</label>
       <typedesc></typedesc>
       <description></description>
