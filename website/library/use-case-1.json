@@ -1,0 +1,97 @@
+{
+    "items" : [
+	{
+	   "id": "http://marcr.org/work/123",
+           "uniformTitle": "http://marcr.org/title/123",
+	   "title" : "Weaving the Web",
+           "titleRemainder" : "the original design and ultimate destiny of the World Wide Web by its inventor",
+	   "type" : "Work",
+	   "marcrType" : "Book",
+           "classification" : "025.3 M465f 2008",
+           "author" : "http://marcr.org/person/timbl", 
+           "contributor": "http://marcr.org/person/markf",
+	   "subject": [ "http://marcr.org/subject/www", "http://marcr.org/subject/timbl" ],
+	   "language": "english",
+	   "summary": "Tim Berners-Lee, the inventor of the World Wide Web, has been hailed by Time magazine as one of the 100 greatest minds of this century. His creation has already changed the way people do business, entertain themselves, exchange ideas, and socialize with one another." "Berners-Lee offers insights to help readers understand the true nature of the Web, enabling them to use it to their fullest advantage. He shares his views on such critical issues as censorship, privacy, the increasing power of software companies in the online world, and the need to find the ideal balance between the commercial and social forces on the Web. His criticism of the Web's current state makes clear that there is still much work to be done. Finally, Berners-Lee presents his own plan for the Web's future, one that calls for the active support and participation of programmers, computer manufacturers, and social organizations to make it happen."
+           "contents": "Enquire within upon everything -- Tangles, links, and webs -- info.cern.ch -- Protocols: simple rules for global systems -- Going global -- Browsing -- Changes -- Consortium -- Competition and consensus -- Web of people -- Privacy -- Mind to mind -- Machines and the Web -- Weaving the Web.",
+	   "hasInstance": [ "http://marcr.org/instance/123-1", "http://marcr.org/instance/123-2", "http://marcr.org/instance/123-3" ]
+           "hasVariant": [ "http://marcr.org/work/123.2" ],
+	 },
+         { 
+           "id": "http://marcr.org/instance/123-1",
+           "type": "Instance",
+           "marcrType": "HardcoverBook",
+           "date" : "1999-09-22",
+           "publisher" : [ "http://marcr.org/org/harperone" ],
+           "place: "[ "http://marcr.org/place/sfo" ],",
+           "ISBN": "9780062515865"
+         },
+         { 
+           "id": "http://marcr.org/instance/123-2",
+           "type": "Instance",
+           "marcrType": "PaperbackBook",
+           "date" : "2000-11-07",
+           "publisher" : [ "http://marcr.org/org/harperbusiness" ],
+           "place: "[ "http://marcr.org/place/sfo" ],",
+           "ISBN": "9780062515872"
+         },
+         { 
+           "id": "http://marcr.org/instance/123-3",
+           "type": "Instance",
+           "marcrType": "HardcoverBook",
+           "date" : "1999-12-18",
+           "publisher" : [ "http://marcr.org/org/orion" ],
+           "place: "[ "http://marcr.org/place/london" ],",
+           "ISBN": "9780062515865"
+         },         
+  	 {
+	   "id": "http://marcr.org/work/123.2",
+           "uniformTitle": "http://marcr.org/title/123",
+	   "title" : "Weaving the Web",
+           "titleRemainder" : "the original design and ultimate destiny of the World Wide Web by its inventor",
+	   "type" : "Work",
+	   "marcrType" : "AudioBook",
+           "narrator" : "http://marcr.org/person/timbl", 
+	   "subject": [ "http://marcr.org/subject/www", "http://marcr.org/subject/timbl" ],
+	   "language": "english",
+           "abstract": "<p>Tim Berners-Lee, the inventor of the World Wide Web, has been hailed by 'Time' magazine as one of the 100 greatest minds of this century.His creation has already changed the way people do business, entertain themselves, exchange ideas, and socialize with one another. With new online businesses and communities forming every day, the full impact of Berners-Lee's grand scheme has yet to be fully realized.</p><p>Now, this low-profile genius tells his own story of the Web's origins--from its radical introduction and the creation of the now ubiquitous WWW and HTTP acronyms to how he sees the future development of this revolutionary medium.</p><p>Berners-Lee offers insights to help listeners understand the true nature of the Web, enabling them to use it to their fullest advantage. He shares his views on such critical issues as censorship, privacy, and the increasing power of software companies in the online world.</p>",
+	   "hasInstance": [ "http://marcr.org/instance/123.2-1" ]
+           "isVariantOf": [ "http://marcr.org/work/123" ],
+	 },
+         { 
+           "id": "http://marcr.org/instance/123.2-1",
+           "type": "Instance",
+           "marcrType": "CassetteTape",
+           "note": "2 tapes", 
+           "date" : "1999-09-22",
+           "publisher" : [ "http://marcr.org/org/harperaudio" ],
+           "place: "[ "http://marcr.org/place/sfo" ],",
+           "ISBN": "9780694521258"
+         },
+         {
+         "id": "http://marcr.org/person/timbl", 
+         "label": "Tim Berners-Lee",
+         },
+         {
+         "id": "http://marcr.org/person/markf",          
+         "label": "Mark Fischetti",
+         },
+         {
+         "id": "http://marcr.org/place/sfo",
+         "label": "San Fransisco",
+         },
+         {
+         "id": "http://marcr.org/place/london",
+         "label": "London",
+         },
+         {
+         "id": "http://marcr.org/subject/www",
+         "label": "World Wide Web",
+         },
+         {
+         "id": "http://marcr.org/subject/timbl",
+         "label": "Tim Berners-Lee",
+         }
+
+
+
