@@ -47,6 +47,34 @@
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
+    <property id='formSubdivision'>
+      <label>formSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='generalSubdivsion'>
+      <label>generalSubdivsion</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='geographicSubdivision'>
+      <label>geographicSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='chronologicalSubdivision'>
+      <label>chronologicalSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
   </class>
 
   <class id='CreativeWork' isa='Resource'> 
