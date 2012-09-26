@@ -59,6 +59,20 @@
       <marcref>100, 110, 111 / 700, 710, 711</marcref>
       <rdaref></rdaref>
     </property>
+    <property id='author' refines="creator">
+      <label>illustrator</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='reader' refines="creator">
+      <label>illustrator</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
     <property id='illustrator' refines="creator">
       <label>illustrator</label>
       <typedesc></typedesc>
@@ -164,6 +178,27 @@
       <marcref>5XX</marcref>
       <rdaref></rdaref>
     </property>
+    <property id='summary' refines="note">
+      <label>summary</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='contents' refines="note">
+      <label>contents</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='abstract' refines="note">
+      <label>abstract</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
     <property id='subject'>
       <label>subject</label>
       <typedesc>@Person or @Place or @Organization or @Topic</typedesc>
@@ -206,6 +241,18 @@
     </property>
     <property id='hasVersion' refines="relatedTo">
       <label>hasVersion</label>
+      <typedesc></typedesc>
+      <description></description>
+      <rdaref></rdaref>
+    </property>
+    <property id='isVariantOf' refines="relatedTo">
+      <label>isVariantOf</label>
+      <typedesc></typedesc>
+      <description></description>
+      <rdaref></rdaref>
+    </property>
+    <property id='hasVariant' refines="relatedTo">
+      <label>hasVariant</label>
       <typedesc></typedesc>
       <description></description>
       <rdaref></rdaref>
@@ -382,13 +429,18 @@ v    </property>
   </class>
 
   <class id='AudioNonmusical' isa='Audio'> 
-    <label>AudioNonmusical</label>
+    <label>Audio Nonmusical</label>
     <tagline>A non-musical audio</tagline>
   </class>
 
   <class id='AudioMusical' isa='Audio'> 
-    <label>AudioMusical</label>
+    <label>Audio Musical</label>
     <tagline>A musical audio</tagline>
+  </class>
+
+  <class id='AudioBook' isa='Audio'> 
+    <label>Audio Book</label>
+    <tagline>An audio book.</tagline>
   </class>
 
   <class id='MovingImage' isa='CreativeWork'>
@@ -729,11 +781,6 @@ v    </property>
 
   <!-- other -->
     
-  <class id='Audiobook' isa='PhysicalAudio'>
-    <label>Audio Book</label>
-    <tagline>An audio book.</tagline>
-  </class>
-
   <class id='CD' isa='PhysicalAudio'>
     <label>CD</label>
     <tagline></tagline>
