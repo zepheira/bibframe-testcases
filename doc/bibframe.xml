@@ -477,7 +477,7 @@ v    </property>
   </class>
 
   <class id='MotionPicture' isa='MovingImage'>
-    <label>Motion Pictute</label>
+    <label>Motion Picture</label>
     <tagline>A motion picture.</tagline>
   </class>
 

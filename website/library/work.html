@@ -107,14 +107,14 @@
               <!-- Work display lens -->
 	      <div ex:role="lens" ex:itemTypes="Work" style="display: none">
 		  
-		<div class="workTitle"><span ex:content=".title"></span> <span ex:content=".subTitle"></span> <span ex:content=".titleInclusiveDate"></span></div>
+		<div class="workTitle"><span ex:content=".title"></span> <span ex:content=".titleRemainder"></span> <span ex:content=".titleInclusiveDate"></span></div>
 		<br />
 		
 		<table class="table table-condensed">
                   <tr ex:if-exists=".creator">
                     <td class="property">Creator</td>
                     <td>
-		      <ul ex:content=".creator" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".name"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
+		      <ul ex:content=".creator" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".name"></span> <span class="authorityLink idlc" ex:if-exists=".hasIDLink"><a ex:href-content=".hasIDLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
                     </td>
                   </tr>
                   <tr ex:if-exists=".abstract">
@@ -132,7 +132,7 @@
                   <tr ex:if-exists=".subject">
                     <td class="property">Subject</td>
                     <td>
-		      <ul ex:content=".subject" class="value subject"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".name"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span> 
+		      <ul ex:content=".subject" class="value subject"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".name"></span> <span class="authorityLink idlc" ex:if-exists=".hasIDLink"><a ex:href-content=".hasIDLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span> 
                           <span ex:if-exists=".generalSubdivision"> <span class="divider">/</span> <span class="subdivision general" ex:content=".generalSubdivision"></span></span>
                           <span ex:if-exists=".geographicSubdivision"> <span class="divider">/</span> <span class="subdivision geographic" ex:content=".geographicSubdivision"></span></span>
                           <span ex:if-exists=".chronologicalSubdivision"> <span class="divider">/</span> <span class="subdivision chronological" ex:content=".chronologicalSubdivision"></span></span>
@@ -156,11 +156,11 @@
                                         <i ex:class-subcontent="icon-default icon-{{.marcrType}}-{{.carrier}}"  ex:title-subcontent="{{.marcrType}}, {{.carrier}}"></i>
                                         
                                         <span ex:if="exists(.link)">
-                                          <span class="title"><a ex:href-content=".link"><span ex:content="!hasInstance.title"></span> <span ex:content="!hasInstance.subTitle"></span> <span ex:content="!hasInstance.titleInclusiveDate"></span></a></span>
+                                          <span class="title"><a ex:href-content=".link"><span ex:content="!hasInstance.title"></span> <span ex:content="!hasInstance.titleRemainder"></span> <span ex:content="!hasInstance.titleInclusiveDate"></span></a></span>
                                         </span>
                                         
                                         <span ex:if="not(exists(.link))">
-                                          <span class="title"><span ex:content="!hasInstance.title"></span> <span ex:content="!hasInstance.subTitle"></span> <span ex:content="!hasInstance.titleInclusiveDate"></span></span>
+                                          <span class="title"><span ex:content="!hasInstance.title"></span> <span ex:content="!hasInstance.titleRemainder"></span> <span ex:content="!hasInstance.titleInclusiveDate"></span></span>
                                         </span>
                                       </div>
                                     </td>
@@ -179,10 +179,10 @@
                                       <span class="format" ex:content=".format"></span>
                                     </td>
                                   </tr>
-                                  <tr ex:if-exists=".ISBN">
+                                  <tr ex:if-exists=".isbn">
                                     <td class="property">ISBN</td>
                                     <td class="value">
-                                      <span class="isbn" ex:content=".ISBN"></span>
+                                      <span class="isbn" ex:content=".isbn"></span>
                                     </td>
                                   </tr>
                                   <tr ex:if-exists=".edition">

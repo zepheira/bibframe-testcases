@@ -20,7 +20,7 @@
                     "carrier": "Volume",
 	            "publishedOn" : "2009-01-30",
 	            "publisher" : [ "marcr:ala" ],
-	            "ISBN": "978-0838909508"
+	            "isbn": "978-0838909508"
             },
 	    {
 	            "id": "marcr:frbr-2009-01-30:2",
@@ -51,7 +51,7 @@
                     "carrier": "Volume",
 	            "publishedOn" : "2010",
 	            "publisher" : [ "marcr:ala" ],
-	            "ISBN": "978-0838935941"
+	            "isbn": "978-0838935941"
 	},
 	    {
 	            "id": "marcr:ir-2010-07-09:2",
@@ -189,13 +189,14 @@
         },
 	{
         	"id": "marcr:frbr-1997-09-01",
-	        "title" : "Functional Requirements for Bibliographic Records: Final Report",
-		"label" : "Functional Requirements for Bibliographic Records: Final Report",
+	        "title" : "Functional requirements for bibliographic records :",
+	        "titleRemainder" : "final report / IFLA Study Group on the Functional Requirements for Bibliographic Records ; approved by the Standing Committee of the IFLA Section on Cataloguing.",
+	        "label" : "Functional requirements for bibliographic records :",
            	"type" : "Work",
            	"marcrType" : "Text",
                 "language" : "english",
-                "creator" : [ "marcr:ifla" ],
-                "subject": [ "marcr:frbr" ],
+                "creator" : [ "marcr:ifla-study" ],
+                "subject": [ "marcr:cataloging", "marcr:bibliography", "marcr:frbr" ],
                 "abstract": "The purpose of this study is to delineate in clearly defined terms the functions performed by the bibliographic record with respect to various media, various applications, and various user needs. The study is to cover the full range of functions for the bibliographic record in its widest sense- i.e., a record that encompasses not only descriptive elements, but access points (name, title, subject, etc.), other 'organizing' elements (classification, etc.), and annotations.",
                 "hasInstance": [ "marcr:frbr-1997-09-01:1", "marcr:frbr-1997-09-01:2", "marcr:frbr-1997-09-01:3" ]
         },
@@ -222,9 +223,8 @@
 	    {
                 "id": "marcr:frbr-1997-09-01:3",
                 "type": "Instance",
-                "marcrType": "PaperbackBook",
-                "isbn" : "9783598113826",
-                "carrier": "Volume",
+                "marcrType": "HardcoverBook",
+                "isbn" : "359811382X",
                 "publishedOn" :	"1998",
   	        "publishedAt" : "http://marcr.org/auth/geo/münchen",
                 "publisher" : [ "marcr:k.g.saur" ]
@@ -238,9 +238,34 @@
            "id": "marcr:frbr",
            "type": "Topic",
            "marcrType": "Topic",
-           "label": "FRBR",
-           "name": "FRBR",
-	   "hasAuthorityLink": "http://id.loc.gov/authorities/subjects/sh2007002541"
+           "label": "FRBR (Conceptual model)",
+           "name": "FRBR (Conceptual model)",
+	   "hasIDLink": "http://id.loc.gov/authorities/subjects/sh2007002541"
+        },
+        {
+           "id": "marcr:cataloging",
+           "type": "Topic",
+           "marcrType": "Topic",
+           "label": "Cataloging",
+           "name": "Cataloging",
+	   "hasIDLink": "http://id.loc.gov/authorities/subjects/sh2007002541"
+        },
+        {
+           "id": "marcr:bibliography",
+           "type": "Topic",
+           "marcrType": "Topic",
+           "label": "Bibliography",
+           "name": "Bibliography",
+           "generalSubdivision": "Methodology",
+	   "hasIDLink": "http://id.loc.gov/authorities/subjects/sh85013838"
+        },
+        {
+           "id": "marcr:ifla-study",
+           "type": "Organization",
+           "marcrType": "Organization",
+           "label": "IFLA Study Group on the Functional Requirements for Bibliographic Records",
+           "name": "IFLA Study Group on the Functional Requirements for Bibliographic Records",
+	   "hasIDLink": "http://id.loc.gov/authorities/names/nr98013265"
         },
         {
            "id": "marcr:ifla",
@@ -248,7 +273,7 @@
            "marcrType": "Organization",
            "label": "International Federation of Library Associations and Institutions",
            "name": "International Federation of Library Associations and Institutions",
-	   "hasAuthorityLink": "http://id.loc.gov/authorities/names/n80121204"
+	   "hasIDLink": "http://id.loc.gov/authorities/names/n80121204"
         },
         {
            "id": "marcr:k.g.saur",
@@ -256,7 +281,7 @@
            "marcrType": "Organization",
            "label": "K.G. Saur",
            "name": "K.G. Saur",
-	   "hasAuthorityLink": "http://id.loc.gov/authorities/names/nr91037301.html"
+	   "hasIDLink": "http://id.loc.gov/authorities/names/nr91037301.html"
         },
 	{
         	"id": "marcr:rda-2011-06-13",
