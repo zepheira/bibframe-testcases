@@ -1,5 +1,12 @@
 /* marcr.org vocab style */
 
+body {
+ background-image: url(/vocab/img/draft.png);
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: 98% 12%;
+ }
+
 .section-text {
  font-size: 115%;              
  font-weight: bold;
