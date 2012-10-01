@@ -89,7 +89,7 @@
 	{
 	    	"id": "marcr:sw-2011-07-01",
 	        "title" : "Be part of the web not just on it : report of the Stanford Linked Data Workshop, 27 June - 1 July 2011",
-		"label" : "	Be part of the web not just on it : report of the Stanford Linked Data Workshop, 27 June - 1 July 2011",
+		"label" : "Be part of the web not just on it : report of the Stanford Linked Data Workshop, 27 June - 1 July 2011",
 		"language" : "english",
 	       	"type" : "Work",
 	       	"marcrType" : "Report",
@@ -190,7 +190,7 @@
 	{
         	"id": "marcr:frbr-1997-09-01",
 	        "title" : "Functional requirements for bibliographic records :",
-	        "titleRemainder" : "final report / IFLA Study Group on the Functional Requirements for Bibliographic Records ; approved by the Standing Committee of the IFLA Section on Cataloguing.",
+	        "titleRemainder": "final report / IFLA Study Group on the Functional Requirements for Bibliographic Records ; approved by the Standing Committee of the IFLA Section on Cataloguing.",
 	        "label" : "Functional requirements for bibliographic records :",
            	"type" : "Work",
            	"marcrType" : "Text",
