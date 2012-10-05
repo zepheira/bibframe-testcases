@@ -183,6 +183,8 @@ FIELD_RENAMINGS = {
 '852a': 'label',
 '852h': 'callNumber', #Need to verify this one, since it seems to contradict the rest of the 852 pattern
 '852n': 'code',
+'852u': 'link',
+'852e': 'streetAddress',
 
 '856u': 'link',
 }
