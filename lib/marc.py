@@ -43,7 +43,7 @@ MATERIALIZE = {
 
 MATERIALIZE_VIA_ANNOTATION = {
 #'852': (BOUND_TO_INSTANCE, 'institution', {'marcrType': 'Organization'}),
-'852': ('institution', {'marcrType': 'Organization'}, {'type': 'Holdings', 'marcrType': 'HoldingsAnnotation'}),
+'852': ('institution', {'marcrType': 'Organization'}, {'marcrType': 'Holdings'}),
 }
 
 
@@ -61,6 +61,7 @@ FIELD_RENAMINGS = {
 '100a': 'label',
 '100b': 'numeration',
 '100c': 'titles',
+'100d': 'date',  #Note: there has been discussion about removing this, but we're no sure we get reliable ID.LOC lookups without it.  If it is removed, update augment.py 
 '110a': 'label',
 '110d': 'date',
 '111a': 'label',
@@ -144,6 +145,7 @@ FIELD_RENAMINGS = {
 '600a': 'label',
 '600d': 'date',
 '610a': 'label',
+'610d': 'date',  #Note: there has been discussion about removing this, but we're no sure we get reliable ID.LOC lookups without it.  If it is removed, update augment.py 
 '650a': 'label',
 '650d': 'date',
 '651a': 'label',
@@ -174,6 +176,7 @@ FIELD_RENAMINGS = {
 '700a': 'label',
 '700b': 'numeration',
 '700c': 'titles',
+'700d': 'date',  #Note: there has been discussion about removing this, but we're no sure we get reliable ID.LOC lookups without it.  If it is removed, update augment.py 
 '710a': 'label',
 '710d': 'date',
 '711a': 'label',

@@ -13,9 +13,6 @@ import logging
 import string
 import itertools
 
-import requests # http://docs.python-requests.org/en/latest/index.html
-import requests_cache # pip install requests_cache
-
 import amara
 from amara.lib.util import coroutine
 from amara.thirdparty import httplib2, json
@@ -35,8 +32,6 @@ FALINKFIELD = u'856u'
 #CATLINKFIELD = u'010a'
 CATLINKFIELD = u'LCCN'
 CACHEDIR = os.path.expanduser('~/tmp')
-
-requests_cache.configure(os.path.join(CACHEDIR, 'cache'))
 
 NON_ISBN_CHARS = re.compile(u'\D')
 
@@ -93,7 +88,7 @@ class subobjects(object):
     def add(self, props, sink=None):
         sink = sink or self.exhibit_sink
         objid = 'obj_' + str(self.ix + 1)
-        code = props[u'code']
+        code = props[u'marccode']
         item = {
             u'id': objid,
             u'label': objid,
@@ -188,7 +183,7 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
                     handled = False
                     if code in MATERIALIZE:
                         (subst, extra_props) = MATERIALIZE[code]
-                        props = {u'code': code}
+                        props = {u'marccode': code}
                         props.update(extra_props)
                         #props.update(other_properties)
                         props.update(subfields)
@@ -203,7 +198,7 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
 
                     if code in MATERIALIZE_VIA_ANNOTATION:
                         (subst, extra_object_props, extra_annotation_props) = MATERIALIZE_VIA_ANNOTATION[code]
-                        object_props = {u'code': code}
+                        object_props = {u'marccode': code}
                         object_props.update(extra_object_props)
                         #props.update(other_properties)
 
@@ -223,7 +218,9 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
                             u'id': annid,
                             u'label': recid,
                             subst: objectid,
-                            #u'type': u'Annotation',
+                            u'type': u'Annotation',
+                            u'on_work': work_item[u'id'],
+                            u'on_instance': instance_item[u'id'],
                         }
                         annotation_item.update(extra_annotation_props)
                         annotation_item.update(annotation_subfields)
@@ -255,7 +252,7 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
                             lookup = code + k
                             if lookup in MATERIALIZE:
                                 (subst, extra_props) = MATERIALIZE[lookup]
-                                props = {u'code': code, k: v}
+                                props = {u'marccode': code, k: v}
                                 props.update(extra_props)
                                 #print >> sys.stderr, lookup, k, props, 
                                 subid = subobjs.add(props)
@@ -289,16 +286,6 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
                         work_item[key] = val
 
             #link = work_item.get(u'cftag_008')
-
-
-            #Work out the item's finding aid link
-            link = work_item.get(u'dftag_' + FALINKFIELD)
-            if link:
-                work_item['fa_link'] = link
-                r = requests.get(link)
-                if r.history: #If redirects were encountered
-                    resolvedlink = r.history[-1].headers['location']
-                    work_item['fa_resolvedlink'] = resolvedlink
 
 
             #Handle ISBNs re: https://foundry.zepheira.com/issues/1976
