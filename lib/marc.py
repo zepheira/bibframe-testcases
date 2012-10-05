@@ -20,9 +20,9 @@ MATERIALIZE = {
 '830': ('uniformTitle', {'marcrType': 'Title'}),
 
 '260a': ('place', {'marcrType': 'Place'}),
-'260b': ('actor', {'marcrType': 'Organization'}),
+'260b': ('provider', {'marcrType': 'Organization'}),
 '260e': ('place', {'marcrType': 'Place'}),
-'260f': ('actor', {'marcrType': 'Organization'}),
+'260f': ('provider', {'marcrType': 'Organization'}),
 
 '300': ('physicalDescription', {'marcrType': 'Measurement'}),
 
