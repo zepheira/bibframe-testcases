@@ -165,13 +165,13 @@ T1 = '''        <div class="row-fluid vocabulary-display-section">
 
 
 T2 = '''\
-            <tr>
-          <td>{0}{1}{2}{3}</td>
-          <td>{4}</td>
-          <td>{5}</td>
-          <td>{6}</td>
-          <td>{7}</td>
-            </tr>
+          <tr id="{0}">
+            <td>{0}{1}{2}{3}</td>
+            <td>{4}</td>
+            <td>{5}</td>
+            <td>{6}</td>
+            <td>{7}</td>
+          </tr>
 '''
 
 
