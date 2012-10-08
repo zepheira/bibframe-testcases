@@ -35,9 +35,9 @@ MATERIALIZE = {
 '651': ('subject', {'marcrType': 'Geographic'}),
 #'655': ('genre', {'marcrType': 'Genre'}),
 
-'700': ('name', {'marcrType': 'Person'}),
-'710': ('name', {'marcrType': 'Organization'}),
-'711': ('name', {'marcrType': 'Meeting'}),
+'700': ('creator', {'marcrType': 'Person'}),
+'710': ('creator', {'marcrType': 'Organization'}),
+'711': ('creator', {'marcrType': 'Meeting'}),
 }
 
 
