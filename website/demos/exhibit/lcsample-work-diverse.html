@@ -2,7 +2,7 @@
 <html lang="en">
   
   <head>
-    <title>MARCR Linked Data Navigator</title>
+    <title>MARCR Linked Data Navigator - LoC 2K Diverse Collection</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link href="./css/bootstrap.css" rel="stylesheet" />
@@ -12,6 +12,7 @@
     <link rel="exhibit/data" href="./lcsample-diverse.work.json" />
     <link rel="exhibit/data" href="./lcsample-diverse.instance.json" />
     <link rel="exhibit/data" href="./lcsample-diverse.object.json" />
+    <link rel="exhibit/data" href="./lcsample-diverse.annotations.json" />
 
     <link rel="exhibit/data" href="./tmp/peepshow.work.json" />
     <link rel="exhibit/data" href="./tmp/peepshow.instance.json" />
@@ -19,6 +20,8 @@
 
     <link rel="exhibit/data" href="./tmp/peepshow.holdings.json" />
     <link rel="exhibit/data" href="./tmp/peepshow.pictures.json" />
+
+    <link rel="exhibit/data" href="./schema.json" />
 
     <script src="http://api.simile.zepheira.com/exhibit/3.0.0/exhibit-api.js"></script>
 
@@ -103,11 +106,11 @@
 
             <!-- <div ex:role="facet" ex:expression=".instance.isbnType" ex:facetLabel="Book Type" ex:sortMode="count"></div> -->
 
-            <div ex:role="facet" ex:expression=".name.label" ex:facetLabel="Creator" ex:sortMode="count"></div>
+            <div ex:role="facet" ex:expression=".creator.label" ex:facetLabel="Creator" ex:sortMode="count"></div>
 
             <div ex:role="facet" ex:expression=".subject.label" ex:facetLabel="Subject" ex:sortMode="count"></div>
 
-            <div ex:role="facet" ex:expression=".instance.name.label" ex:facetLabel="Publisher" ex:sortMode="count"></div>
+            <div ex:role="facet" ex:expression=".instance.provider.label" ex:facetLabel="Provider" ex:sortMode="count"></div>
             
           </div>
           
@@ -123,14 +126,14 @@
               <!-- Work display lens -->
 	      <div ex:role="lens" ex:itemTypes="WorkRecord" style="display: none">
 		  
-		<h3 class="titleWork"><span ex:content=".title"></span> <span ex:content=".subTitle"></span> <span ex:content=".titleInclusiveDate"></span></h3>
+		<h3 class="titleWork"><span ex:content=".title"></span> <span ex:content=".titleRemainder"></span> <span ex:content=".titleInclusiveDate"></span></h3>
 		<br />
 		
 		<table class="table table-condensed">
-                  <tr ex:if-exists=".name">
+                  <tr ex:if-exists=".creator">
                     <td class="property span2">Creator</td>
                     <td>
-		      <ul ex:content=".name" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".label"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
+		      <ul ex:content=".creator" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".label"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
                     </td>
                   </tr>
                   <tr ex:if-exists=".formatedContentsNote">
@@ -150,7 +153,7 @@
                     </td>
                   </tr>                    
                   <tr ex:if-exists=".subject">
-                    <td class="property span2">Subject</td>
+                    <td class="property span2">Subject(s)</td>
                     <td>
 		      <ul ex:content=".subject" class="value subject"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".label"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span> 
                           <span ex:if-exists=".generalSubdivision"> <span class="divider">/</span> <span class="subdivision general" ex:content=".generalSubdivision"></span></span>
@@ -160,7 +163,14 @@
                       </ul>
                     </td>
                   </tr>
-                  
+                  <tr ex:if-exists=".lcCallNumber">
+                    <td class="property span2">LC Call Number</td>
+                    <td><div ex:content=".lcCallNumber" class="value lcCallNumber"></div></td>
+                  </tr>                    
+                  <tr ex:if-exists=".deweyNumber">
+                    <td class="property span2">Dewey Number</td>
+                    <td><div ex:content=".deweyNumber" class="value deweyNumber"></div></td>
+                  </tr>                    
                   <tr ex:if-exists=".instance">
                     <td class="property span2">Instance(s)</td>
 		    <td>
@@ -170,11 +180,11 @@
                             <i ex:class-subcontent="icon-default icon-{{.resourceType}}"  ex:title-subcontent="{{.resourceType}}"></i>
 
                             <span ex:if="exists(.link)">
-                              <span class="title"><a ex:href-content=".link"><span ex:content="!instance.title"></span> <span ex:content="!instance.subTitle"></span> <span ex:content="!instance.titleInclusiveDate"></span></a></span>
+                              <span class="title"><a ex:href-content=".link"><span ex:content="!instance.title"></span> <span ex:content="!instance.titleRemainder"></span> <span ex:content="!instance.titleInclusiveDate"></span></a></span>
                             </span>
 
                             <span ex:if="not(exists(.link))">
-                              <span class="title"><span ex:content="!instance.title"></span> <span ex:content="!instance.subTitle"></span> <span ex:content="!instance.titleInclusiveDate"></span></span>
+                              <span class="title"><span ex:content="!instance.title"></span> <span ex:content="!instance.titleRemainder"></span> <span ex:content="!instance.titleInclusiveDate"></span></span>
                             </span>
                           </h4>
                           
@@ -183,11 +193,11 @@
                             <div class="span8">
                               
                               <table class="table table-condensed">
-                                <tr ex:if-exists=".name">
+                                <tr ex:if-exists=".provider">
                                   <td class="property span2">Publisher</td>
                                   <td class="value">
                                     <span class="publishedAt" ex:content=".place.label"></span> 
-                                    <span class="publisher" ex:content=".name.label"></span> 
+                                    <span class="publisher" ex:content=".provider.label"></span> 
                                     <span class="publishedOn" ex:content=".date"></span> 
                                   </td>
                                 </tr>

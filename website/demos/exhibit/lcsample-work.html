@@ -126,7 +126,7 @@
               <!-- Work display lens -->
 	      <div ex:role="lens" ex:itemTypes="WorkRecord" style="display: none">
 		  
-		<h3 class="titleWork"><span ex:content=".title"></span> <span ex:content=".subTitle"></span> <span ex:content=".titleInclusiveDate"></span></h3>
+		<h3 class="titleWork"><span ex:content=".title"></span> <span ex:content=".titleRemainder"></span> <span ex:content=".titleInclusiveDate"></span></h3>
 		<br />
 		
 		<table class="table table-condensed">
@@ -173,11 +173,11 @@
                             <i ex:class-subcontent="icon-default icon-{{.resourceType}}"  ex:title-subcontent="{{.resourceType}}"></i>
 
                             <span ex:if="exists(.link)">
-                              <span class="title"><a ex:href-content=".link"><span ex:content="!instance.title"></span> <span ex:content="!instance.subTitle"></span> <span ex:content="!instance.titleInclusiveDate"></span></a></span>
+                              <span class="title"><a ex:href-content=".link"><span ex:content="!instance.title"></span> <span ex:content="!instance.titleRemainder"></span> <span ex:content="!instance.titleInclusiveDate"></span></a></span>
                             </span>
 
                             <span ex:if="not(exists(.link))">
-                              <span class="title"><span ex:content="!instance.title"></span> <span ex:content="!instance.subTitle"></span> <span ex:content="!instance.titleInclusiveDate"></span></span>
+                              <span class="title"><span ex:content="!instance.title"></span> <span ex:content="!instance.titleRemainder"></span> <span ex:content="!instance.titleInclusiveDate"></span></span>
                             </span>
                           </h4>
                           
