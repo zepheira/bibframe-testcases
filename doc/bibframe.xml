@@ -87,36 +87,142 @@
       <marcref>100, 110, 111 / 700, 710, 711</marcref>
       <rdaref></rdaref>
     </property>
-    <property id='author' refines="creator">
+
+    <property id='architect' refines='creator'>
+      <label>architect</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='artist' refines='creator'>
+      <label>artist</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='author' refines='creator'>
+      <label>author</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='cartographer' refines='creator'>
+      <label>cartographer</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='choreographer' refines='creator'>
+      <label>choreographer</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='cinematographer' refines='creator'>
+      <label>cinematographer</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='compiler' refines='creator'>
+      <label>compiler</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='composer' refines='creator'>
+      <label>composer</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='designer' refines='creator'>
+      <label>designer</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='director' refines='creator'>
+      <label>director</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='librettist' refines='creator'>
+      <label>librettist</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='lyricist' refines='creator'>
+      <label>lyricist</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='photographer' refines='creator'>
+      <label>photographer</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='producer ' refines='creator'>
+      <label>producer </label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='arranger' refines='creator'>
+      <label>arranger</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='editor' refines='creator'>
+      <label>editor</label>
+      <typedesc></typedesc>
+      <description></description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='illustrator' refines='creator'>
       <label>illustrator</label>
       <typedesc></typedesc>
       <description></description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='reader' refines="creator">
-      <label>illustrator</label>
+    <property id='performer' refines='creator'>
+      <label>performer</label>
       <typedesc></typedesc>
       <description></description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='illustrator' refines="creator">
-      <label>illustrator</label>
+    <property id='conductor' refines='creator'>
+      <label>conductor</label>
       <typedesc></typedesc>
       <description></description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='sculptor' refines="creator">
-      <label>sculptor</label>
-      <typedesc></typedesc>
-      <description></description>
-      <marcref></marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='carver' refines="creator">
-      <label>carver</label>
+    <property id='translator' refines='creator'>
+      <label>translator</label>
       <typedesc></typedesc>
       <description></description>
       <marcref></marcref>
