@@ -114,9 +114,9 @@
         <div class="span9">
 
           <div class="results" ex:role="viewPanel">
-            
+
             <div ex:role="view" 
-                 ex:label="List">
+                 ex:label="What">
               
               <!-- Work display lens -->
 	      <div ex:role="lens" ex:itemTypes="WorkRecord" style="display: none">
@@ -128,7 +128,7 @@
                   <tr ex:if-exists=".creator">
                     <td class="property span2">Creator</td>
                     <td>
-		      <ul ex:content=".creator" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".label"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
+		      <ul ex:content=".creator" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".label"></span><span class="name" ex:content=".q"></span><span class="name" ex:content=".date"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
                     </td>
                   </tr>
                   <tr ex:if-exists=".formatedContentsNote">
@@ -289,7 +289,7 @@
 		
 	      </div>
 	      
-            </div>
+            </div> <!-- end List View -->
 	    
           </div> <!-- viewPanel -->
           

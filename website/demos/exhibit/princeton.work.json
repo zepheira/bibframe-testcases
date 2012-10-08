@@ -2,9 +2,11 @@
 {
     "lcCallNumber": "NA7348.P2", 
     "dftag_0359": "AAG0567TS", 
-    "name": "obj_6", 
     "language": "freengger", 
-    "creator": "obj_1", 
+    "creator": [
+        "obj_1", 
+        "obj_6"
+    ], 
     "lccn": "12023599", 
     "dftag_040c": "NjP", 
     "title": "Plans, coupes, elevations des plus belles maisons et des hotels construits \u00e0 Paris et dans les environs.", 
@@ -43,8 +45,10 @@
     "lcCallNumber": "NE1325.A5", 
     "dftag_5003": "GAX copy", 
     "dftag_5005": "NjP", 
-    "name": "obj_22", 
-    "creator": "obj_12", 
+    "creator": [
+        "obj_12", 
+        "obj_22"
+    ], 
     "dftag_040c": "EAU", 
     "title": "Goj\u016bsantsugi.", 
     "subject": [
@@ -74,13 +78,13 @@
     "dftag_040a": "EAU", 
     "dftag_246i": "Known as the"
 },{
-    "name": [
+    "creator": [
+        "obj_23", 
         "obj_29", 
         "obj_30", 
         "obj_31", 
         "obj_32"
     ], 
-    "creator": "obj_23", 
     "type": "WorkRecord", 
     "title": "T\u014dkaid\u014d goj\u016bsantsugi emaki.", 
     "dftag_2456": "880-02/$1", 
@@ -166,11 +170,13 @@
     ], 
     "language": "fre", 
     "dftag_040e": "dcrb", 
-    "creator": "obj_48", 
+    "creator": [
+        "obj_48", 
+        "obj_57"
+    ], 
     "lccn": "93207707", 
     "dftag_040c": "DLC", 
     "title": "Histoire naturelle de Mre. Francois Bacon ...", 
-    "name": "obj_57", 
     "label": "_8", 
     "dftag_041h": "eng", 
     "instance": "instance_8", 
@@ -211,7 +217,8 @@
     "dftag_040a": "CIN", 
     "subject": "obj_62"
 },{
-    "name": [
+    "creator": [
+        "obj_63", 
         "obj_68", 
         "obj_69", 
         "obj_70", 
@@ -220,7 +227,6 @@
         "obj_73", 
         "obj_74"
     ], 
-    "creator": "obj_63", 
     "formatedContentsNote": [
         "De interpretatione, with extensive marginal scholia and interlinear glosses.", 
         "Prior analytics, with extensive marginal scholia and interlinear glosses.", 
@@ -249,10 +255,10 @@
     ]
 },{
     "titleInclusiveDates": "[between 1775 and 1800].", 
-    "name": "obj_81", 
     "language": "mynspa", 
     "title": "Book of the Chilam Balam of Chumayel,", 
     "type": "WorkRecord", 
+    "creator": "obj_81", 
     "subject": [
         "obj_77", 
         "obj_78", 
@@ -276,9 +282,11 @@
 },{
     "titleInclusiveDates": "1887-1888.", 
     "dftag_0359": "CCN1248TS", 
-    "name": "obj_90", 
     "dftag_040e": "appm", 
-    "creator": "obj_82", 
+    "creator": [
+        "obj_82", 
+        "obj_90"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Hamilton Cottier collection of California photographs,", 
     "label": "_12", 
@@ -408,9 +416,9 @@
     ]
 },{
     "titleInclusiveDates": "ca. 1897.", 
-    "name": "obj_139", 
     "title": "A. C. Vroman photograph album of California and Arizona views,", 
     "type": "WorkRecord", 
+    "creator": "obj_139", 
     "label": "_16", 
     "instance": "instance_16", 
     "dftag_040e": "appm", 
@@ -428,7 +436,8 @@
         "obj_138"
     ]
 },{
-    "name": [
+    "creator": [
+        "obj_140", 
         "obj_146", 
         "obj_147", 
         "obj_148", 
@@ -437,7 +446,6 @@
         "obj_151", 
         "obj_152"
     ], 
-    "creator": "obj_140", 
     "type": "WorkRecord", 
     "title": "Brief addressed to Adolph, Count of Nassau, sanctioning his election to the see of Mainz.", 
     "label": "_17", 
@@ -450,9 +458,9 @@
     "dftag_040a": "NjP", 
     "subject": "obj_145"
 },{
-    "name": "obj_157", 
     "title": "[Blood-letting calendar for Vienna, 1462].", 
     "type": "WorkRecord", 
+    "creator": "obj_157", 
     "label": "_18", 
     "note": "Related words: Aderlasskalender, Laxierkalender.", 
     "instance": "instance_18", 
@@ -466,12 +474,12 @@
     "dftag_040a": "NjP", 
     "subject": "obj_156"
 },{
-    "name": [
+    "creator": [
+        "obj_158", 
         "obj_163", 
         "obj_164", 
         "obj_165"
     ], 
-    "creator": "obj_158", 
     "type": "WorkRecord", 
     "title": "Bulla Turcorum.", 
     "label": "_19", 
@@ -492,8 +500,10 @@
     "dftag_040a": "NjP", 
     "subject": "obj_162"
 },{
-    "name": "obj_172", 
-    "creator": "obj_166", 
+    "creator": [
+        "obj_166", 
+        "obj_172"
+    ], 
     "type": "WorkRecord", 
     "title": "Ars minor [fragment].", 
     "label": "_20", 
@@ -508,11 +518,11 @@
         "obj_171"
     ]
 },{
-    "name": [
+    "creator": [
+        "obj_173", 
         "obj_179", 
         "obj_180"
     ], 
-    "creator": "obj_173", 
     "type": "WorkRecord", 
     "title": "Ars minor [fragment].", 
     "label": "_21", 
@@ -527,12 +537,12 @@
         "obj_178"
     ]
 },{
-    "name": [
+    "creator": [
+        "obj_181", 
         "obj_186", 
         "obj_187", 
         "obj_188"
     ], 
-    "creator": "obj_181", 
     "type": "WorkRecord", 
     "title": "Indulgentia.", 
     "label": "_22", 
@@ -544,12 +554,12 @@
     "dftag_040a": "NjP", 
     "subject": "obj_185"
 },{
-    "name": [
+    "title": "Biblia pauperum.", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_195", 
         "obj_196"
     ], 
-    "title": "Biblia pauperum.", 
-    "type": "WorkRecord", 
     "label": "_23", 
     "instance": "instance_23", 
     "dftag_583x": "mlc", 
@@ -571,7 +581,10 @@
         "WHS copy has 12 leaves supplied from other copies and 5 leaves supplied in facsimile; the 17 leaves are vol. I fo. 1 and vol. II fo. 1, 17, 25, 46, 70, 149, 155, 156, 191, 217, 235, 268, 270, 275, 279, and 305.", 
         "WHS also has fragment ([1] leaf ; 32.7 x 21 cm.) from Ezekiel ch. 34."
     ], 
-    "name": [
+    "language": "lat", 
+    "title": "Biblia Latina.", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_201", 
         "obj_202", 
         "obj_203", 
@@ -580,9 +593,6 @@
         "obj_206", 
         "obj_207"
     ], 
-    "language": "lat", 
-    "title": "Biblia Latina.", 
-    "type": "WorkRecord", 
     "label": "_24", 
     "dftag_041h": "hebgrc", 
     "instance": "instance_24", 
@@ -606,7 +616,10 @@
         "WHS copy has 12 leaves supplied from other copies and 5 leaves supplied in facsimile; the 17 leaves are vol. I fo. 1 and vol. II fo. 1, 17, 25, 46, 70, 149, 155, 156, 191, 217, 235, 268, 270, 275, 279, and 305.", 
         "WHS also has fragment ([1] leaf ; 32.7 x 21 cm.) from Ezekiel ch. 34."
     ], 
-    "name": [
+    "language": "lat", 
+    "title": "Biblia Latina.", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_212", 
         "obj_213", 
         "obj_214", 
@@ -615,9 +628,6 @@
         "obj_217", 
         "obj_218"
     ], 
-    "language": "lat", 
-    "title": "Biblia Latina.", 
-    "type": "WorkRecord", 
     "label": "_25", 
     "dftag_041h": "hebgrc", 
     "instance": "instance_25", 
@@ -637,7 +647,9 @@
         "NjP", 
         "NjP"
     ], 
-    "name": [
+    "title": "Biblia Latina.", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_223", 
         "obj_224", 
         "obj_225", 
@@ -646,8 +658,6 @@
         "obj_228", 
         "obj_229"
     ], 
-    "title": "Biblia Latina.", 
-    "type": "WorkRecord", 
     "label": "_26", 
     "note": [
         "WHS copy is printed on parchment.", 
@@ -667,7 +677,9 @@
         "NjP", 
         "NjP"
     ], 
-    "name": [
+    "title": "Biblia Latina.", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_234", 
         "obj_235", 
         "obj_236", 
@@ -676,8 +688,6 @@
         "obj_239", 
         "obj_240"
     ], 
-    "title": "Biblia Latina.", 
-    "type": "WorkRecord", 
     "label": "_27", 
     "note": [
         "WHS copy is printed on parchment.", 
@@ -692,11 +702,11 @@
     "id": "work_27", 
     "dftag_040a": "NjP"
 },{
-    "name": [
+    "creator": [
+        "obj_241", 
         "obj_247", 
         "obj_248"
     ], 
-    "creator": "obj_241", 
     "type": "WorkRecord", 
     "title": "Doctrinale [fragment].", 
     "label": "_28", 
@@ -711,8 +721,10 @@
         "obj_246"
     ]
 },{
-    "name": "obj_255", 
-    "creator": "obj_249", 
+    "creator": [
+        "obj_249", 
+        "obj_255"
+    ], 
     "type": "WorkRecord", 
     "title": "Ars minor [fragment].", 
     "label": "_29", 
@@ -727,11 +739,11 @@
         "obj_254"
     ]
 },{
-    "name": [
+    "creator": [
+        "obj_256", 
         "obj_262", 
         "obj_263"
     ], 
-    "creator": "obj_256", 
     "type": "WorkRecord", 
     "title": "Ars minor [fragment].", 
     "label": "_30", 
@@ -746,11 +758,11 @@
         "obj_261"
     ]
 },{
-    "name": [
+    "creator": [
+        "obj_264", 
         "obj_270", 
         "obj_271"
     ], 
-    "creator": "obj_264", 
     "type": "WorkRecord", 
     "title": "Ars minor [fragment].", 
     "label": "_31", 
@@ -765,11 +777,11 @@
         "obj_269"
     ]
 },{
-    "name": [
+    "creator": [
+        "obj_272", 
         "obj_278", 
         "obj_279"
     ], 
-    "creator": "obj_272", 
     "type": "WorkRecord", 
     "title": "Ars minor [fragment].", 
     "label": "_32", 
@@ -784,15 +796,15 @@
         "obj_277"
     ]
 },{
-    "name": [
+    "title": "Passione di Cristo.", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_284", 
         "obj_285", 
         "obj_286", 
         "obj_287", 
         "obj_288"
     ], 
-    "title": "Passione di Cristo.", 
-    "type": "WorkRecord", 
     "label": "_33", 
     "instance": "instance_33", 
     "dftag_583x": "mlc", 
@@ -803,12 +815,12 @@
     "subject": "obj_283"
 },{
     "titleRemainder": "blood-letting calendar].", 
-    "name": [
+    "title": "[Almanac for 1472 :", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_293", 
         "obj_294"
     ], 
-    "title": "[Almanac for 1472 :", 
-    "type": "WorkRecord", 
     "label": "_34", 
     "note": [
         "Text in Latin.", 
@@ -826,16 +838,16 @@
     "dftag_040a": "NjP", 
     "subject": "obj_292"
 },{
-    "name": [
+    "language": "lat", 
+    "title": "Biblia.", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_299", 
         "obj_300", 
         "obj_301", 
         "obj_302", 
         "obj_303"
     ], 
-    "language": "lat", 
-    "title": "Biblia.", 
-    "type": "WorkRecord", 
     "label": "_35", 
     "dftag_041h": "hebgrc", 
     "instance": "instance_35", 
@@ -860,14 +872,6 @@
         "Room for a bishop att ye man in ye moon.", 
         "Sir George Etheredge.", 
         "Sir Charles Sedley."
-    ], 
-    "name": [
-        "obj_312", 
-        "obj_313", 
-        "obj_314", 
-        "obj_315", 
-        "obj_316", 
-        "obj_317"
     ], 
     "dftag_040e": "amremm", 
     "title": "[Collection of English Restoration plays, poetry, and other works].", 
@@ -907,6 +911,14 @@
         "Item cataloged from digital reproduction, January 2006."
     ], 
     "instance": "instance_36", 
+    "creator": [
+        "obj_312", 
+        "obj_313", 
+        "obj_314", 
+        "obj_315", 
+        "obj_316", 
+        "obj_317"
+    ], 
     "dftag_505g": [
         "1. p. 1-36:", 
         "2. p. 37-108:", 
@@ -953,8 +965,10 @@
     "titleRemainder": "women and learning from Plato to Princeton : an exhibition celebrating the 20th anniversary of undergraduate coeducation at Princeton University /", 
     "dftag_0359": "ACQ4781TS", 
     "seriesStatement": "[Exhibition catalogues - Princeton University Library, Dept. of Rare Books and Special Collections ;", 
-    "name": "obj_325", 
-    "creator": "obj_318", 
+    "creator": [
+        "obj_318", 
+        "obj_325"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Gender in the academy :", 
     "label": "_37", 
@@ -978,15 +992,15 @@
         "NjP", 
         "NjP"
     ], 
-    "name": [
+    "title": "Biblia Latina.", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_330", 
         "obj_331", 
         "obj_332", 
         "obj_333", 
         "obj_334"
     ], 
-    "title": "Biblia Latina.", 
-    "type": "WorkRecord", 
     "label": "_38", 
     "note": [
         "Commonly known in English as the 36-line Bible.", 
@@ -1003,11 +1017,11 @@
     "id": "work_38", 
     "dftag_040a": "NjP"
 },{
-    "name": [
+    "creator": [
+        "obj_335", 
         "obj_341", 
         "obj_342"
     ], 
-    "creator": "obj_335", 
     "type": "WorkRecord", 
     "title": "Ars minor [fragment].", 
     "label": "_39", 
@@ -1023,13 +1037,13 @@
     ]
 },{
     "titleInclusiveDates": "[ca. 1807]", 
-    "name": [
+    "creator": [
+        "obj_343", 
         "obj_352", 
         "obj_353", 
         "obj_354", 
         "obj_355"
     ], 
-    "creator": "obj_343", 
     "type": "WorkRecord", 
     "title": "Dettingen Te Deum, Utrecht Te Deum and Utrecht Jubilate :", 
     "label": "_40", 
@@ -1057,8 +1071,10 @@
 },{
     "titleInclusiveDates": "[ca. 1760] /", 
     "titleRemainder": "an oratorio :", 
-    "name": "obj_362", 
-    "creator": "obj_356", 
+    "creator": [
+        "obj_356", 
+        "obj_362"
+    ], 
     "type": "WorkRecord", 
     "title": "Israel in Egypt :", 
     "label": "_41", 
@@ -1079,11 +1095,11 @@
 },{
     "titleInclusiveDates": "[ca. 1745].", 
     "titleRemainder": "an oratorio :", 
-    "name": [
+    "creator": [
+        "obj_363", 
         "obj_371", 
         "obj_372"
     ], 
-    "creator": "obj_363", 
     "type": "WorkRecord", 
     "title": "Joseph :", 
     "label": "_42", 
@@ -1107,11 +1123,11 @@
 },{
     "titleInclusiveDates": "[ca. 1748].", 
     "titleRemainder": "an oratorio :", 
-    "name": [
+    "creator": [
+        "obj_373", 
         "obj_380", 
         "obj_381"
     ], 
-    "creator": "obj_373", 
     "type": "WorkRecord", 
     "title": "Alexander Balus :", 
     "label": "_43", 
@@ -1137,11 +1153,11 @@
 },{
     "titleInclusiveDates": "[ca. 1744].", 
     "titleRemainder": "an oratorio :", 
-    "name": [
+    "creator": [
+        "obj_382", 
         "obj_389", 
         "obj_390"
     ], 
-    "creator": "obj_382", 
     "type": "WorkRecord", 
     "title": "Belshazzar :", 
     "label": "_44", 
@@ -1165,35 +1181,35 @@
         "obj_388"
     ]
 },{
+    "lcCallNumber": "M3.3.D3", 
     "titleRemainder": "ballet pour enfants /", 
-    "creator": "obj_391", 
-    "dftag_028a": "D. & F. 8935", 
-    "dftag_028b": "A. Durand", 
-    "id": "work_45", 
-    "dftag_035a": "(OCoLC)ocm00655342", 
-    "dftag_5003": "Cotsen copy:", 
-    "dftag_040c": "MIA", 
-    "dftag_5005": "NjP", 
-    "dftag_040a": "DLC", 
-    "subject": "obj_395", 
-    "dftag_040d": "NjP", 
-    "title": "La bo\u00eete \u00e0 joujoux :", 
-    "label": "_45", 
+    "dftag_0359": "CKL0835TS", 
     "note": [
         "From the Diana R. Tillson Collection, gift of Lloyd E. Cotsen, Class of 1950.", 
         "First ed.", 
         "For piano."
     ], 
-    "instance": "instance_45", 
-    "dftag_245c": "par Andr\u00e9 Helle ; musique de Claude Debussy.", 
-    "type": "WorkRecord", 
-    "lcCallNumber": "M3.3.D3", 
-    "dftag_0359": "CKL0835TS", 
-    "name": [
+    "dftag_5003": "Cotsen copy:", 
+    "dftag_5005": "NjP", 
+    "creator": [
+        "obj_391", 
         "obj_396", 
         "obj_397"
     ], 
-    "lccn": "m 61001952 //r68"
+    "lccn": "m 61001952 //r68", 
+    "dftag_040c": "MIA", 
+    "title": "La bo\u00eete \u00e0 joujoux :", 
+    "label": "_45", 
+    "dftag_028a": "D. & F. 8935", 
+    "instance": "instance_45", 
+    "dftag_028b": "A. Durand", 
+    "dftag_245c": "par Andr\u00e9 Helle ; musique de Claude Debussy.", 
+    "dftag_035a": "(OCoLC)ocm00655342", 
+    "dftag_040d": "NjP", 
+    "type": "WorkRecord", 
+    "id": "work_45", 
+    "dftag_040a": "DLC", 
+    "subject": "obj_395"
 },{
     "titleRemainder": "Kit\u0101b Uth\u016bl\u016bjiy\u0101 / Aris\u1e6d\u016b\u1e6d\u0101l\u012bs ... [etc.].", 
     "dftag_040e": "amremm", 
@@ -1222,7 +1238,10 @@
     "dftag_040a": "PUL", 
     "subject": "obj_400"
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "title": "[Album of miniatures and specimens of calligraphy of Indian origin].", 
+    "dftag_040c": "PUL", 
+    "creator": [
         "obj_438", 
         "obj_439", 
         "obj_440", 
@@ -1256,9 +1275,6 @@
         "obj_468", 
         "obj_469"
     ], 
-    "dftag_040e": "amremm", 
-    "title": "[Album of miniatures and specimens of calligraphy of Indian origin].", 
-    "dftag_040c": "PUL", 
     "label": "_47", 
     "note": [
         "Ms. codex.", 
@@ -1355,11 +1371,13 @@
         "880-04"
     ], 
     "dftag_040e": "amremm", 
-    "creator": "obj_475", 
+    "creator": [
+        "obj_475", 
+        "obj_481"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Ta\u1e25r\u012br Kit\u0101b M\u0101n\u0101l\u0101wis f\u012b al-ashk\u0101l al-kur\u012byah.", 
     "dftag_2456": "880-02", 
-    "name": "obj_481", 
     "subject": [
         "obj_477", 
         "obj_478", 
@@ -1453,11 +1471,13 @@
 },{
     "dftag_2466": "880-03", 
     "dftag_040e": "amremm", 
-    "creator": "obj_492", 
+    "creator": [
+        "obj_492", 
+        "obj_498"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Idr\u0101k al-s\u016bl f\u012b mus\u0101baqat al-khuy\u016bl bi-rasm al-Khiz\u0101nah al-shar\u012bfah al-sul\u1e6d\u0101n\u012byah al-malik\u012byah al-N\u0101\u1e63ir\u012byah al-N\u0101\u1e63ir\u012byah(!) \u02bbamarah\u0101 All\u0101h ta\u02bb\u0101l\u00e1 bi-daw\u0101m ayy\u0101mihi /", 
     "dftag_2456": "880-02", 
-    "name": "obj_498", 
     "subject": [
         "obj_495", 
         "obj_496", 
@@ -1518,10 +1538,6 @@
         "Title on a spine label (vertical):"
     ]
 },{
-    "name": [
-        "obj_513", 
-        "obj_514"
-    ], 
     "dftag_040e": "amremm", 
     "title": "\u015eerh \u00fc\u015f-\u015eemail.", 
     "dftag_040c": "PUL", 
@@ -1535,6 +1551,10 @@
         "17 lines per page. Written in a small nasta\u02bbl\u012bq in black ink with use of red for rubrication. Text is written inside a gold leaf frame outlined in black ink, with columns and separate couplets also divided with lines in gold leaf outlined in black ink. Text frames on fol. 2b-3a are double with additional lines in red ink. Catchwords on the verso of each leaf. Glazed European paper. Ms. has marginal annotations, mostly excerpts from Q\u0101r\u012b al-Haraw\u012b's commentary on Sham\u0101\u02beil, Jam\u02bb al-was\u0101\u02beil f\u012b shar\u1e25 al-Sham\u0101\u02beil. These are in the same hand as the main text, written in a very small nasta\u02bbl\u012bq in black and red ink to form different shapes including crescent moon, minaret, swords, cups and bowls, fruit, trees, palm-trees etc."
     ], 
     "instance": "instance_54", 
+    "creator": [
+        "obj_513", 
+        "obj_514"
+    ], 
     "dftag_035a": [
         "(OCoLC)ocn169914208", 
         "(OCoLC)169914208"
@@ -1625,9 +1645,11 @@
         "obj_531"
     ]
 },{
-    "name": "obj_535", 
     "dftag_040e": "amremm", 
-    "creator": "obj_532", 
+    "creator": [
+        "obj_532", 
+        "obj_535"
+    ], 
     "formatedContentsNote": [
         "1. fol. 2a: [Table of contents].", 
         "2. fol. 3a: [Several inscriptions].", 
@@ -1706,8 +1728,10 @@
         "Other title given by P. Hitti :"
     ]
 },{
-    "name": "obj_547", 
-    "creator": "obj_541", 
+    "creator": [
+        "obj_541", 
+        "obj_547"
+    ], 
     "formatedContentsNote": [
         "1. fol. 2a-58a: Tu\u1e25fat dhaw\u012b al-alb\u0101b f\u012b ma\u1e25\u0101sin al-adab / Mu\u1e25ammad ibn A\u1e25mad al-\u02bbAl\u0101\u02bc\u012b.", 
         "2. fol. 58b: Min insh\u0101\u02bc k\u0101tibihi ... Mu\u1e25ammad ibn A\u1e25mad al-\u02bbAl\u0101\u02bc\u012b.", 
@@ -1736,12 +1760,12 @@
         "obj_546"
     ]
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_548", 
         "obj_551", 
         "obj_552"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_548", 
     "formatedContentsNote": [
         "1. fol. 1a-5a: Lam\u1e25at al-mukhta\u1e6dif f\u012b al-farq bayna al-\u1e6dal\u0101q wa-al-\u1e25ilf / Ibn Taym\u012byah.", 
         "2. fol. 5b-16a: Tafs\u012br al-Mu\u02bbawwidhatayn / Ibn Taym\u012byah.", 
@@ -1832,13 +1856,13 @@
     "dftag_040a": "PUL", 
     "subject": "obj_560"
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_561", 
         "obj_564", 
         "obj_565", 
         "obj_566"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_561", 
     "dftag_040c": "PUL", 
     "title": "A\u1e6db\u0101q al-dhahab.", 
     "dftag_2456": "880-02", 
@@ -1902,14 +1926,14 @@
         "Title in a note on fol. 1a and in Brockelmann, C. GAL:"
     ]
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "title": "Mur\u0101sal\u0101t.", 
+    "dftag_040c": "PUL", 
+    "creator": [
         "obj_581", 
         "obj_582", 
         "obj_583"
     ], 
-    "dftag_040e": "amremm", 
-    "title": "Mur\u0101sal\u0101t.", 
-    "dftag_040c": "PUL", 
     "dftag_2456": "880-02", 
     "label": "_65", 
     "note": [
@@ -2055,8 +2079,8 @@
         "2. fol. 30b-39b : Kit\u0101b al-Mal\u1e25amah."
     ], 
     "dftag_040c": "PUL", 
+    "creator": "obj_614", 
     "dftag_2456": "880-02", 
-    "name": "obj_614", 
     "label": "_70", 
     "note": [
         "Ms. codex.", 
@@ -2265,12 +2289,12 @@
         "Title in King, D. Survey :"
     ]
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_649", 
         "obj_659", 
         "obj_660"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_649", 
     "dftag_040c": "PUL", 
     "title": "Kit\u0101b Tahdh\u012bb al-Tahdh\u012bb /", 
     "dftag_2456": "880-03", 
@@ -2387,14 +2411,14 @@
         "880-04"
     ], 
     "dftag_040e": "amremm", 
-    "creator": "obj_676", 
-    "dftag_040c": "PUL", 
-    "title": "Kit\u0101b al-akhl\u0101q al-musamm\u00e1 bi-Tazkiyat al-arw\u0101\u1e25 \u02bban maw\u0101ni\u02bb al-afl\u0101\u1e25 /", 
-    "dftag_2456": "880-02", 
-    "name": [
+    "creator": [
+        "obj_676", 
         "obj_682", 
         "obj_683"
     ], 
+    "dftag_040c": "PUL", 
+    "title": "Kit\u0101b al-akhl\u0101q al-musamm\u00e1 bi-Tazkiyat al-arw\u0101\u1e25 \u02bban maw\u0101ni\u02bb al-afl\u0101\u1e25 /", 
+    "dftag_2456": "880-02", 
     "subject": [
         "obj_679", 
         "obj_680", 
@@ -2427,9 +2451,11 @@
         "Title from inscription on fol. 1a and tail of text block:"
     ]
 },{
-    "name": "obj_688", 
     "dftag_040e": "amremm", 
-    "creator": "obj_684", 
+    "creator": [
+        "obj_684", 
+        "obj_688"
+    ], 
     "formatedContentsNote": [
         "1. fol. 1a-8b: al-Juz\u02bc al-th\u0101lith min al-faw\u0101\u02bcid al-muntaq\u0101h al-ghar\u0101\u02bcib \u02bban al-shuy\u016bkh al-\u02bbaw\u0101l\u012b min \u1e25ad\u012bth Ab\u012b \u02bbAbd All\u0101h A\u1e25mad ibn al-\u1e24asan ibn \u02bbAbd al-Jabb\u0101r al-\u1e62\u016bf\u012b.", 
         "2. fol. 9a-20b: Kit\u0101b mukhta\u1e63\u0101r Ta\u1e63\u1e25\u012b\u1e25 Gh\u0101yat al-ikhti\u1e63\u0101r / Ab\u016b Bakr ibn Q\u0101\u1e0d\u012b \u02bbAjl\u016bn.", 
@@ -2581,9 +2607,11 @@
         "Shams al-D\u012bn Mu\u1e25ammad Ibn \u1e6c\u016bl\u016bn.", 
         "Shams al-D\u012bn Mu\u1e25ammad Ibn \u1e6c\u016bl\u016bn."
     ], 
-    "name": "obj_725", 
     "dftag_040e": "amremm", 
-    "creator": "obj_716", 
+    "creator": [
+        "obj_716", 
+        "obj_725"
+    ], 
     "formatedContentsNote": [
         "2. fol. 101b-103a: [Blank].", 
         "3. fol. 103b: F\u0101\u02beidah."
@@ -2623,9 +2651,11 @@
         "obj_724"
     ]
 },{
-    "name": "obj_729", 
     "dftag_040e": "amremm", 
-    "creator": "obj_726", 
+    "creator": [
+        "obj_726", 
+        "obj_729"
+    ], 
     "formatedContentsNote": [
         "1. fol. 1a-40a: Kit\u0101b J\u0101l\u012bn\u016bs al-ma\u02bbr\u016bf bi-al-\u1e62in\u0101\u02bbah al-\u1e63agh\u012brah / Galen.", 
         "2. fol. 41a-58b: Kit\u0101b J\u0101l\u012bn\u016bs f\u012b al-bu\u1e25r\u0101n / Galen.", 
@@ -2811,12 +2841,12 @@
     "dftag_040a": "PUL", 
     "dftag_246i": "Title given by Hitti, P. Garrett coll. :"
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_757", 
         "obj_761", 
         "obj_762"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_757", 
     "dftag_040c": "PUL", 
     "title": "[al-Jam\u02bb bayna al-\u1e62a\u1e25\u012b\u1e25ayn].", 
     "dftag_2456": "880-02", 
@@ -2937,7 +2967,9 @@
         "Other title in GAL:"
     ]
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_785", 
         "obj_801", 
         "obj_802", 
         "obj_803", 
@@ -2959,8 +2991,6 @@
         "obj_819", 
         "obj_820"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_785", 
     "formatedContentsNote": [
         "1. fol. 1a: [Table of contents].", 
         "2. fol. 2a: [Verses of poetry by Fuzul\u00ee-i Ba\u011fd\u00e2d\u00ee, Naz\u00e2r\u00ee Efendi and Ilm\u00ee Efendi, with mention of the dates of events such as the death of Kemalpa\u015fazade, al-Sayyid al-Shar\u012bf (al-Jurj\u0101n\u012b), J\u0101m\u012b, etc.].", 
@@ -3327,9 +3357,11 @@
     "dftag_040a": "PUL", 
     "dftag_246i": "Title by a later hand (fol. 1a):"
 },{
-    "name": "obj_873", 
     "dftag_040e": "amremm", 
-    "creator": "obj_869", 
+    "creator": [
+        "obj_869", 
+        "obj_873"
+    ], 
     "formatedContentsNote": [
         "1. fol. 1b-7b : Tu\u1e25fah waf\u012byah bi-ma\u02bb\u0101n\u012b \u1e25ur\u016bf al-\u02bbarab\u012byah / Ibr\u0101h\u012bm ibn Mu\u1e25ammad al-\u1e62af\u0101qis\u012b.", 
         "2. fol. 8a-371b : Kit\u0101b al-Mi\u1e63b\u0101\u1e25 f\u012b al-Jam\u02bb bayna al-Af\u02bb\u0101l wa-al-\u1e62i\u1e25\u0101\u1e25 / Mu\u1e25ammad ibn A\u1e25mad al-Qur\u1e6dub\u012b.", 
@@ -3381,7 +3413,9 @@
         "ta\u02bcl\u012bf Jal\u0101l al-D\u012bn al-Im\u0101m \u02bbAbd al-Ra\u1e25m\u0101n al-Suy\u016b\u1e6d\u012b al-Sh\u0101fi\u02bb\u012b.", 
         "lil-Jal\u0101l al-Suy\u016b\u1e6d\u012b [Title in Table of contents: \"Kit\u0101b Wu\u1e63\u016bl al-am\u0101n\u012b bi-u\u1e63\u016bl al-tah\u0101n\u012b\"]."
     ], 
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_874", 
         "obj_885", 
         "obj_886", 
         "obj_887", 
@@ -3397,8 +3431,6 @@
         "obj_897", 
         "obj_898"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_874", 
     "formatedContentsNote": [
         "1. fol. I: [Blank].", 
         "2. fol. IIa: [Table of contents].", 
@@ -3474,14 +3506,14 @@
         "obj_884"
     ]
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_899", 
         "obj_906", 
         "obj_907", 
         "obj_908", 
         "obj_909"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_899", 
     "dftag_040c": "PUL", 
     "title": "al-Khu\u1e6dab al-mub\u0101rakah.", 
     "dftag_2456": "880-03", 
@@ -3606,11 +3638,13 @@
 },{
     "dftag_2466": "880-04", 
     "dftag_040e": "amremm", 
-    "creator": "obj_921", 
+    "creator": [
+        "obj_921", 
+        "obj_927"
+    ], 
     "dftag_040c": "PUL", 
     "title": "al-Lub\u0101b.", 
     "dftag_2456": "880-03", 
-    "name": "obj_927", 
     "subject": [
         "obj_925", 
         "obj_926"
@@ -3664,9 +3698,11 @@
         "obj_932"
     ]
 },{
-    "name": "obj_937", 
     "dftag_040e": "amremm", 
-    "creator": "obj_933", 
+    "creator": [
+        "obj_933", 
+        "obj_937"
+    ], 
     "formatedContentsNote": [
         "1. fol. 1a-32b: Ris\u0101lah \u1e24anaf\u012byah \u02bbal\u00e1 Ithb\u0101t al-w\u0101jib lil-Daww\u0101n\u012b / [Mu\u1e25ammad Mull\u0101 \u1e24anaf\u012b].", 
         "2. fol. 33a-56a: Ris\u0101lah qad\u012bmah li-ithb\u0101t al-w\u0101jib / Mawl\u0101n\u0101 Jal\u0101l al-D\u012bn al-Daww\u0101n\u012b.", 
@@ -3910,11 +3946,13 @@
 },{
     "dftag_2466": "880-03", 
     "dftag_040e": "amremm", 
-    "creator": "obj_967", 
+    "creator": [
+        "obj_967", 
+        "obj_969"
+    ], 
     "dftag_040c": "PUL", 
     "title": "al-Muntah\u00e1 [f\u012b al-qir\u0101\u02bc\u0101t].", 
     "dftag_2456": "880-02", 
-    "name": "obj_969", 
     "subject": "obj_971", 
     "label": "_117", 
     "note": [
@@ -4117,11 +4155,13 @@
         "880-06"
     ], 
     "dftag_040e": "amremm", 
-    "creator": "obj_1005", 
+    "creator": [
+        "obj_1005", 
+        "obj_1009"
+    ], 
     "dftag_040c": "PUL", 
     "title": "\u1e92afarn\u0101mah /", 
     "dftag_2456": "880-03", 
-    "name": "obj_1009", 
     "subject": [
         "obj_1008", 
         "obj_1010", 
@@ -4252,8 +4292,8 @@
         "85. fol. 429b-431b: [Blank]."
     ], 
     "dftag_040c": "PUL", 
+    "creator": "obj_1014", 
     "dftag_2456": "880-02", 
-    "name": "obj_1014", 
     "subject": [
         "obj_1015", 
         "obj_1016", 
@@ -4309,9 +4349,11 @@
         "obj_1022"
     ]
 },{
-    "name": "obj_1030", 
     "dftag_040e": "amremm", 
-    "creator": "obj_1023", 
+    "creator": [
+        "obj_1023", 
+        "obj_1030"
+    ], 
     "dftag_040c": "PUL", 
     "title": "al-Gh\u0101yah al-qu\u1e63w\u00e1 f\u012b dir\u0101yat al-fatw\u00e1.", 
     "dftag_2456": "880-02", 
@@ -4414,12 +4456,12 @@
     "dftag_040a": "PUL", 
     "subject": "obj_1041"
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1042", 
         "obj_1048", 
         "obj_1049"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1042", 
     "dftag_040c": "PUL", 
     "title": "Khu\u1e6dbat \u02bb\u0100\u02bcishah ... wa-tafs\u012br ghar\u012bbih\u0101 wa-lughatih\u0101.", 
     "dftag_2456": "880-02", 
@@ -4441,9 +4483,11 @@
         "obj_1047"
     ]
 },{
-    "name": "obj_1055", 
     "dftag_040e": "amremm", 
-    "creator": "obj_1050", 
+    "creator": [
+        "obj_1050", 
+        "obj_1055"
+    ], 
     "dftag_040c": "PUL", 
     "title": "al-Muntaq\u00e1 min Kit\u0101b al-Bukhal\u0101\u02bc.", 
     "dftag_2456": "880-02", 
@@ -4683,11 +4727,13 @@
         "880-08"
     ], 
     "dftag_040e": "amremm", 
-    "creator": "obj_1092", 
+    "creator": [
+        "obj_1092", 
+        "obj_1101"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Kit\u0101b-i J\u0101v\u012bd\u0101n-i durr-i yat\u012bm ast.", 
     "dftag_2456": "880-03", 
-    "name": "obj_1101", 
     "label": "_138", 
     "note": [
         "Ms. codex.", 
@@ -4851,9 +4897,11 @@
         "obj_1131"
     ]
 },{
-    "name": "obj_1134", 
     "dftag_040e": "amremm", 
-    "creator": "obj_1132", 
+    "creator": [
+        "obj_1132", 
+        "obj_1134"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Kunh al-mur\u0101d f\u012b wafq al-a\u02bbd\u0101d.", 
     "dftag_2456": "880-02", 
@@ -5037,7 +5085,6 @@
         "obj_1174"
     ]
 },{
-    "name": "obj_1181", 
     "dftag_040e": "amremm", 
     "title": "[Letters and documents, 1106-1497]", 
     "formatedContentsNote": [
@@ -5093,6 +5140,7 @@
         "The oversized items (9, 13, 26, 29, 40, 41) are in Box 2 and are not digitized."
     ], 
     "instance": "instance_149", 
+    "creator": "obj_1181", 
     "dftag_035a": [
         "(OCoLC)ocn186459901", 
         "(OCoLC)ocm67543382", 
@@ -5172,8 +5220,8 @@
     "dftag_040e": "amremm", 
     "title": "Kit\u0101b Mal\u1e25amat D\u0101niy\u0101l \u1e63alaw\u0101t All\u0101h wa-sal\u0101mihi \u02bbalayhi \u02bbal\u0101m\u0101t m\u0101 yu\u1e25dathu min al-zam\u0101n al-s\u0101lif /", 
     "dftag_040c": "PUL", 
+    "creator": "obj_1201", 
     "dftag_2456": "880-02", 
-    "name": "obj_1201", 
     "subject": [
         "obj_1196", 
         "obj_1197", 
@@ -5358,11 +5406,13 @@
         "880-04"
     ], 
     "dftag_040e": "amremm", 
-    "creator": "obj_1231", 
+    "creator": [
+        "obj_1231", 
+        "obj_1237"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Shar\u1e25 Mift\u0101\u1e25 al-Sakk\u0101k\u012b /", 
     "dftag_2456": "880-02", 
-    "name": "obj_1237", 
     "subject": [
         "obj_1234", 
         "obj_1235", 
@@ -5434,7 +5484,9 @@
         "Title in Mach, R. Yahuda:"
     ]
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1245", 
         "obj_1252", 
         "obj_1253", 
         "obj_1254", 
@@ -5446,8 +5498,6 @@
         "obj_1260", 
         "obj_1261"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1245", 
     "formatedContentsNote": [
         "1. fol. Ia: [Table of contents].", 
         "2. fol. IIa-b: Kit\u0101b al-K\u0101f\u012b f\u012b al-\u02bbaqd al-\u1e63\u0101f\u012b [only first page] / al-Ghazz\u0101l\u012b. -- Mach, R. Yahuda, no. 2219.", 
@@ -5513,12 +5563,12 @@
         "obj_1265"
     ]
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1266", 
         "obj_1275", 
         "obj_1276"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1266", 
     "formatedContentsNote": [
         "1. fol. 2b-9b: [al-Ris\u0101lah al-\u016bl\u00e1 min al-qism al-awwal f\u012b al-riy\u0101\u1e0d\u012by\u0101t, f\u012b al-\u02bbadad].", 
         "2. fol. 9b-17b: al-Ris\u0101lah al-th\u0101niyah min al-qism al-awwal (Ris\u0101lah al-J\u016bmu\u1e6dr\u012by\u0101, wa-hiya al-madkhal il\u00e1 al-handasah).", 
@@ -5566,7 +5616,9 @@
         "obj_1274"
     ]
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1277", 
         "obj_1287", 
         "obj_1288", 
         "obj_1289", 
@@ -5576,8 +5628,6 @@
         "obj_1293", 
         "obj_1294"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1277", 
     "dftag_040c": "PUL", 
     "title": "Kit\u0101b al-Bar\u0101h\u012bn al-bayyin\u0101t f\u012b bay\u0101n \u1e25aq\u0101\u02bciq al-\u1e25ayaw\u0101n\u0101t / li-mu\u02bcallifihi al-\u02bb\u0101lim al-\u02bball\u0101mah wa-al-mudaqqiq al-fahh\u0101mah al-shaykh Mu\u1e25ammad Afand\u012b al-Iskandar\u0101n\u012b", 
     "dftag_2456": "880-03", 
@@ -5606,11 +5656,13 @@
 },{
     "dftag_2466": "880-04", 
     "dftag_040e": "amremm", 
-    "creator": "obj_1295", 
+    "creator": [
+        "obj_1295", 
+        "obj_1305"
+    ], 
     "dftag_040c": "PUL", 
     "title": "al-Mujallad al-awwal min Kit\u0101b Daq\u0101\u02beiq al-\u1e25aq\u0101\u02beiq /", 
     "dftag_2456": "880-03", 
-    "name": "obj_1305", 
     "subject": [
         "obj_1298", 
         "obj_1299", 
@@ -5647,14 +5699,14 @@
     "dftag_040a": "PUL", 
     "dftag_246i": "Title on a hand made label pasted on the front cover :"
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1306", 
         "obj_1313", 
         "obj_1314", 
         "obj_1315", 
         "obj_1316"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1306", 
     "formatedContentsNote": [
         "1. fol. 1a-2b: Du\u02bb\u0101\u02be mub\u0101rak.", 
         "2. fol. 3a-4a: [Several short excerpts and inscriptions, including verses of poetry].", 
@@ -5935,15 +5987,15 @@
         "880-05"
     ], 
     "dftag_040e": "amremm", 
-    "creator": "obj_1360", 
-    "dftag_040c": "PUL", 
-    "title": "Kit\u0101b al-Daraj /", 
-    "dftag_2456": "880-02", 
-    "name": [
+    "creator": [
+        "obj_1360", 
         "obj_1364", 
         "obj_1365", 
         "obj_1366"
     ], 
+    "dftag_040c": "PUL", 
+    "title": "Kit\u0101b al-Daraj /", 
+    "dftag_2456": "880-02", 
     "subject": [
         "obj_1362", 
         "obj_1363"
@@ -6065,7 +6117,9 @@
     "dftag_040a": "PUL", 
     "subject": "obj_1378"
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1379", 
         "obj_1383", 
         "obj_1384", 
         "obj_1385", 
@@ -6077,8 +6131,6 @@
         "obj_1391", 
         "obj_1392"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1379", 
     "formatedContentsNote": [
         "1. fol. 2b-75b : Kit\u0101b Unm\u016bdhaj al-\u02bbul\u016bm / [Mu\u1e25ammad ibn A\u1e25mad] al-\u1e6cars\u016bs\u012b [al-Balaw\u012b] (d. 1163 or 4).", 
         "2. fol. 76a-81b : al-Shar\u1e25 f\u012b al-d\u0101\u02bcirah al-hind\u012byah li-mawl\u0101n\u0101 \u1e62adr al-shar\u012b\u02bbah / \u1e24usayn al-\u1e24usayn\u012b al-Khalkh\u0101l\u012b (d. 1605).", 
@@ -6553,11 +6605,13 @@
         "880-04"
     ], 
     "dftag_040e": "amremm", 
-    "creator": "obj_1463", 
+    "creator": [
+        "obj_1463", 
+        "obj_1470"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Tu\u1e25fat al-zaman f\u012b \u1e93uraf ahl al-Yaman /", 
     "dftag_2456": "880-02", 
-    "name": "obj_1470", 
     "subject": [
         "obj_1466", 
         "obj_1467", 
@@ -6688,11 +6742,13 @@
         "880-04"
     ], 
     "dftag_040e": "amremm", 
-    "creator": "obj_1490", 
+    "creator": [
+        "obj_1490", 
+        "obj_1497"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Shar\u1e25 al-Urj\u016bzah.", 
     "dftag_2456": "880-02", 
-    "name": "obj_1497", 
     "subject": [
         "obj_1492", 
         "obj_1493", 
@@ -6762,11 +6818,13 @@
 },{
     "dftag_2466": "880-03", 
     "dftag_040e": "amremm", 
-    "creator": "obj_1503", 
+    "creator": [
+        "obj_1503", 
+        "obj_1509"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Kit\u0101b Ta\u02bcs\u012bs al-\u1e63i\u1e25\u1e25ah bi-shar\u1e25 al-Lam\u1e25ah /", 
     "dftag_2456": "880-02", 
-    "name": "obj_1509", 
     "subject": [
         "obj_1506", 
         "obj_1507", 
@@ -6819,37 +6877,6 @@
         "obj_1514"
     ]
 },{
-    "name": [
-        "obj_1521", 
-        "obj_1522", 
-        "obj_1523", 
-        "obj_1524", 
-        "obj_1525", 
-        "obj_1526", 
-        "obj_1527", 
-        "obj_1528", 
-        "obj_1529", 
-        "obj_1530", 
-        "obj_1531", 
-        "obj_1532", 
-        "obj_1533", 
-        "obj_1534", 
-        "obj_1535", 
-        "obj_1536", 
-        "obj_1537", 
-        "obj_1538", 
-        "obj_1539", 
-        "obj_1540", 
-        "obj_1541", 
-        "obj_1542", 
-        "obj_1543", 
-        "obj_1544", 
-        "obj_1545", 
-        "obj_1546", 
-        "obj_1547", 
-        "obj_1548", 
-        "obj_1549"
-    ], 
     "dftag_040e": "amremm", 
     "title": "Majm\u016b\u02bbat faw\u0101\u02bcid.", 
     "formatedContentsNote": [
@@ -6926,6 +6953,37 @@
         "71. fol. 169b-172b: Man\u1e93\u016bmah f\u012b dhikr man yasta\u1e25iqqu al-\u1e25i\u1e0d\u0101nah [followed by several short excerpts] / al-T\u012bb\u012b."
     ], 
     "dftag_040c": "PUL", 
+    "creator": [
+        "obj_1521", 
+        "obj_1522", 
+        "obj_1523", 
+        "obj_1524", 
+        "obj_1525", 
+        "obj_1526", 
+        "obj_1527", 
+        "obj_1528", 
+        "obj_1529", 
+        "obj_1530", 
+        "obj_1531", 
+        "obj_1532", 
+        "obj_1533", 
+        "obj_1534", 
+        "obj_1535", 
+        "obj_1536", 
+        "obj_1537", 
+        "obj_1538", 
+        "obj_1539", 
+        "obj_1540", 
+        "obj_1541", 
+        "obj_1542", 
+        "obj_1543", 
+        "obj_1544", 
+        "obj_1545", 
+        "obj_1546", 
+        "obj_1547", 
+        "obj_1548", 
+        "obj_1549"
+    ], 
     "dftag_2456": "880-01", 
     "label": "_198", 
     "note": [
@@ -6948,7 +7006,25 @@
         "obj_1520"
     ]
 },{
-    "creator": "obj_1550", 
+    "creator": [
+        "obj_1550", 
+        "obj_1556", 
+        "obj_1557", 
+        "obj_1558", 
+        "obj_1559", 
+        "obj_1560", 
+        "obj_1561", 
+        "obj_1562", 
+        "obj_1563", 
+        "obj_1564", 
+        "obj_1566", 
+        "obj_1567", 
+        "obj_1568", 
+        "obj_1569", 
+        "obj_1570", 
+        "obj_1571", 
+        "obj_1572"
+    ], 
     "id": "work_199", 
     "dftag_040e": "amremm", 
     "dftag_040c": "PUL", 
@@ -7008,24 +7084,6 @@
         "18. fol. 155a-b:"
     ], 
     "type": "WorkRecord", 
-    "name": [
-        "obj_1556", 
-        "obj_1557", 
-        "obj_1558", 
-        "obj_1559", 
-        "obj_1560", 
-        "obj_1561", 
-        "obj_1562", 
-        "obj_1563", 
-        "obj_1564", 
-        "obj_1566", 
-        "obj_1567", 
-        "obj_1568", 
-        "obj_1569", 
-        "obj_1570", 
-        "obj_1571", 
-        "obj_1572"
-    ], 
     "dftag_5056": [
         "880-04", 
         "880-05", 
@@ -7070,12 +7128,12 @@
     "uniformTitle": "obj_1565", 
     "dftag_246i": "Title on a label spine (horizontal):"
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1573", 
         "obj_1580", 
         "obj_1581"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1573", 
     "formatedContentsNote": [
         "1. fol. 1a-15a: Qa\u1e63\u012bdat al-Shaykh al-faq\u012bh al-im\u0101m al-\u02bb\u0101lim al-\u1e25\u0101fi\u1e93 al-Muqri\u02bc Ab\u012b al-Q\u0101sim al-Sh\u0101\u1e6dib\u012b ra\u1e0diya All\u0101h \u02bbanhu al-maws\u016bmah bi-\u02bbAq\u012blat atr\u0101b al-qa\u1e63\u0101\u02bcid f\u012b asn\u00e1 al-maq\u0101\u1e63id al-muta\u1e0damminah kha\u1e6d\u1e6d al-Mu\u1e63\u1e25af al-mu\u1e25taw\u012byah \u02bbal\u00e1 al-muqni\u02bb.", 
         "2. fol. 15b-35b: Qa\u1e63\u012bdat al-Shaykh al-faq\u012bh al-im\u0101m al-\u02bb\u0101lim \u02bbAlam al-D\u012bn Ab\u012b al-\u1e24asan \u02bbAl\u012b al-Sakh\u0101w\u012b.", 
@@ -7387,30 +7445,6 @@
         "obj_1639"
     ]
 },{
-    "name": [
-        "obj_1643", 
-        "obj_1644", 
-        "obj_1645", 
-        "obj_1646", 
-        "obj_1647", 
-        "obj_1648", 
-        "obj_1649", 
-        "obj_1650", 
-        "obj_1651", 
-        "obj_1652", 
-        "obj_1653", 
-        "obj_1654", 
-        "obj_1655", 
-        "obj_1656", 
-        "obj_1657", 
-        "obj_1658", 
-        "obj_1659", 
-        "obj_1660", 
-        "obj_1661", 
-        "obj_1662", 
-        "obj_1663", 
-        "obj_1664"
-    ], 
     "dftag_040e": "amremm", 
     "title": "Ris\u0101lah f\u012b al-ghayb. Ris\u0101lah f\u012b al-tafs\u012br wa-m\u0101 Mu\u1e25ammad ill\u0101 ras\u016bl ... etc.", 
     "formatedContentsNote": [
@@ -7524,6 +7558,30 @@
         "108. fol. 522a-529b: [Blank, except a short excerpt on fol. 527b and inscriptions on fol. 528a-b]."
     ], 
     "dftag_040c": "PUL", 
+    "creator": [
+        "obj_1643", 
+        "obj_1644", 
+        "obj_1645", 
+        "obj_1646", 
+        "obj_1647", 
+        "obj_1648", 
+        "obj_1649", 
+        "obj_1650", 
+        "obj_1651", 
+        "obj_1652", 
+        "obj_1653", 
+        "obj_1654", 
+        "obj_1655", 
+        "obj_1656", 
+        "obj_1657", 
+        "obj_1658", 
+        "obj_1659", 
+        "obj_1660", 
+        "obj_1661", 
+        "obj_1662", 
+        "obj_1663", 
+        "obj_1664"
+    ], 
     "label": "_210", 
     "note": [
         "Ms. codex.", 
@@ -7723,9 +7781,11 @@
         "obj_1699"
     ]
 },{
-    "name": "obj_1704", 
     "dftag_040e": "amremm", 
-    "creator": "obj_1700", 
+    "creator": [
+        "obj_1700", 
+        "obj_1704"
+    ], 
     "formatedContentsNote": [
         "1. fol. 1a-101a : Was\u0101\u02bcil al-ta\u1e25q\u012bq wa-ras\u0101\u02bcil al-tawf\u012bq / \u02bbAbd al-Ghan\u012b [al-N\u0101bulus\u012b]. -- Mach, R. and E. Ormsby. Handlist, no. 1588.", 
         "2. fol. 101a-103b : Ta\u1e25q\u012bq al-maq\u1e63\u016bd min ma\u02bbn\u00e1 Y\u0101 man huwa ma\u02bbb\u016bd f\u012b \u1e63\u016brat kull ma\u02bbb\u016bd / \u02bbAbd al-Ghan\u012b al-N\u0101bulus\u012b. -- Mach, R. and E. Ormsby. Handlist, no. 1431.", 
@@ -7915,7 +7975,18 @@
         "880-05"
     ], 
     "dftag_040e": "amremm", 
-    "creator": "obj_1734", 
+    "creator": [
+        "obj_1734", 
+        "obj_1745", 
+        "obj_1746", 
+        "obj_1747", 
+        "obj_1748", 
+        "obj_1749", 
+        "obj_1750", 
+        "obj_1751", 
+        "obj_1752", 
+        "obj_1753"
+    ], 
     "formatedContentsNote": [
         "1. fol. 1b-3a: [Preface]. -- Mach, R. and E. Ormsby. Handlist, no. 55a.", 
         "2. fol. 3a-11a: al-Ris\u0101lah al-\u016bl\u00e1 wa-hiya Ris\u0101lat r\u016b\u1e25 al-\u1e63al\u0101h lil-hadiyah il\u00e1 \u1e25a\u1e0drat al-ust\u0101dh f\u012b al-\u02bbul\u016bm al-il\u0101h\u012byah mawl\u0101n\u0101 Mu\u1e25ammad Mu\u1e25sin a\u02bbl\u00e1 All\u0101h darajatah. -- Mach, R. and E. Ormsby. Handlist, no. 55j.", 
@@ -7932,17 +8003,6 @@
     "dftag_040c": "PUL", 
     "title": "Arba\u02bb\u012bn\u012by\u0101t /", 
     "dftag_2456": "880-03", 
-    "name": [
-        "obj_1745", 
-        "obj_1746", 
-        "obj_1747", 
-        "obj_1748", 
-        "obj_1749", 
-        "obj_1750", 
-        "obj_1751", 
-        "obj_1752", 
-        "obj_1753"
-    ], 
     "subject": [
         "obj_1738", 
         "obj_1739", 
@@ -8015,9 +8075,11 @@
         "obj_1757"
     ]
 },{
-    "name": "obj_1762", 
     "dftag_040e": "amremm", 
-    "creator": "obj_1758", 
+    "creator": [
+        "obj_1758", 
+        "obj_1762"
+    ], 
     "formatedContentsNote": [
         "1. fol. 2b-8b: [Short treatise].", 
         "2. fol. 9a: [Letter in Persian].", 
@@ -8103,9 +8165,11 @@
     "dftag_040a": "PUL", 
     "dftag_246i": "Title in Mach-Ormsby's Handlist:"
 },{
-    "name": "obj_1778", 
     "dftag_040e": "amremm", 
-    "creator": "obj_1775", 
+    "creator": [
+        "obj_1775", 
+        "obj_1778"
+    ], 
     "formatedContentsNote": [
         "1. fol. 1a-11a: Kit\u0101b Ism\u0101\u02bb al-\u1e63umm f\u012b ithb\u0101t al-sharaf min qibal al-umm / Mu\u1e25ammad ibn Ab\u012b Zayd al-Marr\u0101kush\u012b al-\u1e0car\u012br.", 
         "2. fol. 12a-14b: Anw\u0101r al-sar\u0101\u02bcir wa-sar\u0101\u02bcir al-anw\u0101r / T\u0101j al-D\u012bn [A\u1e25mad ibn Mu\u1e25ammad] al-Shar\u012bsh\u012b.", 
@@ -8197,7 +8261,6 @@
     "dftag_040a": "PUL", 
     "dftag_246i": "Title on fol. 2a (later hand):"
 },{
-    "name": "obj_1790", 
     "dftag_040e": "amremm", 
     "title": "Majm\u016b\u02bbat al-ras\u0101\u02beil.", 
     "formatedContentsNote": [
@@ -8238,6 +8301,7 @@
         "36. fol. 137a-140b: \u1e24\u0101shiyat M\u012brz\u0101 Z\u0101hid \u02bbal\u00e1 al-Jal\u0101l / Mirz\u0101 Z\u0101hid al-K\u0101bul\u012b."
     ], 
     "dftag_040c": "PUL", 
+    "creator": "obj_1790", 
     "dftag_2456": "880-02", 
     "label": "_231", 
     "note": [
@@ -8456,12 +8520,12 @@
     "dftag_040a": "PUL", 
     "dftag_246i": "Title in a note on fol. 1a:"
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1828", 
         "obj_1831", 
         "obj_1832"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1828", 
     "formatedContentsNote": [
         "1. Pastedown of upper cover: Uns al-nafas [short text in Ottoman Turkish on water parsley].", 
         "2. fol. 2a: [Inscriptions and notes in Arabic and Ottoman Turkish].", 
@@ -8705,7 +8769,10 @@
     "dftag_040a": "PUL", 
     "dftag_246i": "Title in table of contents (fol. 2a):"
 },{
-    "name": [
+    "language": "eng", 
+    "title": "[Blickling Homilies].", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_1873", 
         "obj_1874", 
         "obj_1875", 
@@ -8716,9 +8783,6 @@
         "obj_1880", 
         "obj_1881"
     ], 
-    "language": "eng", 
-    "title": "[Blickling Homilies].", 
-    "type": "WorkRecord", 
     "label": "_246", 
     "note": [
         "Ms. codex.", 
@@ -8740,9 +8804,11 @@
 },{
     "dftag_035z": "2001.PR.2*", 
     "summary": "The panoramic veduta of Rome is inscribed with an \"Indice delle cose notabili diviso in otto giornate,\" listing 390 monuments and sites, the numbering of which correspond to those in the guidebook which Vasi published in the same year: Indice istorico del gran prospetto di Rom (Roma : M. Pagliarini, 1965). The dedication to Charles III appears in the lower left corner on an antique slab. To the right of Charles III's coat of arms are printed verses from the 64th epigram by the Roman poet Martial: HINC SEPTEM DOMINOS VIDERE MONTES / ET TOTAM LICET AESTIMARE ROMAN. M. Val. Mart. lib. 4 epig. 64.", 
-    "name": "obj_1887", 
     "dftag_040e": "gihc", 
-    "creator": "obj_1882", 
+    "creator": [
+        "obj_1882", 
+        "obj_1887"
+    ], 
     "dftag_040c": "CMalG", 
     "title": "Prospetto d[ell']alma citt\u00e0 di Roma visto dal Monte Gianicolo", 
     "dftag_246a": [
@@ -8770,8 +8836,10 @@
     ]
 },{
     "dftag_0359": "CHP9214TS", 
-    "name": "obj_1892", 
-    "creator": "obj_1888", 
+    "creator": [
+        "obj_1888", 
+        "obj_1892"
+    ], 
     "dftag_040c": "JHE", 
     "title": "Il nvovo teatro delle fabriche, et edificii, in prospettiva di Roma moderna ...", 
     "label": "_248", 
@@ -8789,11 +8857,11 @@
     "subject": "obj_1891"
 },{
     "dftag_0359": "CHT9113TS", 
-    "name": [
+    "creator": [
+        "obj_1893", 
         "obj_1898", 
         "obj_1899"
     ], 
-    "creator": "obj_1893", 
     "dftag_040c": "TRN", 
     "title": "Palazzi di Roma de piv celebri architetti,", 
     "label": "_249", 
@@ -8814,14 +8882,14 @@
     "lcCallNumber": "NB87.R7", 
     "titleRemainder": "eiusque palatium, cum suis prospectibus, statuae, fontes, vivaria, theatra, areolae, plantarum, viarumque ordines, cum eiusdem villae absoluta delineatione.", 
     "dftag_0359": "CHU6481TS", 
-    "name": [
+    "title": "Villa Pamphilia :", 
+    "lccn": "12028915", 
+    "dftag_040c": "EYM", 
+    "creator": [
         "obj_1906", 
         "obj_1907", 
         "obj_1908"
     ], 
-    "title": "Villa Pamphilia :", 
-    "lccn": "12028915", 
-    "dftag_040c": "EYM", 
     "label": "_250", 
     "note": [
         "Contains 76 plates illustrating statuary, by Dominique Barri\u00e8re; the remaining plates show views of the villa or fountains, and are by Giovanni Battista Falda.", 
@@ -8859,11 +8927,11 @@
 },{
     "lcCallNumber": "NA9415.R7", 
     "dftag_0359": "CHV4472TS", 
-    "name": [
+    "creator": [
+        "obj_1915", 
         "obj_1920", 
         "obj_1921"
     ], 
-    "creator": "obj_1915", 
     "lccn": "12010956", 
     "dftag_040c": "MdBJ", 
     "title": "Le fontane di Roma nelle piazze e lvoghi pvblici della citt\u00e0, con li loro prospetti, come sono al presente /", 
@@ -8888,11 +8956,11 @@
     "subject": "obj_1919"
 },{
     "dftag_5005": "NjP", 
-    "name": [
+    "creator": [
+        "obj_1922", 
         "obj_1928", 
         "obj_1929"
     ], 
-    "creator": "obj_1922", 
     "type": "WorkRecord", 
     "title": "Nvova pianta et alzata della citt\u00e0 di Roma con tvtte le strade, piazze et edificii de tempi, palazzi, giardini et altre fabbriche antiche e moderne come si trovano al presente nel pontificato di N.S. Papa Innocentio XI con le loro dichiarationi nomi et indice copiosissimo /", 
     "label": "_253", 
@@ -9046,12 +9114,12 @@
         "obj_1967"
     ]
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1968", 
         "obj_1972", 
         "obj_1973"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1968", 
     "dftag_040c": "PUL", 
     "title": "Kit\u0101b Lubb al-as\u0101s /", 
     "dftag_2456": "880-03", 
@@ -9077,12 +9145,12 @@
     "dftag_040a": "PUL", 
     "subject": "obj_1971"
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1974", 
         "obj_1979", 
         "obj_1980"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1974", 
     "dftag_040c": "PUL", 
     "title": "Kit\u0101b Hid\u0101yat al-aky\u0101s il\u00e1 \u02bbirf\u0101n asr\u0101r Lubb al-as\u0101s.", 
     "dftag_2456": "880-03", 
@@ -9110,9 +9178,11 @@
         "obj_1978"
     ]
 },{
-    "name": "obj_1988", 
     "dftag_040e": "amremm", 
-    "creator": "obj_1981", 
+    "creator": [
+        "obj_1981", 
+        "obj_1988"
+    ], 
     "formatedContentsNote": [
         "1. fol. 1a-20b: Kit\u0101b al-Durrah al-munta\u1e93amah f\u012b fiqh al-a\u02beimmah al-mu\u02bbta\u1e63amah al-mukhta\u1e63ar min al-Azh\u0101r / ta\u02bel\u012bf mu\u1e25ibb lil-\u0101l al-a\u1e6dh\u0101r A\u1e25mad ibn Ism\u0101\u02bb\u012bl ibn \u1e62\u0101li\u1e25. An abridgment of Ibn al-Murta\u1e0d\u00e1's treatise on Zayd\u012b fiqh, al-Azh\u0101r.", 
         "2. fol. 20b-21b: Kit\u0101b al-Jawharah al-munta\u1e93amah f\u012b fiqh al-a\u02beimmah al-mu\u02bbta\u1e63amah / ta\u02bel\u012bf al-faq\u012bh al-jal\u012bl \u02bbayn \u0101l Mu\u1e25ammad al-kir\u0101m wa-sal\u012bl ahl al-bayt al-kir\u0101m. A short work on Zayd\u012b religious requirements.", 
@@ -9179,12 +9249,12 @@
     "dftag_040a": "PUL", 
     "dftag_246i": "Title in Mach, Yahuda:"
 },{
-    "name": [
+    "dftag_040e": "amremm", 
+    "creator": [
+        "obj_1995", 
         "obj_2001", 
         "obj_2002"
     ], 
-    "dftag_040e": "amremm", 
-    "creator": "obj_1995", 
     "formatedContentsNote": [
         "1. pastedown, fol. 1a-1b: [Notes and poetry].", 
         "2. fol. 2a-2b: H\u0101dhihi al-mas\u0101\u02beil / lil-faq\u012bh \u02bbAl\u012b ibn Mu\u1e25ammad. Questions and answers concerning inheritance law.", 
@@ -9316,8 +9386,10 @@
     "dftag_246i": "Upper edge title:"
 },{
     "dftag_2466": "880-03", 
-    "name": "obj_2026", 
-    "creator": "obj_2020", 
+    "creator": [
+        "obj_2020", 
+        "obj_2026"
+    ], 
     "formatedContentsNote": [
         "1. fol. 1a: [Poem].", 
         "2. fol. 1b-6b: al-Mas\u0101\u02bcil al-mar\u1e0d\u012byah f\u012b bay\u0101n ittif\u0101q Ahl al-Sunnah \u02bbal\u00e1 sunan al-\u1e63al\u0101h wa-al-Zayd\u012byah.", 
@@ -9352,8 +9424,10 @@
         "obj_2025"
     ]
 },{
-    "name": "obj_2032", 
-    "creator": "obj_2027", 
+    "creator": [
+        "obj_2027", 
+        "obj_2032"
+    ], 
     "type": "WorkRecord", 
     "title": "[Minh\u0101j al-wu\u1e63\u016bl il\u00e1 Mi\u02bby\u0101r al-\u02bbuq\u016bl f\u012b \u02bbilm al-u\u1e63\u016bl].", 
     "dftag_2456": "880-02", 
@@ -9377,8 +9451,10 @@
     "dftag_040a": "NjP", 
     "dftag_246i": "Title in Hitti, Garrett collection:"
 },{
-    "name": "obj_2038", 
-    "creator": "obj_2033", 
+    "creator": [
+        "obj_2033", 
+        "obj_2038"
+    ], 
     "type": "WorkRecord", 
     "title": "[al-Muntaza\u02bb al-mukht\u0101r min Ghayth al-midr\u0101r].", 
     "dftag_2456": "880-02", 
@@ -9449,11 +9525,13 @@
         "880-06"
     ], 
     "dftag_040e": "amremm", 
-    "creator": "obj_2048", 
+    "creator": [
+        "obj_2048", 
+        "obj_2053"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Kit\u0101b Ma\u02be\u0101thir al-abr\u0101r f\u012b ta\u1e25\u1e63\u012bl mujmal\u0101t jaw\u0101hir al-akhy\u0101r :", 
     "dftag_2456": "880-03", 
-    "name": "obj_2053", 
     "subject": [
         "obj_2050", 
         "obj_2051", 
@@ -9482,8 +9560,10 @@
     "dftag_040a": "NjP", 
     "dftag_246i": "Title on fol. 3b:"
 },{
-    "name": "obj_2059", 
-    "creator": "obj_2054", 
+    "creator": [
+        "obj_2054", 
+        "obj_2059"
+    ], 
     "type": "WorkRecord", 
     "title": "[Sketchbook for the year 1815].", 
     "label": "_273", 
@@ -9526,9 +9606,9 @@
     ]
 },{
     "titleInclusiveDates": "[ca. 1895-1905].", 
-    "name": "obj_2074", 
     "title": "Photograph album of New Mexico and Arizona,", 
     "type": "WorkRecord", 
+    "creator": "obj_2074", 
     "label": "_275", 
     "instance": "instance_275", 
     "dftag_040e": "appm", 
@@ -9549,8 +9629,10 @@
     ]
 },{
     "titleInclusiveDates": "1901.", 
-    "name": "obj_2086", 
-    "creator": "obj_2075", 
+    "creator": [
+        "obj_2075", 
+        "obj_2086"
+    ], 
     "type": "WorkRecord", 
     "title": "Arizona, Gates Party, Navaho's :", 
     "label": "_276", 
@@ -9575,8 +9657,10 @@
     ]
 },{
     "titleInclusiveDates": "1901.", 
-    "name": "obj_2100", 
-    "creator": "obj_2087", 
+    "creator": [
+        "obj_2087", 
+        "obj_2100"
+    ], 
     "type": "WorkRecord", 
     "title": "Arizona, Hopi, Pueblos :", 
     "label": "_277", 
@@ -9602,13 +9686,6 @@
         "obj_2099"
     ]
 },{
-    "name": [
-        "obj_2104", 
-        "obj_2105", 
-        "obj_2106", 
-        "obj_2107", 
-        "obj_2108"
-    ], 
     "title": "[Bible].", 
     "type": "WorkRecord", 
     "dftag_505t": [
@@ -9623,6 +9700,13 @@
         "Origin: Written in Northern England (according to the Kalendar) in the early 15th century."
     ], 
     "instance": "instance_278", 
+    "creator": [
+        "obj_2104", 
+        "obj_2105", 
+        "obj_2106", 
+        "obj_2107", 
+        "obj_2108"
+    ], 
     "dftag_505g": [
         "fols. 1r-11v:", 
         "fols. 1r-175v:", 
@@ -9698,8 +9782,10 @@
         "NjP"
     ], 
     "dftag_0359": "(cotsenAccess)152299", 
-    "name": "obj_2129", 
-    "creator": "obj_2125", 
+    "creator": [
+        "obj_2125", 
+        "obj_2129"
+    ], 
     "title": "Momo-kuri 53-tsugi (Travel story).", 
     "label": "_282", 
     "note": [
@@ -9822,8 +9908,10 @@
     "lcCallNumber": "CT788.S168", 
     "titleRemainder": "To which are prefixed, memoirs of his life ...", 
     "dftag_0359": "AAX1285TS", 
-    "name": "obj_2168", 
-    "creator": "obj_2163", 
+    "creator": [
+        "obj_2163", 
+        "obj_2168"
+    ], 
     "lccn": "44053571", 
     "dftag_040c": "NjP", 
     "title": "Letters of the late Ignatius Sancho, an African ...", 
@@ -9874,8 +9962,10 @@
 },{
     "titleRemainder": "addressed to the inhabitants of America on the following interesting subjects ... /", 
     "dftag_0359": "AAY0219TS", 
-    "name": "obj_2186", 
-    "creator": "obj_2179", 
+    "creator": [
+        "obj_2179", 
+        "obj_2186"
+    ], 
     "formatedContentsNote": "I. Of the origin and design of government in general, with concise remarks on the English constitution -- II. Of monarchy and hereditary succession -- III. Thoughts on the present state of American affairs -- IV. Of the present ability of America, with some miscellaneous reflections.", 
     "dftag_040c": "NjP", 
     "title": "Common sense :", 
@@ -9966,13 +10056,13 @@
 },{
     "lcCallNumber": "AP3", 
     "dftag_0359": "CKN1888TS", 
-    "name": [
-        "obj_2207", 
-        "obj_2208"
-    ], 
     "title": "The Independent Whig.", 
     "lccn": "10021445", 
     "dftag_040c": "MUB", 
+    "creator": [
+        "obj_2207", 
+        "obj_2208"
+    ], 
     "label": "_295", 
     "note": [
         "A reprint of the Independent Whig, no. 1-53, Jan. 20, 1720-Jan. 4, 1720 [o.s.] originally published as a weekly periodical.", 
@@ -9987,11 +10077,11 @@
 },{
     "lcCallNumber": "E164", 
     "dftag_0359": "CKQ0751TS", 
-    "name": [
+    "creator": [
+        "obj_2209", 
         "obj_2214", 
         "obj_2215"
     ], 
-    "creator": "obj_2209", 
     "lccn": "12011835", 
     "dftag_040c": "RIU", 
     "title": "Some information respecting America,", 
@@ -10083,11 +10173,11 @@
 },{
     "dftag_5005": "MoU", 
     "dftag_0359": "CKW3848TS", 
-    "name": [
+    "creator": [
+        "obj_2240", 
         "obj_2247", 
         "obj_2248"
     ], 
-    "creator": "obj_2240", 
     "dftag_040c": "PLF", 
     "title": "An abstract of the evidence delivered before a select Committee of the House of Commons in the years 1790 and 1791 on the petitioners for the abolition of the slave-trade.", 
     "label": "_301", 
@@ -10156,8 +10246,10 @@
     "lcCallNumber": "JK3125 1778", 
     "titleRemainder": "holden at Ipswich in the County of Essex, who were deputed to take into consideration the constitution and form of government, proposed by the Convention of the state of Massachusetts-Bay.", 
     "dftag_0359": "CLL2450TS", 
-    "name": "obj_2268", 
-    "creator": "obj_2263", 
+    "creator": [
+        "obj_2263", 
+        "obj_2268"
+    ], 
     "lccn": "08027557", 
     "dftag_040c": "OSU", 
     "title": "Result of the convention of delegates,", 
@@ -10196,8 +10288,10 @@
     "lcCallNumber": "UA649.T792", 
     "titleRemainder": "With some account of the authors.", 
     "dftag_0359": "CLM3222TS", 
-    "name": "obj_2282", 
-    "creator": "obj_2277", 
+    "creator": [
+        "obj_2277", 
+        "obj_2282"
+    ], 
     "lccn": "77354466 //r892", 
     "dftag_040c": "DLC", 
     "title": "A brief reply to the History of standing armies in England.", 
@@ -10229,11 +10323,11 @@
 },{
     "lcCallNumber": "HX811 1656", 
     "dftag_0359": "CLM5714TS", 
-    "name": [
+    "creator": [
+        "obj_2288", 
         "obj_2293", 
         "obj_2294"
     ], 
-    "creator": "obj_2288", 
     "lccn": "02019964", 
     "dftag_040c": "RRR", 
     "title": "The common-wealth of Oceana.", 
@@ -10256,8 +10350,10 @@
     "lcCallNumber": "E446", 
     "titleRemainder": "Collected from various authors, and submitted to the serious consideration of all, more especially of those in power.", 
     "dftag_0359": "CLM5791TS", 
-    "name": "obj_2301", 
-    "creator": "obj_2295", 
+    "creator": [
+        "obj_2295", 
+        "obj_2301"
+    ], 
     "lccn": "10034585 //r", 
     "dftag_040c": "PHA", 
     "title": "Caution and warning to Great-Britain and her colonies,in a short representation of the calamitous state of the enslaved Negroes in the British dominions.", 
@@ -10304,9 +10400,11 @@
     ]
 },{
     "dftag_0359": "CLN1209TS", 
-    "name": "obj_2318", 
     "language": "engfre", 
-    "creator": "obj_2309", 
+    "creator": [
+        "obj_2309", 
+        "obj_2318"
+    ], 
     "dftag_040c": "UUM", 
     "title": "The spirit of laws.", 
     "label": "_311", 
@@ -10351,8 +10449,10 @@
     "lcCallNumber": "BV741", 
     "titleRemainder": "by the authority of reason, Scripture, and antiquity: which may serve the place of a general reply to such late discourses, as have oppos'd a tolleration.", 
     "dftag_0359": "CLN7378TS", 
-    "name": "obj_2328", 
-    "creator": "obj_2324", 
+    "creator": [
+        "obj_2324", 
+        "obj_2328"
+    ], 
     "lccn": "04022461 //r2", 
     "dftag_040c": "VA@", 
     "title": "The great case of liberty of conscience once more briefly debated & defended,", 
@@ -10367,8 +10467,10 @@
     "subject": "obj_2327"
 },{
     "dftag_0359": "CLP1573TS", 
-    "name": "obj_2333", 
-    "creator": "obj_2329", 
+    "creator": [
+        "obj_2329", 
+        "obj_2333"
+    ], 
     "dftag_040c": "JNA", 
     "title": "The dying Negro, a poem.", 
     "label": "_314", 
@@ -10435,12 +10537,12 @@
     "lcCallNumber": "E215.2", 
     "titleRemainder": "and the taxes imposed upon them, considered.", 
     "dftag_0359": "CLU3530TS", 
-    "name": [
+    "creator": [
+        "obj_2349", 
         "obj_2355", 
         "obj_2356", 
         "obj_2357"
     ], 
-    "creator": "obj_2349", 
     "lccn": "05002272 //R", 
     "dftag_040c": "VWM", 
     "title": "The regulations lately made concerning the colonies,", 
@@ -10627,8 +10729,10 @@
     "lcCallNumber": "JK176", 
     "titleRemainder": "on the answers of sundry states to their resolutions, passed in December, 1798.", 
     "dftag_0359": "CLW2672TS", 
-    "name": "obj_2412", 
-    "creator": "obj_2406", 
+    "creator": [
+        "obj_2406", 
+        "obj_2412"
+    ], 
     "lccn": "09021517", 
     "dftag_040c": "UCW", 
     "title": "Proceedings of the Virginia Assembly,", 
@@ -10712,12 +10816,12 @@
     "lcCallNumber": "DA396.A3", 
     "titleRemainder": "with some reflections on the resistance made to King Charles I, and on the anniversary of his death : in which the mysterious doctrine of that Prince's saintship and martyrdom is unriddled: the substance of which was delivered in a sermon preached in the West Meeting-House in Boston the Lord's-day after the 30th day of January, 1749/50...", 
     "dftag_0359": "CLW4792TS", 
-    "name": [
+    "creator": [
+        "obj_2430", 
         "obj_2436", 
         "obj_2437", 
         "obj_2438"
     ], 
-    "creator": "obj_2430", 
     "lccn": "12019679", 
     "dftag_040c": "MUU", 
     "title": "A discourse concerning unlimited submission and non-resistance to the higher powers :", 
@@ -10757,8 +10861,10 @@
     ]
 },{
     "dftag_0359": "CLX0179TS", 
-    "name": "obj_2450", 
-    "creator": "obj_2445", 
+    "creator": [
+        "obj_2445", 
+        "obj_2450"
+    ], 
     "lccn": "05016739", 
     "dftag_040c": "MNU", 
     "title": "Report of the Secretary of State, on the privileges and restrictions on the commerce of the United States in foreign countries /", 
@@ -10819,11 +10925,13 @@
     "dftag_0359": "CLY1424TS", 
     "dftag_5005": "NjP", 
     "dftag_040e": "dcrb", 
-    "creator": "obj_2461", 
+    "creator": [
+        "obj_2461", 
+        "obj_2467"
+    ], 
     "lccn": "rc 01002820 //r98", 
     "dftag_040c": "DLC", 
     "title": "Notes on the state of Virginia /", 
-    "name": "obj_2467", 
     "label": "_335", 
     "note": [
         "1st American ed.", 
@@ -10863,8 +10971,10 @@
 },{
     "titleRemainder": "ou Du rapport que les loix doivent avoir avec la constitution de chaque gouvernemnent, les moeurs, le climat, la religion, le commerce, & c., \u00e1 quoi l'auteur a ajout \u00e9 des recherches nouvelles, sur les loix romaines touchant le successions, sur les loix francoises, & sur les loix f\u00e9odales.", 
     "dftag_0359": "CLY5168TS", 
-    "name": "obj_2481", 
-    "creator": "obj_2473", 
+    "creator": [
+        "obj_2473", 
+        "obj_2481"
+    ], 
     "dftag_040c": "NDD", 
     "title": "De l'espirit des loix,", 
     "label": "_337", 
@@ -10938,9 +11048,9 @@
     "lcCallNumber": "DA510", 
     "titleRemainder": "[No. 1-45]", 
     "dftag_0359": "CMX2879TS", 
-    "name": "obj_2500", 
     "title": "The North Briton.", 
     "dftag_040c": "MSC", 
+    "creator": "obj_2500", 
     "label": "_340", 
     "note": "By John Wilkes.", 
     "instance": "instance_340", 
@@ -11018,9 +11128,11 @@
         "Manuscript notes.", 
         "Spine title: Burlamaqui's Natural law."
     ], 
-    "name": "obj_2530", 
     "language": "eng", 
-    "creator": "obj_2521", 
+    "creator": [
+        "obj_2521", 
+        "obj_2530"
+    ], 
     "lccn": "21021933", 
     "dftag_040c": "CIN", 
     "title": "The principles of natural law :", 
@@ -11062,9 +11174,11 @@
     "lcCallNumber": "E211", 
     "titleRemainder": "and the means of making it a benefit to the world.", 
     "dftag_0359": "CPN2108TS", 
-    "name": "obj_2540", 
     "language": "engfre", 
-    "creator": "obj_2536", 
+    "creator": [
+        "obj_2536", 
+        "obj_2540"
+    ], 
     "lccn": "04020429", 
     "dftag_040c": "EEM", 
     "title": "Observations on the importance of the American Revolution,", 
@@ -11080,8 +11194,10 @@
     "subject": "obj_2539"
 },{
     "dftag_0359": "CPP8362TS", 
-    "name": "obj_2546", 
-    "creator": "obj_2541", 
+    "creator": [
+        "obj_2541", 
+        "obj_2546"
+    ], 
     "formatedContentsNote": "Of commerce.--Of luxury.--Of money.--Of interest.--Of the balance of trade.--Of the balance of power.--Of taxes.--Of public credit.--Of some remarkable custom.--Of the populousness of antient nations.--Of the protestant succession.--Idea of a perfect commonwealth.", 
     "dftag_040c": "SYB", 
     "title": "Political discourses /", 
@@ -11138,11 +11254,11 @@
 },{
     "lcCallNumber": "BV741.W58", 
     "titleRemainder": "being discussed and discharged of bloud-guiltinesse by just defense : wherein the great questions of this present time are handled, viz. How farre liberty of conscience ought to be given to those that truly feare God? And how farre restrained to turbulent and pestilent persons, that not onely raze the foundation of godlinesse, but disturb the civill peace where they live? Also how farre the magistrate may proceed in the duties of the first table? And that all magistrates ought to study the word and will of God, that they may frame their government according to it. Discussed. As they are alledged from divers Scriptures, out of the Old and New Testament. Wherein also the practice of princes is debated, together with the judgement of ancient and late writers of most precious esteem. Whereunto is added a reply to Mr. Williams answer, to Mr. Cottons letter /", 
-    "name": [
+    "creator": [
+        "obj_2559", 
         "obj_2566", 
         "obj_2567"
     ], 
-    "creator": "obj_2559", 
     "lccn": "49038592", 
     "dftag_040c": "RPJCB", 
     "title": "The bloudy tenent, washed, and made white in the bloud of the Lambe :", 
@@ -11171,8 +11287,10 @@
     "lcCallNumber": "E211.S42 AC901", 
     "titleRemainder": "in answer to a letter, under the signature of A.W. Farmer. Whereby his sophistry is exposed, his cavils confuted, his artifices detected, and his wit ridiculed; in a general address to the inhabitants of America, and a particular address to the farmers of the province of New-York ...", 
     "dftag_0359": "AAK1135TS", 
-    "name": "obj_2576", 
-    "creator": "obj_2568", 
+    "creator": [
+        "obj_2568", 
+        "obj_2576"
+    ], 
     "lccn": "08031573", 
     "dftag_040c": "NjP", 
     "title": "A full vindication of the measures of the Congress, from the calumnies of their enemies;", 
@@ -11198,8 +11316,10 @@
         "NjP", 
         "NjP"
     ], 
-    "name": "obj_2584", 
-    "creator": "obj_2577", 
+    "creator": [
+        "obj_2577", 
+        "obj_2584"
+    ], 
     "type": "WorkRecord", 
     "title": "Speech, in the House of Representatives of the Congress of the United States, delivered January 14, 1794, :", 
     "label": "_352", 
@@ -11225,9 +11345,11 @@
     ]
 },{
     "lcCallNumber": "JC153", 
-    "name": "obj_2591", 
     "dftag_040e": "bdrb", 
-    "creator": "obj_2585", 
+    "creator": [
+        "obj_2585", 
+        "obj_2591"
+    ], 
     "dftag_040c": "NRU", 
     "title": "Leviathan, or The matter, forme, & power of a common-wealth ecclesiasticall and civill. /", 
     "label": "_353", 
@@ -11286,11 +11408,11 @@
     ]
 },{
     "titleRemainder": "number I[-V] /", 
-    "name": [
+    "creator": [
+        "obj_2599", 
         "obj_2606", 
         "obj_2607"
     ], 
-    "creator": "obj_2599", 
     "type": "WorkRecord", 
     "title": "The American crisis :", 
     "label": "_355", 
@@ -11307,12 +11429,12 @@
     ]
 },{
     "titleRemainder": "At the Parliament begun and holden at Westminster, the nineteenth day of May, anno Dom. 1761, in the first year of the reign of Our Sovereign Lord George the Third ... and from thence continued by several prorogations to the tenth day of January, 1765, being the fourth session of the Twelfth Parliament of Great-Britain.", 
-    "name": [
+    "creator": [
+        "obj_2608", 
         "obj_2613", 
         "obj_2614", 
         "obj_2615"
     ], 
-    "creator": "obj_2608", 
     "dftag_040c": "MiU", 
     "title": "Anno regni Georgii III. regis Magnae Britanniae, Franciae, & Hiberniae, quinto.", 
     "label": "_356", 
@@ -11336,12 +11458,12 @@
     "dftag_246i": "Binder's title:"
 },{
     "titleRemainder": "At the request of the inhabitants of the town of Boston; to commemorate the bloody tragedy of the fifth of March, 1770. /", 
-    "name": [
+    "creator": [
+        "obj_2616", 
         "obj_2622", 
         "obj_2623", 
         "obj_2624"
     ], 
-    "creator": "obj_2616", 
     "type": "WorkRecord", 
     "title": "An oration delivered April 2d, 1771. :", 
     "label": "_357", 
@@ -11363,7 +11485,8 @@
     ]
 },{
     "titleRemainder": "at the request of the inhabitants of the town of Boston: to commemorate the bloody tragedy of the fifth of March 1770. By the Honorable John Hancock, Esq; [Five lines in Latin from Virgil].", 
-    "name": [
+    "creator": [
+        "obj_2625", 
         "obj_2631", 
         "obj_2632", 
         "obj_2633", 
@@ -11372,7 +11495,6 @@
         "obj_2636", 
         "obj_2637"
     ], 
-    "creator": "obj_2625", 
     "type": "WorkRecord", 
     "title": "An oration; delivered March 5, 1774,", 
     "label": "_358", 
@@ -11392,8 +11514,10 @@
         "obj_2630"
     ]
 },{
-    "name": "obj_2643", 
-    "creator": "obj_2638", 
+    "creator": [
+        "obj_2638", 
+        "obj_2643"
+    ], 
     "title": "Report from the committee of the whole House ... to consider ... measures ... for the abolition of the slave trade.", 
     "label": "_359", 
     "instance": "instance_359", 
@@ -11405,8 +11529,10 @@
     "subject": "obj_2642"
 },{
     "titleRemainder": "submitting ... evidence ... collected in consequence of His Majesty's order ... dated the 11th of February 1788 ... particularly the trade in slaves ...", 
-    "name": "obj_2649", 
-    "creator": "obj_2644", 
+    "creator": [
+        "obj_2644", 
+        "obj_2649"
+    ], 
     "title": "Report of the Lords of the Committee of Council appointed for the consideration of all matters relating to trade and foreign plantations :", 
     "label": "_360", 
     "instance": "instance_360", 
@@ -11419,12 +11545,12 @@
 },{
     "titleRemainder": "with some select cases in the Court of Chancery, and of the Common Pleas, which are within the same period : to which is added the case of general warrants and a collection of maxims /", 
     "dftag_0359": "ACJ4383TS", 
-    "name": [
+    "creator": [
+        "obj_2650", 
         "obj_2655", 
         "obj_2656", 
         "obj_2657"
     ], 
-    "creator": "obj_2650", 
     "dftag_040c": "CUL", 
     "title": "Reports of cases adjudged in the Court of King's Bench from Easter Term 12 Geo. 3. to Michaelmas 14 Geo. 3 (both inclusive.) [i.e. 1772-1774] :", 
     "label": "_361", 
@@ -11447,7 +11573,8 @@
     "lcCallNumber": "HJ8105 1789", 
     "dftag_0359": "AAM1741TS", 
     "dftag_5005": "NjP", 
-    "name": [
+    "creator": [
+        "obj_2658", 
         "obj_2663", 
         "obj_2664", 
         "obj_2665", 
@@ -11455,7 +11582,6 @@
         "obj_2667", 
         "obj_2668"
     ], 
-    "creator": "obj_2658", 
     "lccn": "64058911", 
     "title": "Report of the Secretary of the Treasury to the House of Representatives, relative to a provision for the support of the public credit of the United States, in conformity to a resolution of the twenty-first day of September, 1789. Presented to the House on Thursday the 14th day of January, 1790. Published by order of the House of Representatives.", 
     "label": "_362", 
@@ -11501,12 +11627,12 @@
     ]
 },{
     "titleRemainder": "a political discourse in two books; the former containing the first praeliminary of Oceana, inlarged, interpreted, and vindicated; the second concerning ordination against Dr. H. Hamond, Dr. L. Seaman, and the authors they follow : in which two books is contained thehole commonwealth of the Hebrews, as also the different policies introduced into the church of Christ, during the time of the Apostles.", 
-    "name": [
+    "creator": [
+        "obj_2675", 
         "obj_2680", 
         "obj_2681", 
         "obj_2682"
     ], 
-    "creator": "obj_2675", 
     "dftag_040c": "MNU", 
     "title": "The prerogative of popular government :", 
     "label": "_364", 
@@ -11569,8 +11695,10 @@
 },{
     "lcCallNumber": "UA649", 
     "dftag_035z": "(OCoLC)15937089", 
-    "name": "obj_2702", 
-    "creator": "obj_2696", 
+    "creator": [
+        "obj_2696", 
+        "obj_2702"
+    ], 
     "lccn": "92850203", 
     "dftag_040c": "CLO", 
     "title": "A letter from the author of the Argument against a standing army to the author of the Ballancing letter.", 
@@ -11595,8 +11723,10 @@
 },{
     "lcCallNumber": "JC189", 
     "titleRemainder": "being a sequel to The principles of natural law.", 
-    "name": "obj_2709", 
-    "creator": "obj_2703", 
+    "creator": [
+        "obj_2703", 
+        "obj_2709"
+    ], 
     "lccn": "40023785", 
     "dftag_040c": "RBN", 
     "title": "The principles of politic law;", 
@@ -11622,8 +11752,10 @@
     "subject": "obj_2708"
 },{
     "titleRemainder": "who had desired by R. Manasses an agent for them, that they might return into England, and worship the God of their fathers here in their synagogues, &c. ...", 
-    "name": "obj_2717", 
-    "creator": "obj_2711", 
+    "creator": [
+        "obj_2711", 
+        "obj_2717"
+    ], 
     "dftag_040c": "VXJ", 
     "title": "A narrative of the late proceeds at White-hall, concerning the Jews :", 
     "label": "_369", 
@@ -11666,9 +11798,11 @@
 },{
     "lcCallNumber": "BV741", 
     "dftag_035z": "(OCoLC)5248426", 
-    "name": "obj_2734", 
     "dftag_040e": "dcrb", 
-    "creator": "obj_2726", 
+    "creator": [
+        "obj_2726", 
+        "obj_2734"
+    ], 
     "lccn": "97147990", 
     "dftag_040c": "DLC", 
     "title": "The essential rights and liberties of Protestants :", 
@@ -11746,9 +11880,11 @@
 },{
     "lcCallNumber": "KF223.Z4", 
     "titleRemainder": "with the pleadings and arguments on both sides.", 
-    "name": "obj_2754", 
     "dftag_040e": "dcrb", 
-    "creator": "obj_2746", 
+    "creator": [
+        "obj_2746", 
+        "obj_2754"
+    ], 
     "lccn": "24018403", 
     "dftag_040c": "DLC", 
     "title": "The trial of John Peter Zenger, of New-York, printer, who was tried and acquitted, for printing and publishing a libel against the government :", 
@@ -11776,9 +11912,11 @@
     ]
 },{
     "dftag_035z": "(OCoLC)228764170", 
-    "name": "obj_2763", 
     "dftag_040e": "dcrb", 
-    "creator": "obj_2755", 
+    "creator": [
+        "obj_2755", 
+        "obj_2763"
+    ], 
     "lccn": "09009844", 
     "dftag_040c": "DLC", 
     "title": "An account of the trial of Thomas Cooper, of Northumberland :", 
@@ -11856,9 +11994,11 @@
     ]
 },{
     "titleRemainder": "Published by authority.", 
-    "name": "obj_2782", 
     "dftag_040e": "bdrb", 
-    "creator": "obj_2776", 
+    "creator": [
+        "obj_2776", 
+        "obj_2782"
+    ], 
     "dftag_040c": "AQM", 
     "title": "The rights of colonies examined. :", 
     "label": "_378", 
@@ -12048,9 +12188,11 @@
     ]
 },{
     "titleRemainder": "being the aniversary [sic] for the election of His Majesty's Council for said province /", 
-    "name": "obj_2835", 
     "dftag_040e": "bdrb", 
-    "creator": "obj_2829", 
+    "creator": [
+        "obj_2829", 
+        "obj_2835"
+    ], 
     "dftag_040c": "COO", 
     "title": "A sermon preached before His Excellency Francis Bernard, Esq; governor, His Honor Thomas Hutchinson, Esq; lieutenant-governor, the Honorable His Majesty's Council, and the Honorable House of Representatives, of the province of the Massachusetts-Bay in New-England, May 25th. 1768 :", 
     "label": "_387", 
@@ -12075,12 +12217,12 @@
     ]
 },{
     "titleRemainder": "At the dedication of the Tree of Liberty, from the summer house in the tree. /", 
-    "name": [
+    "dftag_040e": "bdrb", 
+    "creator": [
+        "obj_2836", 
         "obj_2841", 
         "obj_2842"
     ], 
-    "dftag_040e": "bdrb", 
-    "creator": "obj_2836", 
     "dftag_040c": "AQM", 
     "title": "A discourse, delivered in Providence, in the colony of Rhode-Island, upon the 25th. day of July, 1768. :", 
     "label": "_388", 
@@ -12102,9 +12244,9 @@
     "subject": "obj_2840"
 },{
     "titleRemainder": "... Calculated for the meridian of Boston in New-England, lat. 42 deg. 25 min. north. ... /", 
-    "name": "obj_2847", 
     "title": "Ames's almanack revived and improved: or, An astronomical diary, for the year of our Lord Christ 1766.", 
     "dftag_040c": "YUS", 
+    "creator": "obj_2847", 
     "label": "_389", 
     "note": [
         "The author's preface, signed Philodemos, states that he undertook the preparation of this almanac \"as Mr. Ames, (son of the lately deceased Dr. Ames) declined furnishing the public with an almanack for the year 1766, and application was made by the printers to the author.\" This assertion is denied by Ames in his own preface to his 1766 almanac, issued by McAlpine and Fleeming.", 
@@ -12259,8 +12401,10 @@
     ]
 },{
     "titleRemainder": "setting forth the causes and necessity of their taking up arms.", 
-    "name": "obj_2889", 
-    "creator": "obj_2883", 
+    "creator": [
+        "obj_2883", 
+        "obj_2889"
+    ], 
     "dftag_040c": "HVC", 
     "title": "A declaration by the representatives of the United Colonies of North-America now first met in general congress at Philadelphia :", 
     "label": "_396", 
@@ -12494,9 +12638,11 @@
 },{
     "lcCallNumber": "HF1754", 
     "titleRemainder": "presented to the House of Representatives, December 5, 1791.", 
-    "name": "obj_2956", 
     "dftag_040e": "dcrb", 
-    "creator": "obj_2948", 
+    "creator": [
+        "obj_2948", 
+        "obj_2956"
+    ], 
     "lccn": "68033395", 
     "dftag_040c": "DLC", 
     "title": "Report of the Secretary of the Treasury of the United States, on the subject of manufactures :", 
@@ -12549,9 +12695,11 @@
 },{
     "lcCallNumber": "BV2500.A6", 
     "dftag_035z": "(OCoLC)33295336", 
-    "name": "obj_2973", 
     "dftag_040e": "dcrb", 
-    "creator": "obj_2964", 
+    "creator": [
+        "obj_2964", 
+        "obj_2973"
+    ], 
     "lccn": "34021069", 
     "dftag_040c": "DLC", 
     "title": "A sermon preached before the incorporated Society for the Propagation of the Gospel in Foreign Parts :", 
@@ -12584,11 +12732,11 @@
 },{
     "lcCallNumber": "HT1033", 
     "dftag_035z": "(OCoLC)31014415", 
-    "name": [
+    "creator": [
+        "obj_2974", 
         "obj_2979", 
         "obj_2980"
     ], 
-    "creator": "obj_2974", 
     "lccn": "94840883", 
     "dftag_040c": "JNA", 
     "title": "The case of our fellow-creatures, the oppressed Africans,", 
@@ -12630,12 +12778,12 @@
     "subject": "obj_2985"
 },{
     "lcCallNumber": "BV4935.G76", 
-    "name": [
+    "dftag_040e": "bdrb", 
+    "creator": [
+        "obj_2986", 
         "obj_2994", 
         "obj_2995"
     ], 
-    "dftag_040e": "bdrb", 
-    "creator": "obj_2986", 
     "dftag_040c": "AQM", 
     "title": "A narrative of the most remarkable particulars in the life of James Albert Ukawsaw Gronniosaw, an African prince /", 
     "label": "_413", 
@@ -12768,13 +12916,13 @@
     "id": "work_418", 
     "dftag_040a": "Uk-ES"
 },{
-    "name": [
-        "obj_3031", 
-        "obj_3032"
-    ], 
     "dftag_040e": "bdrb", 
     "title": "A Summary of the evidence produced before the committee of the Privy Council, and before a committee of the House of Commons; relating to the slave trade.", 
     "dftag_040c": "GTX", 
+    "creator": [
+        "obj_3031", 
+        "obj_3032"
+    ], 
     "label": "_419", 
     "instance": "instance_419", 
     "dftag_035a": [
@@ -12792,8 +12940,10 @@
     ]
 },{
     "titleRemainder": "Cap. XXXVI, an act for the abolition of the slave trade, 25th March 1807.", 
-    "name": "obj_3039", 
-    "creator": "obj_3033", 
+    "creator": [
+        "obj_3033", 
+        "obj_3039"
+    ], 
     "dftag_040c": "COO", 
     "title": "Anno quadragesimo septimo Georgii III. Regis :", 
     "label": "_420", 
@@ -12812,12 +12962,12 @@
 },{
     "lcCallNumber": "HT871", 
     "titleRemainder": "recommended to the professors of Christianity, of every denomination.", 
-    "name": [
+    "dftag_040e": "dcrb", 
+    "creator": [
+        "obj_3040", 
         "obj_3047", 
         "obj_3048"
     ], 
-    "dftag_040e": "dcrb", 
-    "creator": "obj_3040", 
     "lccn": "09000037", 
     "dftag_040c": "DLC", 
     "title": "Considerations on keeping Negroes :", 
@@ -12866,9 +13016,11 @@
     "subject": "obj_3053"
 },{
     "titleRemainder": "[Two lines from Proverbs].", 
-    "name": "obj_3059", 
     "dftag_040e": "bdrb", 
-    "creator": "obj_3054", 
+    "creator": [
+        "obj_3054", 
+        "obj_3059"
+    ], 
     "dftag_040c": "AQM", 
     "title": "A mite cast into the treasury: or, Observations on slave-keeping. :", 
     "label": "_423", 
@@ -12887,8 +13039,10 @@
     "dftag_040a": "MWA", 
     "subject": "obj_3058"
 },{
-    "name": "obj_3066", 
-    "creator": "obj_3060", 
+    "creator": [
+        "obj_3060", 
+        "obj_3066"
+    ], 
     "dftag_040c": "E8W", 
     "title": "A vindication of the address, to the inhabitants of the British settlements, on the slavery of the Negroes in America, in answer to a pamphlet entitled, \"Slavery not forbidden by scripture; or A defence of the West-India planters from the aspersions thrown out against them by the author of the Address\" ...", 
     "label": "_424", 
@@ -12986,9 +13140,11 @@
 },{
     "lcCallNumber": "E445.V8", 
     "titleRemainder": "with a proposal for the gradual abolition of it, in the state of Virginia. /", 
-    "name": "obj_3093", 
     "dftag_040e": "bdrb", 
-    "creator": "obj_3087", 
+    "creator": [
+        "obj_3087", 
+        "obj_3093"
+    ], 
     "lccn": "11006627", 
     "dftag_040c": "HHG", 
     "title": "A dissertation on slavery: :", 
@@ -13136,8 +13292,10 @@
 },{
     "dftag_5005": "NjP", 
     "titleRemainder": "\u00e0 l'usage des \u00e9coles techniques, compagnies de chemins de fer et de navigation : traitant de l'outillage du menuisier, tourneur, tonnelier, charron, charpentier, modeleur et du m\u00e9canicien /", 
-    "name": "obj_3138", 
-    "creator": "obj_3129", 
+    "creator": [
+        "obj_3129", 
+        "obj_3138"
+    ], 
     "type": "WorkRecord", 
     "title": "Manuel de l'outillage des arts et m\u00e9tiers :", 
     "label": "_434", 
@@ -13158,9 +13316,11 @@
     ]
 },{
     "titleInclusiveDates": "1859-1861 /", 
-    "name": "obj_3145", 
     "dftag_040e": "appm", 
-    "creator": "obj_3139", 
+    "creator": [
+        "obj_3139", 
+        "obj_3145"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Journal to Pikes Peak,", 
     "label": "_435", 
@@ -13212,9 +13372,11 @@
     ]
 },{
     "titleInclusiveDates": "1859.", 
-    "name": "obj_3162", 
     "dftag_040e": "appm", 
-    "creator": "obj_3157", 
+    "creator": [
+        "obj_3157", 
+        "obj_3162"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Journal,", 
     "label": "_437", 
@@ -13234,9 +13396,11 @@
     ]
 },{
     "titleInclusiveDates": "1848-1849.", 
-    "name": "obj_3171", 
     "dftag_040e": "appm", 
-    "creator": "obj_3163", 
+    "creator": [
+        "obj_3163", 
+        "obj_3171"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Manuscript journal,", 
     "label": "_438", 
@@ -13263,9 +13427,11 @@
     ]
 },{
     "titleInclusiveDates": "1850.", 
-    "name": "obj_3179", 
     "dftag_040e": "appm", 
-    "creator": "obj_3172", 
+    "creator": [
+        "obj_3172", 
+        "obj_3179"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Diary of an overland journey to California,", 
     "label": "_439", 
@@ -13289,9 +13455,11 @@
 },{
     "titleInclusiveDates": "1853-1861.", 
     "titleRemainder": "written from the Oregon Trail and California, 1853-55, 1857, 1861 : written from California by Elvira Bradway, his wife, 1855, 1857,", 
-    "name": "obj_3188", 
     "dftag_040e": "appm", 
-    "creator": "obj_3180", 
+    "creator": [
+        "obj_3180", 
+        "obj_3188"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Autograph letters :", 
     "label": "_440", 
@@ -13315,13 +13483,13 @@
     ]
 },{
     "titleInclusiveDates": "1853-1877 /", 
-    "name": [
+    "dftag_040e": "appm", 
+    "creator": [
+        "obj_3189", 
         "obj_3199", 
         "obj_3200", 
         "obj_3201"
     ], 
-    "dftag_040e": "appm", 
-    "creator": "obj_3189", 
     "dftag_040c": "NjP", 
     "title": "Sixty-one unpublished manuscript letters written from California and elsewhere,", 
     "label": "_441", 
@@ -13410,13 +13578,13 @@
     ]
 },{
     "titleInclusiveDates": "1879.", 
-    "name": [
+    "creator": [
+        "obj_3221", 
         "obj_3232", 
         "obj_3233", 
         "obj_3234", 
         "obj_3235"
     ], 
-    "creator": "obj_3221", 
     "type": "WorkRecord", 
     "title": "Frances Metcalfe Wolcott collection of photographs of the American West and Mexico,", 
     "label": "_445", 
@@ -13490,12 +13658,12 @@
     ]
 },{
     "titleInclusiveDates": "1809-1852", 
-    "name": [
+    "creator": [
+        "obj_3256", 
         "obj_3264", 
         "obj_3265", 
         "obj_3266"
     ], 
-    "creator": "obj_3256", 
     "type": "WorkRecord", 
     "dftag_245g": "(bulk 1849-1852)", 
     "title": "Baldwin family gold rush collection,", 
@@ -13596,9 +13764,11 @@
     ]
 },{
     "dftag_0359": "CNT0748NE", 
-    "name": "obj_3299", 
     "dftag_040e": "amremm", 
-    "creator": "obj_3295", 
+    "creator": [
+        "obj_3295", 
+        "obj_3299"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Kit\u0101b-i Sh\u0101hn\u0101mah /", 
     "dftag_2456": "880-03", 
@@ -13629,8 +13799,10 @@
 },{
     "titleRemainder": "Consisting of animadversions on the impolicy and barbarity of the deleterious commerce and subsequent slavery of the human species; to which is added, A desultory letter written to Napoleon Bonaparte, anno Domini, 1801.", 
     "dftag_0359": "CKM2127TS", 
-    "name": "obj_3306", 
-    "creator": "obj_3300", 
+    "creator": [
+        "obj_3300", 
+        "obj_3306"
+    ], 
     "dftag_040c": "CIN", 
     "title": "A preliminary essay, on the oppression of the exiled sons of Africa.", 
     "label": "_453", 
@@ -13649,7 +13821,11 @@
     "lcCallNumber": "JK154", 
     "titleRemainder": "a collection of essays, written in favour of the new Constitution, as agreed upon by the Federal convention, September 17, 1787, in two volumes.", 
     "dftag_0359": "CLL8419TS", 
-    "name": [
+    "dftag_040e": "dcrb", 
+    "title": "The federalist:", 
+    "lccn": "09021562 //r98", 
+    "dftag_040c": "DLC", 
+    "creator": [
         "obj_3312", 
         "obj_3313", 
         "obj_3314", 
@@ -13658,10 +13834,6 @@
         "obj_3317", 
         "obj_3318"
     ], 
-    "dftag_040e": "dcrb", 
-    "title": "The federalist:", 
-    "lccn": "09021562 //r98", 
-    "dftag_040c": "DLC", 
     "label": "_454", 
     "note": [
         "First complete edition. cf. The Foederalist ... [ed.] by Henry B. Dawson. New York, 1863. Introduction: p. xxiii, lv-lxiii.", 
@@ -13708,8 +13880,10 @@
         "Ex copy 1:", 
         "Ex copy 2:"
     ], 
-    "name": "obj_3331", 
-    "creator": "obj_3326", 
+    "creator": [
+        "obj_3326", 
+        "obj_3331"
+    ], 
     "dftag_040c": "IBK", 
     "title": "Notes on the state of Virginia.", 
     "label": "_456", 
@@ -13729,9 +13903,11 @@
     "lcCallNumber": "AC901", 
     "titleRemainder": "wherein the reasons are given why the Jews were antiently considered as the immediate vassals and absolute property of the Crown, but are now in a state of liberty and freedom like other subjects ... /", 
     "dftag_0359": "CLY4366TS", 
-    "name": "obj_3338", 
     "dftag_040e": "dcrb", 
-    "creator": "obj_3332", 
+    "creator": [
+        "obj_3332", 
+        "obj_3338"
+    ], 
     "lccn": "94839735", 
     "dftag_040c": "DLC", 
     "title": "A second letter to a friend concerning naturalizations :", 
@@ -13750,9 +13926,11 @@
 },{
     "titleRemainder": "which took place on the eighth day of May, 1725, on the beach of Lovell's Pond, in Fryeburgh, in the Distict of Maine. : Together with the commemoration sermon, delivered by the Rev. Mr. T. Symmes. : Published according to act of Congress.", 
     "dftag_0359": "CMR4896TS", 
-    "name": "obj_3346", 
     "dftag_040e": "bdrb", 
-    "creator": "obj_3339", 
+    "creator": [
+        "obj_3339", 
+        "obj_3346"
+    ], 
     "dftag_040c": "MWA", 
     "title": "The history of the fight of the intrepid Captain John Lovell [i.e., Lovewell],", 
     "label": "_458", 
@@ -13780,12 +13958,12 @@
 },{
     "lcCallNumber": "HB161", 
     "dftag_0359": "CPQ5556TS", 
-    "name": [
+    "creator": [
+        "obj_3348", 
         "obj_3353", 
         "obj_3354", 
         "obj_3355"
     ], 
-    "creator": "obj_3348", 
     "lccn": "43049501", 
     "dftag_040c": "PAU", 
     "title": "An inquiry into the nature and causes of the wealth of nations /", 
@@ -13806,8 +13984,10 @@
 },{
     "dftag_5005": "NjP", 
     "titleRemainder": "occasioned by a late sermon, with some other papers occasioned by the queries.", 
-    "name": "obj_3364", 
-    "creator": "obj_3356", 
+    "creator": [
+        "obj_3356", 
+        "obj_3364"
+    ], 
     "dftag_040c": "VXJ", 
     "title": "Some queries relative to the Jews :", 
     "label": "_460", 
@@ -13829,13 +14009,13 @@
         "obj_3363"
     ]
 },{
-    "name": [
+    "creator": [
+        "obj_3365", 
         "obj_3371", 
         "obj_3372", 
         "obj_3373", 
         "obj_3374"
     ], 
-    "creator": "obj_3365", 
     "type": "WorkRecord", 
     "title": "The examination of Doctor Benjamin Franklin, before an august assembly, relating to the repeal of the stamp-act, &c.", 
     "label": "_461", 
@@ -13886,13 +14066,13 @@
         "obj_3380"
     ]
 },{
-    "name": [
+    "dftag_040e": "dcrb", 
+    "creator": [
+        "obj_3381", 
         "obj_3389", 
         "obj_3390", 
         "obj_3391"
     ], 
-    "dftag_040e": "dcrb", 
-    "creator": "obj_3381", 
     "dftag_040c": "AOX", 
     "title": "Anno regni Gulielmi et Mariae, regis & reginae Angliae, Scotiae, Franciae & Hiberniae, Primo. On the sixteenth day of December, anno Dom. 1689. In the first year of Their Majesties reign, this act passed the royal assent.", 
     "subject": [
@@ -13923,8 +14103,10 @@
     "dftag_246i": "At head of caption title:"
 },{
     "lcCallNumber": "DS135.E5", 
-    "name": "obj_3397", 
-    "creator": "obj_3392", 
+    "creator": [
+        "obj_3392", 
+        "obj_3397"
+    ], 
     "dftag_040c": "TYC", 
     "title": "Reasons for naturalizing the Jews in Great Britain and Ireland.", 
     "label": "_464", 
@@ -13987,12 +14169,12 @@
     ]
 },{
     "titleRemainder": "being a collection of what hath yet appeared in defence of the late Act, in favour of the Jews /", 
-    "name": [
+    "title": "The other side of the question :", 
+    "dftag_040c": "YUS", 
+    "creator": [
         "obj_3419", 
         "obj_3420"
     ], 
-    "title": "The other side of the question :", 
-    "dftag_040c": "YUS", 
     "label": "_467", 
     "instance": "instance_467", 
     "dftag_245c": "to which is prefixed, a word or two by the editor [i.e. R. Flexman] ...", 
@@ -14009,8 +14191,10 @@
         "obj_3418"
     ]
 },{
-    "name": "obj_3430", 
-    "creator": "obj_3421", 
+    "creator": [
+        "obj_3421", 
+        "obj_3430"
+    ], 
     "dftag_040c": "NLE", 
     "title": "Considerations on the bill to permit persons professing the Jewish religion to be naturalized by Parliament. In several letters from a merchant in town to his friend in the country. ...", 
     "label": "_468", 
@@ -14035,11 +14219,11 @@
     "lcCallNumber": "KD4058.J48", 
     "titleRemainder": "in a second letter from a merchant in town to his friend in the country : in this part the utility of the Jews in trade, their situation in other nations, and the expediency of continuing them on the present footing are fully considered and proved.", 
     "dftag_0822": "19", 
-    "name": [
+    "creator": [
+        "obj_3431", 
         "obj_3438", 
         "obj_3439"
     ], 
-    "creator": "obj_3431", 
     "lccn": "85205097", 
     "dftag_040c": "DLC", 
     "title": "Further considerations on the Act to permit persons professing the Jewish religion to be naturalized by Parliament :", 
@@ -14066,8 +14250,10 @@
     ]
 },{
     "titleRemainder": "and probably having never been read either by the author of that paper, or by several others who have since signed a petition, which that paper was calculated to support : to remove those false impressions, the following short, but true, state of facts is submitted to the consideration of the public.", 
-    "name": "obj_3446", 
-    "creator": "obj_3440", 
+    "creator": [
+        "obj_3440", 
+        "obj_3446"
+    ], 
     "dftag_040c": "YUS", 
     "title": "The bill, permitting the Jews to be naturalized by Parliament, having been misrepresented in the London Gazetteer of Friday the 18th May :", 
     "label": "_470", 
@@ -14093,9 +14279,9 @@
     ]
 },{
     "titleRemainder": "containing Mr. Locke's sentiments in respect to the treatment of the Jews by the Christians ; the cruel hardships, oppressions, indignities, and massacres which they formerly suffer'd in England ...", 
-    "name": "obj_3451", 
     "title": "The Jews advocate :", 
     "dftag_040c": "VXJ", 
+    "creator": "obj_3451", 
     "label": "_471", 
     "note": "Pages 55-58 are misnumbered 51-54.", 
     "instance": "instance_471", 
@@ -14117,10 +14303,10 @@
         "Translation of Chinese title: Heresy exposed in respectful obedience to the sacred edict. A complete picture gallery.", 
         "Printed 3 columns to the page, on both sides of double leaf folded once in Chinese style."
     ], 
-    "name": "obj_3456", 
     "language": "eng", 
     "title": "The cause of the riots in the Yangtse Valley.", 
     "dftag_040c": "CLU", 
+    "creator": "obj_3456", 
     "label": "_472", 
     "dftag_041h": "chi", 
     "instance": "instance_472", 
@@ -14160,8 +14346,10 @@
 },{
     "lcCallNumber": "TA140", 
     "dftag_0359": "CEC3894TS", 
-    "name": "obj_3467", 
-    "creator": "obj_3463", 
+    "creator": [
+        "obj_3463", 
+        "obj_3467"
+    ], 
     "lccn": "05025909", 
     "dftag_040c": "VIC", 
     "title": "Life of Thomas Telford, civil engineer,", 
@@ -14193,9 +14381,9 @@
     ]
 },{
     "lcCallNumber": "TG25.B42", 
-    "name": "obj_3483", 
     "title": "[Bayonne Bridge, over the Kill van Kull between Port Richmond, Staten Island, New York and Bayonne, New Jersey].", 
     "dftag_040c": "PUL", 
+    "creator": "obj_3483", 
     "subject": [
         "obj_3479", 
         "obj_3480", 
@@ -14222,7 +14410,9 @@
         "NjP", 
         "NjP"
     ], 
-    "name": [
+    "title": "[Album containing 1000 wood engravings].", 
+    "type": "WorkRecord", 
+    "creator": [
         "obj_3485", 
         "obj_3486", 
         "obj_3487", 
@@ -14230,8 +14420,6 @@
         "obj_3489", 
         "obj_3490"
     ], 
-    "title": "[Album containing 1000 wood engravings].", 
-    "type": "WorkRecord", 
     "label": "_477", 
     "note": [
         "Title from Hamilton, S. Amer. book illustrators (1968 ed.)", 
@@ -14247,13 +14435,13 @@
     "dftag_040a": "NjP"
 },{
     "titleInclusiveDates": "[ca. 1824].", 
-    "name": [
-        "obj_3499", 
-        "obj_3500"
-    ], 
     "language": "mynspa", 
     "title": "Book of the Chilam Balam of Kaua :", 
     "type": "WorkRecord", 
+    "creator": [
+        "obj_3499", 
+        "obj_3500"
+    ], 
     "subject": [
         "obj_3493", 
         "obj_3494", 
@@ -14280,12 +14468,12 @@
         "NjP"
     ], 
     "dftag_5003": "Vols. 1-2", 
-    "name": [
+    "creator": [
+        "obj_3501", 
         "obj_3506", 
         "obj_3507", 
         "obj_3508"
     ], 
-    "creator": "obj_3501", 
     "dftag_040c": "SMFRE", 
     "title": "Fugaku hyakkei /", 
     "dftag_2456": "880-02", 
@@ -14317,11 +14505,11 @@
     "dftag_040a": "NNC", 
     "subject": "obj_3505"
 },{
-    "name": [
+    "creator": [
+        "obj_3509", 
         "obj_3517", 
         "obj_3518"
     ], 
-    "creator": "obj_3509", 
     "dftag_040c": "SM7", 
     "title": "Itako zekkush\u016b /", 
     "dftag_2456": "880-02", 
@@ -14357,12 +14545,12 @@
 },{
     "dftag_040b": "eng", 
     "lcCallNumber": "PL762.K9", 
-    "name": [
+    "title": "Ky\u014dgetsub\u014d /", 
+    "dftag_040c": "CLU", 
+    "creator": [
         "obj_3523", 
         "obj_3524"
     ], 
-    "title": "Ky\u014dgetsub\u014d /", 
-    "dftag_040c": "CLU", 
     "dftag_2456": "880-01", 
     "label": "_481", 
     "note": [
@@ -14383,11 +14571,11 @@
     "dftag_040a": "CLU", 
     "subject": "obj_3522"
 },{
-    "name": [
+    "creator": [
+        "obj_3525", 
         "obj_3535", 
         "obj_3536"
     ], 
-    "creator": "obj_3525", 
     "dftag_040c": "IUL", 
     "title": "Ehon mushi erami /", 
     "dftag_2456": "880-02", 
@@ -14423,11 +14611,11 @@
         "880-03", 
         "880-04"
     ], 
-    "name": [
+    "creator": [
+        "obj_3537", 
         "obj_3546", 
         "obj_3547"
     ], 
-    "creator": "obj_3537", 
     "dftag_040c": "SM7", 
     "title": "Ehon ky\u014dka yama mata yama /", 
     "dftag_2456": "880-02", 
@@ -14462,8 +14650,10 @@
     ]
 },{
     "lcCallNumber": "NE1325.K5", 
-    "name": "obj_3560", 
-    "creator": "obj_3548", 
+    "creator": [
+        "obj_3548", 
+        "obj_3560"
+    ], 
     "dftag_040c": "EAU", 
     "title": "Mushirui gafu /", 
     "label": "_484", 
@@ -14496,7 +14686,8 @@
     "lcCallNumber": "NA9340.R8", 
     "titleRemainder": "ex simulachris quae in columna eiusdem Romae visuntur collecta /", 
     "dftag_5005": "NjP", 
-    "name": [
+    "creator": [
+        "obj_3561", 
         "obj_3567", 
         "obj_3568", 
         "obj_3569", 
@@ -14506,7 +14697,6 @@
         "obj_3573", 
         "obj_3574"
     ], 
-    "creator": "obj_3561", 
     "dftag_040c": "EQO", 
     "title": "Historia vtriusque belli Dacici a Traiano Caesare gesti :", 
     "label": "_485", 
@@ -14544,14 +14734,14 @@
     "dftag_5003": "SAX copy:", 
     "dftag_5005": "NjP", 
     "dftag_040e": "dcrb", 
-    "creator": "obj_3575", 
-    "dftag_040c": "DDO", 
-    "title": "Trait\u00e9 du iardinage selon les raisons de la nature et de l'art :", 
-    "name": [
+    "creator": [
+        "obj_3575", 
         "obj_3580", 
         "obj_3581", 
         "obj_3582"
     ], 
+    "dftag_040c": "DDO", 
+    "title": "Trait\u00e9 du iardinage selon les raisons de la nature et de l'art :", 
     "label": "_486", 
     "note": [
         "Caption title: Traitt\u00e9 du iardinage selon les raisons de la nature et de l'art.", 
@@ -14623,11 +14813,11 @@
     ], 
     "titleRemainder": "si juan /", 
     "dftag_2466": "880-03", 
-    "name": [
+    "creator": [
+        "obj_3591", 
         "obj_3597", 
         "obj_3598"
     ], 
-    "creator": "obj_3591", 
     "dftag_040c": "PULEA", 
     "title": "Yi jing :", 
     "dftag_2456": "880-02", 
@@ -14657,11 +14847,11 @@
     "dftag_5005": "NjP-G", 
     "titleRemainder": "wu juan /", 
     "dftag_2466": "880-03", 
-    "name": [
+    "creator": [
+        "obj_3600", 
         "obj_3607", 
         "obj_3608"
     ], 
-    "creator": "obj_3600", 
     "dftag_040c": "PULEA", 
     "title": "Baoyizi you ke zhi zhang yi gao :", 
     "dftag_2456": "880-02", 
@@ -14687,8 +14877,10 @@
 },{
     "dftag_5005": "NjP-G", 
     "titleRemainder": "shi juan /", 
-    "name": "obj_3617", 
-    "creator": "obj_3610", 
+    "creator": [
+        "obj_3610", 
+        "obj_3617"
+    ], 
     "dftag_040c": "PULEA", 
     "title": "Wai ke xin fa :", 
     "dftag_2456": "880-02", 
@@ -14717,12 +14909,12 @@
         "880-03", 
         "880-04"
     ], 
-    "name": [
+    "creator": [
+        "obj_3619", 
         "obj_3627", 
         "obj_3628", 
         "obj_3629"
     ], 
-    "creator": "obj_3619", 
     "dftag_040c": "PULEA", 
     "title": "Xin juan Yunlin shen gou :", 
     "dftag_2456": "880-02", 
@@ -14755,12 +14947,12 @@
         "880-02", 
         "880-03"
     ], 
-    "name": [
+    "title": "Xin ke yi heng :", 
+    "dftag_040c": "PULEA", 
+    "creator": [
         "obj_3636", 
         "obj_3637"
     ], 
-    "title": "Xin ke yi heng :", 
-    "dftag_040c": "PULEA", 
     "dftag_2456": "880-01", 
     "label": "_492", 
     "note": "In case.", 
@@ -14786,12 +14978,12 @@
 },{
     "dftag_5005": "NjP-G", 
     "titleRemainder": "liu juan.", 
-    "name": [
+    "title": "Yi yao ji lan :", 
+    "dftag_040c": "PULEA", 
+    "creator": [
         "obj_3643", 
         "obj_3644"
     ], 
-    "title": "Yi yao ji lan :", 
-    "dftag_040c": "PULEA", 
     "dftag_2456": "880-01", 
     "label": "_493", 
     "note": "In case.", 
@@ -14843,11 +15035,11 @@
     "dftag_5005": "NjP-G", 
     "titleRemainder": "si juan /", 
     "dftag_2466": "880-03", 
-    "name": [
+    "creator": [
+        "obj_3654", 
         "obj_3660", 
         "obj_3661"
     ], 
-    "creator": "obj_3654", 
     "dftag_040c": "PULEA", 
     "title": "Xin qie yun lin shen gou :", 
     "dftag_2456": "880-02", 
@@ -14875,11 +15067,11 @@
         "NjP-G"
     ], 
     "titleRemainder": "[shi yi juan] /", 
-    "name": [
+    "creator": [
+        "obj_3663", 
         "obj_3669", 
         "obj_3670"
     ], 
-    "creator": "obj_3663", 
     "dftag_040c": "PULEA", 
     "title": "Yi xue xin jing lu :", 
     "dftag_2456": "880-02", 
@@ -14907,14 +15099,14 @@
     "dftag_5005": "NjP-G", 
     "titleRemainder": "shi juan /", 
     "dftag_2466": "880-03", 
-    "name": [
+    "creator": [
+        "obj_3672", 
         "obj_3679", 
         "obj_3680", 
         "obj_3681", 
         "obj_3682", 
         "obj_3683"
     ], 
-    "creator": "obj_3672", 
     "dftag_040c": "CStRLIN", 
     "title": "Ding bu Ming yi zhi zhang :", 
     "dftag_2456": "880-02", 
@@ -14943,8 +15135,10 @@
         "880-03", 
         "880-04"
     ], 
-    "name": "obj_3693", 
-    "creator": "obj_3686", 
+    "creator": [
+        "obj_3686", 
+        "obj_3693"
+    ], 
     "dftag_040c": "PULEA", 
     "title": "Miao yi zhai yi xue zheng yin zhong zi bian :", 
     "dftag_2456": "880-02", 
@@ -14979,13 +15173,13 @@
         "880-04", 
         "880-05"
     ], 
-    "name": [
+    "title": "Xin ke Shang han liu shu zuan yao bian yi :", 
+    "dftag_040c": "PULEA", 
+    "creator": [
         "obj_3700", 
         "obj_3701", 
         "obj_3702"
     ], 
-    "title": "Xin ke Shang han liu shu zuan yao bian yi :", 
-    "dftag_040c": "PULEA", 
     "dftag_2456": "880-01", 
     "label": "_499", 
     "note": "In case.", 
@@ -15013,11 +15207,11 @@
     ]
 },{
     "dftag_5005": "NjP-G", 
-    "name": [
+    "creator": [
+        "obj_3705", 
         "obj_3712", 
         "obj_3713"
     ], 
-    "creator": "obj_3705", 
     "dftag_040c": "PULEA", 
     "title": "Yi jia xin fa /", 
     "dftag_2456": "880-02", 
@@ -15082,11 +15276,11 @@
     "language": "chijpn", 
     "title": "Kakke ruih\u014d /", 
     "dftag_040c": "DNLM", 
-    "dftag_2456": "880-01", 
-    "name": [
+    "creator": [
         "obj_3734", 
         "obj_3735"
     ], 
+    "dftag_2456": "880-01", 
     "label": "_503", 
     "note": [
         "In kanbun and Chinese, with no Japanese reading marks.", 
@@ -15112,6 +15306,7 @@
     ]
 },{
     "titleRemainder": "liu juan /", 
+    "creator": "obj_3743", 
     "id": "work_504", 
     "dftag_035a": "(CStRLIN)NJPX05-B14249", 
     "dftag_040c": "NjP-G", 
@@ -15138,7 +15333,6 @@
     "dftag_040a": "NjP-G", 
     "dftag_245c": "Baisongjushi zeng ding.", 
     "type": "WorkRecord", 
-    "name": "obj_3743", 
     "dftag_5056": "880-06", 
     "dftag_505t": "Fu you bian /", 
     "dftag_2456": "880-01", 
@@ -15150,9 +15344,9 @@
 },{
     "dftag_5005": "NjP-G", 
     "titleRemainder": "[er juan] /", 
-    "name": "obj_3751", 
     "title": "Shang han lun pang xun :", 
     "dftag_040c": "NjP-G", 
+    "creator": "obj_3751", 
     "dftag_2456": "880-01", 
     "label": "_505", 
     "note": "In case with: Bihua yi jing (C83/M30), San jia yi an he ke (C83/M31), and Fei bing wen da (C83/M33).", 
@@ -15170,11 +15364,11 @@
     ]
 },{
     "titleRemainder": "shi er juan /", 
-    "name": [
+    "creator": [
+        "obj_3753", 
         "obj_3761", 
         "obj_3762"
     ], 
-    "creator": "obj_3753", 
     "dftag_040c": "NjP-G", 
     "title": "Bian zheng bing jian :", 
     "dftag_2456": "880-02", 
@@ -15193,11 +15387,11 @@
 },{
     "titleRemainder": "ba juan /", 
     "dftag_2466": "880-03", 
-    "name": [
+    "creator": [
+        "obj_3764", 
         "obj_3772", 
         "obj_3773"
     ], 
-    "creator": "obj_3764", 
     "dftag_040c": "PULEA", 
     "title": "Nie shi dou men fang zhi :", 
     "dftag_2456": "880-02", 
@@ -15222,12 +15416,12 @@
 },{
     "titleRemainder": "[er juan] /", 
     "dftag_2466": "880-02", 
-    "name": [
+    "title": "Dou zhen jing yan ji :", 
+    "dftag_040c": "NjP-G", 
+    "creator": [
         "obj_3780", 
         "obj_3781"
     ], 
-    "title": "Dou zhen jing yan ji :", 
-    "dftag_040c": "NjP-G", 
     "dftag_2456": "880-01", 
     "label": "_508", 
     "instance": "instance_508", 
@@ -15245,9 +15439,9 @@
 },{
     "dftag_5005": "NjP-G", 
     "titleRemainder": "shi liu juan /", 
-    "name": "obj_3787", 
     "title": "Yi shu :", 
     "dftag_040c": "NjP-G", 
+    "creator": "obj_3787", 
     "dftag_2456": "880-01", 
     "label": "_509", 
     "note": "In 4 cases.", 
@@ -15260,13 +15454,13 @@
     "subject": "obj_3786"
 },{
     "dftag_5005": "NjP-G", 
-    "name": [
+    "creator": [
+        "obj_3789", 
         "obj_3794", 
         "obj_3795", 
         "obj_3796", 
         "obj_3797"
     ], 
-    "creator": "obj_3789", 
     "dftag_040c": "UkLSOA", 
     "title": "Mai yao lian zhu yao xing shi wu kao /", 
     "dftag_2456": "880-02", 
@@ -15282,9 +15476,9 @@
     "subject": "obj_3793"
 },{
     "titleRemainder": "er juan, xu ji shi juan /", 
-    "name": "obj_3804", 
     "title": "Bu yao liang fang :", 
     "dftag_040c": "NjP-G", 
+    "creator": "obj_3804", 
     "dftag_2456": "880-01", 
     "label": "_511", 
     "instance": "instance_511", 
@@ -15300,7 +15494,6 @@
 },{
     "dftag_505r": "L\u00fc Benzhong zhuan.", 
     "dftag_5056": "880-03", 
-    "name": "obj_3810", 
     "title": "Bao chi hui bian /", 
     "dftag_040c": "PULEA", 
     "dftag_505t": "Tong meng xun /", 
@@ -15308,6 +15501,7 @@
     "label": "_512", 
     "note": "Hui: unicode value 5F5A.", 
     "instance": "instance_512", 
+    "creator": "obj_3810", 
     "dftag_245c": "Zhu Zhizhen ji.", 
     "dftag_035a": [
         "(OCoLC)ocn153568716", 
@@ -15321,8 +15515,10 @@
     "subject": "obj_3809"
 },{
     "titleRemainder": "[san juan] /", 
-    "name": "obj_3818", 
-    "creator": "obj_3812", 
+    "creator": [
+        "obj_3812", 
+        "obj_3818"
+    ], 
     "dftag_040c": "DNLM", 
     "title": "Huo you xin shu :", 
     "dftag_2456": "880-02", 
@@ -15360,12 +15556,12 @@
     "subject": "obj_3824"
 },{
     "titleRemainder": "ba juan /", 
-    "name": [
+    "title": "Wai ke ji ye :", 
+    "dftag_040c": "NjP-G", 
+    "creator": [
         "obj_3830", 
         "obj_3831"
     ], 
-    "title": "Wai ke ji ye :", 
-    "dftag_040c": "NjP-G", 
     "dftag_2456": "880-01", 
     "label": "_515", 
     "instance": "instance_515", 
@@ -15377,9 +15573,9 @@
     "subject": "obj_3829"
 },{
     "titleRemainder": "si juan /", 
-    "name": "obj_3837", 
     "title": "Sha zheng hui yao :", 
     "dftag_040c": "NjP-G", 
+    "creator": "obj_3837", 
     "dftag_2456": "880-01", 
     "label": "_516", 
     "note": [
@@ -15396,12 +15592,12 @@
 },{
     "titleRemainder": "5 juan /", 
     "dftag_2466": "880-03", 
-    "name": [
+    "creator": [
+        "obj_3839", 
         "obj_3846", 
         "obj_3847", 
         "obj_3848"
     ], 
-    "creator": "obj_3839", 
     "dftag_040c": "DNLM", 
     "title": "Liang peng hui ji jing yan shen fang :", 
     "dftag_2456": "880-02", 
@@ -15421,9 +15617,9 @@
     ]
 },{
     "dftag_5005": "NjP-G", 
-    "name": "obj_3854", 
     "title": "Yi shou yan ke.", 
     "dftag_040c": "UkLSOA", 
+    "creator": "obj_3854", 
     "dftag_2456": "880-01", 
     "label": "_518", 
     "note": "In case with: Wan shi dou zhen qi shu (C93/1821b).", 
@@ -15441,9 +15637,9 @@
     ]
 },{
     "dftag_5005": "NjP-G", 
-    "name": "obj_3859", 
     "title": "Wan shi dou zhen qi shu .", 
     "dftag_040c": "NjP-G", 
+    "creator": "obj_3859", 
     "dftag_2456": "880-01", 
     "label": "_519", 
     "note": "In case with: Yi shou yan ke (C93/1821a). Gai shu you Xianfeng 5 nian Fan Zhizhong xu.", 
@@ -15478,9 +15674,9 @@
     ]
 },{
     "titleRemainder": "[er juan] /", 
-    "name": "obj_3873", 
     "title": "Bian yong liang fang :", 
     "dftag_040c": "NjP-G", 
+    "creator": "obj_3873", 
     "dftag_2456": "880-01", 
     "label": "_521", 
     "instance": "instance_521", 
@@ -15528,8 +15724,10 @@
 },{
     "lcCallNumber": "C83/M33", 
     "dftag_5005": "NjP-G", 
-    "name": "obj_3894", 
-    "creator": "obj_3888", 
+    "creator": [
+        "obj_3888", 
+        "obj_3894"
+    ], 
     "dftag_040c": "NjP-G", 
     "title": "Fei bing wen da /", 
     "dftag_2456": "880-02", 
@@ -15598,8 +15796,10 @@
 },{
     "lcCallNumber": "PR1173", 
     "dftag_0359": "CCW0980TS", 
-    "name": "obj_3919", 
-    "creator": "obj_3915", 
+    "creator": [
+        "obj_3915", 
+        "obj_3919"
+    ], 
     "lccn": "14016811", 
     "dftag_040c": "CarP", 
     "title": "The works of Virgil /", 
@@ -15616,9 +15816,11 @@
 },{
     "dftag_5005": "NjP", 
     "titleRemainder": "with English notes, critical and explanatory, a metrical clavis, and an historical, geographical, and mythological index /", 
-    "name": "obj_3928", 
     "language": "lateng", 
-    "creator": "obj_3921", 
+    "creator": [
+        "obj_3921", 
+        "obj_3928"
+    ], 
     "dftag_040c": "WSU", 
     "title": "The Aeneid of Virgil :", 
     "label": "_529", 
@@ -15642,9 +15844,11 @@
         "Princeton's copy defective lacks t.p."
     ], 
     "dftag_0359": "CLF6712TS", 
-    "name": "obj_3935", 
     "language": "eng", 
-    "creator": "obj_3931", 
+    "creator": [
+        "obj_3931", 
+        "obj_3935"
+    ], 
     "lccn": "17011672", 
     "dftag_040c": "SOI", 
     "title": "The Odes, Satyrs, and Epistles of Horace.", 
@@ -15659,8 +15863,10 @@
     "dftag_040a": "DLC"
 },{
     "dftag_0359": "CNR5492TS", 
-    "name": "obj_3941", 
-    "creator": "obj_3936", 
+    "creator": [
+        "obj_3936", 
+        "obj_3941"
+    ], 
     "dftag_040c": "OSU", 
     "title": "Livy.", 
     "label": "_531", 
@@ -15786,12 +15992,12 @@
 },{
     "note": "\"Books I, II & III were translated by Sir Thomas Urquhart. The translation of books I & II was first published in 1653; that of book III in 1693. The version of books IV & V is by Peter Le Motteux, and was first published in 1694\".", 
     "dftag_0359": "CPE9164TS", 
-    "name": [
+    "language": "eng", 
+    "creator": [
+        "obj_3981", 
         "obj_3986", 
         "obj_3987"
     ], 
-    "language": "eng", 
-    "creator": "obj_3981", 
     "dftag_040c": "NDA", 
     "title": "The lives, heroic deeds & sayings of Gargantua & his son Pantagruel/", 
     "label": "_539", 
@@ -15806,9 +16012,11 @@
     "dftag_040a": "NDA"
 },{
     "dftag_0359": "CET7210TS", 
-    "name": "obj_3994", 
     "language": "eng", 
-    "creator": "obj_3988", 
+    "creator": [
+        "obj_3988", 
+        "obj_3994"
+    ], 
     "dftag_040c": "CPS", 
     "title": "The life of Pythagoras /", 
     "label": "_540", 
@@ -15901,8 +16109,10 @@
         "NjP"
     ], 
     "dftag_0359": "CPR7914TS", 
-    "name": "obj_4026", 
-    "creator": "obj_4021", 
+    "creator": [
+        "obj_4021", 
+        "obj_4026"
+    ], 
     "dftag_040c": "GPM", 
     "title": "[British theatre].", 
     "label": "_546", 
@@ -15925,8 +16135,10 @@
     "lcCallNumber": "R773", 
     "titleRemainder": "comprising biographical sketches of all the eminent physicians whose names are recorded in the Annals ...", 
     "dftag_0359": "ACR6654TS", 
-    "name": "obj_4032", 
-    "creator": "obj_4027", 
+    "creator": [
+        "obj_4027", 
+        "obj_4032"
+    ], 
     "lccn": "07029794 //r843", 
     "dftag_040c": "ICU", 
     "title": "The roll of the Royal College of Physicians of London,", 
@@ -16031,7 +16243,11 @@
     "lcCallNumber": "JK154", 
     "titleRemainder": "a collection of essays, written in favour of the new Constitution, as agreed upon by the Federal convention, September 17, 1787, in two volumes.", 
     "dftag_0359": "CLL8419TS", 
-    "name": [
+    "dftag_040e": "dcrb", 
+    "title": "The federalist:", 
+    "lccn": "09021562 //r98", 
+    "dftag_040c": "DLC", 
+    "creator": [
         "obj_4063", 
         "obj_4064", 
         "obj_4065", 
@@ -16040,10 +16256,6 @@
         "obj_4068", 
         "obj_4069"
     ], 
-    "dftag_040e": "dcrb", 
-    "title": "The federalist:", 
-    "lccn": "09021562 //r98", 
-    "dftag_040c": "DLC", 
     "label": "_552", 
     "note": [
         "First complete edition. cf. The Foederalist ... [ed.] by Henry B. Dawson. New York, 1863. Introduction: p. xxiii, lv-lxiii.", 
@@ -16076,7 +16288,6 @@
     "lcCallNumber": "B1", 
     "dftag_0359": "ACA3550TS", 
     "dftag_362a": "Vol. 1, no. 1 (Jan. 1892)-", 
-    "name": "obj_4078", 
     "title": "The philosophical review.", 
     "lccn": "13006464 //r862", 
     "dftag_040c": "MnMULS", 
@@ -16089,6 +16300,7 @@
         "Issue for Apr. 1995 misnumbered, but constitutes v. 104, no. 2."
     ], 
     "instance": "instance_554", 
+    "creator": "obj_4078", 
     "dftag_035a": [
         "(OCoLC)1695555", 
         "(CStRLIN)NJPG87-S904"
@@ -16189,12 +16401,12 @@
     "subject": "obj_4102"
 },{
     "dftag_0359": "CPD7494TS", 
-    "name": [
+    "creator": [
+        "obj_4103", 
         "obj_4107", 
         "obj_4108", 
         "obj_4109"
     ], 
-    "creator": "obj_4103", 
     "formatedContentsNote": "1.-2. bd. Oden.--3.-6. bd. Messias.--7. bd. Oden. Geistliche lieder. Epigramme.--8. bd. Der Tod Adams. Hermanns schlacht.--9. bd. Salomo. Hermann und die f\u00fcrsten.--10. bd. David. Hermanns tod.--11. bd. Hinterlassne schriften, von Margareta Klopstock.--12. bd. Die deutsche gelehrtenrepublik.--13.-18. bd. S\u00e4mmtliche sprachwissenschaftliche und \u00e4sthetische schriften. Hrsg. von A.L. Bach und A.R.C. Spindler.", 
     "dftag_040c": "CUY", 
     "title": "Klopstocks s\u00e4mmtliche werke ...", 
@@ -16347,11 +16559,11 @@
     "lcCallNumber": "DS708", 
     "titleRemainder": "...taken chiefly from the papers of His Excellency the Earl of Macartney ... Sir Erasmus Gower ... and of other gentlemen in the several departments of the embassy,", 
     "dftag_0359": "CLV9190TS", 
-    "name": [
+    "creator": [
+        "obj_4153", 
         "obj_4161", 
         "obj_4162"
     ], 
-    "creator": "obj_4153", 
     "lccn": "a 32001318", 
     "dftag_040c": "MNU", 
     "title": "An authentic account of an embassy from the King of Great Britain to the Emperor of China", 
@@ -16390,11 +16602,11 @@
     "lcCallNumber": "DC611.P985", 
     "titleRemainder": "53 cartes, 19 plans, 6 vues \u00e0 vol d'oiseau et 6 panoramas.", 
     "dftag_0359": "CND2788TS", 
-    "name": [
+    "creator": [
+        "obj_4169", 
         "obj_4174", 
         "obj_4175"
     ], 
-    "creator": "obj_4169", 
     "lccn": "20002475", 
     "dftag_040c": "SMI", 
     "title": "Pyr\u00e9n\u00e9es.", 
@@ -16439,8 +16651,10 @@
     "subject": "obj_4186"
 },{
     "dftag_0359": "CPG9890TS", 
-    "name": "obj_4191", 
-    "creator": "obj_4187", 
+    "creator": [
+        "obj_4187", 
+        "obj_4191"
+    ], 
     "dftag_040c": "STF", 
     "title": "C. M. Wielands s\u00e4mmtliche Werke...", 
     "label": "_575", 
@@ -16473,7 +16687,10 @@
     "dftag_490v": "v. 55, no. 1]", 
     "dftag_0359": "CET7505TS", 
     "seriesStatement": "[Hazlitt tracts,", 
-    "creator": "obj_4197", 
+    "creator": [
+        "obj_4197", 
+        "obj_4201"
+    ], 
     "lccn": "23004850", 
     "dftag_040c": "RBN", 
     "title": "Some account of the mss. and printed books in the library of St. Mary Magdalen College, Oxford.", 
@@ -16488,8 +16705,7 @@
     "dftag_040d": "PUL", 
     "type": "WorkRecord", 
     "id": "work_577", 
-    "dftag_040a": "DLC", 
-    "name": "obj_4201"
+    "dftag_040a": "DLC"
 },{
     "titleRemainder": "with portraits and illustrations /", 
     "dftag_0359": "CET7497TS", 
@@ -16554,8 +16770,10 @@
     "lcCallNumber": "DK254.R3", 
     "titleRemainder": "(Istoricheskai\ufe20a\ufe21 spravka).", 
     "dftag_0359": "ABG2187TS", 
-    "name": "obj_4221", 
-    "creator": "obj_4218", 
+    "creator": [
+        "obj_4218", 
+        "obj_4221"
+    ], 
     "lccn": "27001598", 
     "dftag_040c": "NjP", 
     "title": "Rasputin i Ross\u012bi\ufe20a\ufe21. :", 
@@ -16614,7 +16832,10 @@
 },{
     "dftag_0359": "CET6961TS", 
     "seriesStatement": "M\u00e9moires et souvenirs", 
-    "creator": "obj_4231", 
+    "creator": [
+        "obj_4231", 
+        "obj_4235"
+    ], 
     "dftag_040c": "YSM", 
     "title": "Le Village,", 
     "label": "_584", 
@@ -16625,12 +16846,13 @@
     "dftag_040d": "PUL", 
     "type": "WorkRecord", 
     "id": "work_584", 
-    "dftag_040a": "YSM", 
-    "name": "obj_4235"
+    "dftag_040a": "YSM"
 },{
     "dftag_0359": "CEV4423TS", 
-    "name": "obj_4245", 
-    "creator": "obj_4237", 
+    "creator": [
+        "obj_4237", 
+        "obj_4245"
+    ], 
     "dftag_040c": "DRB", 
     "title": "Goethe und Schiller in Briefen /", 
     "label": "_585", 
@@ -16653,13 +16875,13 @@
     ]
 },{
     "dftag_0359": "CKT9315TS", 
-    "name": [
+    "title": "The Tatler; or, Lucubrations of Isaac Bickerstaff, Esq.", 
+    "dftag_040c": "IXA", 
+    "creator": [
         "obj_4250", 
         "obj_4251", 
         "obj_4252"
     ], 
-    "title": "The Tatler; or, Lucubrations of Isaac Bickerstaff, Esq.", 
-    "dftag_040c": "IXA", 
     "label": "_586", 
     "note": [
         "271 numbers, originally issued in folio, three times a week, April 12, 1709, to January 2, 1710 [i.e. 1711] about 180 numbers were by Steele, who was also the projector; 42 by Addison and 36 by them jointly.", 
@@ -16802,13 +17024,13 @@
     ]
 },{
     "dftag_0359": "CKT9315TS", 
-    "name": [
+    "title": "The Tatler; or, Lucubrations of Isaac Bickerstaff, Esq.", 
+    "dftag_040c": "IXA", 
+    "creator": [
         "obj_4295", 
         "obj_4296", 
         "obj_4297"
     ], 
-    "title": "The Tatler; or, Lucubrations of Isaac Bickerstaff, Esq.", 
-    "dftag_040c": "IXA", 
     "label": "_593", 
     "note": [
         "271 numbers, originally issued in folio, three times a week, April 12, 1709, to January 2, 1710 [i.e. 1711] about 180 numbers were by Steele, who was also the projector; 42 by Addison and 36 by them jointly.", 
@@ -16823,13 +17045,13 @@
     "dftag_040a": "IXA"
 },{
     "dftag_0359": "CKT9315TS", 
-    "name": [
+    "title": "The Tatler; or, Lucubrations of Isaac Bickerstaff, Esq.", 
+    "dftag_040c": "IXA", 
+    "creator": [
         "obj_4302", 
         "obj_4303", 
         "obj_4304"
     ], 
-    "title": "The Tatler; or, Lucubrations of Isaac Bickerstaff, Esq.", 
-    "dftag_040c": "IXA", 
     "label": "_594", 
     "note": [
         "271 numbers, originally issued in folio, three times a week, April 12, 1709, to January 2, 1710 [i.e. 1711] about 180 numbers were by Steele, who was also the projector; 42 by Addison and 36 by them jointly.", 
@@ -16880,12 +17102,12 @@
     ]
 },{
     "dftag_0359": "ABU9842TS", 
-    "name": [
+    "title": "Napoleonkalender und Gedenkbuch der Befreiungskriege auf das Jahr 1812 /", 
+    "dftag_040c": "NjP", 
+    "creator": [
         "obj_4320", 
         "obj_4321"
     ], 
-    "title": "Napoleonkalender und Gedenkbuch der Befreiungskriege auf das Jahr 1812 /", 
-    "dftag_040c": "NjP", 
     "label": "_597", 
     "instance": "instance_597", 
     "dftag_245c": "herausgegeben von Friedrich und Gertrude Kircheisen.", 
@@ -17044,8 +17266,10 @@
     "subject": "obj_4364"
 },{
     "dftag_0359": "CPG9890TS", 
-    "name": "obj_4369", 
-    "creator": "obj_4365", 
+    "creator": [
+        "obj_4365", 
+        "obj_4369"
+    ], 
     "dftag_040c": "STF", 
     "title": "C. M. Wielands s\u00e4mmtliche Werke...", 
     "label": "_605", 
@@ -17061,8 +17285,10 @@
     "lcCallNumber": "CR1619", 
     "titleRemainder": "comprising a registry of all armorial bearings from the earliest to the present time, including the late grants by the College of arms.", 
     "dftag_0359": "ABS6865TS", 
-    "name": "obj_4375", 
-    "creator": "obj_4370", 
+    "creator": [
+        "obj_4370", 
+        "obj_4375"
+    ], 
     "lccn": "17000461", 
     "dftag_040c": "NhD", 
     "title": "Encyclop\u00e6dia of heraldry, or General armory of England, Scotland and Ireland,", 
@@ -17102,11 +17328,11 @@
     "lcCallNumber": "D163.A3", 
     "titleRemainder": "que part\u00edr\u00e3o do Escalda para a Terra Santa no anno de 1189. Escrita em latim por hum dos mesmos cruzados.", 
     "dftag_0359": "ABK2018TS", 
-    "name": "obj_4386", 
     "language": "porlat", 
     "title": "Rela\u00e7\u00e3o da derrota, naval fa\u00e7anhas, e successos dos cruzados", 
     "lccn": "44015039", 
     "dftag_040c": "NjP", 
+    "creator": "obj_4386", 
     "label": "_608", 
     "note": [
         "Portuguese and Latin.", 
@@ -17203,12 +17429,12 @@
 },{
     "titleRemainder": "donsko\u012d sbornik : trudy li\ufe20u\ufe21bitele\u012d donskago proshlago i sovremennago byta : vypusk 3-\u012d /", 
     "dftag_0359": "ACV8259TS", 
-    "name": [
+    "title": "Chasovo\u012d :", 
+    "dftag_040c": "NjP", 
+    "creator": [
         "obj_4414", 
         "obj_4415"
     ], 
-    "title": "Chasovo\u012d :", 
-    "dftag_040c": "NjP", 
     "label": "_613", 
     "instance": "instance_613", 
     "dftag_245c": "izdan\u012be F. Trailina.", 
@@ -17314,9 +17540,9 @@
 },{
     "titleRemainder": "ex scriptis Societati Regiae Scientiarum exhibitis.", 
     "dftag_0359": "CJN2100TS", 
-    "name": "obj_4445", 
     "title": "Miscellanea berolinensia ad incrementum scientiarum :", 
     "dftag_040c": "NjP", 
+    "creator": "obj_4445", 
     "dftag_310a": "Irregular", 
     "label": "_618", 
     "note": "Imprint varies.", 
@@ -17376,8 +17602,10 @@
     "subject": "obj_4460"
 },{
     "dftag_0359": "CEY9916TS", 
-    "name": "obj_4466", 
-    "creator": "obj_4461", 
+    "creator": [
+        "obj_4461", 
+        "obj_4466"
+    ], 
     "lccn": "35022529", 
     "dftag_040c": "MAA", 
     "title": "Dialogus de gestis sanctorum fratrum minorum /", 
@@ -17510,9 +17738,9 @@
 },{
     "dftag_0359": "CHC7061TS", 
     "dftag_362a": "1.-4. Jahrg.; 1912-1915.", 
-    "name": "obj_4511", 
     "title": "Das Monistische Jahrhundert.", 
     "dftag_040c": "GUA", 
+    "creator": "obj_4511", 
     "label": "_630", 
     "note": [
         "Subtitle varies.", 
@@ -17604,12 +17832,12 @@
     "titleRemainder": "translated by William Whiston.", 
     "dftag_0359": "CNM8250TS", 
     "formatedContentsNote": "v. 1 Containing five books of the antiquities of the Jews. To which are prefixed three dissertations -- v. 2. Containing six books of the antiquities of the Jews -- v. 3. Containing five books of the antiquities of the Jews -- v. 4. Containing four books of the antiquities of the Jews. With the life of Josephus -- v. 5. Containing four books of the Jewish war -- v. 6. Containing three books of the Jewish war.", 
-    "name": [
+    "creator": [
+        "obj_4535", 
         "obj_4542", 
         "obj_4543", 
         "obj_4544"
     ], 
-    "creator": "obj_4535", 
     "lccn": "03013527", 
     "dftag_040c": "AQM", 
     "title": "The genuine works of Flavius Josephus /", 
@@ -17647,7 +17875,10 @@
     "titleRemainder": "Recepte v\u00e9ritable.", 
     "dftag_0359": "CFB1487TS", 
     "seriesStatement": "Bibliotheca romanica 279/281. Biblioth\u00e8que fran\u00e7aise", 
-    "creator": "obj_4551", 
+    "creator": [
+        "obj_4551", 
+        "obj_4555"
+    ], 
     "dftag_040c": "OKU", 
     "title": "OEuvres de Bernard Palissy :", 
     "label": "_637", 
@@ -17660,8 +17891,7 @@
     "dftag_040d": "PUL", 
     "type": "WorkRecord", 
     "id": "work_637", 
-    "dftag_040a": "OKU", 
-    "name": "obj_4555"
+    "dftag_040a": "OKU"
 },{
     "dftag_0359": "CFB1027TS", 
     "creator": "obj_4556", 
@@ -17737,8 +17967,10 @@
     "titleRemainder": "a series of amusing and instructive experiments, which may be performed with ease, safety, success, and economy ; to which is added, The romance of chemistry : an inquiry into the fallacies of the prevailing theory of chemistry : with a new theory and a new nomenclature /", 
     "dftag_0359": "CEY0509TS", 
     "dftag_0822": "20", 
-    "name": "obj_4583", 
-    "creator": "obj_4578", 
+    "creator": [
+        "obj_4578", 
+        "obj_4583"
+    ], 
     "lccn": "90229659 //r93", 
     "dftag_040c": "DLC", 
     "title": "Chemical recreations :", 
@@ -17770,8 +18002,10 @@
     "lcCallNumber": "DC130.S2", 
     "dftag_0359": "CEX8567TS", 
     "seriesStatement": "Collection Nelson", 
-    "name": "obj_4595", 
-    "creator": "obj_4589", 
+    "creator": [
+        "obj_4589", 
+        "obj_4595"
+    ], 
     "lccn": "20012234", 
     "dftag_040c": "KLG", 
     "title": "La cour de Louis XIV;", 
@@ -17812,9 +18046,9 @@
 },{
     "dftag_0359": "CHC7061TS", 
     "dftag_362a": "1.-4. Jahrg.; 1912-1915.", 
-    "name": "obj_4607", 
     "title": "Das Monistische Jahrhundert.", 
     "dftag_040c": "GUA", 
+    "creator": "obj_4607", 
     "label": "_646", 
     "note": [
         "Subtitle varies.", 
@@ -17871,7 +18105,6 @@
         "Each volume has added t.p.", 
         "Pub. also under title \"Ante-Nicene fathers\"."
     ], 
-    "name": "obj_4625", 
     "language": "eng", 
     "title": "Ante-Nicene Christian library :", 
     "formatedContentsNote": [
@@ -17879,6 +18112,7 @@
         "(cont.) v. 21. The works of Lactantius, v. 1 (1871) -- v. 22. The works of Lactantius, v. 2., together with the Testaments of the twelve patriarchs and fragments of the second and third centuries (1871) -- v. 23. Origen contra Celsum (1872) -- v. 24. Early liturgies and other documents (1872) -- v.25. Additional volume, containing early christian works discovered since the completion of the series, and selections from the Commentaries of Origen; ed. by A. Menzies. Edinburgh, 1897."
     ], 
     "dftag_040c": "NjP", 
+    "creator": "obj_4625", 
     "label": "_649", 
     "dftag_041h": "und", 
     "instance": "instance_649", 
@@ -17945,8 +18179,10 @@
     ]
 },{
     "dftag_0359": "CNR5492TS", 
-    "name": "obj_4648", 
-    "creator": "obj_4643", 
+    "creator": [
+        "obj_4643", 
+        "obj_4648"
+    ], 
     "dftag_040c": "OSU", 
     "title": "Livy.", 
     "label": "_653", 
@@ -17961,8 +18197,10 @@
     "subject": "obj_4647"
 },{
     "dftag_0359": "CNR5492TS", 
-    "name": "obj_4655", 
-    "creator": "obj_4650", 
+    "creator": [
+        "obj_4650", 
+        "obj_4655"
+    ], 
     "dftag_040c": "OSU", 
     "title": "Livy.", 
     "label": "_654", 
@@ -18058,10 +18296,10 @@
 },{
     "dftag_0359": "CBB2473TS", 
     "dftag_362a": "1876-1887.", 
-    "name": "obj_4694", 
     "title": "Smull's legislative hand book.", 
     "lccn": "sn 87036396", 
     "dftag_040c": "NIC", 
+    "creator": "obj_4694", 
     "dftag_310a": "Biennial", 
     "label": "_659", 
     "note": [
@@ -18087,7 +18325,6 @@
     "lcCallNumber": "B1", 
     "dftag_0359": "ACA3550TS", 
     "dftag_362a": "Vol. 1, no. 1 (Jan. 1892)-", 
-    "name": "obj_4699", 
     "title": "The philosophical review.", 
     "lccn": "13006464 //r862", 
     "dftag_040c": "MnMULS", 
@@ -18100,6 +18337,7 @@
         "Issue for Apr. 1995 misnumbered, but constitutes v. 104, no. 2."
     ], 
     "instance": "instance_660", 
+    "creator": "obj_4699", 
     "dftag_035a": [
         "(OCoLC)1695555", 
         "(CStRLIN)NJPG87-S904"
@@ -18117,7 +18355,10 @@
         "Biblioth\u00e8que fran\u00e7aise", 
         "Bibliotheca romanica ;"
     ], 
-    "creator": "obj_4702", 
+    "creator": [
+        "obj_4702", 
+        "obj_4706"
+    ], 
     "lccn": "13019396 //r", 
     "dftag_040c": "MNU", 
     "title": "Odes /", 
@@ -18132,8 +18373,7 @@
     "dftag_040d": "PUL", 
     "type": "WorkRecord", 
     "id": "work_661", 
-    "dftag_040a": "MNU", 
-    "name": "obj_4706"
+    "dftag_040a": "MNU"
 },{
     "titleRemainder": "de la prison de Ham aux jardins de Wilhelmshoehe : r\u00e9gime de l'ordre.", 
     "dftag_0359": "CFA7932TS", 
@@ -18278,10 +18518,10 @@
     "titleRemainder": "being papers read before the Rhode Island Soldiers and Sailors Historical Society.", 
     "dftag_0359": "CKW4643TS", 
     "dftag_362a": "[1st]-7th ser.", 
-    "name": "obj_4760", 
     "title": "Personal narratives of events in the war of the rebellion,", 
     "lccn": "07034263", 
     "dftag_040c": "MHR", 
+    "creator": "obj_4760", 
     "label": "_668", 
     "note": [
         "Each vol. has also a distinctive title; 5th ser., 1894-99, and 7th ser., 1905-15 have also collective title-pages.", 
@@ -18305,10 +18545,10 @@
     "titleRemainder": "being papers read before the Rhode Island Soldiers and Sailors Historical Society.", 
     "dftag_0359": "CKW4643TS", 
     "dftag_362a": "[1st]-7th ser.", 
-    "name": "obj_4768", 
     "title": "Personal narratives of events in the war of the rebellion,", 
     "lccn": "07034263", 
     "dftag_040c": "MHR", 
+    "creator": "obj_4768", 
     "label": "_669", 
     "note": [
         "Each vol. has also a distinctive title; 5th ser., 1894-99, and 7th ser., 1905-15 have also collective title-pages.", 
@@ -18348,8 +18588,10 @@
     "dftag_040a": "NJM"
 },{
     "dftag_0359": "CPG9890TS", 
-    "name": "obj_4778", 
-    "creator": "obj_4774", 
+    "creator": [
+        "obj_4774", 
+        "obj_4778"
+    ], 
     "dftag_040c": "STF", 
     "title": "C. M. Wielands s\u00e4mmtliche Werke...", 
     "label": "_671", 
@@ -18365,7 +18607,6 @@
     "lcCallNumber": "B1", 
     "dftag_0359": "ACA3550TS", 
     "dftag_362a": "Vol. 1, no. 1 (Jan. 1892)-", 
-    "name": "obj_4783", 
     "title": "The philosophical review.", 
     "lccn": "13006464 //r862", 
     "dftag_040c": "MnMULS", 
@@ -18378,6 +18619,7 @@
         "Issue for Apr. 1995 misnumbered, but constitutes v. 104, no. 2."
     ], 
     "instance": "instance_672", 
+    "creator": "obj_4783", 
     "dftag_035a": [
         "(OCoLC)1695555", 
         "(CStRLIN)NJPG87-S904"
@@ -18613,9 +18855,9 @@
     "dftag_040a": "PUL"
 },{
     "dftag_0359": "CFB2419TS", 
-    "name": "obj_4861", 
     "title": "Handbook of Manchester /", 
     "dftag_040c": "CGU", 
+    "creator": "obj_4861", 
     "label": "_685", 
     "note": "Cover title: Handbook, British Association, Manchester, 1887.", 
     "instance": "instance_685", 
@@ -18653,12 +18895,12 @@
     ], 
     "dftag_505r": "von Johann Andreas Cramer --", 
     "dftag_0359": "CPD5230TS", 
-    "name": [
+    "creator": [
+        "obj_4867", 
         "obj_4872", 
         "obj_4873", 
         "obj_4874"
     ], 
-    "creator": "obj_4867", 
     "dftag_040c": "PAU", 
     "title": "C.F. Gellerts s\u00e4mmtliche Schriften.", 
     "label": "_687", 
@@ -18690,12 +18932,12 @@
     ], 
     "dftag_505r": "von Johann Andreas Cramer --", 
     "dftag_0359": "CPD5230TS", 
-    "name": [
+    "creator": [
+        "obj_4875", 
         "obj_4880", 
         "obj_4881", 
         "obj_4882"
     ], 
-    "creator": "obj_4875", 
     "dftag_040c": "PAU", 
     "title": "C.F. Gellerts s\u00e4mmtliche Schriften.", 
     "label": "_688", 
@@ -18727,12 +18969,12 @@
     ], 
     "dftag_505r": "von Johann Andreas Cramer --", 
     "dftag_0359": "CPD5230TS", 
-    "name": [
+    "creator": [
+        "obj_4883", 
         "obj_4888", 
         "obj_4889", 
         "obj_4890"
     ], 
-    "creator": "obj_4883", 
     "dftag_040c": "PAU", 
     "title": "C.F. Gellerts s\u00e4mmtliche Schriften.", 
     "label": "_689", 
@@ -18760,9 +19002,11 @@
 },{
     "note": "\"A literal rendering into English of the French edition published by Messrs. Daunou and Naudet in their Recueil des historiens des Gaules et de la France, tome XXi\u00e8me. The first book has also been considerably abridged.\"--Notice.", 
     "dftag_0359": "ACJ1013TS", 
-    "name": "obj_4899", 
     "language": "eng", 
-    "creator": "obj_4891", 
+    "creator": [
+        "obj_4891", 
+        "obj_4899"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Saint Louis, King of France /", 
     "label": "_690", 
@@ -18784,8 +19028,10 @@
     ]
 },{
     "dftag_0359": "CPG9890TS", 
-    "name": "obj_4904", 
-    "creator": "obj_4900", 
+    "creator": [
+        "obj_4900", 
+        "obj_4904"
+    ], 
     "dftag_040c": "STF", 
     "title": "C. M. Wielands s\u00e4mmtliche Werke...", 
     "label": "_691", 
@@ -18800,8 +19046,10 @@
 },{
     "dftag_0359": "CLB5260TS", 
     "seriesStatement": "Die Entdeckung von Amerika. [ I. Abth.]", 
-    "name": "obj_4910", 
-    "creator": "obj_4905", 
+    "creator": [
+        "obj_4905", 
+        "obj_4910"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Christoph Columbus.", 
     "label": "_692", 
@@ -18831,8 +19079,10 @@
     "subject": "obj_4918"
 },{
     "dftag_0359": "ABR9996TS", 
-    "name": "obj_4926", 
-    "creator": "obj_4919", 
+    "creator": [
+        "obj_4919", 
+        "obj_4926"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Nukhbat \u02bbIqd al-ajy\u0101d f\u012b al-\u1e63\u0101fin\u0101t al-jiy\u0101d /", 
     "label": "_694", 
@@ -18933,9 +19183,9 @@
 },{
     "titleRemainder": "a collection of the most esteemed dramatic productions,", 
     "dftag_0359": "CKU4645TS", 
-    "name": "obj_4949", 
     "title": "The British drama;", 
     "dftag_040c": "CLE", 
+    "creator": "obj_4949", 
     "label": "_699", 
     "note": "Each play has separate title-page and pagination.", 
     "instance": "instance_699", 
@@ -18948,9 +19198,9 @@
 },{
     "titleRemainder": "a collection of the most esteemed dramatic productions,", 
     "dftag_0359": "CKU4645TS", 
-    "name": "obj_4953", 
     "title": "The British drama;", 
     "dftag_040c": "CLE", 
+    "creator": "obj_4953", 
     "label": "_700", 
     "note": "Each play has separate title-page and pagination.", 
     "instance": "instance_700", 
@@ -18963,9 +19213,9 @@
 },{
     "titleRemainder": "a collection of the most esteemed dramatic productions,", 
     "dftag_0359": "CKU4645TS", 
-    "name": "obj_4957", 
     "title": "The British drama;", 
     "dftag_040c": "CLE", 
+    "creator": "obj_4957", 
     "label": "_701", 
     "note": "Each play has separate title-page and pagination.", 
     "instance": "instance_701", 
@@ -19074,9 +19324,9 @@
 },{
     "titleRemainder": "wa-huwa majm\u016b\u02bb mar\u0101th\u012b wa-t\u0101b\u012bn wa-tarjamat \u1e25ay\u0101t al-\u1e6dayyib al-dhikr al-kh\u0101lid al-ism al-muthallath al-ra\u1e25mat al-Dukt\u016br Sulaym\u0101n Afand\u012b al-Kh\u016br\u012b al-\u1e24im\u1e63\u012b /", 
     "dftag_0359": "ABZ3301TS", 
-    "name": "obj_4988", 
     "title": "Athar \u1e25asan li-faq\u012bd al-wa\u1e6dan :", 
     "dftag_040c": "PUL", 
+    "creator": "obj_4988", 
     "dftag_2456": "880-01", 
     "label": "_707", 
     "note": "Includes bibliographical references.", 
@@ -19207,8 +19457,10 @@
 },{
     "titleRemainder": "the beginnings of Israel's history,", 
     "dftag_0359": "ACM1401TS", 
-    "name": "obj_5028", 
-    "creator": "obj_5023", 
+    "creator": [
+        "obj_5023", 
+        "obj_5028"
+    ], 
     "dftag_040c": "C", 
     "title": "Twelve studies on the making of a nation;", 
     "label": "_713", 
@@ -19270,9 +19522,9 @@
 },{
     "titleRemainder": "(I should worry) /", 
     "dftag_0359": "CFF5669TS", 
-    "name": "obj_5046", 
     "title": "Ish ga bibble =", 
     "dftag_040c": "LDL", 
+    "creator": "obj_5046", 
     "label": "_716", 
     "instance": "instance_716", 
     "dftag_245c": "compiled by E.C. Lewis.", 
@@ -19289,7 +19541,6 @@
         "Each volume has added t.p.", 
         "Pub. also under title \"Ante-Nicene fathers\"."
     ], 
-    "name": "obj_5052", 
     "language": "eng", 
     "title": "Ante-Nicene Christian library :", 
     "formatedContentsNote": [
@@ -19297,6 +19548,7 @@
         "(cont.) v. 21. The works of Lactantius, v. 1 (1871) -- v. 22. The works of Lactantius, v. 2., together with the Testaments of the twelve patriarchs and fragments of the second and third centuries (1871) -- v. 23. Origen contra Celsum (1872) -- v. 24. Early liturgies and other documents (1872) -- v.25. Additional volume, containing early christian works discovered since the completion of the series, and selections from the Commentaries of Origen; ed. by A. Menzies. Edinburgh, 1897."
     ], 
     "dftag_040c": "NjP", 
+    "creator": "obj_5052", 
     "label": "_717", 
     "dftag_041h": "und", 
     "instance": "instance_717", 
@@ -19333,8 +19585,10 @@
     "dftag_040a": "NjP"
 },{
     "dftag_0359": "CFE9641TS", 
-    "name": "obj_5063", 
-    "creator": "obj_5059", 
+    "creator": [
+        "obj_5059", 
+        "obj_5063"
+    ], 
     "dftag_040c": "MUU", 
     "title": "Extraits;", 
     "label": "_719", 
@@ -19405,7 +19659,10 @@
     "titleRemainder": "L'Amour m\u00e9decin.", 
     "dftag_0359": "CFE8320TS", 
     "seriesStatement": "Biblioth\u00e8que fran\u00e7aise", 
-    "creator": "obj_5079", 
+    "creator": [
+        "obj_5079", 
+        "obj_5083"
+    ], 
     "lccn": "21011091", 
     "dftag_040c": "CLU", 
     "title": "\u0152uvres de Moli\u00e8re.", 
@@ -19417,12 +19674,13 @@
     "dftag_040d": "PUL", 
     "type": "WorkRecord", 
     "id": "work_723", 
-    "dftag_040a": "DLC", 
-    "name": "obj_5083"
+    "dftag_040a": "DLC"
 },{
     "dftag_0359": "CFE8873TS", 
-    "name": "obj_5089", 
-    "creator": "obj_5085", 
+    "creator": [
+        "obj_5085", 
+        "obj_5089"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Die kreutzer-sonata ... /", 
     "label": "_724", 
@@ -19435,10 +19693,10 @@
 },{
     "titleRemainder": "handbook for travellers /", 
     "dftag_0359": "ACQ8152TS", 
-    "name": "obj_5095", 
     "title": "Egypt :", 
     "formatedContentsNote": "1. Lower Egypt, with the Fayum and the peninsula of the Sinai. -- Part 2. Upper Egypt.", 
     "dftag_040c": "CL", 
+    "creator": "obj_5095", 
     "label": "_725", 
     "note": "Includes index.", 
     "instance": "instance_725", 
@@ -19474,9 +19732,9 @@
 },{
     "dftag_0359": "ACQ0768TS", 
     "dftag_362a": "Vol. 1 (1887/88)-v. 3, no. 2 (1895/96) ; new ser., v. 1 (1900/01)-", 
-    "name": "obj_5105", 
     "title": "Proceedings of the Aristotelian Society.", 
     "dftag_040c": "NhD", 
+    "creator": "obj_5105", 
     "dftag_310a": "Quarterly with an annual bound volume", 
     "label": "_727", 
     "note": [
@@ -19532,9 +19790,9 @@
     ]
 },{
     "dftag_0359": "CFF7877TS", 
-    "name": "obj_5125", 
     "title": "From the Upanishads /", 
     "dftag_040c": "CUI", 
+    "creator": "obj_5125", 
     "label": "_730", 
     "instance": "instance_730", 
     "uniformTitle": "obj_5120", 
@@ -19569,9 +19827,11 @@
 },{
     "note": "Verse translation of: Inferno.", 
     "dftag_0359": "ACV7982TS", 
-    "name": "obj_5137", 
     "language": "rus", 
-    "creator": "obj_5132", 
+    "creator": [
+        "obj_5132", 
+        "obj_5137"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Ad /", 
     "label": "_732", 
@@ -19635,13 +19895,13 @@
 },{
     "titleRemainder": "The mountain miller; and George Vining.", 
     "dftag_0359": "CFG0618TS", 
-    "name": [
-        "obj_5156", 
-        "obj_5157"
-    ], 
     "title": "Narratives of the shepherd of the Salisbury plain;", 
     "formatedContentsNote": "The shepherd of Salisbury plain, by Mrs. Hannah More.--The mountain miller; an authentic narrative, by William A. Hallock.--George Vining, or the mother's last prayer, a narrative of facts.", 
     "dftag_040c": "BOS", 
+    "creator": [
+        "obj_5156", 
+        "obj_5157"
+    ], 
     "label": "_736", 
     "instance": "instance_736", 
     "dftag_035a": "(OCoLC)ocm11155773", 
@@ -19691,12 +19951,12 @@
         "Princeton's copy defective lacks t.p."
     ], 
     "dftag_0359": "CFG5793TS", 
-    "name": [
+    "language": "engger", 
+    "creator": [
+        "obj_5168", 
         "obj_5172", 
         "obj_5173"
     ], 
-    "language": "engger", 
-    "creator": "obj_5168", 
     "dftag_040c": "PUL", 
     "title": "King Lear.", 
     "label": "_739", 
@@ -19709,9 +19969,9 @@
 },{
     "dftag_0359": "CKW6458TS", 
     "dftag_362a": "No. 1 (21 sept. 1792)-no. 1139 (4 brumaire, an 4 [26 oct. 1795]).", 
-    "name": "obj_5181", 
     "title": "Journal des d\u00e9bats et des d\u00e9crets.", 
     "dftag_040c": "NOC", 
+    "creator": "obj_5181", 
     "dftag_310a": "Daily", 
     "label": "_740", 
     "note": "At head of title: Convention nationale.", 
@@ -19996,9 +20256,11 @@
 },{
     "titleRemainder": "containing the portions of the Roman ritual most frequently used in parish church functions /", 
     "dftag_0359": "CHU0096TS", 
-    "name": "obj_5268", 
     "language": "engmul", 
-    "creator": "obj_5264", 
+    "creator": [
+        "obj_5264", 
+        "obj_5268"
+    ], 
     "dftag_040c": "BJO", 
     "title": "The sacristy manual :", 
     "label": "_755", 
@@ -20031,8 +20293,10 @@
 },{
     "titleRemainder": "alphabetically digested under proper titles.", 
     "dftag_0359": "CLW5448TS", 
-    "name": "obj_5279", 
-    "creator": "obj_5274", 
+    "creator": [
+        "obj_5274", 
+        "obj_5279"
+    ], 
     "dftag_040c": "PLF", 
     "title": "A new abridgement of the law,", 
     "label": "_757", 
@@ -20047,8 +20311,10 @@
 },{
     "titleRemainder": "alphabetically digested under proper titles.", 
     "dftag_0359": "CLW5448TS", 
-    "name": "obj_5285", 
-    "creator": "obj_5280", 
+    "creator": [
+        "obj_5280", 
+        "obj_5285"
+    ], 
     "dftag_040c": "PLF", 
     "title": "A new abridgement of the law,", 
     "label": "_758", 
@@ -20065,7 +20331,10 @@
     "titleRemainder": "oder dessen jugend, j\u00fcnglingsjahre, wanderschaft, lehrjahre, h\u00e4usliches leben und alter.", 
     "dftag_0359": "CFH5372TS", 
     "seriesStatement": "Universal-bibliothek,", 
-    "creator": "obj_5286", 
+    "creator": [
+        "obj_5286", 
+        "obj_5290"
+    ], 
     "dftag_040c": "CLE", 
     "title": "Johann Heinrich Jung's (genannt Stilling) lebensgeschichte,", 
     "label": "_759", 
@@ -20076,8 +20345,7 @@
     "dftag_040d": "PUL", 
     "type": "WorkRecord", 
     "id": "work_759", 
-    "dftag_040a": "CLE", 
-    "name": "obj_5290"
+    "dftag_040a": "CLE"
 },{
     "lcCallNumber": "PQ1794.D3", 
     "dftag_0359": "CNN9100TS", 
@@ -20117,9 +20385,9 @@
 },{
     "dftag_0359": "ACQ0768TS", 
     "dftag_362a": "Vol. 1 (1887/88)-v. 3, no. 2 (1895/96) ; new ser., v. 1 (1900/01)-", 
-    "name": "obj_5308", 
     "title": "Proceedings of the Aristotelian Society.", 
     "dftag_040c": "NhD", 
+    "creator": "obj_5308", 
     "dftag_310a": "Quarterly with an annual bound volume", 
     "label": "_762", 
     "note": [
@@ -20413,10 +20681,10 @@
     "titleRemainder": "containing a summary of Asiatic intelligence.", 
     "dftag_0359": "CNC1807TS", 
     "dftag_362a": "v. 1-6; Jan. 1869-Oct. 1874.", 
-    "name": "obj_5408", 
     "title": "The Siam repository,", 
     "lccn": "43005999", 
     "dftag_040c": "BTI", 
+    "creator": "obj_5408", 
     "label": "_775", 
     "note": [
         "Vol. 1 lacks subtitle.", 
@@ -20457,7 +20725,12 @@
     "lcCallNumber": "PA3404", 
     "dftag_0359": "CCH2314TS", 
     "seriesStatement": "Bibliotheca scriptorum graecorum et romanorum Teubneriana. [S. g.]", 
-    "creator": "obj_5415", 
+    "creator": [
+        "obj_5415", 
+        "obj_5419", 
+        "obj_5420", 
+        "obj_5421"
+    ], 
     "lccn": "43001902", 
     "dftag_040c": "IaU", 
     "title": "Libanii Opera;", 
@@ -20472,12 +20745,7 @@
     ], 
     "dftag_040d": "NjP", 
     "type": "WorkRecord", 
-    "id": "work_777", 
-    "name": [
-        "obj_5419", 
-        "obj_5420", 
-        "obj_5421"
-    ]
+    "id": "work_777"
 },{
     "titleRemainder": "in two volumes; I. Studies in poetry and prose ...", 
     "dftag_0359": "CLB7392TS", 
@@ -20510,8 +20778,10 @@
     ]
 },{
     "dftag_0359": "CFY2867TS", 
-    "name": "obj_5441", 
-    "creator": "obj_5437", 
+    "creator": [
+        "obj_5437", 
+        "obj_5441"
+    ], 
     "dftag_040c": "TRN", 
     "title": "Ioannis Stobaei Florilegium,", 
     "label": "_780", 
@@ -20549,7 +20819,11 @@
     "dftag_0359": "CFJ5127TS", 
     "seriesStatement": "Volks-bibliothek f\u00fcr kunst und wissenschaft,", 
     "language": "gergmh", 
-    "creator": "obj_5450", 
+    "creator": [
+        "obj_5450", 
+        "obj_5454", 
+        "obj_5455"
+    ], 
     "dftag_040c": "CLE", 
     "title": "Frauendienst;", 
     "label": "_782", 
@@ -20559,11 +20833,7 @@
     "dftag_040d": "PUL", 
     "type": "WorkRecord", 
     "id": "work_782", 
-    "dftag_040a": "CLE", 
-    "name": [
-        "obj_5454", 
-        "obj_5455"
-    ]
+    "dftag_040a": "CLE"
 },{
     "titleRemainder": "Handbuch f\u00fcr reisende", 
     "dftag_0359": "CFJ4307TS", 
@@ -20600,7 +20870,12 @@
     "lcCallNumber": "PA3404", 
     "dftag_0359": "CCH2314TS", 
     "seriesStatement": "Bibliotheca scriptorum graecorum et romanorum Teubneriana. [S. g.]", 
-    "creator": "obj_5466", 
+    "creator": [
+        "obj_5466", 
+        "obj_5470", 
+        "obj_5471", 
+        "obj_5472"
+    ], 
     "lccn": "43001902", 
     "dftag_040c": "IaU", 
     "title": "Libanii Opera;", 
@@ -20615,22 +20890,17 @@
     ], 
     "dftag_040d": "NjP", 
     "type": "WorkRecord", 
-    "id": "work_785", 
-    "name": [
-        "obj_5470", 
-        "obj_5471", 
-        "obj_5472"
-    ]
+    "id": "work_785"
 },{
     "lcCallNumber": "PA6134", 
     "dftag_0359": "CKX1337TS", 
-    "name": [
+    "creator": [
+        "obj_5476", 
         "obj_5482", 
         "obj_5483", 
         "obj_5484", 
         "obj_5485"
     ], 
-    "creator": "obj_5476", 
     "lccn": "89460052 //r92", 
     "dftag_040c": "DLC", 
     "title": "A. Persii Flacci, D. Iunii Iuvenalis, Sulpiciae Saturae /", 
@@ -20648,9 +20918,11 @@
 },{
     "titleRemainder": "Haririi Eloquentiae arabicae principis tres priores consessus : e codice manuscripto Bibliothecae Lugduno-Batavae pro specimine emissi /", 
     "dftag_0359": "ADF7171TS", 
-    "name": "obj_5492", 
     "language": "aralat", 
-    "creator": "obj_5488", 
+    "creator": [
+        "obj_5488", 
+        "obj_5492"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Maq\u0101m\u0101t lil-\u1e24ar\u012br\u012b", 
     "dftag_2456": "880-02", 
@@ -20797,8 +21069,10 @@
 },{
     "titleRemainder": "alphabetically digested under proper titles.", 
     "dftag_0359": "CLW5448TS", 
-    "name": "obj_5534", 
-    "creator": "obj_5529", 
+    "creator": [
+        "obj_5529", 
+        "obj_5534"
+    ], 
     "dftag_040c": "PLF", 
     "title": "A new abridgement of the law,", 
     "label": "_795", 
@@ -20813,8 +21087,10 @@
 },{
     "titleRemainder": "alphabetically digested under proper titles.", 
     "dftag_0359": "CLW5448TS", 
-    "name": "obj_5540", 
-    "creator": "obj_5535", 
+    "creator": [
+        "obj_5535", 
+        "obj_5540"
+    ], 
     "dftag_040c": "PLF", 
     "title": "A new abridgement of the law,", 
     "label": "_796", 
@@ -20861,9 +21137,9 @@
     "subject": "obj_5549"
 },{
     "dftag_0359": "CBP9358TS", 
-    "name": "obj_5554", 
     "title": "M\u00fcneccim.", 
     "dftag_040c": "NjP", 
+    "creator": "obj_5554", 
     "dftag_310a": "Annual", 
     "label": "_799", 
     "note": [
@@ -20884,7 +21160,12 @@
     "lcCallNumber": "PA3404", 
     "dftag_0359": "CCH2314TS", 
     "seriesStatement": "Bibliotheca scriptorum graecorum et romanorum Teubneriana. [S. g.]", 
-    "creator": "obj_5555", 
+    "creator": [
+        "obj_5555", 
+        "obj_5559", 
+        "obj_5560", 
+        "obj_5561"
+    ], 
     "lccn": "43001902", 
     "dftag_040c": "IaU", 
     "title": "Libanii Opera;", 
@@ -20899,12 +21180,7 @@
     ], 
     "dftag_040d": "NjP", 
     "type": "WorkRecord", 
-    "id": "work_800", 
-    "name": [
-        "obj_5559", 
-        "obj_5560", 
-        "obj_5561"
-    ]
+    "id": "work_800"
 },{
     "titleRemainder": "con la pronunciaci\u00f3n figurada.", 
     "dftag_0359": "CFK3705TS", 
@@ -20921,8 +21197,10 @@
 },{
     "titleRemainder": "sein chronologisch-geordneter briefwechsel, mit den hierhergeh\u00f6rigen mittheilungen aus seinem ungedruckten nachlasse hrsg.", 
     "dftag_0359": "CPG6885TS", 
-    "name": "obj_5574", 
-    "creator": "obj_5570", 
+    "creator": [
+        "obj_5570", 
+        "obj_5574"
+    ], 
     "dftag_040c": "RBN", 
     "title": "Lebensbild;", 
     "label": "_802", 
@@ -20936,8 +21214,10 @@
 },{
     "titleRemainder": "sein chronologisch-geordneter briefwechsel, mit den hierhergeh\u00f6rigen mittheilungen aus seinem ungedruckten nachlasse hrsg.", 
     "dftag_0359": "CPG6885TS", 
-    "name": "obj_5579", 
-    "creator": "obj_5575", 
+    "creator": [
+        "obj_5575", 
+        "obj_5579"
+    ], 
     "dftag_040c": "RBN", 
     "title": "Lebensbild;", 
     "label": "_803", 
@@ -20950,8 +21230,10 @@
     "dftag_040a": "RBN"
 },{
     "dftag_0359": "ADX9659TS", 
-    "name": "obj_5587", 
-    "creator": "obj_5580", 
+    "creator": [
+        "obj_5580", 
+        "obj_5587"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Shar\u1e25 al-\u02bbUrwah al-wuthq\u00e1 li-\u0101yat All\u0101h al-\u02bbu\u1e93m\u00e1 wa-al-\u1e25ujjah al-mu\u1e25aqqiq al-Sayyid Mu\u1e25ammad K\u0101\u1e93im al-\u1e6cab\u0101\u1e6dab\u0101\u02be\u012b al-Yazd\u012b, quddisa sirruh /", 
     "label": "_804", 
@@ -21044,7 +21326,12 @@
     "lcCallNumber": "PA3404", 
     "dftag_0359": "CCH2314TS", 
     "seriesStatement": "Bibliotheca scriptorum graecorum et romanorum Teubneriana. [S. g.]", 
-    "creator": "obj_5608", 
+    "creator": [
+        "obj_5608", 
+        "obj_5612", 
+        "obj_5613", 
+        "obj_5614"
+    ], 
     "lccn": "43001902", 
     "dftag_040c": "IaU", 
     "title": "Libanii Opera;", 
@@ -21059,12 +21346,7 @@
     ], 
     "dftag_040d": "NjP", 
     "type": "WorkRecord", 
-    "id": "work_809", 
-    "name": [
-        "obj_5612", 
-        "obj_5613", 
-        "obj_5614"
-    ]
+    "id": "work_809"
 },{
     "titleRemainder": "wa-huwa kit\u0101b ijtim\u0101\u02bb\u012b adab\u012b yab\u1e25athu \u02bban t\u0101r\u012bkh al-\u02bbahar\u0304ah wa-asb\u0101bih\u0101 wa-imtid\u0101dih\u0101 wa-nush\u016b\u02beih\u0101 bayna al-umam al-kh. /", 
     "dftag_0359": "ADJ7365TS", 
@@ -21116,10 +21398,10 @@
     "titleRemainder": "containing a summary of Asiatic intelligence.", 
     "dftag_0359": "CNC1807TS", 
     "dftag_362a": "v. 1-6; Jan. 1869-Oct. 1874.", 
-    "name": "obj_5633", 
     "title": "The Siam repository,", 
     "lccn": "43005999", 
     "dftag_040c": "BTI", 
+    "creator": "obj_5633", 
     "label": "_812", 
     "note": [
         "Vol. 1 lacks subtitle.", 
@@ -21137,10 +21419,10 @@
     "titleRemainder": "containing a summary of Asiatic intelligence.", 
     "dftag_0359": "CNC1807TS", 
     "dftag_362a": "v. 1-6; Jan. 1869-Oct. 1874.", 
-    "name": "obj_5639", 
     "title": "The Siam repository,", 
     "lccn": "43005999", 
     "dftag_040c": "BTI", 
+    "creator": "obj_5639", 
     "label": "_813", 
     "note": [
         "Vol. 1 lacks subtitle.", 
@@ -21158,10 +21440,10 @@
     "titleRemainder": "containing a summary of Asiatic intelligence.", 
     "dftag_0359": "CNC1807TS", 
     "dftag_362a": "v. 1-6; Jan. 1869-Oct. 1874.", 
-    "name": "obj_5645", 
     "title": "The Siam repository,", 
     "lccn": "43005999", 
     "dftag_040c": "BTI", 
+    "creator": "obj_5645", 
     "label": "_814", 
     "note": [
         "Vol. 1 lacks subtitle.", 
@@ -21179,10 +21461,10 @@
     "titleRemainder": "containing a summary of Asiatic intelligence.", 
     "dftag_0359": "CNC1807TS", 
     "dftag_362a": "v. 1-6; Jan. 1869-Oct. 1874.", 
-    "name": "obj_5651", 
     "title": "The Siam repository,", 
     "lccn": "43005999", 
     "dftag_040c": "BTI", 
+    "creator": "obj_5651", 
     "label": "_815", 
     "note": [
         "Vol. 1 lacks subtitle.", 
@@ -21199,8 +21481,10 @@
     "lcCallNumber": "PR5400", 
     "titleRemainder": "now first brought together with many pieces not before published; /", 
     "dftag_0359": "ACR4508TS", 
-    "name": "obj_5657", 
-    "creator": "obj_5653", 
+    "creator": [
+        "obj_5653", 
+        "obj_5657"
+    ], 
     "lccn": "01019221", 
     "title": "The works of Percy Bysshe Shelley in verse and prose, :", 
     "label": "_816", 
@@ -21282,6 +21566,7 @@
     "title": "Sir Degrevant,", 
     "lccn": "21007582", 
     "dftag_040c": "AZS", 
+    "creator": "obj_5674", 
     "label": "_820", 
     "note": "Texts of the Thornton ms. (Lincoln cathedral A 1,17) and Cambridge University ms. (Ff. 1,6) on opposite pages, with glossary.", 
     "instance": "instance_820", 
@@ -21291,13 +21576,14 @@
     "dftag_040d": "PUL", 
     "type": "WorkRecord", 
     "id": "work_820", 
-    "dftag_040a": "DLC", 
-    "name": "obj_5674"
+    "dftag_040a": "DLC"
 },{
     "lcCallNumber": "QD3", 
     "dftag_0359": "CJD0209TS", 
-    "name": "obj_5683", 
-    "creator": "obj_5675", 
+    "creator": [
+        "obj_5675", 
+        "obj_5683"
+    ], 
     "lccn": "05012331 //r952", 
     "dftag_040c": "CGU", 
     "title": "The collected works of Sir Humphry Davy ...", 
@@ -21349,11 +21635,11 @@
     "lcCallNumber": "PS1742", 
     "titleRemainder": "a poem in songs and sonnets,", 
     "dftag_0359": "CLL4598TS", 
-    "name": [
+    "creator": [
+        "obj_5695", 
         "obj_5699", 
         "obj_5700"
     ], 
-    "creator": "obj_5695", 
     "lccn": "27022260", 
     "dftag_040c": "RRR", 
     "title": "A new day,", 
@@ -21370,8 +21656,10 @@
     "titleRemainder": "handbook for travellers /", 
     "dftag_0359": "CND1315TS", 
     "seriesStatement": "Baedeker's guide books", 
-    "name": "obj_5708", 
-    "creator": "obj_5702", 
+    "creator": [
+        "obj_5702", 
+        "obj_5708"
+    ], 
     "dftag_040c": "CUZ", 
     "title": "Belgium and Holland :", 
     "label": "_824", 
@@ -21451,9 +21739,11 @@
 },{
     "titleRemainder": "dawrah-i \u1e25uquq-i id\u0101r\u012b, \u02bbamal\u012b (dar mam\u0101lik-i mukhtalifah) /", 
     "dftag_0359": "CCB5664TS", 
-    "name": "obj_5738", 
     "language": "per", 
-    "creator": "obj_5731", 
+    "creator": [
+        "obj_5731", 
+        "obj_5738"
+    ], 
     "dftag_040c": "NjP", 
     "title": "Madrasah-i Dawlat\u012b-i D\u0101r al-Fun\u016bn :", 
     "label": "_829", 
@@ -21522,9 +21812,9 @@
     "subject": "obj_5749"
 },{
     "dftag_0359": "ACE6016TS", 
-    "name": "obj_5754", 
     "title": "al-Mu\u1e25\u0101\u1e0darah al-adab\u012byah wa-al-mu\u1e25\u0101warah al-\u1e24alab\u012byah /", 
     "dftag_040c": "NjP", 
+    "creator": "obj_5754", 
     "label": "_832", 
     "instance": "instance_832", 
     "dftag_245c": "jam\u02bb Mu\u1e25ammad Nu\u02bbm\u0101n Muqayyad\u02b9z\u0101dah.", 
@@ -21558,8 +21848,10 @@
     ]
 },{
     "dftag_0359": "ACD7297TS", 
-    "name": "obj_5768", 
-    "creator": "obj_5761", 
+    "creator": [
+        "obj_5761", 
+        "obj_5768"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Kit\u0101b Ab\u012b al-Ja\u02bbd /", 
     "dftag_2456": "880-02", 
@@ -21649,12 +21941,12 @@
 },{
     "titleRemainder": "political report.", 
     "dftag_0359": "ADT0787TS", 
-    "name": [
+    "title": "Extracts from the reports of the executive of the Zionist Organisation to the twelfth Zionist Congress, Carlsbad, September, 1921 :", 
+    "dftag_040c": "NjP", 
+    "creator": [
         "obj_5794", 
         "obj_5795"
     ], 
-    "title": "Extracts from the reports of the executive of the Zionist Organisation to the twelfth Zionist Congress, Carlsbad, September, 1921 :", 
-    "dftag_040c": "NjP", 
     "label": "_838", 
     "note": "Title on cover: Zionism during the war: a record of Zionist political activity, 1914-21.", 
     "instance": "instance_838", 
@@ -21714,9 +22006,9 @@
     ]
 },{
     "dftag_0359": "CBP9358TS", 
-    "name": "obj_5813", 
     "title": "M\u00fcneccim.", 
     "dftag_040c": "NjP", 
+    "creator": "obj_5813", 
     "dftag_310a": "Annual", 
     "label": "_841", 
     "note": [
@@ -21794,8 +22086,10 @@
     ]
 },{
     "dftag_0359": "CFR2422TS", 
-    "name": "obj_5839", 
-    "creator": "obj_5832", 
+    "creator": [
+        "obj_5832", 
+        "obj_5839"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Notes sur les archives de Notre-Dame de Beauport /", 
     "label": "_845", 
@@ -21854,13 +22148,13 @@
         "Dedicatory letter signed: Clorinda Matto de Turner."
     ], 
     "dftag_0359": "CGM3876TS", 
-    "name": [
-        "obj_5855", 
-        "obj_5856"
-    ], 
     "language": "quespa", 
     "title": "Apunchis Jesucristoc Evangelion San Lucaspa qquelkascan.", 
     "dftag_040c": "NDD", 
+    "creator": [
+        "obj_5855", 
+        "obj_5856"
+    ], 
     "label": "_848", 
     "dftag_041h": "grc", 
     "instance": "instance_848", 
@@ -22016,9 +22310,9 @@
     "dftag_490v": "no. 111", 
     "dftag_0359": "CFK9077TS", 
     "seriesStatement": "The Family library ;", 
-    "name": "obj_5907", 
     "title": "Selections from the American poets /", 
     "dftag_040c": "IWC", 
+    "creator": "obj_5907", 
     "label": "_857", 
     "instance": "instance_857", 
     "dftag_245c": "by William Cullen Bryant.", 
@@ -22050,8 +22344,10 @@
 },{
     "titleRemainder": "late Lord Bishop of Lichfield and Coventry /", 
     "dftag_0359": "CFL5759TS", 
-    "name": "obj_5919", 
-    "creator": "obj_5914", 
+    "creator": [
+        "obj_5914", 
+        "obj_5919"
+    ], 
     "dftag_040c": "BPS", 
     "title": "An account of the life and death of the Right Reverend Father in God, John Hacket :", 
     "label": "_859", 
@@ -22089,11 +22385,11 @@
 },{
     "dftag_0359": "CFL9623TS", 
     "seriesStatement": "The Temple classics, ed. by Israel Gollancz", 
-    "name": [
+    "creator": [
+        "obj_5927", 
         "obj_5932", 
         "obj_5933"
     ], 
-    "creator": "obj_5927", 
     "dftag_040c": "OKC", 
     "title": "The life and death of Thomas Wolsey /", 
     "label": "_861", 
@@ -22124,7 +22420,12 @@
     "lcCallNumber": "PA3404", 
     "dftag_0359": "CCH2314TS", 
     "seriesStatement": "Bibliotheca scriptorum graecorum et romanorum Teubneriana. [S. g.]", 
-    "creator": "obj_5939", 
+    "creator": [
+        "obj_5939", 
+        "obj_5943", 
+        "obj_5944", 
+        "obj_5945"
+    ], 
     "lccn": "43001902", 
     "dftag_040c": "IaU", 
     "title": "Libanii Opera;", 
@@ -22139,17 +22440,17 @@
     ], 
     "dftag_040d": "NjP", 
     "type": "WorkRecord", 
-    "id": "work_863", 
-    "name": [
-        "obj_5943", 
-        "obj_5944", 
-        "obj_5945"
-    ]
+    "id": "work_863"
 },{
     "lcCallNumber": "PA3404", 
     "dftag_0359": "CCH2314TS", 
     "seriesStatement": "Bibliotheca scriptorum graecorum et romanorum Teubneriana. [S. g.]", 
-    "creator": "obj_5949", 
+    "creator": [
+        "obj_5949", 
+        "obj_5953", 
+        "obj_5954", 
+        "obj_5955"
+    ], 
     "lccn": "43001902", 
     "dftag_040c": "IaU", 
     "title": "Libanii Opera;", 
@@ -22164,12 +22465,7 @@
     ], 
     "dftag_040d": "NjP", 
     "type": "WorkRecord", 
-    "id": "work_864", 
-    "name": [
-        "obj_5953", 
-        "obj_5954", 
-        "obj_5955"
-    ]
+    "id": "work_864"
 },{
     "titleRemainder": "comprising the geography, chronology and statistics of the empire; the ethnology, primitive traditions and sociology of the Turks; and the genealogy of the existing Osmanli dynasty /", 
     "dftag_0359": "CCA0764TS", 
@@ -22210,12 +22506,12 @@
     "subject": "obj_5969"
 },{
     "titleRemainder": "accurately printed from the text of the corrected copy left by the late George Steevens, esq., with glossarial notes.", 
-    "name": [
+    "creator": [
+        "obj_5970", 
         "obj_5974", 
         "obj_5975", 
         "obj_5976"
     ], 
-    "creator": "obj_5970", 
     "dftag_040c": "HUV", 
     "title": "The plays of William Shakspeare :", 
     "label": "_867", 
@@ -22260,7 +22556,6 @@
     "lcCallNumber": "B1", 
     "dftag_0359": "ACA3550TS", 
     "dftag_362a": "Vol. 1, no. 1 (Jan. 1892)-", 
-    "name": "obj_5986", 
     "title": "The philosophical review.", 
     "lccn": "13006464 //r862", 
     "dftag_040c": "MnMULS", 
@@ -22273,6 +22568,7 @@
         "Issue for Apr. 1995 misnumbered, but constitutes v. 104, no. 2."
     ], 
     "instance": "instance_869", 
+    "creator": "obj_5986", 
     "dftag_035a": [
         "(OCoLC)1695555", 
         "(CStRLIN)NJPG87-S904"
@@ -22299,13 +22595,13 @@
 },{
     "dftag_0359": "CKY4508TS", 
     "dftag_362a": "June 30, 1920-", 
-    "name": [
-        "obj_5998", 
-        "obj_5999"
-    ], 
     "title": "Commercial and government radio stations of the United States.", 
     "lccn": "sn 87028157", 
     "dftag_040c": "NYG", 
+    "creator": [
+        "obj_5998", 
+        "obj_5999"
+    ], 
     "dftag_310a": "Annual", 
     "label": "_871", 
     "note": "At head of title, 1913-1916: Department of Commerce. Bureau of Navigation. (1914-1926 include also, Radio Service)--1927- : Department of Commerce. Radio Division.", 
@@ -22324,7 +22620,6 @@
     "lcCallNumber": "B1", 
     "dftag_0359": "ACA3550TS", 
     "dftag_362a": "Vol. 1, no. 1 (Jan. 1892)-", 
-    "name": "obj_6004", 
     "title": "The philosophical review.", 
     "lccn": "13006464 //r862", 
     "dftag_040c": "MnMULS", 
@@ -22337,6 +22632,7 @@
         "Issue for Apr. 1995 misnumbered, but constitutes v. 104, no. 2."
     ], 
     "instance": "instance_872", 
+    "creator": "obj_6004", 
     "dftag_035a": [
         "(OCoLC)1695555", 
         "(CStRLIN)NJPG87-S904"
@@ -22368,8 +22664,10 @@
     ]
 },{
     "dftag_0359": "CBP1014TS", 
-    "name": "obj_6019", 
-    "creator": "obj_6013", 
+    "creator": [
+        "obj_6013", 
+        "obj_6019"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Kit\u0101b al-Mukhta\u1e63ar al-muf\u012bd f\u012b al-ashy\u0101\u02bc wa-al-maw\u0101l\u012bd /", 
     "dftag_2456": "880-03", 
@@ -22412,8 +22710,10 @@
     "subject": "obj_6025"
 },{
     "dftag_0359": "CBU8907TS", 
-    "name": "obj_6032", 
-    "creator": "obj_6026", 
+    "creator": [
+        "obj_6026", 
+        "obj_6032"
+    ], 
     "dftag_040c": "NjP", 
     "title": "al-Dir\u0101sah al-awwal\u012byah f\u012b al-jughr\u0101fiy\u0101 al-\u1e6dab\u012b\u02bb\u012byah /", 
     "label": "_876", 
@@ -22431,12 +22731,12 @@
     "subject": "obj_6031"
 },{
     "dftag_0359": "CPD7494TS", 
-    "name": [
+    "creator": [
+        "obj_6033", 
         "obj_6037", 
         "obj_6038", 
         "obj_6039"
     ], 
-    "creator": "obj_6033", 
     "formatedContentsNote": "1.-2. bd. Oden.--3.-6. bd. Messias.--7. bd. Oden. Geistliche lieder. Epigramme.--8. bd. Der Tod Adams. Hermanns schlacht.--9. bd. Salomo. Hermann und die f\u00fcrsten.--10. bd. David. Hermanns tod.--11. bd. Hinterlassne schriften, von Margareta Klopstock.--12. bd. Die deutsche gelehrtenrepublik.--13.-18. bd. S\u00e4mmtliche sprachwissenschaftliche und \u00e4sthetische schriften. Hrsg. von A.L. Bach und A.R.C. Spindler.", 
     "dftag_040c": "CUY", 
     "title": "Klopstocks s\u00e4mmtliche werke ...", 
@@ -22453,12 +22753,12 @@
     "dftag_040a": "CUY"
 },{
     "dftag_0359": "CPD7494TS", 
-    "name": [
+    "creator": [
+        "obj_6041", 
         "obj_6045", 
         "obj_6046", 
         "obj_6047"
     ], 
-    "creator": "obj_6041", 
     "formatedContentsNote": "1.-2. bd. Oden.--3.-6. bd. Messias.--7. bd. Oden. Geistliche lieder. Epigramme.--8. bd. Der Tod Adams. Hermanns schlacht.--9. bd. Salomo. Hermann und die f\u00fcrsten.--10. bd. David. Hermanns tod.--11. bd. Hinterlassne schriften, von Margareta Klopstock.--12. bd. Die deutsche gelehrtenrepublik.--13.-18. bd. S\u00e4mmtliche sprachwissenschaftliche und \u00e4sthetische schriften. Hrsg. von A.L. Bach und A.R.C. Spindler.", 
     "dftag_040c": "CUY", 
     "title": "Klopstocks s\u00e4mmtliche werke ...", 
@@ -22491,12 +22791,12 @@
     "titleRemainder": "translated by William Whiston.", 
     "dftag_0359": "CNM8250TS", 
     "formatedContentsNote": "v. 1 Containing five books of the antiquities of the Jews. To which are prefixed three dissertations -- v. 2. Containing six books of the antiquities of the Jews -- v. 3. Containing five books of the antiquities of the Jews -- v. 4. Containing four books of the antiquities of the Jews. With the life of Josephus -- v. 5. Containing four books of the Jewish war -- v. 6. Containing three books of the Jewish war.", 
-    "name": [
+    "creator": [
+        "obj_6054", 
         "obj_6061", 
         "obj_6062", 
         "obj_6063"
     ], 
-    "creator": "obj_6054", 
     "lccn": "03013527", 
     "dftag_040c": "AQM", 
     "title": "The genuine works of Flavius Josephus /", 
@@ -22518,12 +22818,12 @@
     "titleRemainder": "translated by William Whiston.", 
     "dftag_0359": "CNM8250TS", 
     "formatedContentsNote": "v. 1 Containing five books of the antiquities of the Jews. To which are prefixed three dissertations -- v. 2. Containing six books of the antiquities of the Jews -- v. 3. Containing five books of the antiquities of the Jews -- v. 4. Containing four books of the antiquities of the Jews. With the life of Josephus -- v. 5. Containing four books of the Jewish war -- v. 6. Containing three books of the Jewish war.", 
-    "name": [
+    "creator": [
+        "obj_6065", 
         "obj_6072", 
         "obj_6073", 
         "obj_6074"
     ], 
-    "creator": "obj_6065", 
     "lccn": "03013527", 
     "dftag_040c": "AQM", 
     "title": "The genuine works of Flavius Josephus /", 
@@ -22542,8 +22842,10 @@
     ]
 },{
     "dftag_0359": "CPG9890TS", 
-    "name": "obj_6080", 
-    "creator": "obj_6076", 
+    "creator": [
+        "obj_6076", 
+        "obj_6080"
+    ], 
     "dftag_040c": "STF", 
     "title": "C. M. Wielands s\u00e4mmtliche Werke...", 
     "label": "_882", 
@@ -22623,7 +22925,12 @@
     "lcCallNumber": "PA3404", 
     "dftag_0359": "CCH2314TS", 
     "seriesStatement": "Bibliotheca scriptorum graecorum et romanorum Teubneriana. [S. g.]", 
-    "creator": "obj_6094", 
+    "creator": [
+        "obj_6094", 
+        "obj_6098", 
+        "obj_6099", 
+        "obj_6100"
+    ], 
     "lccn": "43001902", 
     "dftag_040c": "IaU", 
     "title": "Libanii Opera;", 
@@ -22638,12 +22945,7 @@
     ], 
     "dftag_040d": "NjP", 
     "type": "WorkRecord", 
-    "id": "work_886", 
-    "name": [
-        "obj_6098", 
-        "obj_6099", 
-        "obj_6100"
-    ]
+    "id": "work_886"
 },{
     "dftag_0359": "CPS4665TS", 
     "creator": "obj_6104", 
@@ -22661,11 +22963,11 @@
     "subject": "obj_6108"
 },{
     "dftag_0359": "CPC0319TS", 
-    "name": [
+    "creator": [
+        "obj_6109", 
         "obj_6113", 
         "obj_6114"
     ], 
-    "creator": "obj_6109", 
     "formatedContentsNote": "v. 1. Plays / ed. with notes, by R.H. Shepherd -- v. 2. Poems, and minor translations / with an introduction by A.C. Swinburne -- v. 3. Homer's Iliad and Odyssey / ed. with notes, by R.H. Shepherd.", 
     "dftag_040c": "SDB", 
     "title": "The works of George Chapman.", 
@@ -22716,11 +23018,13 @@
     "dftag_0359": "CCE8598TS", 
     "dftag_2466": "880-02", 
     "language": "ara", 
-    "creator": "obj_6124", 
+    "creator": [
+        "obj_6124", 
+        "obj_6131"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Kull\u012by\u0101t shar\u1e25 al-jaz\u0101\u02bc :", 
     "dftag_2456": "880-01", 
-    "name": "obj_6131", 
     "label": "_890", 
     "dftag_041h": "ota", 
     "instance": "instance_890", 
@@ -22788,15 +23092,15 @@
     "titleRemainder": "comprising treatises on the nature and treatment of diseases, materia medica and therapeutics, medical jurisprudence, etc., etc. /", 
     "dftag_0359": "CCA2830TS", 
     "dftag_5005": "NjP", 
-    "name": [
+    "title": "The cyclop\u00e6dia of practical medicine :", 
+    "lccn": "34037184", 
+    "dftag_040c": "PSt", 
+    "creator": [
         "obj_6148", 
         "obj_6149", 
         "obj_6150", 
         "obj_6151"
     ], 
-    "title": "The cyclop\u00e6dia of practical medicine :", 
-    "lccn": "34037184", 
-    "dftag_040c": "PSt", 
     "label": "_893", 
     "note": "Vol. 4 has imprint 1850.", 
     "instance": "instance_893", 
@@ -22815,15 +23119,15 @@
     "titleRemainder": "comprising treatises on the nature and treatment of diseases, materia medica and therapeutics, medical jurisprudence, etc., etc. /", 
     "dftag_0359": "CCA2830TS", 
     "dftag_5005": "NjP", 
-    "name": [
+    "title": "The cyclop\u00e6dia of practical medicine :", 
+    "lccn": "34037184", 
+    "dftag_040c": "PSt", 
+    "creator": [
         "obj_6156", 
         "obj_6157", 
         "obj_6158", 
         "obj_6159"
     ], 
-    "title": "The cyclop\u00e6dia of practical medicine :", 
-    "lccn": "34037184", 
-    "dftag_040c": "PSt", 
     "label": "_894", 
     "note": "Vol. 4 has imprint 1850.", 
     "instance": "instance_894", 
@@ -22842,15 +23146,15 @@
     "titleRemainder": "comprising treatises on the nature and treatment of diseases, materia medica and therapeutics, medical jurisprudence, etc., etc. /", 
     "dftag_0359": "CCA2830TS", 
     "dftag_5005": "NjP", 
-    "name": [
+    "title": "The cyclop\u00e6dia of practical medicine :", 
+    "lccn": "34037184", 
+    "dftag_040c": "PSt", 
+    "creator": [
         "obj_6164", 
         "obj_6165", 
         "obj_6166", 
         "obj_6167"
     ], 
-    "title": "The cyclop\u00e6dia of practical medicine :", 
-    "lccn": "34037184", 
-    "dftag_040c": "PSt", 
     "label": "_895", 
     "note": "Vol. 4 has imprint 1850.", 
     "instance": "instance_895", 
@@ -22866,9 +23170,9 @@
     "subject": "obj_6163"
 },{
     "dftag_0359": "CCG2655TS", 
-    "name": "obj_6172", 
     "title": "al-Qa\u1e63\u012bdah al-jawn\u012byah.", 
     "dftag_040c": "NjP", 
+    "creator": "obj_6172", 
     "label": "_896", 
     "note": [
         "Caption title.", 
@@ -22941,8 +23245,10 @@
     "subject": "obj_6189"
 },{
     "dftag_0359": "CNJ4111TS", 
-    "name": "obj_6195", 
-    "creator": "obj_6190", 
+    "creator": [
+        "obj_6190", 
+        "obj_6195"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Correspondance d'Orient 1830-1831,", 
     "label": "_900", 
@@ -22955,8 +23261,10 @@
     "subject": "obj_6194"
 },{
     "dftag_0359": "CNJ4111TS", 
-    "name": "obj_6201", 
-    "creator": "obj_6196", 
+    "creator": [
+        "obj_6196", 
+        "obj_6201"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Correspondance d'Orient 1830-1831,", 
     "label": "_901", 
@@ -22969,8 +23277,10 @@
     "subject": "obj_6200"
 },{
     "dftag_0359": "CNJ4111TS", 
-    "name": "obj_6207", 
-    "creator": "obj_6202", 
+    "creator": [
+        "obj_6202", 
+        "obj_6207"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Correspondance d'Orient 1830-1831,", 
     "label": "_902", 
@@ -22983,8 +23293,10 @@
     "subject": "obj_6206"
 },{
     "dftag_0359": "CNJ4111TS", 
-    "name": "obj_6213", 
-    "creator": "obj_6208", 
+    "creator": [
+        "obj_6208", 
+        "obj_6213"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Correspondance d'Orient 1830-1831,", 
     "label": "_903", 
@@ -23055,8 +23367,10 @@
 },{
     "dftag_0359": "CFR9067TS", 
     "seriesStatement": "Cassell's National Library New Series", 
-    "name": "obj_6237", 
-    "creator": "obj_6230", 
+    "creator": [
+        "obj_6230", 
+        "obj_6237"
+    ], 
     "dftag_040c": "MUU", 
     "title": "Travels in England during the reign of Queen Elizabeth,", 
     "label": "_907", 
@@ -23075,9 +23389,9 @@
 },{
     "dftag_0359": "ACH1800TS", 
     "dftag_362a": ". -14th ed. (1822).", 
-    "name": "obj_6245", 
     "title": "The Peerage of the United Kingdom of Great Britain & Ireland.", 
     "dftag_040c": "CtY", 
+    "creator": "obj_6245", 
     "label": "_908", 
     "note": [
         "Description based on: 14th ed. (1822).", 
@@ -23152,7 +23466,12 @@
     "lcCallNumber": "PA3404", 
     "dftag_0359": "CCH2314TS", 
     "seriesStatement": "Bibliotheca scriptorum graecorum et romanorum Teubneriana. [S. g.]", 
-    "creator": "obj_6265", 
+    "creator": [
+        "obj_6265", 
+        "obj_6269", 
+        "obj_6270", 
+        "obj_6271"
+    ], 
     "lccn": "43001902", 
     "dftag_040c": "IaU", 
     "title": "Libanii Opera;", 
@@ -23167,17 +23486,17 @@
     ], 
     "dftag_040d": "NjP", 
     "type": "WorkRecord", 
-    "id": "work_912", 
-    "name": [
-        "obj_6269", 
-        "obj_6270", 
-        "obj_6271"
-    ]
+    "id": "work_912"
 },{
     "lcCallNumber": "PA3404", 
     "dftag_0359": "CCH2314TS", 
     "seriesStatement": "Bibliotheca scriptorum graecorum et romanorum Teubneriana. [S. g.]", 
-    "creator": "obj_6275", 
+    "creator": [
+        "obj_6275", 
+        "obj_6279", 
+        "obj_6280", 
+        "obj_6281"
+    ], 
     "lccn": "43001902", 
     "dftag_040c": "IaU", 
     "title": "Libanii Opera;", 
@@ -23192,12 +23511,7 @@
     ], 
     "dftag_040d": "NjP", 
     "type": "WorkRecord", 
-    "id": "work_913", 
-    "name": [
-        "obj_6279", 
-        "obj_6280", 
-        "obj_6281"
-    ]
+    "id": "work_913"
 },{
     "lcCallNumber": "E415", 
     "titleRemainder": "chiefly relating to the war of 1846.", 
@@ -23219,7 +23533,6 @@
     "lcCallNumber": "B1", 
     "dftag_0359": "ACA3550TS", 
     "dftag_362a": "Vol. 1, no. 1 (Jan. 1892)-", 
-    "name": "obj_6294", 
     "title": "The philosophical review.", 
     "lccn": "13006464 //r862", 
     "dftag_040c": "MnMULS", 
@@ -23232,6 +23545,7 @@
         "Issue for Apr. 1995 misnumbered, but constitutes v. 104, no. 2."
     ], 
     "instance": "instance_915", 
+    "creator": "obj_6294", 
     "dftag_035a": [
         "(OCoLC)1695555", 
         "(CStRLIN)NJPG87-S904"
@@ -23320,8 +23634,10 @@
 },{
     "titleRemainder": "alphabetically digested under proper titles.", 
     "dftag_0359": "CLW5448TS", 
-    "name": "obj_6328", 
-    "creator": "obj_6323", 
+    "creator": [
+        "obj_6323", 
+        "obj_6328"
+    ], 
     "dftag_040c": "PLF", 
     "title": "A new abridgement of the law,", 
     "label": "_921", 
@@ -23375,9 +23691,9 @@
 },{
     "titleRemainder": "ex scriptis Societati Regiae Scientiarum exhibitis.", 
     "dftag_0359": "CJN2100TS", 
-    "name": "obj_6346", 
     "title": "Miscellanea berolinensia ad incrementum scientiarum :", 
     "dftag_040c": "NjP", 
+    "creator": "obj_6346", 
     "dftag_310a": "Irregular", 
     "label": "_925", 
     "note": "Imprint varies.", 
@@ -23390,9 +23706,9 @@
 },{
     "titleRemainder": "ex scriptis Societati Regiae Scientiarum exhibitis.", 
     "dftag_0359": "CJN2100TS", 
-    "name": "obj_6351", 
     "title": "Miscellanea berolinensia ad incrementum scientiarum :", 
     "dftag_040c": "NjP", 
+    "creator": "obj_6351", 
     "dftag_310a": "Irregular", 
     "label": "_926", 
     "note": "Imprint varies.", 
@@ -23405,9 +23721,9 @@
 },{
     "titleRemainder": "ex scriptis Societati Regiae Scientiarum exhibitis.", 
     "dftag_0359": "CJN2100TS", 
-    "name": "obj_6356", 
     "title": "Miscellanea berolinensia ad incrementum scientiarum :", 
     "dftag_040c": "NjP", 
+    "creator": "obj_6356", 
     "dftag_310a": "Irregular", 
     "label": "_927", 
     "note": "Imprint varies.", 
@@ -23419,8 +23735,10 @@
     "subject": "obj_6355"
 },{
     "dftag_0359": "CMC4848TS", 
-    "name": "obj_6362", 
-    "creator": "obj_6357", 
+    "creator": [
+        "obj_6357", 
+        "obj_6362"
+    ], 
     "dftag_040c": "GSU", 
     "title": "Diary, reminiscences, and correspondence of Henry Crabb Robinson /", 
     "label": "_928", 
@@ -23436,8 +23754,10 @@
 },{
     "titleRemainder": "ein prosaisch-komisches Gedicht /", 
     "dftag_0359": "CGM2055TS", 
-    "name": "obj_6368", 
-    "creator": "obj_6364", 
+    "creator": [
+        "obj_6364", 
+        "obj_6368"
+    ], 
     "dftag_040c": "BUF", 
     "title": "Wilhelmine :", 
     "label": "_929", 
@@ -23451,8 +23771,10 @@
     "dftag_040a": "BUF"
 },{
     "dftag_0359": "CKC8123TS", 
-    "name": "obj_6375", 
-    "creator": "obj_6370", 
+    "creator": [
+        "obj_6370", 
+        "obj_6375"
+    ], 
     "dftag_040c": "CLU", 
     "title": "A discourse delivered to the students of the Royal Academy on the distribution of the prizes, December 10, 1776.", 
     "label": "_930", 
@@ -23483,13 +23805,13 @@
 },{
     "lcCallNumber": "PQ1710.A1", 
     "dftag_0359": "CFV1386TS", 
-    "name": [
-        "obj_6383", 
-        "obj_6384"
-    ], 
     "title": "Les veritez plaisantes, ov Le monde au naturel.", 
     "lccn": "34018889", 
     "dftag_040c": "CLU", 
+    "creator": [
+        "obj_6383", 
+        "obj_6384"
+    ], 
     "label": "_932", 
     "note": [
         "Title in red and black, with vignette (a globe).", 
@@ -23521,8 +23843,10 @@
     "dftag_040a": "STF"
 },{
     "dftag_0359": "CCR4042TS", 
-    "name": "obj_6393", 
-    "creator": "obj_6389", 
+    "creator": [
+        "obj_6389", 
+        "obj_6393"
+    ], 
     "dftag_040c": "UPM", 
     "title": "Libussa, duchess of Bohemia ; and The man without a name /", 
     "label": "_934", 
@@ -23603,8 +23927,10 @@
     "lcCallNumber": "BX958.T7", 
     "titleRemainder": "landmarks in the history of the papacy/", 
     "dftag_0359": "CCQ8593TS", 
-    "name": "obj_6418", 
-    "creator": "obj_6412", 
+    "creator": [
+        "obj_6412", 
+        "obj_6418"
+    ], 
     "dftag_040c": "DNV", 
     "title": "The Tombs of the popes :", 
     "label": "_939", 
@@ -23731,8 +24057,10 @@
 },{
     "titleRemainder": "comprising the first six books and portions of the eleventh and twelfth books;", 
     "dftag_0359": "CJC8506TS", 
-    "name": "obj_6456", 
-    "creator": "obj_6449", 
+    "creator": [
+        "obj_6449", 
+        "obj_6456"
+    ], 
     "dftag_040c": "VJA", 
     "title": "The Elements of Euclid for the use of schools and colleges;", 
     "label": "_946", 
@@ -23750,12 +24078,12 @@
     ]
 },{
     "titleRemainder": "accurately printed from the text of the corrected copy left by the late George Steevens, esq., with glossarial notes.", 
-    "name": [
+    "creator": [
+        "obj_6457", 
         "obj_6461", 
         "obj_6462", 
         "obj_6463"
     ], 
-    "creator": "obj_6457", 
     "dftag_040c": "HUV", 
     "title": "The plays of William Shakspeare :", 
     "label": "_947", 
@@ -23804,9 +24132,9 @@
 },{
     "dftag_0359": "ACQ0768TS", 
     "dftag_362a": "Vol. 1 (1887/88)-v. 3, no. 2 (1895/96) ; new ser., v. 1 (1900/01)-", 
-    "name": "obj_6473", 
     "title": "Proceedings of the Aristotelian Society.", 
     "dftag_040c": "NhD", 
+    "creator": "obj_6473", 
     "dftag_310a": "Quarterly with an annual bound volume", 
     "label": "_949", 
     "note": [
@@ -23825,8 +24153,10 @@
     "subject": "obj_6472"
 },{
     "dftag_0359": "CNJ1220TS", 
-    "name": "obj_6482", 
-    "creator": "obj_6477", 
+    "creator": [
+        "obj_6477", 
+        "obj_6482"
+    ], 
     "dftag_040c": "PUL", 
     "title": "Histoire des \u00e9v\u00eaques d'\u00c9vreux ...", 
     "label": "_950", 
@@ -23860,10 +24190,10 @@
     "titleRemainder": "being papers read before the Rhode Island Soldiers and Sailors Historical Society.", 
     "dftag_0359": "CKW4643TS", 
     "dftag_362a": "[1st]-7th ser.", 
-    "name": "obj_6495", 
     "title": "Personal narratives of events in the war of the rebellion,", 
     "lccn": "07034263", 
     "dftag_040c": "MHR", 
+    "creator": "obj_6495", 
     "label": "_952", 
     "note": [
         "Each vol. has also a distinctive title; 5th ser., 1894-99, and 7th ser., 1905-15 have also collective title-pages.", 
@@ -23887,10 +24217,10 @@
     "titleRemainder": "being papers read before the Rhode Island Soldiers and Sailors Historical Society.", 
     "dftag_0359": "CKW4643TS", 
     "dftag_362a": "[1st]-7th ser.", 
-    "name": "obj_6503", 
     "title": "Personal narratives of events in the war of the rebellion,", 
     "lccn": "07034263", 
     "dftag_040c": "MHR", 
+    "creator": "obj_6503", 
     "label": "_953", 
     "note": [
         "Each vol. has also a distinctive title; 5th ser., 1894-99, and 7th ser., 1905-15 have also collective title-pages.", 
@@ -23914,10 +24244,10 @@
     "titleRemainder": "being papers read before the Rhode Island Soldiers and Sailors Historical Society.", 
     "dftag_0359": "CKW4643TS", 
     "dftag_362a": "[1st]-7th ser.", 
-    "name": "obj_6511", 
     "title": "Personal narratives of events in the war of the rebellion,", 
     "lccn": "07034263", 
     "dftag_040c": "MHR", 
+    "creator": "obj_6511", 
     "label": "_954", 
     "note": [
         "Each vol. has also a distinctive title; 5th ser., 1894-99, and 7th ser., 1905-15 have also collective title-pages.", 
@@ -23941,10 +24271,10 @@
     "titleRemainder": "being papers read before the Rhode Island Soldiers and Sailors Historical Society.", 
     "dftag_0359": "CKW4643TS", 
     "dftag_362a": "[1st]-7th ser.", 
-    "name": "obj_6519", 
     "title": "Personal narratives of events in the war of the rebellion,", 
     "lccn": "07034263", 
     "dftag_040c": "MHR", 
+    "creator": "obj_6519", 
     "label": "_955", 
     "note": [
         "Each vol. has also a distinctive title; 5th ser., 1894-99, and 7th ser., 1905-15 have also collective title-pages.", 
@@ -24022,8 +24352,10 @@
     ]
 },{
     "dftag_0359": "CPA7243TS", 
-    "name": "obj_6542", 
-    "creator": "obj_6537", 
+    "creator": [
+        "obj_6537", 
+        "obj_6542"
+    ], 
     "dftag_040c": "CLE", 
     "title": "\u0152uvres de Rabelais /", 
     "label": "_959", 
@@ -24101,8 +24433,10 @@
     "dftag_040a": "GZD"
 },{
     "dftag_0359": "CNZ1745TS", 
-    "name": "obj_6567", 
-    "creator": "obj_6562", 
+    "creator": [
+        "obj_6562", 
+        "obj_6567"
+    ], 
     "dftag_040c": "TJC", 
     "title": "Angelus Silesius /", 
     "label": "_964", 
@@ -24117,12 +24451,12 @@
     "dftag_040a": "TJC"
 },{
     "titleRemainder": "accurately printed from the text of the corrected copy left by the late George Steevens, esq., with glossarial notes.", 
-    "name": [
+    "creator": [
+        "obj_6568", 
         "obj_6572", 
         "obj_6573", 
         "obj_6574"
     ], 
-    "creator": "obj_6568", 
     "dftag_040c": "HUV", 
     "title": "The plays of William Shakspeare :", 
     "label": "_965", 
@@ -24150,10 +24484,10 @@
     "lcCallNumber": "AS122", 
     "dftag_0359": "ACP8245TS", 
     "dftag_362a": "Vol. 1-14.", 
-    "name": "obj_6578", 
     "title": "Aberystwyth studies /", 
     "lccn": "15001870", 
     "dftag_040c": "CU", 
+    "creator": "obj_6578", 
     "label": "_966", 
     "note": "No more published?.", 
     "instance": "instance_966", 
@@ -24169,10 +24503,10 @@
 },{
     "dftag_0359": "CLW2063TS", 
     "formatedContentsNote": "th. 1. Des Sachsenspiegels erster theil; oder, Das s\u00e4chsische landrecht. Nach der Berliner handschrift v. j. 1369. 3. umgearb. ausg. 1861.--th. 2. Des Sachsenspiegels zweiter theil nebst den verwandten rechtsb\u00fcchern. 1. bd. Das s\u00e4chsische lehnrecht und der Richtsteig lehnrechts. 1842. 2. bd. Der Auctor v. de beneficiis, das G\u00f6rlitzer rechtsbuch und das System des lehnrechts. 1844.", 
-    "name": "obj_6584", 
     "title": "Des Sachsenspiegels erster [und zweiter] theil...", 
     "lccn": "11012332", 
     "dftag_040c": "FSL", 
+    "creator": "obj_6584", 
     "label": "_967", 
     "instance": "instance_967", 
     "uniformTitle": "obj_6580", 
@@ -24201,7 +24535,10 @@
     "lcCallNumber": "PQ6323", 
     "dftag_0359": "CNP4490TS", 
     "seriesStatement": "Bibliotheca romanica. 137-141, 151-153, 241-248. Biblioteca espa\u00f1ola", 
-    "creator": "obj_6592", 
+    "creator": [
+        "obj_6592", 
+        "obj_6597"
+    ], 
     "lccn": "11031512 //r22", 
     "dftag_040c": "SOI", 
     "title": "Don Quijote ...", 
@@ -24213,8 +24550,7 @@
     "dftag_040d": "PUL", 
     "type": "WorkRecord", 
     "id": "work_969", 
-    "dftag_040a": "DLC", 
-    "name": "obj_6597"
+    "dftag_040a": "DLC"
 },{
     "lcCallNumber": "DC611.N847", 
     "dftag_0359": "CMX3345TS", 
@@ -24239,8 +24575,10 @@
 },{
     "lcCallNumber": "QD3", 
     "dftag_0359": "CJD0209TS", 
-    "name": "obj_6612", 
-    "creator": "obj_6604", 
+    "creator": [
+        "obj_6604", 
+        "obj_6612"
+    ], 
     "lccn": "05012331 //r952", 
     "dftag_040c": "CGU", 
     "title": "The collected works of Sir Humphry Davy ...", 
@@ -24262,8 +24600,10 @@
 },{
     "lcCallNumber": "QD3", 
     "dftag_0359": "CJD0209TS", 
-    "name": "obj_6622", 
-    "creator": "obj_6614", 
+    "creator": [
+        "obj_6614", 
+        "obj_6622"
+    ], 
     "lccn": "05012331 //r952", 
     "dftag_040c": "CGU", 
     "title": "The collected works of Sir Humphry Davy ...", 
@@ -24303,8 +24643,10 @@
 },{
     "titleRemainder": "or a peaceable dispute for the perfection of the holy scripture in point of ceremonies and church-government; in which the removal of the service-book is justifi'd ... To which is added, a brief tractate of scandal; with an answer to the new doctrine of the doctors of Aberdeen, touching scandal.", 
     "dftag_0359": "CLF5354TS", 
-    "name": "obj_6632", 
-    "creator": "obj_6627", 
+    "creator": [
+        "obj_6627", 
+        "obj_6632"
+    ], 
     "dftag_040c": "KSU", 
     "title": "The divine right of church-government and excommunication:", 
     "label": "_974", 
@@ -24388,13 +24730,13 @@
 },{
     "titleRemainder": "containing many curious reflexions, very useful and necessary for the right understanding and judging of the excellencies of Homer and Virgil /", 
     "dftag_0359": "CNN8301TS", 
-    "name": [
+    "creator": [
+        "obj_6658", 
         "obj_6666", 
         "obj_6667", 
         "obj_6668", 
         "obj_6669"
     ], 
-    "creator": "obj_6658", 
     "formatedContentsNote": "v. 1. Preface of the translator. A discourse of ... to Monsieur the abbot knight of Morsan. A memoire concerning the Reverend Father Bossu, sent to M....... by the Reverend Father Courayer (p. xxi-xxxvi) Monsieur Bossu's Treatise of the epick poem (book I-II)--v. 2. Monsieur Bossu's Treatise of the epick poem (continued) book III-VI. An essay upon satyr, written by the famous Monsieur Dacier (p. 298-315) Of pastorals, by Monsieur de Fontenelle, English'd by Mr. Motteux (p. 316-351) Fragments taken from the Remarks of Mr. Dacier upon passages of Aristotle's Poetry, which have relation to ... this treatise.", 
     "dftag_040c": "CIN", 
     "title": "Monsieur Bossu's treatise of the epick poem :", 
@@ -24433,8 +24775,10 @@
     "titleRemainder": "The Philobiblon of Richard de Bury,", 
     "dftag_0359": "CKU9266TS", 
     "seriesStatement": "The king's classics", 
-    "name": "obj_6680", 
-    "creator": "obj_6675", 
+    "creator": [
+        "obj_6675", 
+        "obj_6680"
+    ], 
     "dftag_040c": "WVH", 
     "title": "The love of books :", 
     "label": "_981", 
@@ -24490,13 +24834,13 @@
     ]
 },{
     "dftag_0359": "CNH8828TS", 
-    "name": [
-        "obj_6695", 
-        "obj_6696"
-    ], 
     "title": "Voyage from Havre to Paris by the Seine.", 
     "formatedContentsNote": "Pt. 1. Historical and picturesque voyage from Havre to Rouen and from Rouen to Havre by the Seine ... by J. Morlent, tr. ... by M.D.C., 3d ed.--Pt. 2. Historical and picturesque excursion from Rouen to Paris by the Seine ... by an inhabitant of Rouen ... tr. ... by M.D.C., 2d ed.", 
     "dftag_040c": "PUL", 
+    "creator": [
+        "obj_6695", 
+        "obj_6696"
+    ], 
     "label": "_984", 
     "instance": "instance_984", 
     "dftag_035a": "(OCoLC)ocm42701391", 
@@ -24554,14 +24898,14 @@
 },{
     "titleRemainder": "ausz\u00fcge und bemerkungen /", 
     "dftag_0359": "CPC3655TS", 
-    "name": [
+    "title": "Angelus Silesius und Saint-Martin :", 
+    "dftag_040c": "WEL", 
+    "creator": [
         "obj_6717", 
         "obj_6718", 
         "obj_6719", 
         "obj_6720"
     ], 
-    "title": "Angelus Silesius und Saint-Martin :", 
-    "dftag_040c": "WEL", 
     "label": "_988", 
     "note": [
         "Autograph (initials) of Sophie Jewett, 1891, in Wellesley College's copy.", 
@@ -24611,11 +24955,11 @@
 },{
     "titleRemainder": "ses prisonniers, ses gouverneurs, ses archives, d\u00e9tails des tortures et supplices usit\u00e9s envers les prisonniers, r\u00e9v\u00e9lations sur le r\u00e9gime int\u00e9rieur de la Bastille, aventures dramatiques, lugubres, scandaleuses, \u00e9vasions, archives de police /", 
     "dftag_0359": "CJX1442TS", 
-    "name": [
+    "creator": [
+        "obj_6733", 
         "obj_6738", 
         "obj_6739"
     ], 
-    "creator": "obj_6733", 
     "title": "Histoire de la Bastille depuis sa foundation (1374) jusqu'\u00e0 sa destruction (1789) :", 
     "label": "_991", 
     "note": "Date taken from publication date of a related one-vol. edition.", 
@@ -24660,12 +25004,12 @@
 },{
     "lcCallNumber": "PQ2220.D85", 
     "dftag_0359": "CNR2288TS", 
-    "name": [
+    "creator": [
+        "obj_6751", 
         "obj_6755", 
         "obj_6756", 
         "obj_6757"
     ], 
-    "creator": "obj_6751", 
     "dftag_040c": "VA@", 
     "title": "Une histoire d'amour /", 
     "label": "_994", 
@@ -24684,8 +25028,10 @@
 },{
     "lcCallNumber": "QD3", 
     "dftag_0359": "CJD0209TS", 
-    "name": "obj_6766", 
-    "creator": "obj_6758", 
+    "creator": [
+        "obj_6758", 
+        "obj_6766"
+    ], 
     "lccn": "05012331 //r952", 
     "dftag_040c": "CGU", 
     "title": "The collected works of Sir Humphry Davy ...", 
@@ -24709,15 +25055,15 @@
     "dftag_490v": "Bd. 8", 
     "dftag_0359": "CPF9105TS", 
     "seriesStatement": "Die F\u00fcnfzig B\u00fccher ;", 
-    "name": [
+    "title": "Alt-Berliner Humor.", 
+    "lccn": "24014974", 
+    "dftag_040c": "NUI", 
+    "creator": [
         "obj_6772", 
         "obj_6773", 
         "obj_6774", 
         "obj_6775"
     ], 
-    "title": "Alt-Berliner Humor.", 
-    "lccn": "24014974", 
-    "dftag_040c": "NUI", 
     "label": "_996", 
     "note": "Works by Julius von Voss, Adolf Glassbrenner, and David Kalisch, edited by Georg Hermann.", 
     "instance": "instance_996", 
