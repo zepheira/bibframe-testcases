@@ -865,42 +865,42 @@ v    </property>
   </class>
 
   <class id='AudioCartridge' isa='PhysicalAudio'>
-    <label>AudioCartridge</label>
+    <label>Audio Cartridge</label>
     <tagline>An audio cartridge </tagline>
     <rdaref>338 $b = sg</rdaref>
     <marcref>g - 007/01 (Sound recording)</marcref>
   </class>
     
   <class id='AudioCylinder' isa='PhysicalAudio'>
-    <label>AudioCylinder</label>
+    <label>Audio Cylinder</label>
     <tagline>An audio cylinder </tagline>
     <rdaref>338 $b = se</rdaref>
     <marcref>e - 007/01 (Sound recording)</marcref>
   </class>
     
   <class id='AudioDisc' isa='PhysicalAudio'>
-    <label>AudioDisc</label>
+    <label>Audio Disc</label>
     <tagline>An audio disc </tagline>
     <rdaref>338 $b = sd</rdaref>
     <marcref>d - 007/01 (Sound recording)</marcref>
   </class>
     
   <class id='SoundTrackReel' isa='PhysicalAudio'>
-    <label>SoundTrackReel</label>
+    <label>Sound Track Reel</label>
     <tagline>An sound track reel </tagline>
     <rdaref>338 $b = si</rdaref>
     <marcref>i - 007/01 (Sound recording)</marcref>
   </class>
     
   <class id='AudioRoll' isa='PhysicalAudio'>
-    <label>AudioRoll</label>
+    <label>Audio Roll</label>
     <tagline>An audio roll </tagline>
     <rdaref>338 $b = sq</rdaref>
     <marcref>q - 007/01 (Sound recording)</marcref>
   </class>
     
   <class id='AudioCassette' isa='PhysicalAudio'>
-    <label>AudioCassette</label>
+    <label>Audio Cassette</label>
     <tagline>An audiocassette</tagline>
     <rdaref>338 $b = ss</rdaref>
     <marcref>s - 007/01 (Sound recording)</marcref>
@@ -996,36 +996,285 @@ v    </property>
   <!-- other -->
 
 
-  
+  <!-- Microform Carriers -->  
 
-  <class id='Microform' isa='Instance'>
-    <label>Microform</label>
+  <class id='PhysicalMicroform' isa='Instance'>
+    <label>Physical Microform</label>
     <tagline>Microform carriers</tagline>
   </class>
+
+  <class id='AperatureCard' isa='PhysicalMicroform'>
+    <label>Aperture Card</label>
+    <tagline>Aperture Card</tagline>
+    <rdaref>338 $b = ha</rdaref>
+    <marcref>a - 007/01 (Microform)</marcref>
+  </class>
+
+  <class id='Microfiche' isa='PhysicalMicroform'>
+    <label>Microfiche</label>
+    <tagline>Microfiche</tagline>
+    <rdaref>338 $b = he</rdaref>
+    <marcref>e - 007/01 (Microform)</marcref>
+  </class>
+
+  <class id='MicroficheCassette' isa='PhysicalMicroform'>
+    <label>Microfiche Cassette</label>
+    <tagline>Microfiche Cassette</tagline>
+    <rdaref>338 $b = hf</rdaref>
+    <marcref>f - 007/01 (Microform)</marcref>
+  </class>
+
+  <class id='MicrofilmCartridge' isa='PhysicalMicroform'>
+    <label>MicrofilmCartridge</label>
+    <tagline>MicrofilmCartridge</tagline>
+    <rdaref>338 $b = hb</rdaref>
+    <marcref>b - 007/01 (Microform)</marcref>
+  </class>
+
+  <class id='MicrofilmCassette' isa='PhysicalMicroform'>
+    <label>Microfilm Cassette</label>
+    <tagline>Microfilm Cassette</tagline>
+    <rdaref>338 $b = hc</rdaref>
+    <marcref>c - 007/01 (Microform)</marcref>
+  </class>
+
+  <class id='MicrofilmReel' isa='PhysicalMicroform'>
+    <label>Microfilm Reel</label>
+    <tagline>Microfilm Reel</tagline>
+    <rdaref>338 $b = hd</rdaref>
+    <marcref>d - 007/01 (Microform)</marcref>
+  </class>
+
+  <class id='MicrofilmRoll' isa='PhysicalMicroform'>
+    <label>Microfilm Roll</label>
+    <tagline>Microfilm Roll</tagline>
+    <rdaref>338 $b = hj</rdaref>
+    <marcref>j - 007/01 (Microfilm)</marcref>
+  </class>
+
+  <class id='MicrofilmSlip' isa='PhysicalMicroform'>
+    <label>Microfilm Slip</label>
+    <tagline>Microfilm Slip</tagline>
+    <rdaref>338 $b = hh  </rdaref>
+    <marcref>h - 007/01 (Microform)</marcref>
+  </class>
+
+  <class id='Microopaque' isa='PhysicalMicroform'>
+    <label>Microopaque</label>
+    <tagline>Microopaque</tagline>
+    <rdaref>338 $b = hg  </rdaref>
+    <marcref>g - 007/01 (Microform)</marcref>
+  </class>
+
+  <!-- other -->
+
+  <!-- Microscopic Carriers -->
+
+  <class id='PhysicalMicroscopic' isa='Instance'>
+    <label>Physical Microscopic</label>
+    <tagline>Physical microscopic carriers</tagline>
+  </class>
+
+  <class id='MicroscopeSlide' isa='PhysicalMicroscopic'>
+    <label>Microscope Slide</label>
+    <tagline>Microscope Slide</tagline>
+    <rdaref>338 $b = pp</rdaref>
+    <marcref>p - 008/33 (Visual Materials)</marcref>
+  </class>
+
+  <!-- other -->
+
+  <!-- Projected Image Carriers -->
   
-  <class id='Microscopic' isa='Instance'>
-    <label>Microscopic</label>
-    <tagline>Microscopic carriers </tagline>
+  <class id='PhysicalProjectedImage' isa='Instance'>
+    <label>Physical Projected Image</label>
+    <tagline>A Physical Projected image carrier.</tagline>
+  </class>
+
+  <class id='FilmCartridge' isa='PhysicalProjectedImage'>
+    <label>Film Cartridge</label>
+    <tagline>Film Cartridge</tagline>
+    <rdaref>338 $b = mc</rdaref>
+    <marcref>c - 007/01 (Motion picture)</marcref>
+  </class>
+
+  <class id='FilmCassette' isa='PhysicalProjectedImage'>
+    <label>Film Cassette</label>
+    <tagline>Film Cassette</tagline>
+    <rdaref>338 $b = mf</rdaref>
+    <marcref>f - 007/01 (Motion picture)</marcref>
+  </class>
+
+  <class id='FilmReel' isa='PhysicalProjectedImage'>
+    <label>Film Reel</label>
+    <tagline>Film Reel</tagline>
+    <rdaref>338 $b = mr</rdaref>
+    <marcref>r - 007/01 (Motion picture)</marcref>
+  </class>
+
+  <class id='FilmRoll' isa='PhysicalProjectedImage'>
+    <label>Film Roll</label>
+    <tagline>Film Roll</tagline>
+    <rdaref>338 $b = mo</rdaref>
+    <marcref>o - 007/01 (Motion picture)</marcref>
+  </class>
+
+  <class id='Filmslip' isa='PhysicalProjectedImage'>
+    <label>Filmslip</label>
+    <tagline>Filmslip</tagline>
+    <rdaref>338 $b = gd</rdaref>
+    <marcref>d - 007/01 (Projected graphic)</marcref>
+  </class>
+
+  <class id='Filmstrip' isa='PhysicalProjectedImage'>
+    <label>Filmstrip</label>
+    <tagline>Filmstrip</tagline>
+    <rdaref>338 $b = gf</rdaref>
+    <marcref>f - 007/01 (Projected graphic)</marcref>
+  </class>
+
+  <class id='FilmstripCartridge' isa='PhysicalProjectedImage'>
+    <label>Filmstrip Cartridge</label>
+    <tagline>Filmstrip Cartridge</tagline>
+    <rdaref>338 $b = gc</rdaref>
+    <marcref>c - 007/01 (Projected graphic)</marcref>
+  </class>
+
+  <class id='OverheadTransparency' isa='PhysicalProjectedImage'>
+    <label>Overhead Transparency</label>
+    <tagline>Overhead Transparency</tagline>
+    <rdaref>338 $b = gt</rdaref>
+    <marcref>t - 007/01 (Projected graphic)</marcref>
+  </class>
+
+  <class id='Slide' isa='PhysicalProjectedImage'>
+    <label>Slide</label>
+    <tagline>Slide</tagline>
+    <rdaref>338 $b = gs</rdaref>
+    <marcref>s - 007/01 (Projected graphic) </marcref>
   </class>
   
-  <class id='ProjectedImage' isa='Instance'>
-    <label>Projected Image</label>
-    <tagline>Projected image carriers </tagline>
-  </class>
+  <!-- other -->
+
+  <!-- Stereographic Carriers -->
   
-  <class id='Stereographic' isa='Instance'>
-    <label>Stereographic</label>
-    <tagline>Stereographic carriers </tagline>
+  <class id='PhysicalStereographic' isa='Instance'>
+    <label>Physical Stereographic</label>
+    <tagline>Physical Stereographic carriers </tagline>
   </class>
-  
-  <class id='Unmediated' isa='Instance'>
-    <label>Unmediated</label>
-    <tagline>Unmediated carriers </tagline>
+
+  <class id='StereographCard' isa='PhysicalStereographic'>
+    <label>Stereograph Card</label>
+    <tagline>Stereograph Card</tagline>
+    <rdaref>338 $b = eh</rdaref>
+    <marcref>h - 007/01 (Non-projected graphic)</marcref>
   </class>
+
+  <class id='StereographDisc' isa='PhysicalStereographic'>
+    <label>Stereograph Disc</label>
+    <tagline>Stereograph Disc</tagline>
+    <rdaref>338 $b = es</rdaref>
+    <marcref>s - 007/01 (Projected graphic) </marcref>
+  </class>
+
+  <!-- other -->
+
+  <!-- Physical Unmediated carriers -->
+
+  <class id='PhysicalUnmediated' isa='Instance'>
+    <label>Physical Unmediated</label>
+    <tagline>A physical unmediated carrier</tagline>
+  </class>
+
+  <class id='Card' isa='PhysicalUnmediated'>
+    <label>Card</label>
+    <tagline>Card</tagline>
+    <rdaref>338 $b = no</rdaref>
+    <marcref>no code</marcref>
+  </class>
+
+  <class id='Flipchart' isa='PhysicalUnmediated'>
+    <label>Flipchart</label>
+    <tagline>Flipchart</tagline>
+    <rdaref>338 $b = nn</rdaref>
+    <marcref>no code</marcref>
+  </class>
+
+  <class id='Roll' isa='PhysicalUnmediated'>
+    <label>Roll</label>
+    <tagline>Roll</tagline>
+    <rdaref>338 $b = na</rdaref>
+    <marcref>no code</marcref>
+  </class>
+
+  <class id='Sheet' isa='PhysicalUnmediated'>
+    <label>Sheet</label>
+    <tagline>Sheet</tagline>
+    <rdaref>338 $b = nb</rdaref>
+    <marcref>no code</marcref>
+  </class>
+
+  <class id='Volume' isa='PhysicalUnmediated'>
+    <label>Volume</label>
+    <tagline>Volume</tagline>
+    <rdaref>338 $b = nc</rdaref>
+    <marcref>no code</marcref>
+  </class>
+
+  <class id='Object' isa='PhysicalUnmediated'>
+    <label>Object</label>
+    <tagline>Object</tagline>
+    <rdaref>338 $b = nr</rdaref>
+    <marcref>r - Bibliographic Leader/06</marcref>
+  </class>
+
+  <!-- other -->
+
+  <!-- Physical Video Carriers -->
   
   <class id='PhysicalVideo' isa='Instance'>
     <label>Physical Video</label>
     <tagline>Video carriers </tagline>
+  </class>
+
+  <class id='VideoCartridge' isa='PhysicalVideo'>
+    <label>Video Cartridge</label>
+    <tagline>Video Cartridge</tagline>
+    <rdaref>338 $b = vc</rdaref>
+    <marcref>c - 007/01 (Videorecording)</marcref>
+  </class>
+
+  <class id='Videocassette' isa='PhysicalVideo'>
+    <label>Videocassette</label>
+    <tagline>Videocassette</tagline>
+    <rdaref>338 $b = vf</rdaref>
+    <marcref>f - 007/01 (Videorecording)</marcref>
+  </class>
+
+  <class id='Videodisc' isa='PhysicalVideo'>
+    <label>Videodisc</label>
+    <tagline>Videodisc</tagline>
+    <rdaref>338 $b = vd</rdaref>
+    <marcref>d - 007/01 (Videorecording)</marcref>
+  </class>
+
+  <class id='VideotapeReel' isa='PhysicalVideo'>
+    <label>Videotape Reel</label>
+    <tagline>Videotape Reel</tagline>
+    <rdaref>338 $b = vr</rdaref>
+    <marcref>r - 007/01 (Videorecording)</marcref>
+  </class>
+
+  <!-- other -->
+
+  <class id='BlurayDisc' isa='PhysicalVideo'>
+    <label>Bluray Disk</label>
+    <tagline>An optical disc format that offers more than five times the storage capacity of traditional DVDs</tagline>
+  </class>
+
+  <class id='DVD' isa='PhysicalVideo'>
+    <label>DVD</label>
+    <tagline>An optical disc format.</tagline>
   </class>
   
   <!-- Misc Library Carriers (because they seem to be missing) -->
@@ -1132,24 +1381,14 @@ v    </property>
     <tagline>A large print book.</tagline>
   </class>
 
-  <class id='BlurayDisc' isa='PhysicalVideo'>
-    <label>Bluray Disk</label>
-    <tagline>An optical disc format that offers more than five times the storage capacity of traditional DVDs</tagline>
-  </class>
 
-  <class id='DVD' isa='PhysicalVideo'>
-    <label>DVD</label>
-    <tagline>An optical disc format.</tagline>
-  </class>
-
-
-  <class id='FilmReel' isa='ProjectedImage'>
+  <class id='FilmReel' isa='PhysicalProjectedImage'>
     <label>Film Reel</label>
     <tagline></tagline>
   </class>
 
 
-  <class id='VHSTape' isa='ProjectedImage'>
+  <class id='VHSTape' isa='PhysicalProjectedImage'>
     <label>VHS Tape</label>
     <tagline></tagline>
   </class>
