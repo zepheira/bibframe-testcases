@@ -121,8 +121,7 @@
               <!-- Work display lens -->
 	      <div ex:role="lens" ex:itemTypes="WorkRecord" style="display: none">
 		  
-		<h3 class="titleWork"><span ex:content=".title"></span> <span ex:content=".titleRemainder"></span> <span ex:content=".titleStatement"></span> <span ex:content=".titleInclusiveDate"></span></h3>
-		<br />
+		<div class="titleWork"><span ex:content=".title"></span> <span ex:content=".titleRemainder"></span> <span ex:content=".titleStatement"></span> <span ex:content=".titleInclusiveDate"></span></div>
 		
 		<table class="table table-condensed">
                   <tr ex:if-exists=".creator">
@@ -131,13 +130,13 @@
 		      <ul ex:content=".creator" class="value creator"><li><i ex:class-subcontent="icon-{{.marcrType}}" ex:title-subcontent="{{.marcrType}}"></i> <span class="name" ex:content=".label"></span><span class="name" ex:content=".q"></span><span class="name" ex:content=".date"></span> <span class="authorityLink idlc" ex:if-exists=".hasAuthorityLink"><a ex:href-content=".hasAuthorityLink">(<i class="icon-star"></i>)</a></span> <span class="authorityLink idlc" ex:if-exists=".idlcFromHeuristic"><a ex:href-content=".idlcFromHeuristic">(<i class="icon-star"></i>)</a></span> <span class="authorityLink viaf" ex:if-exists=".viafFromHeuristic"><a ex:href-content=".viafFromHeuristic">(<i class="icon-ok"></i>)</a></span></li></ul>
                     </td>
                   </tr>
-                  <tr ex:if-exists=".formatedContentsNote">
-                    <td class="property span2">Contents</td>
-                    <td><div ex:content=".formatedContentsNote" class="value contents"></div></td>
-                  </tr>                    
                   <tr ex:if-exists=".summary">
                     <td class="property span2">Summary</td>
                     <td><div ex:content=".summary" class="value summary"></div></td>
+                  </tr>                    
+                  <tr ex:if-exists=".formatedContentsNote">
+                    <td class="property span2">Contents</td>
+                    <td><div ex:content=".formatedContentsNote" class="value contents"></div></td>
                   </tr>                    
                   <tr ex:if-exists=".note">
                     <td class="property span2">Note(s)</td>
@@ -171,7 +170,7 @@
 		    <td>
                       <ul ex:content=".instance" class="value instance">
                         <li>
-                          <h4 class="titleInstance">
+                          <div class="titleInstance">
                             <i ex:class-subcontent="icon-default icon-{{.resourceType}}"  ex:title-subcontent="{{.resourceType}}"></i>
 
                             <span ex:if="exists(.link)">
@@ -181,7 +180,7 @@
                             <span ex:if="not(exists(.link))">
                               <span class="title"><span ex:content="!instance.title"></span> <span ex:content="!instance.titleRemainder"></span> <span ex:content="!instance.titleStatement"></span> <span ex:content="!instance.titleInclusiveDate"></span></span>
                             </span>
-                          </h4>
+                          </div>
                           
                           <div class="row-fluid">
 
