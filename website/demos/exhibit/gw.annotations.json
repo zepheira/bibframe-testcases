@@ -1,0 +1,496 @@
+{"items": [
+{
+    "on_instance": "instance_1", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_1", 
+    "institution": "obj_9", 
+    "marcrType": "Holdings", 
+    "label": "_1", 
+    "type": "Annotation", 
+    "id": "annotation_1"
+},{
+    "on_instance": "instance_2", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_2", 
+    "institution": "obj_19", 
+    "marcrType": "Holdings", 
+    "label": "_2", 
+    "type": "Annotation", 
+    "id": "annotation_2"
+},{
+    "on_instance": "instance_3", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_3", 
+    "institution": "obj_29", 
+    "marcrType": "Holdings", 
+    "label": "_3", 
+    "type": "Annotation", 
+    "id": "annotation_3"
+},{
+    "on_instance": "instance_4", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_4", 
+    "institution": "obj_38", 
+    "marcrType": "Holdings", 
+    "label": "_4", 
+    "type": "Annotation", 
+    "id": "annotation_4"
+},{
+    "on_instance": "instance_5", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_5", 
+    "institution": "obj_50", 
+    "marcrType": "Holdings", 
+    "label": "_5", 
+    "type": "Annotation", 
+    "id": "annotation_5"
+},{
+    "on_instance": "instance_6", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_6", 
+    "institution": "obj_69", 
+    "marcrType": "Holdings", 
+    "label": "_6", 
+    "type": "Annotation", 
+    "id": "annotation_6"
+},{
+    "on_instance": "instance_7", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_7", 
+    "institution": "obj_83", 
+    "marcrType": "Holdings", 
+    "label": "_7", 
+    "type": "Annotation", 
+    "id": "annotation_7"
+},{
+    "on_instance": "instance_8", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_8", 
+    "institution": "obj_90", 
+    "marcrType": "Holdings", 
+    "label": "_8", 
+    "type": "Annotation", 
+    "id": "annotation_8"
+},{
+    "on_instance": "instance_9", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_9", 
+    "institution": "obj_96", 
+    "marcrType": "Holdings", 
+    "label": "_9", 
+    "type": "Annotation", 
+    "id": "annotation_9"
+},{
+    "on_instance": "instance_10", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_10", 
+    "institution": "obj_103", 
+    "marcrType": "Holdings", 
+    "label": "_10", 
+    "type": "Annotation", 
+    "id": "annotation_10"
+},{
+    "on_instance": "instance_11", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_11", 
+    "institution": "obj_111", 
+    "marcrType": "Holdings", 
+    "label": "_11", 
+    "type": "Annotation", 
+    "id": "annotation_11"
+},{
+    "on_instance": "instance_12", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_12", 
+    "institution": "obj_119", 
+    "marcrType": "Holdings", 
+    "label": "_12", 
+    "type": "Annotation", 
+    "id": "annotation_12"
+},{
+    "on_instance": "instance_13", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_13", 
+    "institution": "obj_129", 
+    "marcrType": "Holdings", 
+    "label": "_13", 
+    "type": "Annotation", 
+    "id": "annotation_13"
+},{
+    "on_instance": "instance_14", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_14", 
+    "institution": "obj_135", 
+    "marcrType": "Holdings", 
+    "label": "_14", 
+    "type": "Annotation", 
+    "id": "annotation_14"
+},{
+    "on_instance": "instance_15", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_15", 
+    "institution": "obj_143", 
+    "marcrType": "Holdings", 
+    "label": "_15", 
+    "type": "Annotation", 
+    "id": "annotation_15"
+},{
+    "on_instance": "instance_16", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_16", 
+    "institution": "obj_155", 
+    "marcrType": "Holdings", 
+    "label": "_16", 
+    "type": "Annotation", 
+    "id": "annotation_16"
+},{
+    "on_instance": "instance_17", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_17", 
+    "institution": "obj_163", 
+    "marcrType": "Holdings", 
+    "label": "_17", 
+    "type": "Annotation", 
+    "id": "annotation_17"
+},{
+    "on_instance": "instance_18", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_18", 
+    "institution": "obj_175", 
+    "marcrType": "Holdings", 
+    "label": "_18", 
+    "type": "Annotation", 
+    "id": "annotation_18"
+},{
+    "on_instance": "instance_19", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_19", 
+    "institution": "obj_183", 
+    "marcrType": "Holdings", 
+    "label": "_19", 
+    "type": "Annotation", 
+    "id": "annotation_19"
+},{
+    "on_instance": "instance_20", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_20", 
+    "institution": "obj_189", 
+    "marcrType": "Holdings", 
+    "label": "_20", 
+    "type": "Annotation", 
+    "id": "annotation_20"
+},{
+    "on_instance": "instance_21", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_21", 
+    "institution": "obj_195", 
+    "marcrType": "Holdings", 
+    "label": "_21", 
+    "type": "Annotation", 
+    "id": "annotation_21"
+},{
+    "on_instance": "instance_22", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_22", 
+    "institution": "obj_202", 
+    "marcrType": "Holdings", 
+    "label": "_22", 
+    "type": "Annotation", 
+    "id": "annotation_22"
+},{
+    "on_instance": "instance_23", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_23", 
+    "institution": "obj_209", 
+    "marcrType": "Holdings", 
+    "label": "_23", 
+    "type": "Annotation", 
+    "id": "annotation_23"
+},{
+    "on_instance": "instance_24", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_24", 
+    "institution": "obj_217", 
+    "marcrType": "Holdings", 
+    "label": "_24", 
+    "type": "Annotation", 
+    "id": "annotation_24"
+},{
+    "on_instance": "instance_25", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_25", 
+    "institution": "obj_225", 
+    "marcrType": "Holdings", 
+    "label": "_25", 
+    "type": "Annotation", 
+    "id": "annotation_25"
+},{
+    "on_instance": "instance_26", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_26", 
+    "institution": "obj_236", 
+    "marcrType": "Holdings", 
+    "label": "_26", 
+    "type": "Annotation", 
+    "id": "annotation_26"
+},{
+    "on_instance": "instance_27", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_27", 
+    "institution": "obj_244", 
+    "marcrType": "Holdings", 
+    "label": "_27", 
+    "type": "Annotation", 
+    "id": "annotation_27"
+},{
+    "on_instance": "instance_28", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_28", 
+    "institution": "obj_251", 
+    "marcrType": "Holdings", 
+    "label": "_28", 
+    "type": "Annotation", 
+    "id": "annotation_28"
+},{
+    "on_instance": "instance_29", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_29", 
+    "institution": "obj_259", 
+    "marcrType": "Holdings", 
+    "label": "_29", 
+    "type": "Annotation", 
+    "id": "annotation_29"
+},{
+    "on_instance": "instance_30", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_30", 
+    "institution": "obj_265", 
+    "marcrType": "Holdings", 
+    "label": "_30", 
+    "type": "Annotation", 
+    "id": "annotation_30"
+},{
+    "on_instance": "instance_31", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_31", 
+    "institution": "obj_273", 
+    "marcrType": "Holdings", 
+    "label": "_31", 
+    "type": "Annotation", 
+    "id": "annotation_31"
+},{
+    "on_instance": "instance_32", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_32", 
+    "institution": "obj_282", 
+    "marcrType": "Holdings", 
+    "label": "_32", 
+    "type": "Annotation", 
+    "id": "annotation_32"
+},{
+    "on_instance": "instance_33", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_33", 
+    "institution": "obj_289", 
+    "marcrType": "Holdings", 
+    "label": "_33", 
+    "type": "Annotation", 
+    "id": "annotation_33"
+},{
+    "on_instance": "instance_34", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_34", 
+    "institution": "obj_296", 
+    "marcrType": "Holdings", 
+    "label": "_34", 
+    "type": "Annotation", 
+    "id": "annotation_34"
+},{
+    "on_instance": "instance_35", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_35", 
+    "institution": "obj_304", 
+    "marcrType": "Holdings", 
+    "label": "_35", 
+    "type": "Annotation", 
+    "id": "annotation_35"
+},{
+    "on_instance": "instance_36", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_36", 
+    "institution": "obj_311", 
+    "marcrType": "Holdings", 
+    "label": "_36", 
+    "type": "Annotation", 
+    "id": "annotation_36"
+},{
+    "on_instance": "instance_37", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_37", 
+    "institution": "obj_319", 
+    "marcrType": "Holdings", 
+    "label": "_37", 
+    "type": "Annotation", 
+    "id": "annotation_37"
+},{
+    "on_instance": "instance_38", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_38", 
+    "institution": "obj_326", 
+    "marcrType": "Holdings", 
+    "label": "_38", 
+    "type": "Annotation", 
+    "id": "annotation_38"
+},{
+    "on_instance": "instance_39", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_39", 
+    "institution": "obj_333", 
+    "marcrType": "Holdings", 
+    "label": "_39", 
+    "type": "Annotation", 
+    "id": "annotation_39"
+},{
+    "on_instance": "instance_40", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_40", 
+    "institution": "obj_339", 
+    "marcrType": "Holdings", 
+    "label": "_40", 
+    "type": "Annotation", 
+    "id": "annotation_40"
+},{
+    "on_instance": "instance_41", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_41", 
+    "institution": "obj_354", 
+    "marcrType": "Holdings", 
+    "label": "_41", 
+    "type": "Annotation", 
+    "id": "annotation_41"
+},{
+    "on_instance": "instance_42", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_42", 
+    "institution": "obj_363", 
+    "marcrType": "Holdings", 
+    "label": "_42", 
+    "type": "Annotation", 
+    "id": "annotation_42"
+},{
+    "on_instance": "instance_43", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_43", 
+    "institution": "obj_371", 
+    "marcrType": "Holdings", 
+    "label": "_43", 
+    "type": "Annotation", 
+    "id": "annotation_43"
+},{
+    "on_instance": "instance_44", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_44", 
+    "institution": "obj_380", 
+    "marcrType": "Holdings", 
+    "label": "_44", 
+    "type": "Annotation", 
+    "id": "annotation_44"
+},{
+    "on_instance": "instance_45", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_45", 
+    "institution": "obj_388", 
+    "marcrType": "Holdings", 
+    "label": "_45", 
+    "type": "Annotation", 
+    "id": "annotation_45"
+},{
+    "on_instance": "instance_46", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_46", 
+    "institution": "obj_396", 
+    "marcrType": "Holdings", 
+    "label": "_46", 
+    "type": "Annotation", 
+    "id": "annotation_46"
+},{
+    "on_instance": "instance_47", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_47", 
+    "institution": "obj_404", 
+    "marcrType": "Holdings", 
+    "label": "_47", 
+    "type": "Annotation", 
+    "id": "annotation_47"
+},{
+    "on_instance": "instance_48", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_48", 
+    "institution": "obj_410", 
+    "marcrType": "Holdings", 
+    "label": "_48", 
+    "type": "Annotation", 
+    "id": "annotation_48"
+},{
+    "on_instance": "instance_49", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_49", 
+    "institution": "obj_417", 
+    "marcrType": "Holdings", 
+    "label": "_49", 
+    "type": "Annotation", 
+    "id": "annotation_49"
+},{
+    "on_instance": "instance_50", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_50", 
+    "institution": "obj_426", 
+    "marcrType": "Holdings", 
+    "label": "_50", 
+    "type": "Annotation", 
+    "id": "annotation_50"
+},{
+    "on_instance": "instance_94", 
+    "on_work": "work_94", 
+    "institution": "obj_751", 
+    "marcrType": "Holdings", 
+    "label": "_94", 
+    "type": "Annotation", 
+    "id": "annotation_94"
+},{
+    "on_instance": "instance_96", 
+    "on_work": "work_96", 
+    "institution": "obj_772", 
+    "marcrType": "Holdings", 
+    "label": "_96", 
+    "type": "Annotation", 
+    "id": "annotation_96"
+},{
+    "on_instance": "instance_251", 
+    "on_work": "work_251", 
+    "institution": "obj_2327", 
+    "marcrType": "Holdings", 
+    "label": "_251", 
+    "type": "Annotation", 
+    "id": "annotation_251"
+},{
+    "on_instance": "instance_268", 
+    "h": "GW Electronic Journal", 
+    "on_work": "work_268", 
+    "institution": "obj_2438", 
+    "marcrType": "Holdings", 
+    "label": "_268", 
+    "type": "Annotation", 
+    "id": "annotation_268"
+},{
+    "on_instance": "instance_284", 
+    "h": "GW Electronic Journal", 
+    "on_work": "work_284", 
+    "institution": "obj_2540", 
+    "marcrType": "Holdings", 
+    "label": "_284", 
+    "type": "Annotation", 
+    "id": "annotation_284"
+}
+]
+}
