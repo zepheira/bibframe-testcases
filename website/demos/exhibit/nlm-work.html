@@ -2,17 +2,17 @@
 <html lang="en">
   
   <head>
-    <title>MARCR Linked Data Navigator - 1K MARCR records from Princeton Library</title>
+    <title>MARCR Linked Data Navigator - 1K MARCR records from National Library of Medicine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link href="./css/bootstrap.css" rel="stylesheet" />
     <link href="./css/bootstrap-responsive.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
     
-    <link rel="exhibit/data" href="./princeton.work.json" />
-    <link rel="exhibit/data" href="./princeton.instance.json" />
-    <link rel="exhibit/data" href="./princeton.object.json" />
-    <link rel="exhibit/data" href="./princeton.annotations.json" />
+    <link rel="exhibit/data" href="./nlm.work.json" />
+    <link rel="exhibit/data" href="./nlm.instance.json" />
+    <link rel="exhibit/data" href="./nlm.object.json" />
+    <link rel="exhibit/data" href="./nlm.annotations.json" />
 
     <link rel="exhibit/data" href="./schema.json" />
 
@@ -86,7 +86,7 @@
         </div>
       </div>
       
-      <h2>Sample MARCR records from the Princeton Library</h2><br />
+      <h2>Sample MARCR records from the National Library of Medicine</h2><br />
 
       <div class="row-fluid">
 
@@ -121,7 +121,7 @@
               <!-- Work display lens -->
 	      <div ex:role="lens" ex:itemTypes="WorkRecord" style="display: none">
 		  
-		<h3 class="titleWork"><span ex:content=".title"></span> <span ex:content=".titleRemainder"></span> <span ex:content=".titleInclusiveDate"></span></h3>
+		<h3 class="titleWork"><span ex:content=".title"></span> <span ex:content=".titleRemainder"></span> <span ex:content=".titleStatement"></span> <span ex:content=".titleInclusiveDate"></span></h3>
 		<br />
 		
 		<table class="table table-condensed">
@@ -175,11 +175,11 @@
                             <i ex:class-subcontent="icon-default icon-{{.resourceType}}"  ex:title-subcontent="{{.resourceType}}"></i>
 
                             <span ex:if="exists(.link)">
-                              <span class="title"><a ex:href-content=".link"><span ex:content="!instance.title"></span> <span ex:content="!instance.titleRemainder"></span> <span ex:content="!instance.titleInclusiveDate"></span></a></span>
+                              <span class="title"><a ex:href-content=".link"><span ex:content="!instance.title"></span> <span ex:content="!instance.titleRemainder"></span> <span ex:content="!instance.titleStatement"></span> <span ex:content="!instance.titleInclusiveDate"></span></a></span>
                             </span>
 
                             <span ex:if="not(exists(.link))">
-                              <span class="title"><span ex:content="!instance.title"></span> <span ex:content="!instance.titleRemainder"></span> <span ex:content="!instance.titleInclusiveDate"></span></span>
+                              <span class="title"><span ex:content="!instance.title"></span> <span ex:content="!instance.titleRemainder"></span> <span ex:content="!instance.titleStatement"></span> <span ex:content="!instance.titleInclusiveDate"></span></span>
                             </span>
                           </h4>
                           
