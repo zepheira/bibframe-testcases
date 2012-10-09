@@ -249,10 +249,17 @@
       <marcref>245 $b</marcref>
       <rdaref></rdaref>
     </property>
+    <property id='titleStatement' refines='title'>
+      <label>titleStatement</label>
+      <typedesc>Literal</typedesc>
+      <description>The title statement of responsibility, etc.</description>
+      <marcref>245 $c</marcref>
+      <rdaref></rdaref>
+    </property>
     <property id='titleInclusiveDates' refines='title'>
       <label>titleInclusiveDates</label>
       <typedesc>Literal</typedesc>
-      <description>The sub title / remainder of title associated with the creative work.</description>
+      <description>The title inclusive dates.</description>
       <marcref>245 $f</marcref>
       <rdaref></rdaref>
     </property>
