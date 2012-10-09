@@ -77,6 +77,7 @@ FIELD_RENAMINGS = {
 
 '245a': 'title',
 '245b': 'titleRemainder',
+'245c': 'titleStatement',
 '245f': 'titleInclusiveDates',
 '245n': 'titleNumberParts',
 '245p': 'titleNameParts',
