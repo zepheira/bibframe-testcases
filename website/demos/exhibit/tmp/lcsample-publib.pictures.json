@@ -35,7 +35,7 @@
    "marcrType": "Person",  
    "type": "Object",
    "id": "person_1",
-   "name": "Eric Miller",
+   "label": "Eric Miller",
    "link": "http://zepheira.com/people/eric-miller"
 }
 ]
