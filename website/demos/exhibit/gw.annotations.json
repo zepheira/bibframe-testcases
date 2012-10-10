@@ -466,31 +466,4721 @@
     "type": "Annotation", 
     "id": "annotation_96"
 },{
+    "on_instance": "instance_224", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_224", 
+    "institution": "obj_2098", 
+    "marcrType": "Holdings", 
+    "label": "_224", 
+    "type": "Annotation", 
+    "id": "annotation_224"
+},{
+    "on_instance": "instance_225", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_225", 
+    "institution": "obj_2099", 
+    "marcrType": "Holdings", 
+    "label": "_225", 
+    "type": "Annotation", 
+    "id": "annotation_225"
+},{
+    "on_instance": "instance_226", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_226", 
+    "institution": "obj_2100", 
+    "marcrType": "Holdings", 
+    "label": "_226", 
+    "type": "Annotation", 
+    "id": "annotation_226"
+},{
+    "on_instance": "instance_227", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_227", 
+    "institution": "obj_2101", 
+    "marcrType": "Holdings", 
+    "label": "_227", 
+    "type": "Annotation", 
+    "id": "annotation_227"
+},{
+    "on_instance": "instance_228", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_228", 
+    "institution": "obj_2102", 
+    "marcrType": "Holdings", 
+    "label": "_228", 
+    "type": "Annotation", 
+    "id": "annotation_228"
+},{
+    "on_instance": "instance_229", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_229", 
+    "institution": "obj_2103", 
+    "marcrType": "Holdings", 
+    "label": "_229", 
+    "type": "Annotation", 
+    "id": "annotation_229"
+},{
+    "on_instance": "instance_230", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_230", 
+    "institution": "obj_2104", 
+    "marcrType": "Holdings", 
+    "label": "_230", 
+    "type": "Annotation", 
+    "id": "annotation_230"
+},{
+    "on_instance": "instance_231", 
+    "h": "GW Streaming Audio", 
+    "on_work": "work_231", 
+    "institution": "obj_2105", 
+    "marcrType": "Holdings", 
+    "label": "_231", 
+    "type": "Annotation", 
+    "id": "annotation_231"
+},{
+    "on_instance": "instance_232", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_232", 
+    "institution": "obj_2106", 
+    "marcrType": "Holdings", 
+    "label": "_232", 
+    "type": "Annotation", 
+    "id": "annotation_232"
+},{
+    "on_instance": "instance_233", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_233", 
+    "institution": "obj_2107", 
+    "marcrType": "Holdings", 
+    "label": "_233", 
+    "type": "Annotation", 
+    "id": "annotation_233"
+},{
+    "on_instance": "instance_234", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_234", 
+    "institution": "obj_2108", 
+    "marcrType": "Holdings", 
+    "label": "_234", 
+    "type": "Annotation", 
+    "id": "annotation_234"
+},{
+    "on_instance": "instance_235", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_235", 
+    "institution": "obj_2109", 
+    "marcrType": "Holdings", 
+    "label": "_235", 
+    "type": "Annotation", 
+    "id": "annotation_235"
+},{
+    "on_instance": "instance_236", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_236", 
+    "institution": "obj_2110", 
+    "marcrType": "Holdings", 
+    "label": "_236", 
+    "type": "Annotation", 
+    "id": "annotation_236"
+},{
+    "on_instance": "instance_237", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_237", 
+    "institution": "obj_2111", 
+    "marcrType": "Holdings", 
+    "label": "_237", 
+    "type": "Annotation", 
+    "id": "annotation_237"
+},{
+    "on_instance": "instance_238", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_238", 
+    "institution": "obj_2112", 
+    "marcrType": "Holdings", 
+    "label": "_238", 
+    "type": "Annotation", 
+    "id": "annotation_238"
+},{
+    "on_instance": "instance_239", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_239", 
+    "institution": "obj_2113", 
+    "marcrType": "Holdings", 
+    "label": "_239", 
+    "type": "Annotation", 
+    "id": "annotation_239"
+},{
+    "on_instance": "instance_240", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_240", 
+    "institution": "obj_2114", 
+    "marcrType": "Holdings", 
+    "label": "_240", 
+    "type": "Annotation", 
+    "id": "annotation_240"
+},{
+    "on_instance": "instance_241", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_241", 
+    "institution": "obj_2115", 
+    "marcrType": "Holdings", 
+    "label": "_241", 
+    "type": "Annotation", 
+    "id": "annotation_241"
+},{
+    "on_instance": "instance_242", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_242", 
+    "institution": "obj_2116", 
+    "marcrType": "Holdings", 
+    "label": "_242", 
+    "type": "Annotation", 
+    "id": "annotation_242"
+},{
+    "on_instance": "instance_243", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_243", 
+    "institution": "obj_2117", 
+    "marcrType": "Holdings", 
+    "label": "_243", 
+    "type": "Annotation", 
+    "id": "annotation_243"
+},{
+    "on_instance": "instance_244", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_244", 
+    "institution": "obj_2118", 
+    "marcrType": "Holdings", 
+    "label": "_244", 
+    "type": "Annotation", 
+    "id": "annotation_244"
+},{
+    "on_instance": "instance_245", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_245", 
+    "institution": "obj_2119", 
+    "marcrType": "Holdings", 
+    "label": "_245", 
+    "type": "Annotation", 
+    "id": "annotation_245"
+},{
+    "on_instance": "instance_246", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_246", 
+    "institution": "obj_2120", 
+    "marcrType": "Holdings", 
+    "label": "_246", 
+    "type": "Annotation", 
+    "id": "annotation_246"
+},{
+    "on_instance": "instance_247", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_247", 
+    "institution": "obj_2121", 
+    "marcrType": "Holdings", 
+    "label": "_247", 
+    "type": "Annotation", 
+    "id": "annotation_247"
+},{
+    "on_instance": "instance_248", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_248", 
+    "institution": "obj_2122", 
+    "marcrType": "Holdings", 
+    "label": "_248", 
+    "type": "Annotation", 
+    "id": "annotation_248"
+},{
+    "on_instance": "instance_249", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_249", 
+    "institution": "obj_2123", 
+    "marcrType": "Holdings", 
+    "label": "_249", 
+    "type": "Annotation", 
+    "id": "annotation_249"
+},{
+    "on_instance": "instance_250", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_250", 
+    "institution": "obj_2124", 
+    "marcrType": "Holdings", 
+    "label": "_250", 
+    "type": "Annotation", 
+    "id": "annotation_250"
+},{
     "on_instance": "instance_251", 
+    "h": "GW: Streaming Audio", 
     "on_work": "work_251", 
-    "institution": "obj_2327", 
+    "institution": "obj_2125", 
     "marcrType": "Holdings", 
     "label": "_251", 
     "type": "Annotation", 
     "id": "annotation_251"
 },{
+    "on_instance": "instance_252", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_252", 
+    "institution": "obj_2126", 
+    "marcrType": "Holdings", 
+    "label": "_252", 
+    "type": "Annotation", 
+    "id": "annotation_252"
+},{
+    "on_instance": "instance_253", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_253", 
+    "institution": "obj_2127", 
+    "marcrType": "Holdings", 
+    "label": "_253", 
+    "type": "Annotation", 
+    "id": "annotation_253"
+},{
+    "on_instance": "instance_254", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_254", 
+    "institution": "obj_2128", 
+    "marcrType": "Holdings", 
+    "label": "_254", 
+    "type": "Annotation", 
+    "id": "annotation_254"
+},{
+    "on_instance": "instance_255", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_255", 
+    "institution": "obj_2129", 
+    "marcrType": "Holdings", 
+    "label": "_255", 
+    "type": "Annotation", 
+    "id": "annotation_255"
+},{
+    "on_instance": "instance_256", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_256", 
+    "institution": "obj_2130", 
+    "marcrType": "Holdings", 
+    "label": "_256", 
+    "type": "Annotation", 
+    "id": "annotation_256"
+},{
+    "on_instance": "instance_257", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_257", 
+    "institution": "obj_2131", 
+    "marcrType": "Holdings", 
+    "label": "_257", 
+    "type": "Annotation", 
+    "id": "annotation_257"
+},{
+    "on_instance": "instance_258", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_258", 
+    "institution": "obj_2132", 
+    "marcrType": "Holdings", 
+    "label": "_258", 
+    "type": "Annotation", 
+    "id": "annotation_258"
+},{
+    "on_instance": "instance_259", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_259", 
+    "institution": "obj_2133", 
+    "marcrType": "Holdings", 
+    "label": "_259", 
+    "type": "Annotation", 
+    "id": "annotation_259"
+},{
+    "on_instance": "instance_260", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_260", 
+    "institution": "obj_2134", 
+    "marcrType": "Holdings", 
+    "label": "_260", 
+    "type": "Annotation", 
+    "id": "annotation_260"
+},{
+    "on_instance": "instance_261", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_261", 
+    "institution": "obj_2135", 
+    "marcrType": "Holdings", 
+    "label": "_261", 
+    "type": "Annotation", 
+    "id": "annotation_261"
+},{
+    "on_instance": "instance_262", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_262", 
+    "institution": "obj_2136", 
+    "marcrType": "Holdings", 
+    "label": "_262", 
+    "type": "Annotation", 
+    "id": "annotation_262"
+},{
+    "on_instance": "instance_263", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_263", 
+    "institution": "obj_2137", 
+    "marcrType": "Holdings", 
+    "label": "_263", 
+    "type": "Annotation", 
+    "id": "annotation_263"
+},{
+    "on_instance": "instance_264", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_264", 
+    "institution": "obj_2138", 
+    "marcrType": "Holdings", 
+    "label": "_264", 
+    "type": "Annotation", 
+    "id": "annotation_264"
+},{
+    "on_instance": "instance_265", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_265", 
+    "institution": "obj_2139", 
+    "marcrType": "Holdings", 
+    "label": "_265", 
+    "type": "Annotation", 
+    "id": "annotation_265"
+},{
+    "on_instance": "instance_266", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_266", 
+    "institution": "obj_2140", 
+    "marcrType": "Holdings", 
+    "label": "_266", 
+    "type": "Annotation", 
+    "id": "annotation_266"
+},{
+    "on_instance": "instance_267", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_267", 
+    "institution": "obj_2141", 
+    "marcrType": "Holdings", 
+    "label": "_267", 
+    "type": "Annotation", 
+    "id": "annotation_267"
+},{
     "on_instance": "instance_268", 
-    "h": "GW Electronic Journal", 
+    "h": "GW: Streaming Audio", 
     "on_work": "work_268", 
-    "institution": "obj_2438", 
+    "institution": "obj_2142", 
     "marcrType": "Holdings", 
     "label": "_268", 
     "type": "Annotation", 
     "id": "annotation_268"
 },{
+    "on_instance": "instance_269", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_269", 
+    "institution": "obj_2143", 
+    "marcrType": "Holdings", 
+    "label": "_269", 
+    "type": "Annotation", 
+    "id": "annotation_269"
+},{
+    "on_instance": "instance_270", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_270", 
+    "institution": "obj_2144", 
+    "marcrType": "Holdings", 
+    "label": "_270", 
+    "type": "Annotation", 
+    "id": "annotation_270"
+},{
+    "on_instance": "instance_271", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_271", 
+    "institution": "obj_2145", 
+    "marcrType": "Holdings", 
+    "label": "_271", 
+    "type": "Annotation", 
+    "id": "annotation_271"
+},{
+    "on_instance": "instance_272", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_272", 
+    "institution": "obj_2146", 
+    "marcrType": "Holdings", 
+    "label": "_272", 
+    "type": "Annotation", 
+    "id": "annotation_272"
+},{
+    "on_instance": "instance_273", 
+    "h": "GW: Streaming Audio", 
+    "on_work": "work_273", 
+    "institution": "obj_2147", 
+    "marcrType": "Holdings", 
+    "label": "_273", 
+    "type": "Annotation", 
+    "id": "annotation_273"
+},{
+    "on_instance": "instance_274", 
+    "h": "DS777.8", 
+    "on_work": "work_274", 
+    "institution": "obj_2148", 
+    "marcrType": "Holdings", 
+    "label": "_274", 
+    "type": "Annotation", 
+    "id": "annotation_274"
+},{
+    "on_instance": "instance_275", 
+    "h": "DS777.8", 
+    "on_work": "work_275", 
+    "institution": "obj_2149", 
+    "marcrType": "Holdings", 
+    "label": "_275", 
+    "type": "Annotation", 
+    "id": "annotation_275"
+},{
+    "on_instance": "instance_276", 
+    "h": "DS779.23", 
+    "on_work": "work_276", 
+    "institution": "obj_2150", 
+    "marcrType": "Holdings", 
+    "label": "_276", 
+    "type": "Annotation", 
+    "id": "annotation_276"
+},{
+    "on_instance": "instance_277", 
+    "h": "DS779.27", 
+    "on_work": "work_277", 
+    "institution": "obj_2151", 
+    "marcrType": "Holdings", 
+    "label": "_277", 
+    "type": "Annotation", 
+    "id": "annotation_277"
+},{
+    "on_instance": "instance_278", 
+    "h": "DS779.27", 
+    "on_work": "work_278", 
+    "institution": "obj_2152", 
+    "marcrType": "Holdings", 
+    "label": "_278", 
+    "type": "Annotation", 
+    "id": "annotation_278"
+},{
+    "on_instance": "instance_279", 
+    "h": "DS779.27", 
+    "on_work": "work_279", 
+    "institution": "obj_2153", 
+    "marcrType": "Holdings", 
+    "label": "_279", 
+    "type": "Annotation", 
+    "id": "annotation_279"
+},{
+    "on_instance": "instance_280", 
+    "h": "DS779.29.C477", 
+    "on_work": "work_280", 
+    "institution": "obj_2154", 
+    "marcrType": "Holdings", 
+    "label": "_280", 
+    "type": "Annotation", 
+    "id": "annotation_280"
+},{
+    "on_instance": "instance_281", 
+    "h": "DS779.47", 
+    "on_work": "work_281", 
+    "institution": "obj_2155", 
+    "marcrType": "Holdings", 
+    "label": "_281", 
+    "type": "Annotation", 
+    "id": "annotation_281"
+},{
+    "on_instance": "instance_282", 
+    "h": "DS779.47", 
+    "on_work": "work_282", 
+    "institution": "obj_2156", 
+    "marcrType": "Holdings", 
+    "label": "_282", 
+    "type": "Annotation", 
+    "id": "annotation_282"
+},{
+    "on_instance": "instance_283", 
+    "h": "DS779.47", 
+    "on_work": "work_283", 
+    "institution": "obj_2157", 
+    "marcrType": "Holdings", 
+    "label": "_283", 
+    "type": "Annotation", 
+    "id": "annotation_283"
+},{
     "on_instance": "instance_284", 
-    "h": "GW Electronic Journal", 
+    "h": "DS779.47", 
     "on_work": "work_284", 
-    "institution": "obj_2540", 
+    "institution": "obj_2158", 
     "marcrType": "Holdings", 
     "label": "_284", 
     "type": "Annotation", 
     "id": "annotation_284"
-}
-]
-}
+},{
+    "on_instance": "instance_285", 
+    "h": "DS832.7.K6", 
+    "on_work": "work_285", 
+    "institution": "obj_2159", 
+    "marcrType": "Holdings", 
+    "label": "_285", 
+    "type": "Annotation", 
+    "id": "annotation_285"
+},{
+    "on_instance": "instance_286", 
+    "h": "DS889.5", 
+    "on_work": "work_286", 
+    "institution": "obj_2160", 
+    "marcrType": "Holdings", 
+    "label": "_286", 
+    "type": "Annotation", 
+    "id": "annotation_286"
+},{
+    "on_instance": "instance_287", 
+    "h": "HC427.92", 
+    "on_work": "work_287", 
+    "institution": "obj_2161", 
+    "marcrType": "Holdings", 
+    "label": "_287", 
+    "type": "Annotation", 
+    "id": "annotation_287"
+},{
+    "on_instance": "instance_288", 
+    "h": "HC465.E5", 
+    "on_work": "work_288", 
+    "institution": "obj_2162", 
+    "marcrType": "Holdings", 
+    "label": "_288", 
+    "type": "Annotation", 
+    "id": "annotation_288"
+},{
+    "on_instance": "instance_289", 
+    "h": "PG3476.S66", 
+    "on_work": "work_289", 
+    "institution": "obj_2163", 
+    "marcrType": "Holdings", 
+    "label": "_289", 
+    "type": "Annotation", 
+    "id": "annotation_289"
+},{
+    "on_instance": "instance_290", 
+    "h": "PG3478.K69", 
+    "on_work": "work_290", 
+    "institution": "obj_2164", 
+    "marcrType": "Holdings", 
+    "label": "_290", 
+    "type": "Annotation", 
+    "id": "annotation_290"
+},{
+    "on_instance": "instance_291", 
+    "h": "PG3478.K78", 
+    "on_work": "work_291", 
+    "institution": "obj_2165", 
+    "marcrType": "Holdings", 
+    "label": "_291", 
+    "type": "Annotation", 
+    "id": "annotation_291"
+},{
+    "on_instance": "instance_292", 
+    "h": "PG3479.6.O85", 
+    "on_work": "work_292", 
+    "institution": "obj_2166", 
+    "marcrType": "Holdings", 
+    "label": "_292", 
+    "type": "Annotation", 
+    "id": "annotation_292"
+},{
+    "on_instance": "instance_293", 
+    "h": "PG3479.6.O85", 
+    "on_work": "work_293", 
+    "institution": "obj_2167", 
+    "marcrType": "Holdings", 
+    "label": "_293", 
+    "type": "Annotation", 
+    "id": "annotation_293"
+},{
+    "on_instance": "instance_294", 
+    "h": "PG3479.6.O85", 
+    "on_work": "work_294", 
+    "institution": "obj_2168", 
+    "marcrType": "Holdings", 
+    "label": "_294", 
+    "type": "Annotation", 
+    "id": "annotation_294"
+},{
+    "on_instance": "instance_295", 
+    "h": "PG3479.K453", 
+    "on_work": "work_295", 
+    "institution": "obj_2169", 
+    "marcrType": "Holdings", 
+    "label": "_295", 
+    "type": "Annotation", 
+    "id": "annotation_295"
+},{
+    "on_instance": "instance_296", 
+    "h": "PG3481.2.R15", 
+    "on_work": "work_296", 
+    "institution": "obj_2170", 
+    "marcrType": "Holdings", 
+    "label": "_296", 
+    "type": "Annotation", 
+    "id": "annotation_296"
+},{
+    "on_instance": "instance_297", 
+    "h": "PG3482.6.H2654", 
+    "on_work": "work_297", 
+    "institution": "obj_2171", 
+    "marcrType": "Holdings", 
+    "label": "_297", 
+    "type": "Annotation", 
+    "id": "annotation_297"
+},{
+    "on_instance": "instance_298", 
+    "h": "PG3482.8.R732", 
+    "on_work": "work_298", 
+    "institution": "obj_2172", 
+    "marcrType": "Holdings", 
+    "label": "_298", 
+    "type": "Annotation", 
+    "id": "annotation_298"
+},{
+    "on_instance": "instance_299", 
+    "h": "PG3482.8.R732", 
+    "on_work": "work_299", 
+    "institution": "obj_2173", 
+    "marcrType": "Holdings", 
+    "label": "_299", 
+    "type": "Annotation", 
+    "id": "annotation_299"
+},{
+    "on_instance": "instance_300", 
+    "h": "PG3483.2.R535", 
+    "on_work": "work_300", 
+    "institution": "obj_2174", 
+    "marcrType": "Holdings", 
+    "label": "_300", 
+    "type": "Annotation", 
+    "id": "annotation_300"
+},{
+    "on_instance": "instance_301", 
+    "h": "PG3483.I435", 
+    "on_work": "work_301", 
+    "institution": "obj_2175", 
+    "marcrType": "Holdings", 
+    "label": "_301", 
+    "type": "Annotation", 
+    "id": "annotation_301"
+},{
+    "on_instance": "instance_302", 
+    "h": "PG3485.3.R46", 
+    "on_work": "work_302", 
+    "institution": "obj_2176", 
+    "marcrType": "Holdings", 
+    "label": "_302", 
+    "type": "Annotation", 
+    "id": "annotation_302"
+},{
+    "on_instance": "instance_303", 
+    "h": "PG3485.3.U24", 
+    "on_work": "work_303", 
+    "institution": "obj_2177", 
+    "marcrType": "Holdings", 
+    "label": "_303", 
+    "type": "Annotation", 
+    "id": "annotation_303"
+},{
+    "on_instance": "instance_304", 
+    "h": "PG3485.7.U225", 
+    "on_work": "work_304", 
+    "institution": "obj_2178", 
+    "marcrType": "Holdings", 
+    "label": "_304", 
+    "type": "Annotation", 
+    "id": "annotation_304"
+},{
+    "on_instance": "instance_305", 
+    "h": "DS795.8.F67", 
+    "on_work": "work_305", 
+    "institution": "obj_2179", 
+    "marcrType": "Holdings", 
+    "label": "_305", 
+    "type": "Annotation", 
+    "id": "annotation_305"
+},{
+    "on_instance": "instance_306", 
+    "h": "DS107", 
+    "on_work": "work_306", 
+    "institution": "obj_2180", 
+    "marcrType": "Holdings", 
+    "label": "_306", 
+    "type": "Annotation", 
+    "id": "annotation_306"
+},{
+    "on_instance": "instance_307", 
+    "h": "DS204.5", 
+    "on_work": "work_307", 
+    "institution": "obj_2181", 
+    "marcrType": "Holdings", 
+    "label": "_307", 
+    "type": "Annotation", 
+    "id": "annotation_307"
+},{
+    "on_instance": "instance_308", 
+    "h": "PJ4557", 
+    "on_work": "work_308", 
+    "institution": "obj_2182", 
+    "marcrType": "Holdings", 
+    "label": "_308", 
+    "type": "Annotation", 
+    "id": "annotation_308"
+},{
+    "on_instance": "instance_309", 
+    "h": "HD6305.J3", 
+    "on_work": "work_309", 
+    "institution": "obj_2183", 
+    "marcrType": "Holdings", 
+    "label": "_309", 
+    "type": "Annotation", 
+    "id": "annotation_309"
+},{
+    "on_instance": "instance_310", 
+    "h": "DT314", 
+    "on_work": "work_310", 
+    "institution": "obj_2184", 
+    "marcrType": "Holdings", 
+    "label": "_310", 
+    "type": "Annotation", 
+    "id": "annotation_310"
+},{
+    "on_instance": "instance_311", 
+    "h": "DC225", 
+    "on_work": "work_311", 
+    "institution": "obj_2185", 
+    "marcrType": "Holdings", 
+    "label": "_311", 
+    "type": "Annotation", 
+    "id": "annotation_311"
+},{
+    "on_instance": "instance_312", 
+    "h": "DT299.C6", 
+    "on_work": "work_312", 
+    "institution": "obj_2186", 
+    "marcrType": "Holdings", 
+    "label": "_312", 
+    "type": "Annotation", 
+    "id": "annotation_312"
+},{
+    "on_instance": "instance_313", 
+    "h": "HC467.756", 
+    "on_work": "work_313", 
+    "institution": "obj_2187", 
+    "marcrType": "Holdings", 
+    "label": "_313", 
+    "type": "Annotation", 
+    "id": "annotation_313"
+},{
+    "on_instance": "instance_314", 
+    "on_work": "work_314", 
+    "institution": "obj_2188", 
+    "marcrType": "Holdings", 
+    "label": "_314", 
+    "type": "Annotation", 
+    "id": "annotation_314"
+},{
+    "on_instance": "instance_315", 
+    "h": "Y 1.1/8:112-526/", 
+    "on_work": "work_315", 
+    "institution": "obj_2189", 
+    "marcrType": "Holdings", 
+    "label": "_315", 
+    "type": "Annotation", 
+    "id": "annotation_315"
+},{
+    "on_instance": "instance_316", 
+    "h": "DS922.445", 
+    "on_work": "work_316", 
+    "institution": "obj_2190", 
+    "marcrType": "Holdings", 
+    "label": "_316", 
+    "type": "Annotation", 
+    "id": "annotation_316"
+},{
+    "on_instance": "instance_317", 
+    "h": "LB2331.72", 
+    "on_work": "work_317", 
+    "institution": "obj_2191", 
+    "marcrType": "Holdings", 
+    "label": "_317", 
+    "type": "Annotation", 
+    "id": "annotation_317"
+},{
+    "on_instance": "instance_318", 
+    "h": "HD5324", 
+    "on_work": "work_318", 
+    "institution": "obj_2192", 
+    "marcrType": "Holdings", 
+    "label": "_318", 
+    "type": "Annotation", 
+    "id": "annotation_318"
+},{
+    "on_instance": "instance_319", 
+    "h": "RA395.A3", 
+    "on_work": "work_319", 
+    "institution": "obj_2193", 
+    "marcrType": "Holdings", 
+    "label": "_319", 
+    "type": "Annotation", 
+    "id": "annotation_319"
+},{
+    "on_instance": "instance_320", 
+    "h": "GW: Electronic Book", 
+    "on_work": "work_320", 
+    "institution": "obj_2194", 
+    "marcrType": "Holdings", 
+    "label": "_320", 
+    "type": "Annotation", 
+    "id": "annotation_320"
+},{
+    "on_instance": "instance_321", 
+    "h": "DS919", 
+    "on_work": "work_321", 
+    "institution": "obj_2195", 
+    "marcrType": "Holdings", 
+    "label": "_321", 
+    "type": "Annotation", 
+    "id": "annotation_321"
+},{
+    "on_instance": "instance_322", 
+    "h": "QH447", 
+    "on_work": "work_322", 
+    "institution": "obj_2196", 
+    "marcrType": "Holdings", 
+    "label": "_322", 
+    "type": "Annotation", 
+    "id": "annotation_322"
+},{
+    "on_instance": "instance_323", 
+    "h": "DC300", 
+    "on_work": "work_323", 
+    "institution": "obj_2197", 
+    "marcrType": "Holdings", 
+    "label": "_323", 
+    "type": "Annotation", 
+    "id": "annotation_323"
+},{
+    "on_instance": "instance_324", 
+    "h": "HD31", 
+    "on_work": "work_324", 
+    "institution": "obj_2198", 
+    "marcrType": "Holdings", 
+    "label": "_324", 
+    "type": "Annotation", 
+    "id": "annotation_324"
+},{
+    "on_instance": "instance_325", 
+    "h": "Y 1.1/3:111-30", 
+    "on_work": "work_325", 
+    "institution": "obj_2199", 
+    "marcrType": "Holdings", 
+    "label": "_325", 
+    "type": "Annotation", 
+    "id": "annotation_325"
+},{
+    "on_instance": "instance_326", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_326", 
+    "institution": "obj_2200", 
+    "marcrType": "Holdings", 
+    "label": "_326", 
+    "type": "Annotation", 
+    "id": "annotation_326"
+},{
+    "on_instance": "instance_327", 
+    "h": "GW: Electronic Book", 
+    "on_work": "work_327", 
+    "institution": "obj_2201", 
+    "marcrType": "Holdings", 
+    "label": "_327", 
+    "type": "Annotation", 
+    "id": "annotation_327"
+},{
+    "on_instance": "instance_328", 
+    "h": "HX276", 
+    "on_work": "work_328", 
+    "institution": "obj_2202", 
+    "marcrType": "Holdings", 
+    "label": "_328", 
+    "type": "Annotation", 
+    "id": "annotation_328"
+},{
+    "on_instance": "instance_329", 
+    "h": "E302", 
+    "on_work": "work_329", 
+    "institution": "obj_2203", 
+    "marcrType": "Holdings", 
+    "label": "_329", 
+    "type": "Annotation", 
+    "id": "annotation_329"
+},{
+    "on_instance": "instance_330", 
+    "h": "PR4231", 
+    "on_work": "work_330", 
+    "institution": "obj_2204", 
+    "marcrType": "Holdings", 
+    "label": "_330", 
+    "type": "Annotation", 
+    "id": "annotation_330"
+},{
+    "on_instance": "instance_331", 
+    "h": "QH31.D2", 
+    "on_work": "work_331", 
+    "institution": "obj_2205", 
+    "marcrType": "Holdings", 
+    "label": "_331", 
+    "type": "Annotation", 
+    "id": "annotation_331"
+},{
+    "on_instance": "instance_332", 
+    "on_work": "work_332", 
+    "institution": "obj_2206", 
+    "marcrType": "Holdings", 
+    "label": "_332", 
+    "type": "Annotation", 
+    "id": "annotation_332"
+},{
+    "on_instance": "instance_333", 
+    "on_work": "work_333", 
+    "institution": "obj_2207", 
+    "marcrType": "Holdings", 
+    "label": "_333", 
+    "type": "Annotation", 
+    "id": "annotation_333"
+},{
+    "on_instance": "instance_334", 
+    "on_work": "work_334", 
+    "institution": "obj_2208", 
+    "marcrType": "Holdings", 
+    "label": "_334", 
+    "type": "Annotation", 
+    "id": "annotation_334"
+},{
+    "on_instance": "instance_335", 
+    "on_work": "work_335", 
+    "institution": "obj_2209", 
+    "marcrType": "Holdings", 
+    "label": "_335", 
+    "type": "Annotation", 
+    "id": "annotation_335"
+},{
+    "on_instance": "instance_336", 
+    "h": "GW Electronic Journal", 
+    "on_work": "work_336", 
+    "institution": "obj_2210", 
+    "marcrType": "Holdings", 
+    "label": "_336", 
+    "type": "Annotation", 
+    "id": "annotation_336"
+},{
+    "on_instance": "instance_337", 
+    "h": "GW Electronic Journal", 
+    "on_work": "work_337", 
+    "institution": "obj_2211", 
+    "marcrType": "Holdings", 
+    "label": "_337", 
+    "type": "Annotation", 
+    "id": "annotation_337"
+},{
+    "on_instance": "instance_338", 
+    "on_work": "work_338", 
+    "institution": "obj_2212", 
+    "marcrType": "Holdings", 
+    "label": "_338", 
+    "type": "Annotation", 
+    "id": "annotation_338"
+},{
+    "on_instance": "instance_339", 
+    "on_work": "work_339", 
+    "institution": "obj_2213", 
+    "marcrType": "Holdings", 
+    "label": "_339", 
+    "type": "Annotation", 
+    "id": "annotation_339"
+},{
+    "on_instance": "instance_340", 
+    "h": "GW Electronic Journal", 
+    "on_work": "work_340", 
+    "institution": "obj_2214", 
+    "marcrType": "Holdings", 
+    "label": "_340", 
+    "type": "Annotation", 
+    "id": "annotation_340"
+},{
+    "on_instance": "instance_341", 
+    "on_work": "work_341", 
+    "institution": "obj_2215", 
+    "marcrType": "Holdings", 
+    "label": "_341", 
+    "type": "Annotation", 
+    "id": "annotation_341"
+},{
+    "on_instance": "instance_342", 
+    "on_work": "work_342", 
+    "institution": "obj_2216", 
+    "marcrType": "Holdings", 
+    "label": "_342", 
+    "type": "Annotation", 
+    "id": "annotation_342"
+},{
+    "on_instance": "instance_343", 
+    "h": "PN1994", 
+    "on_work": "work_343", 
+    "institution": "obj_2217", 
+    "marcrType": "Holdings", 
+    "label": "_343", 
+    "type": "Annotation", 
+    "id": "annotation_343"
+},{
+    "on_instance": "instance_344", 
+    "h": "PN1995.9.C55", 
+    "on_work": "work_344", 
+    "institution": "obj_2218", 
+    "marcrType": "Holdings", 
+    "label": "_344", 
+    "type": "Annotation", 
+    "id": "annotation_344"
+},{
+    "on_instance": "instance_345", 
+    "h": "PN1997.2", 
+    "on_work": "work_345", 
+    "institution": "obj_2219", 
+    "marcrType": "Holdings", 
+    "label": "_345", 
+    "type": "Annotation", 
+    "id": "annotation_345"
+},{
+    "on_instance": "instance_346", 
+    "h": "PN1997", 
+    "on_work": "work_346", 
+    "institution": "obj_2220", 
+    "marcrType": "Holdings", 
+    "label": "_346", 
+    "type": "Annotation", 
+    "id": "annotation_346"
+},{
+    "on_instance": "instance_347", 
+    "h": "PN1997.2", 
+    "on_work": "work_347", 
+    "institution": "obj_2221", 
+    "marcrType": "Holdings", 
+    "label": "_347", 
+    "type": "Annotation", 
+    "id": "annotation_347"
+},{
+    "on_instance": "instance_348", 
+    "h": "PN1997.L44", 
+    "on_work": "work_348", 
+    "institution": "obj_2222", 
+    "marcrType": "Holdings", 
+    "label": "_348", 
+    "type": "Annotation", 
+    "id": "annotation_348"
+},{
+    "on_instance": "instance_349", 
+    "h": "PN1997.2", 
+    "on_work": "work_349", 
+    "institution": "obj_2223", 
+    "marcrType": "Holdings", 
+    "label": "_349", 
+    "type": "Annotation", 
+    "id": "annotation_349"
+},{
+    "on_instance": "instance_350", 
+    "h": "PN1997.2", 
+    "on_work": "work_350", 
+    "institution": "obj_2224", 
+    "marcrType": "Holdings", 
+    "label": "_350", 
+    "type": "Annotation", 
+    "id": "annotation_350"
+},{
+    "on_instance": "instance_351", 
+    "h": "PN1992.77", 
+    "on_work": "work_351", 
+    "institution": "obj_2225", 
+    "marcrType": "Holdings", 
+    "label": "_351", 
+    "type": "Annotation", 
+    "id": "annotation_351"
+},{
+    "on_instance": "instance_352", 
+    "h": "QB981", 
+    "on_work": "work_352", 
+    "institution": "obj_2226", 
+    "marcrType": "Holdings", 
+    "label": "_352", 
+    "type": "Annotation", 
+    "id": "annotation_352"
+},{
+    "on_instance": "instance_353", 
+    "h": "PN1992.77.W44", 
+    "on_work": "work_353", 
+    "institution": "obj_2227", 
+    "marcrType": "Holdings", 
+    "label": "_353", 
+    "type": "Annotation", 
+    "id": "annotation_353"
+},{
+    "on_instance": "instance_354", 
+    "h": "E185.615", 
+    "on_work": "work_354", 
+    "institution": "obj_2228", 
+    "marcrType": "Holdings", 
+    "label": "_354", 
+    "type": "Annotation", 
+    "id": "annotation_354"
+},{
+    "on_instance": "instance_355", 
+    "h": "PN1997", 
+    "on_work": "work_355", 
+    "institution": "obj_2229", 
+    "marcrType": "Holdings", 
+    "label": "_355", 
+    "type": "Annotation", 
+    "id": "annotation_355"
+},{
+    "on_instance": "instance_356", 
+    "h": "PN1995.9 .C55", 
+    "on_work": "work_356", 
+    "institution": "obj_2230", 
+    "marcrType": "Holdings", 
+    "label": "_356", 
+    "type": "Annotation", 
+    "id": "annotation_356"
+},{
+    "on_instance": "instance_357", 
+    "h": "PN1997", 
+    "on_work": "work_357", 
+    "institution": "obj_2231", 
+    "marcrType": "Holdings", 
+    "label": "_357", 
+    "type": "Annotation", 
+    "id": "annotation_357"
+},{
+    "on_instance": "instance_358", 
+    "h": "PN1998.3.W38", 
+    "on_work": "work_358", 
+    "institution": "obj_2232", 
+    "marcrType": "Holdings", 
+    "label": "_358", 
+    "type": "Annotation", 
+    "id": "annotation_358"
+},{
+    "on_instance": "instance_359", 
+    "h": "PN1997.2", 
+    "on_work": "work_359", 
+    "institution": "obj_2233", 
+    "marcrType": "Holdings", 
+    "label": "_359", 
+    "type": "Annotation", 
+    "id": "annotation_359"
+},{
+    "on_instance": "instance_360", 
+    "h": "PN1997.2", 
+    "on_work": "work_360", 
+    "institution": "obj_2234", 
+    "marcrType": "Holdings", 
+    "label": "_360", 
+    "type": "Annotation", 
+    "id": "annotation_360"
+},{
+    "on_instance": "instance_361", 
+    "h": "PN1997.2", 
+    "on_work": "work_361", 
+    "institution": "obj_2235", 
+    "marcrType": "Holdings", 
+    "label": "_361", 
+    "type": "Annotation", 
+    "id": "annotation_361"
+},{
+    "on_instance": "instance_362", 
+    "h": "PN1995.9.C55", 
+    "on_work": "work_362", 
+    "institution": "obj_2236", 
+    "marcrType": "Holdings", 
+    "label": "_362", 
+    "type": "Annotation", 
+    "id": "annotation_362"
+},{
+    "on_instance": "instance_363", 
+    "h": "PR9499.4.S93", 
+    "on_work": "work_363", 
+    "institution": "obj_2237", 
+    "marcrType": "Holdings", 
+    "label": "_363", 
+    "type": "Annotation", 
+    "id": "annotation_363"
+},{
+    "on_instance": "instance_364", 
+    "h": "PN1997.2", 
+    "on_work": "work_364", 
+    "institution": "obj_2238", 
+    "marcrType": "Holdings", 
+    "label": "_364", 
+    "type": "Annotation", 
+    "id": "annotation_364"
+},{
+    "on_instance": "instance_365", 
+    "h": "GV1588.5", 
+    "on_work": "work_365", 
+    "institution": "obj_2239", 
+    "marcrType": "Holdings", 
+    "label": "_365", 
+    "type": "Annotation", 
+    "id": "annotation_365"
+},{
+    "on_instance": "instance_366", 
+    "h": "PT2621 .A23", 
+    "on_work": "work_366", 
+    "institution": "obj_2240", 
+    "marcrType": "Holdings", 
+    "label": "_366", 
+    "type": "Annotation", 
+    "id": "annotation_366"
+},{
+    "on_instance": "instance_367", 
+    "h": "HV6433.G3", 
+    "on_work": "work_367", 
+    "institution": "obj_2241", 
+    "marcrType": "Holdings", 
+    "label": "_367", 
+    "type": "Annotation", 
+    "id": "annotation_367"
+},{
+    "on_instance": "instance_368", 
+    "h": "PN1992.8.D48", 
+    "on_work": "work_368", 
+    "institution": "obj_2242", 
+    "marcrType": "Holdings", 
+    "label": "_368", 
+    "type": "Annotation", 
+    "id": "annotation_368"
+},{
+    "on_instance": "instance_369", 
+    "h": "PN1992.8.D48", 
+    "on_work": "work_369", 
+    "institution": "obj_2243", 
+    "marcrType": "Holdings", 
+    "label": "_369", 
+    "type": "Annotation", 
+    "id": "annotation_369"
+},{
+    "on_instance": "instance_370", 
+    "h": "PN1997", 
+    "on_work": "work_370", 
+    "institution": "obj_2244", 
+    "marcrType": "Holdings", 
+    "label": "_370", 
+    "type": "Annotation", 
+    "id": "annotation_370"
+},{
+    "on_instance": "instance_371", 
+    "h": "E185.97.B214", 
+    "on_work": "work_371", 
+    "institution": "obj_2245", 
+    "marcrType": "Holdings", 
+    "label": "_371", 
+    "type": "Annotation", 
+    "id": "annotation_371"
+},{
+    "on_instance": "instance_372", 
+    "h": "E185.615", 
+    "on_work": "work_372", 
+    "institution": "obj_2246", 
+    "marcrType": "Holdings", 
+    "label": "_372", 
+    "type": "Annotation", 
+    "id": "annotation_372"
+},{
+    "on_instance": "instance_373", 
+    "h": "HD1478.U62", 
+    "on_work": "work_373", 
+    "institution": "obj_2247", 
+    "marcrType": "Holdings", 
+    "label": "_373", 
+    "type": "Annotation", 
+    "id": "annotation_373"
+},{
+    "on_instance": "instance_374", 
+    "h": "F128.9.P85", 
+    "on_work": "work_374", 
+    "institution": "obj_2248", 
+    "marcrType": "Holdings", 
+    "label": "_374", 
+    "type": "Annotation", 
+    "id": "annotation_374"
+},{
+    "on_instance": "instance_375", 
+    "h": "HD6509.C48", 
+    "on_work": "work_375", 
+    "institution": "obj_2249", 
+    "marcrType": "Holdings", 
+    "label": "_375", 
+    "type": "Annotation", 
+    "id": "annotation_375"
+},{
+    "on_instance": "instance_376", 
+    "h": "E185.97.R27", 
+    "on_work": "work_376", 
+    "institution": "obj_2250", 
+    "marcrType": "Holdings", 
+    "label": "_376", 
+    "type": "Annotation", 
+    "id": "annotation_376"
+},{
+    "on_instance": "instance_377", 
+    "h": "E184.J3", 
+    "on_work": "work_377", 
+    "institution": "obj_2251", 
+    "marcrType": "Holdings", 
+    "label": "_377", 
+    "type": "Annotation", 
+    "id": "annotation_377"
+},{
+    "on_instance": "instance_378", 
+    "h": "62277-PBK", 
+    "on_work": "work_378", 
+    "institution": "obj_2252", 
+    "marcrType": "Holdings", 
+    "label": "_378", 
+    "type": "Annotation", 
+    "id": "annotation_378"
+},{
+    "on_instance": "instance_379", 
+    "h": "62276-PBK", 
+    "on_work": "work_379", 
+    "institution": "obj_2253", 
+    "marcrType": "Holdings", 
+    "label": "_379", 
+    "type": "Annotation", 
+    "id": "annotation_379"
+},{
+    "on_instance": "instance_380", 
+    "h": "62272 - PBK", 
+    "on_work": "work_380", 
+    "institution": "obj_2254", 
+    "marcrType": "Holdings", 
+    "label": "_380", 
+    "type": "Annotation", 
+    "id": "annotation_380"
+},{
+    "on_instance": "instance_381", 
+    "h": "GT3405", 
+    "on_work": "work_381", 
+    "institution": "obj_2255", 
+    "marcrType": "Holdings", 
+    "label": "_381", 
+    "type": "Annotation", 
+    "id": "annotation_381"
+},{
+    "on_instance": "instance_382", 
+    "h": "HG177", 
+    "on_work": "work_382", 
+    "institution": "obj_2256", 
+    "marcrType": "Holdings", 
+    "label": "_382", 
+    "type": "Annotation", 
+    "id": "annotation_382"
+},{
+    "on_instance": "instance_383", 
+    "h": "HD61", 
+    "on_work": "work_383", 
+    "institution": "obj_2257", 
+    "marcrType": "Holdings", 
+    "label": "_383", 
+    "type": "Annotation", 
+    "id": "annotation_383"
+},{
+    "on_instance": "instance_384", 
+    "h": "HD6490.C642", 
+    "on_work": "work_384", 
+    "institution": "obj_2258", 
+    "marcrType": "Holdings", 
+    "label": "_384", 
+    "type": "Annotation", 
+    "id": "annotation_384"
+},{
+    "on_instance": "instance_385", 
+    "h": "HD6515.T3", 
+    "on_work": "work_385", 
+    "institution": "obj_2259", 
+    "marcrType": "Holdings", 
+    "label": "_385", 
+    "type": "Annotation", 
+    "id": "annotation_385"
+},{
+    "on_instance": "instance_386", 
+    "h": "HD6515.A292", 
+    "on_work": "work_386", 
+    "institution": "obj_2260", 
+    "marcrType": "Holdings", 
+    "label": "_386", 
+    "type": "Annotation", 
+    "id": "annotation_386"
+},{
+    "on_instance": "instance_387", 
+    "h": "HV6446", 
+    "on_work": "work_387", 
+    "institution": "obj_2261", 
+    "marcrType": "Holdings", 
+    "label": "_387", 
+    "type": "Annotation", 
+    "id": "annotation_387"
+},{
+    "on_instance": "instance_388", 
+    "h": "LD791.9.H6", 
+    "on_work": "work_388", 
+    "institution": "obj_2262", 
+    "marcrType": "Holdings", 
+    "label": "_388", 
+    "type": "Annotation", 
+    "id": "annotation_388"
+},{
+    "on_instance": "instance_389", 
+    "h": "HD58.8.R86", 
+    "on_work": "work_389", 
+    "institution": "obj_2263", 
+    "marcrType": "Holdings", 
+    "label": "_389", 
+    "type": "Annotation", 
+    "id": "annotation_389"
+},{
+    "on_instance": "instance_390", 
+    "h": "HD6508", 
+    "on_work": "work_390", 
+    "institution": "obj_2264", 
+    "marcrType": "Holdings", 
+    "label": "_390", 
+    "type": "Annotation", 
+    "id": "annotation_390"
+},{
+    "on_instance": "instance_391", 
+    "h": "HD6517.O7", 
+    "on_work": "work_391", 
+    "institution": "obj_2265", 
+    "marcrType": "Holdings", 
+    "label": "_391", 
+    "type": "Annotation", 
+    "id": "annotation_391"
+},{
+    "on_instance": "instance_392", 
+    "h": "HD8039.T22", 
+    "on_work": "work_392", 
+    "institution": "obj_2266", 
+    "marcrType": "Holdings", 
+    "label": "_392", 
+    "type": "Annotation", 
+    "id": "annotation_392"
+},{
+    "on_instance": "instance_393", 
+    "h": "HD4966.T7", 
+    "on_work": "work_393", 
+    "institution": "obj_2267", 
+    "marcrType": "Holdings", 
+    "label": "_393", 
+    "type": "Annotation", 
+    "id": "annotation_393"
+},{
+    "on_instance": "instance_394", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_394", 
+    "institution": "obj_2268", 
+    "marcrType": "Holdings", 
+    "label": "_394", 
+    "type": "Annotation", 
+    "id": "annotation_394"
+},{
+    "on_instance": "instance_395", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_395", 
+    "institution": "obj_2269", 
+    "marcrType": "Holdings", 
+    "label": "_395", 
+    "type": "Annotation", 
+    "id": "annotation_395"
+},{
+    "on_instance": "instance_396", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_396", 
+    "institution": "obj_2270", 
+    "marcrType": "Holdings", 
+    "label": "_396", 
+    "type": "Annotation", 
+    "id": "annotation_396"
+},{
+    "on_instance": "instance_397", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_397", 
+    "institution": "obj_2271", 
+    "marcrType": "Holdings", 
+    "label": "_397", 
+    "type": "Annotation", 
+    "id": "annotation_397"
+},{
+    "on_instance": "instance_398", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_398", 
+    "institution": "obj_2272", 
+    "marcrType": "Holdings", 
+    "label": "_398", 
+    "type": "Annotation", 
+    "id": "annotation_398"
+},{
+    "on_instance": "instance_399", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_399", 
+    "institution": "obj_2273", 
+    "marcrType": "Holdings", 
+    "label": "_399", 
+    "type": "Annotation", 
+    "id": "annotation_399"
+},{
+    "on_instance": "instance_400", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_400", 
+    "institution": "obj_2274", 
+    "marcrType": "Holdings", 
+    "label": "_400", 
+    "type": "Annotation", 
+    "id": "annotation_400"
+},{
+    "on_instance": "instance_401", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_401", 
+    "institution": "obj_2275", 
+    "marcrType": "Holdings", 
+    "label": "_401", 
+    "type": "Annotation", 
+    "id": "annotation_401"
+},{
+    "on_instance": "instance_402", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_402", 
+    "institution": "obj_2276", 
+    "marcrType": "Holdings", 
+    "label": "_402", 
+    "type": "Annotation", 
+    "id": "annotation_402"
+},{
+    "on_instance": "instance_403", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_403", 
+    "institution": "obj_2277", 
+    "marcrType": "Holdings", 
+    "label": "_403", 
+    "type": "Annotation", 
+    "id": "annotation_403"
+},{
+    "on_instance": "instance_404", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_404", 
+    "institution": "obj_2278", 
+    "marcrType": "Holdings", 
+    "label": "_404", 
+    "type": "Annotation", 
+    "id": "annotation_404"
+},{
+    "on_instance": "instance_405", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_405", 
+    "institution": "obj_2279", 
+    "marcrType": "Holdings", 
+    "label": "_405", 
+    "type": "Annotation", 
+    "id": "annotation_405"
+},{
+    "on_instance": "instance_406", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_406", 
+    "institution": "obj_2280", 
+    "marcrType": "Holdings", 
+    "label": "_406", 
+    "type": "Annotation", 
+    "id": "annotation_406"
+},{
+    "on_instance": "instance_407", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_407", 
+    "institution": "obj_2281", 
+    "marcrType": "Holdings", 
+    "label": "_407", 
+    "type": "Annotation", 
+    "id": "annotation_407"
+},{
+    "on_instance": "instance_408", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_408", 
+    "institution": "obj_2282", 
+    "marcrType": "Holdings", 
+    "label": "_408", 
+    "type": "Annotation", 
+    "id": "annotation_408"
+},{
+    "on_instance": "instance_409", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_409", 
+    "institution": "obj_2283", 
+    "marcrType": "Holdings", 
+    "label": "_409", 
+    "type": "Annotation", 
+    "id": "annotation_409"
+},{
+    "on_instance": "instance_410", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_410", 
+    "institution": "obj_2284", 
+    "marcrType": "Holdings", 
+    "label": "_410", 
+    "type": "Annotation", 
+    "id": "annotation_410"
+},{
+    "on_instance": "instance_411", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_411", 
+    "institution": "obj_2285", 
+    "marcrType": "Holdings", 
+    "label": "_411", 
+    "type": "Annotation", 
+    "id": "annotation_411"
+},{
+    "on_instance": "instance_412", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_412", 
+    "institution": "obj_2286", 
+    "marcrType": "Holdings", 
+    "label": "_412", 
+    "type": "Annotation", 
+    "id": "annotation_412"
+},{
+    "on_instance": "instance_413", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_413", 
+    "institution": "obj_2287", 
+    "marcrType": "Holdings", 
+    "label": "_413", 
+    "type": "Annotation", 
+    "id": "annotation_413"
+},{
+    "on_instance": "instance_414", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_414", 
+    "institution": "obj_2288", 
+    "marcrType": "Holdings", 
+    "label": "_414", 
+    "type": "Annotation", 
+    "id": "annotation_414"
+},{
+    "on_instance": "instance_415", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_415", 
+    "institution": "obj_2289", 
+    "marcrType": "Holdings", 
+    "label": "_415", 
+    "type": "Annotation", 
+    "id": "annotation_415"
+},{
+    "on_instance": "instance_416", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_416", 
+    "institution": "obj_2290", 
+    "marcrType": "Holdings", 
+    "label": "_416", 
+    "type": "Annotation", 
+    "id": "annotation_416"
+},{
+    "on_instance": "instance_417", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_417", 
+    "institution": "obj_2291", 
+    "marcrType": "Holdings", 
+    "label": "_417", 
+    "type": "Annotation", 
+    "id": "annotation_417"
+},{
+    "on_instance": "instance_418", 
+    "h": "GW: Electronic Dissertation", 
+    "on_work": "work_418", 
+    "institution": "obj_2292", 
+    "marcrType": "Holdings", 
+    "label": "_418", 
+    "type": "Annotation", 
+    "id": "annotation_418"
+},{
+    "on_instance": "instance_419", 
+    "h": "PN1992.8.C66", 
+    "on_work": "work_419", 
+    "institution": "obj_2293", 
+    "marcrType": "Holdings", 
+    "label": "_419", 
+    "type": "Annotation", 
+    "id": "annotation_419"
+},{
+    "on_instance": "instance_420", 
+    "h": "HF1600.5", 
+    "on_work": "work_420", 
+    "institution": "obj_2294", 
+    "marcrType": "Holdings", 
+    "label": "_420", 
+    "type": "Annotation", 
+    "id": "annotation_420"
+},{
+    "on_instance": "instance_421", 
+    "h": "B824", 
+    "on_work": "work_421", 
+    "institution": "obj_2295", 
+    "marcrType": "Holdings", 
+    "label": "_421", 
+    "type": "Annotation", 
+    "id": "annotation_421"
+},{
+    "on_instance": "instance_422", 
+    "h": "PS3551.L35694", 
+    "on_work": "work_422", 
+    "institution": "obj_2296", 
+    "marcrType": "Holdings", 
+    "label": "_422", 
+    "type": "Annotation", 
+    "id": "annotation_422"
+},{
+    "on_instance": "instance_423", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_423", 
+    "institution": "obj_2297", 
+    "marcrType": "Holdings", 
+    "label": "_423", 
+    "type": "Annotation", 
+    "id": "annotation_423"
+},{
+    "on_instance": "instance_424", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_424", 
+    "institution": "obj_2298", 
+    "marcrType": "Holdings", 
+    "label": "_424", 
+    "type": "Annotation", 
+    "id": "annotation_424"
+},{
+    "on_instance": "instance_425", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_425", 
+    "institution": "obj_2299", 
+    "marcrType": "Holdings", 
+    "label": "_425", 
+    "type": "Annotation", 
+    "id": "annotation_425"
+},{
+    "on_instance": "instance_426", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_426", 
+    "institution": "obj_2300", 
+    "marcrType": "Holdings", 
+    "label": "_426", 
+    "type": "Annotation", 
+    "id": "annotation_426"
+},{
+    "on_instance": "instance_427", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_427", 
+    "institution": "obj_2301", 
+    "marcrType": "Holdings", 
+    "label": "_427", 
+    "type": "Annotation", 
+    "id": "annotation_427"
+},{
+    "on_instance": "instance_428", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_428", 
+    "institution": "obj_2302", 
+    "marcrType": "Holdings", 
+    "label": "_428", 
+    "type": "Annotation", 
+    "id": "annotation_428"
+},{
+    "on_instance": "instance_429", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_429", 
+    "institution": "obj_2303", 
+    "marcrType": "Holdings", 
+    "label": "_429", 
+    "type": "Annotation", 
+    "id": "annotation_429"
+},{
+    "on_instance": "instance_430", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_430", 
+    "institution": "obj_2304", 
+    "marcrType": "Holdings", 
+    "label": "_430", 
+    "type": "Annotation", 
+    "id": "annotation_430"
+},{
+    "on_instance": "instance_431", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_431", 
+    "institution": "obj_2305", 
+    "marcrType": "Holdings", 
+    "label": "_431", 
+    "type": "Annotation", 
+    "id": "annotation_431"
+},{
+    "on_instance": "instance_432", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_432", 
+    "institution": "obj_2306", 
+    "marcrType": "Holdings", 
+    "label": "_432", 
+    "type": "Annotation", 
+    "id": "annotation_432"
+},{
+    "on_instance": "instance_433", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_433", 
+    "institution": "obj_2307", 
+    "marcrType": "Holdings", 
+    "label": "_433", 
+    "type": "Annotation", 
+    "id": "annotation_433"
+},{
+    "on_instance": "instance_434", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_434", 
+    "institution": "obj_2308", 
+    "marcrType": "Holdings", 
+    "label": "_434", 
+    "type": "Annotation", 
+    "id": "annotation_434"
+},{
+    "on_instance": "instance_435", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_435", 
+    "institution": "obj_2309", 
+    "marcrType": "Holdings", 
+    "label": "_435", 
+    "type": "Annotation", 
+    "id": "annotation_435"
+},{
+    "on_instance": "instance_436", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_436", 
+    "institution": "obj_2310", 
+    "marcrType": "Holdings", 
+    "label": "_436", 
+    "type": "Annotation", 
+    "id": "annotation_436"
+},{
+    "on_instance": "instance_437", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_437", 
+    "institution": "obj_2311", 
+    "marcrType": "Holdings", 
+    "label": "_437", 
+    "type": "Annotation", 
+    "id": "annotation_437"
+},{
+    "on_instance": "instance_438", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_438", 
+    "institution": "obj_2312", 
+    "marcrType": "Holdings", 
+    "label": "_438", 
+    "type": "Annotation", 
+    "id": "annotation_438"
+},{
+    "on_instance": "instance_439", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_439", 
+    "institution": "obj_2313", 
+    "marcrType": "Holdings", 
+    "label": "_439", 
+    "type": "Annotation", 
+    "id": "annotation_439"
+},{
+    "on_instance": "instance_440", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_440", 
+    "institution": "obj_2314", 
+    "marcrType": "Holdings", 
+    "label": "_440", 
+    "type": "Annotation", 
+    "id": "annotation_440"
+},{
+    "on_instance": "instance_441", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_441", 
+    "institution": "obj_2315", 
+    "marcrType": "Holdings", 
+    "label": "_441", 
+    "type": "Annotation", 
+    "id": "annotation_441"
+},{
+    "on_instance": "instance_442", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_442", 
+    "institution": "obj_2316", 
+    "marcrType": "Holdings", 
+    "label": "_442", 
+    "type": "Annotation", 
+    "id": "annotation_442"
+},{
+    "on_instance": "instance_443", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_443", 
+    "institution": "obj_2317", 
+    "marcrType": "Holdings", 
+    "label": "_443", 
+    "type": "Annotation", 
+    "id": "annotation_443"
+},{
+    "on_instance": "instance_444", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_444", 
+    "institution": "obj_2318", 
+    "marcrType": "Holdings", 
+    "label": "_444", 
+    "type": "Annotation", 
+    "id": "annotation_444"
+},{
+    "on_instance": "instance_445", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_445", 
+    "institution": "obj_2319", 
+    "marcrType": "Holdings", 
+    "label": "_445", 
+    "type": "Annotation", 
+    "id": "annotation_445"
+},{
+    "on_instance": "instance_446", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_446", 
+    "institution": "obj_2320", 
+    "marcrType": "Holdings", 
+    "label": "_446", 
+    "type": "Annotation", 
+    "id": "annotation_446"
+},{
+    "on_instance": "instance_474", 
+    "on_work": "work_474", 
+    "institution": "obj_2550", 
+    "marcrType": "Holdings", 
+    "label": "_474", 
+    "type": "Annotation", 
+    "id": "annotation_474"
+},{
+    "on_instance": "instance_491", 
+    "h": "GW Electronic Journal", 
+    "on_work": "work_491", 
+    "institution": "obj_2661", 
+    "marcrType": "Holdings", 
+    "label": "_491", 
+    "type": "Annotation", 
+    "id": "annotation_491"
+},{
+    "on_instance": "instance_507", 
+    "h": "GW Electronic Journal", 
+    "on_work": "work_507", 
+    "institution": "obj_2763", 
+    "marcrType": "Holdings", 
+    "label": "_507", 
+    "type": "Annotation", 
+    "id": "annotation_507"
+},{
+    "on_instance": "instance_547", 
+    "h": "NK3840", 
+    "on_work": "work_547", 
+    "institution": "obj_3138", 
+    "marcrType": "Holdings", 
+    "label": "_547", 
+    "type": "Annotation", 
+    "id": "annotation_547"
+},{
+    "on_instance": "instance_548", 
+    "h": "NB159.C9", 
+    "on_work": "work_548", 
+    "institution": "obj_3139", 
+    "marcrType": "Holdings", 
+    "label": "_548", 
+    "type": "Annotation", 
+    "id": "annotation_548"
+},{
+    "on_instance": "instance_549", 
+    "h": "NB159.C9", 
+    "on_work": "work_549", 
+    "institution": "obj_3140", 
+    "marcrType": "Holdings", 
+    "label": "_549", 
+    "type": "Annotation", 
+    "id": "annotation_549"
+},{
+    "on_instance": "instance_550", 
+    "h": "BM495", 
+    "on_work": "work_550", 
+    "institution": "obj_3141", 
+    "marcrType": "Holdings", 
+    "label": "_550", 
+    "type": "Annotation", 
+    "id": "annotation_550"
+},{
+    "on_instance": "instance_551", 
+    "h": "NK3840", 
+    "on_work": "work_551", 
+    "institution": "obj_3142", 
+    "marcrType": "Holdings", 
+    "label": "_551", 
+    "type": "Annotation", 
+    "id": "annotation_551"
+},{
+    "on_instance": "instance_552", 
+    "h": "DG70.S58", 
+    "on_work": "work_552", 
+    "institution": "obj_3143", 
+    "marcrType": "Holdings", 
+    "label": "_552", 
+    "type": "Annotation", 
+    "id": "annotation_552"
+},{
+    "on_instance": "instance_553", 
+    "h": "JA84.R8", 
+    "on_work": "work_553", 
+    "institution": "obj_3144", 
+    "marcrType": "Holdings", 
+    "label": "_553", 
+    "type": "Annotation", 
+    "id": "annotation_553"
+},{
+    "on_instance": "instance_554", 
+    "h": "NX2", 
+    "on_work": "work_554", 
+    "institution": "obj_3145", 
+    "marcrType": "Holdings", 
+    "label": "_554", 
+    "type": "Annotation", 
+    "id": "annotation_554"
+},{
+    "on_instance": "instance_555", 
+    "h": "GE160.R8", 
+    "on_work": "work_555", 
+    "institution": "obj_3146", 
+    "marcrType": "Holdings", 
+    "label": "_555", 
+    "type": "Annotation", 
+    "id": "annotation_555"
+},{
+    "on_instance": "instance_556", 
+    "h": "HN293.5", 
+    "on_work": "work_556", 
+    "institution": "obj_3147", 
+    "marcrType": "Holdings", 
+    "label": "_556", 
+    "type": "Annotation", 
+    "id": "annotation_556"
+},{
+    "on_instance": "instance_557", 
+    "h": "GW Electronic Resource", 
+    "on_work": "work_557", 
+    "institution": "obj_3148", 
+    "marcrType": "Holdings", 
+    "label": "_557", 
+    "type": "Annotation", 
+    "id": "annotation_557"
+},{
+    "on_instance": "instance_558", 
+    "h": "HC60", 
+    "on_work": "work_558", 
+    "institution": "obj_3149", 
+    "marcrType": "Holdings", 
+    "label": "_558", 
+    "type": "Annotation", 
+    "id": "annotation_558"
+},{
+    "on_instance": "instance_559", 
+    "h": "GW: Electronic Resource", 
+    "on_work": "work_559", 
+    "institution": "obj_3150", 
+    "marcrType": "Holdings", 
+    "label": "_559", 
+    "type": "Annotation", 
+    "id": "annotation_559"
+},{
+    "on_instance": "instance_560", 
+    "h": "QA279.7", 
+    "on_work": "work_560", 
+    "institution": "obj_3151", 
+    "marcrType": "Holdings", 
+    "label": "_560", 
+    "type": "Annotation", 
+    "id": "annotation_560"
+},{
+    "on_instance": "instance_561", 
+    "h": "PJ6307", 
+    "on_work": "work_561", 
+    "institution": "obj_3152", 
+    "marcrType": "Holdings", 
+    "label": "_561", 
+    "type": "Annotation", 
+    "id": "annotation_561"
+},{
+    "on_instance": "instance_562", 
+    "h": "BM488.8", 
+    "on_work": "work_562", 
+    "institution": "obj_3153", 
+    "marcrType": "Holdings", 
+    "label": "_562", 
+    "type": "Annotation", 
+    "id": "annotation_562"
+},{
+    "on_instance": "instance_563", 
+    "h": "HA4556.2.A4", 
+    "on_work": "work_563", 
+    "institution": "obj_3154", 
+    "marcrType": "Holdings", 
+    "label": "_563", 
+    "type": "Annotation", 
+    "id": "annotation_563"
+},{
+    "on_instance": "instance_564", 
+    "h": "HA4556.3", 
+    "on_work": "work_564", 
+    "institution": "obj_3155", 
+    "marcrType": "Holdings", 
+    "label": "_564", 
+    "type": "Annotation", 
+    "id": "annotation_564"
+},{
+    "on_instance": "instance_565", 
+    "h": "DR62", 
+    "on_work": "work_565", 
+    "institution": "obj_3156", 
+    "marcrType": "Holdings", 
+    "label": "_565", 
+    "type": "Annotation", 
+    "id": "annotation_565"
+},{
+    "on_instance": "instance_566", 
+    "h": "PC3941.V4", 
+    "on_work": "work_566", 
+    "institution": "obj_3157", 
+    "marcrType": "Holdings", 
+    "label": "_566", 
+    "type": "Annotation", 
+    "id": "annotation_566"
+},{
+    "on_instance": "instance_567", 
+    "h": "PL1129.E5", 
+    "on_work": "work_567", 
+    "institution": "obj_3158", 
+    "marcrType": "Holdings", 
+    "label": "_567", 
+    "type": "Annotation", 
+    "id": "annotation_567"
+},{
+    "on_instance": "instance_568", 
+    "h": "PQ2419", 
+    "on_work": "work_568", 
+    "institution": "obj_3159", 
+    "marcrType": "Holdings", 
+    "label": "_568", 
+    "type": "Annotation", 
+    "id": "annotation_568"
+},{
+    "on_instance": "instance_569", 
+    "h": "BM585", 
+    "on_work": "work_569", 
+    "institution": "obj_3160", 
+    "marcrType": "Holdings", 
+    "label": "_569", 
+    "type": "Annotation", 
+    "id": "annotation_569"
+},{
+    "on_instance": "instance_570", 
+    "h": "K0001/004-0049#01792", 
+    "on_work": "work_570", 
+    "institution": "obj_3161", 
+    "marcrType": "Holdings", 
+    "label": "_570", 
+    "type": "Annotation", 
+    "id": "annotation_570"
+},{
+    "on_instance": "instance_571", 
+    "h": "PB1291", 
+    "on_work": "work_571", 
+    "institution": "obj_3162", 
+    "marcrType": "Holdings", 
+    "label": "_571", 
+    "type": "Annotation", 
+    "id": "annotation_571"
+},{
+    "on_instance": "instance_572", 
+    "h": "HQ784.M3", 
+    "on_work": "work_572", 
+    "institution": "obj_3163", 
+    "marcrType": "Holdings", 
+    "label": "_572", 
+    "type": "Annotation", 
+    "id": "annotation_572"
+},{
+    "on_instance": "instance_573", 
+    "h": "PT1525.A2", 
+    "on_work": "work_573", 
+    "institution": "obj_3164", 
+    "marcrType": "Holdings", 
+    "label": "_573", 
+    "type": "Annotation", 
+    "id": "annotation_573"
+},{
+    "on_instance": "instance_574", 
+    "h": "PA3973", 
+    "on_work": "work_574", 
+    "institution": "obj_3165", 
+    "marcrType": "Holdings", 
+    "label": "_574", 
+    "type": "Annotation", 
+    "id": "annotation_574"
+},{
+    "on_instance": "instance_575", 
+    "h": "PA3875", 
+    "on_work": "work_575", 
+    "institution": "obj_3166", 
+    "marcrType": "Holdings", 
+    "label": "_575", 
+    "type": "Annotation", 
+    "id": "annotation_575"
+},{
+    "on_instance": "instance_576", 
+    "h": "PA3405.S8", 
+    "on_work": "work_576", 
+    "institution": "obj_3167", 
+    "marcrType": "Holdings", 
+    "label": "_576", 
+    "type": "Annotation", 
+    "id": "annotation_576"
+},{
+    "on_instance": "instance_577", 
+    "h": "PA5260", 
+    "on_work": "work_577", 
+    "institution": "obj_3168", 
+    "marcrType": "Holdings", 
+    "label": "_577", 
+    "type": "Annotation", 
+    "id": "annotation_577"
+},{
+    "on_instance": "instance_578", 
+    "h": "Z8747.63", 
+    "on_work": "work_578", 
+    "institution": "obj_3169", 
+    "marcrType": "Holdings", 
+    "label": "_578", 
+    "type": "Annotation", 
+    "id": "annotation_578"
+},{
+    "on_instance": "instance_579", 
+    "h": "PJ5129.L53", 
+    "on_work": "work_579", 
+    "institution": "obj_3170", 
+    "marcrType": "Holdings", 
+    "label": "_579", 
+    "type": "Annotation", 
+    "id": "annotation_579"
+},{
+    "on_instance": "instance_580", 
+    "h": "N6911", 
+    "on_work": "work_580", 
+    "institution": "obj_3171", 
+    "marcrType": "Holdings", 
+    "label": "_580", 
+    "type": "Annotation", 
+    "id": "annotation_580"
+},{
+    "on_instance": "instance_581", 
+    "h": "UA845", 
+    "on_work": "work_581", 
+    "institution": "obj_3172", 
+    "marcrType": "Holdings", 
+    "label": "_581", 
+    "type": "Annotation", 
+    "id": "annotation_581"
+},{
+    "on_instance": "instance_582", 
+    "h": "PN2728.L5", 
+    "on_work": "work_582", 
+    "institution": "obj_3173", 
+    "marcrType": "Holdings", 
+    "label": "_582", 
+    "type": "Annotation", 
+    "id": "annotation_582"
+},{
+    "on_instance": "instance_583", 
+    "h": "PQ6285", 
+    "on_work": "work_583", 
+    "institution": "obj_3174", 
+    "marcrType": "Holdings", 
+    "label": "_583", 
+    "type": "Annotation", 
+    "id": "annotation_583"
+},{
+    "on_instance": "instance_584", 
+    "h": "DK859.56", 
+    "on_work": "work_584", 
+    "institution": "obj_3175", 
+    "marcrType": "Holdings", 
+    "label": "_584", 
+    "type": "Annotation", 
+    "id": "annotation_584"
+},{
+    "on_instance": "instance_585", 
+    "h": "PJ5129.S79", 
+    "on_work": "work_585", 
+    "institution": "obj_3176", 
+    "marcrType": "Holdings", 
+    "label": "_585", 
+    "type": "Annotation", 
+    "id": "annotation_585"
+},{
+    "on_instance": "instance_586", 
+    "h": "HJ1000.5", 
+    "on_work": "work_586", 
+    "institution": "obj_3177", 
+    "marcrType": "Holdings", 
+    "label": "_586", 
+    "type": "Annotation", 
+    "id": "annotation_586"
+},{
+    "on_instance": "instance_587", 
+    "h": "shelved alphabetically by title", 
+    "on_work": "work_587", 
+    "institution": "obj_3178", 
+    "marcrType": "Holdings", 
+    "label": "_587", 
+    "type": "Annotation", 
+    "id": "annotation_587"
+},{
+    "on_instance": "instance_588", 
+    "h": "D839", 
+    "on_work": "work_588", 
+    "institution": "obj_3179", 
+    "marcrType": "Holdings", 
+    "label": "_588", 
+    "type": "Annotation", 
+    "id": "annotation_588"
+},{
+    "on_instance": "instance_589", 
+    "h": "HA1330", 
+    "on_work": "work_589", 
+    "institution": "obj_3180", 
+    "marcrType": "Holdings", 
+    "label": "_589", 
+    "type": "Annotation", 
+    "id": "annotation_589"
+},{
+    "on_instance": "instance_590", 
+    "h": "DS54.3", 
+    "on_work": "work_590", 
+    "institution": "obj_3181", 
+    "marcrType": "Holdings", 
+    "label": "_590", 
+    "type": "Annotation", 
+    "id": "annotation_590"
+},{
+    "on_instance": "instance_591", 
+    "h": "GW Electronic Journal", 
+    "on_work": "work_591", 
+    "institution": "obj_3182", 
+    "marcrType": "Holdings", 
+    "label": "_591", 
+    "type": "Annotation", 
+    "id": "annotation_591"
+},{
+    "on_instance": "instance_592", 
+    "h": "PJ5001", 
+    "on_work": "work_592", 
+    "institution": "obj_3183", 
+    "marcrType": "Holdings", 
+    "label": "_592", 
+    "type": "Annotation", 
+    "id": "annotation_592"
+},{
+    "on_instance": "instance_593", 
+    "h": "TJ163.25.G28", 
+    "on_work": "work_593", 
+    "institution": "obj_3184", 
+    "marcrType": "Holdings", 
+    "label": "_593", 
+    "type": "Annotation", 
+    "id": "annotation_593"
+},{
+    "on_instance": "instance_594", 
+    "h": "DS101", 
+    "on_work": "work_594", 
+    "institution": "obj_3185", 
+    "marcrType": "Holdings", 
+    "label": "_594", 
+    "type": "Annotation", 
+    "id": "annotation_594"
+},{
+    "on_instance": "instance_595", 
+    "h": "DS101", 
+    "on_work": "work_595", 
+    "institution": "obj_3186", 
+    "marcrType": "Holdings", 
+    "label": "_595", 
+    "type": "Annotation", 
+    "id": "annotation_595"
+},{
+    "on_instance": "instance_596", 
+    "h": "DB920", 
+    "on_work": "work_596", 
+    "institution": "obj_3187", 
+    "marcrType": "Holdings", 
+    "label": "_596", 
+    "type": "Annotation", 
+    "id": "annotation_596"
+},{
+    "on_instance": "instance_597", 
+    "h": "N4", 
+    "on_work": "work_597", 
+    "institution": "obj_3188", 
+    "marcrType": "Holdings", 
+    "label": "_597", 
+    "type": "Annotation", 
+    "id": "annotation_597"
+},{
+    "on_instance": "instance_598", 
+    "h": "HF251", 
+    "on_work": "work_598", 
+    "institution": "obj_3189", 
+    "marcrType": "Holdings", 
+    "label": "_598", 
+    "type": "Annotation", 
+    "id": "annotation_598"
+},{
+    "on_instance": "instance_599", 
+    "h": "HA4570.23", 
+    "on_work": "work_599", 
+    "institution": "obj_3190", 
+    "marcrType": "Holdings", 
+    "label": "_599", 
+    "type": "Annotation", 
+    "id": "annotation_599"
+},{
+    "on_instance": "instance_600", 
+    "h": "HA4570.24", 
+    "on_work": "work_600", 
+    "institution": "obj_3191", 
+    "marcrType": "Holdings", 
+    "label": "_600", 
+    "type": "Annotation", 
+    "id": "annotation_600"
+},{
+    "on_instance": "instance_601", 
+    "h": "HF3830.5", 
+    "on_work": "work_601", 
+    "institution": "obj_3192", 
+    "marcrType": "Holdings", 
+    "label": "_601", 
+    "type": "Annotation", 
+    "id": "annotation_601"
+},{
+    "on_instance": "instance_602", 
+    "h": "HA1460.4", 
+    "on_work": "work_602", 
+    "institution": "obj_3193", 
+    "marcrType": "Holdings", 
+    "label": "_602", 
+    "type": "Annotation", 
+    "id": "annotation_602"
+},{
+    "on_instance": "instance_603", 
+    "h": "HA1460.4", 
+    "on_work": "work_603", 
+    "institution": "obj_3194", 
+    "marcrType": "Holdings", 
+    "label": "_603", 
+    "type": "Annotation", 
+    "id": "annotation_603"
+},{
+    "on_instance": "instance_604", 
+    "h": "HC340.6.A1", 
+    "on_work": "work_604", 
+    "institution": "obj_3195", 
+    "marcrType": "Holdings", 
+    "label": "_604", 
+    "type": "Annotation", 
+    "id": "annotation_604"
+},{
+    "on_instance": "instance_605", 
+    "h": "HF3630.8.A1", 
+    "on_work": "work_605", 
+    "institution": "obj_3196", 
+    "marcrType": "Holdings", 
+    "label": "_605", 
+    "type": "Annotation", 
+    "id": "annotation_605"
+},{
+    "on_instance": "instance_606", 
+    "h": "RA407.5", 
+    "on_work": "work_606", 
+    "institution": "obj_3197", 
+    "marcrType": "Holdings", 
+    "label": "_606", 
+    "type": "Annotation", 
+    "id": "annotation_606"
+},{
+    "on_instance": "instance_607", 
+    "h": "GW Electronic Journal", 
+    "on_work": "work_607", 
+    "institution": "obj_3198", 
+    "marcrType": "Holdings", 
+    "label": "_607", 
+    "type": "Annotation", 
+    "id": "annotation_607"
+},{
+    "on_instance": "instance_608", 
+    "h": "F2501", 
+    "on_work": "work_608", 
+    "institution": "obj_3199", 
+    "marcrType": "Holdings", 
+    "label": "_608", 
+    "type": "Annotation", 
+    "id": "annotation_608"
+},{
+    "on_instance": "instance_609", 
+    "h": "HD9715.M65", 
+    "on_work": "work_609", 
+    "institution": "obj_3200", 
+    "marcrType": "Holdings", 
+    "label": "_609", 
+    "type": "Annotation", 
+    "id": "annotation_609"
+},{
+    "on_instance": "instance_610", 
+    "on_work": "work_610", 
+    "institution": "obj_3201", 
+    "marcrType": "Holdings", 
+    "label": "_610", 
+    "type": "Annotation", 
+    "id": "annotation_610"
+},{
+    "on_instance": "instance_611", 
+    "h": "HN530.9.A85", 
+    "on_work": "work_611", 
+    "institution": "obj_3202", 
+    "marcrType": "Holdings", 
+    "label": "_611", 
+    "type": "Annotation", 
+    "id": "annotation_611"
+},{
+    "on_instance": "instance_612", 
+    "h": "HD2346.U9", 
+    "on_work": "work_612", 
+    "institution": "obj_3203", 
+    "marcrType": "Holdings", 
+    "label": "_612", 
+    "type": "Annotation", 
+    "id": "annotation_612"
+},{
+    "on_instance": "instance_613", 
+    "h": "DS101", 
+    "on_work": "work_613", 
+    "institution": "obj_3204", 
+    "marcrType": "Holdings", 
+    "label": "_613", 
+    "type": "Annotation", 
+    "id": "annotation_613"
+},{
+    "on_instance": "instance_614", 
+    "h": "K0001/004-0016#01242", 
+    "on_work": "work_614", 
+    "institution": "obj_3205", 
+    "marcrType": "Holdings", 
+    "label": "_614", 
+    "type": "Annotation", 
+    "id": "annotation_614"
+},{
+    "on_instance": "instance_615", 
+    "h": "M2", 
+    "on_work": "work_615", 
+    "institution": "obj_3206", 
+    "marcrType": "Holdings", 
+    "label": "_615", 
+    "type": "Annotation", 
+    "id": "annotation_615"
+},{
+    "on_instance": "instance_616", 
+    "h": "PN1997", 
+    "on_work": "work_616", 
+    "institution": "obj_3207", 
+    "marcrType": "Holdings", 
+    "label": "_616", 
+    "type": "Annotation", 
+    "id": "annotation_616"
+},{
+    "on_instance": "instance_617", 
+    "h": "PK8547.S3", 
+    "on_work": "work_617", 
+    "institution": "obj_3208", 
+    "marcrType": "Holdings", 
+    "label": "_617", 
+    "type": "Annotation", 
+    "id": "annotation_617"
+},{
+    "on_instance": "instance_618", 
+    "h": "PN1997.2", 
+    "on_work": "work_618", 
+    "institution": "obj_3209", 
+    "marcrType": "Holdings", 
+    "label": "_618", 
+    "type": "Annotation", 
+    "id": "annotation_618"
+},{
+    "on_instance": "instance_619", 
+    "h": "PN1997", 
+    "on_work": "work_619", 
+    "institution": "obj_3210", 
+    "marcrType": "Holdings", 
+    "label": "_619", 
+    "type": "Annotation", 
+    "id": "annotation_619"
+},{
+    "on_instance": "instance_620", 
+    "h": "PN1995.9.C47", 
+    "on_work": "work_620", 
+    "institution": "obj_3211", 
+    "marcrType": "Holdings", 
+    "label": "_620", 
+    "type": "Annotation", 
+    "id": "annotation_620"
+},{
+    "on_instance": "instance_621", 
+    "h": "CD 545", 
+    "on_work": "work_621", 
+    "institution": "obj_3212", 
+    "marcrType": "Holdings", 
+    "label": "_621", 
+    "type": "Annotation", 
+    "id": "annotation_621"
+},{
+    "on_instance": "instance_622", 
+    "h": "CD 468", 
+    "on_work": "work_622", 
+    "institution": "obj_3213", 
+    "marcrType": "Holdings", 
+    "label": "_622", 
+    "type": "Annotation", 
+    "id": "annotation_622"
+},{
+    "on_instance": "instance_623", 
+    "h": "CD 497", 
+    "on_work": "work_623", 
+    "institution": "obj_3214", 
+    "marcrType": "Holdings", 
+    "label": "_623", 
+    "type": "Annotation", 
+    "id": "annotation_623"
+},{
+    "on_instance": "instance_624", 
+    "h": "CD 496", 
+    "on_work": "work_624", 
+    "institution": "obj_3215", 
+    "marcrType": "Holdings", 
+    "label": "_624", 
+    "type": "Annotation", 
+    "id": "annotation_624"
+},{
+    "on_instance": "instance_625", 
+    "h": "CD 363", 
+    "on_work": "work_625", 
+    "institution": "obj_3216", 
+    "marcrType": "Holdings", 
+    "label": "_625", 
+    "type": "Annotation", 
+    "id": "annotation_625"
+},{
+    "on_instance": "instance_626", 
+    "h": "CD 287", 
+    "on_work": "work_626", 
+    "institution": "obj_3217", 
+    "marcrType": "Holdings", 
+    "label": "_626", 
+    "type": "Annotation", 
+    "id": "annotation_626"
+},{
+    "on_instance": "instance_627", 
+    "h": "CD 499", 
+    "on_work": "work_627", 
+    "institution": "obj_3218", 
+    "marcrType": "Holdings", 
+    "label": "_627", 
+    "type": "Annotation", 
+    "id": "annotation_627"
+},{
+    "on_instance": "instance_628", 
+    "h": "CD 278", 
+    "on_work": "work_628", 
+    "institution": "obj_3219", 
+    "marcrType": "Holdings", 
+    "label": "_628", 
+    "type": "Annotation", 
+    "id": "annotation_628"
+},{
+    "on_instance": "instance_629", 
+    "h": "CD 456", 
+    "on_work": "work_629", 
+    "institution": "obj_3220", 
+    "marcrType": "Holdings", 
+    "label": "_629", 
+    "type": "Annotation", 
+    "id": "annotation_629"
+},{
+    "on_instance": "instance_630", 
+    "h": "CD 507", 
+    "on_work": "work_630", 
+    "institution": "obj_3221", 
+    "marcrType": "Holdings", 
+    "label": "_630", 
+    "type": "Annotation", 
+    "id": "annotation_630"
+},{
+    "on_instance": "instance_631", 
+    "h": "CD 350", 
+    "on_work": "work_631", 
+    "institution": "obj_3222", 
+    "marcrType": "Holdings", 
+    "label": "_631", 
+    "type": "Annotation", 
+    "id": "annotation_631"
+},{
+    "on_instance": "instance_632", 
+    "h": "CD 269", 
+    "on_work": "work_632", 
+    "institution": "obj_3223", 
+    "marcrType": "Holdings", 
+    "label": "_632", 
+    "type": "Annotation", 
+    "id": "annotation_632"
+},{
+    "on_instance": "instance_633", 
+    "h": "CD 531", 
+    "on_work": "work_633", 
+    "institution": "obj_3224", 
+    "marcrType": "Holdings", 
+    "label": "_633", 
+    "type": "Annotation", 
+    "id": "annotation_633"
+},{
+    "on_instance": "instance_634", 
+    "h": "CD 520", 
+    "on_work": "work_634", 
+    "institution": "obj_3225", 
+    "marcrType": "Holdings", 
+    "label": "_634", 
+    "type": "Annotation", 
+    "id": "annotation_634"
+},{
+    "on_instance": "instance_635", 
+    "h": "N6888.B463", 
+    "on_work": "work_635", 
+    "institution": "obj_3226", 
+    "marcrType": "Holdings", 
+    "label": "_635", 
+    "type": "Annotation", 
+    "id": "annotation_635"
+},{
+    "on_instance": "instance_636", 
+    "h": "GW Electronic Book", 
+    "on_work": "work_636", 
+    "institution": "obj_3227", 
+    "marcrType": "Holdings", 
+    "label": "_636", 
+    "type": "Annotation", 
+    "id": "annotation_636"
+},{
+    "on_instance": "instance_637", 
+    "h": "DD85", 
+    "on_work": "work_637", 
+    "institution": "obj_3228", 
+    "marcrType": "Holdings", 
+    "label": "_637", 
+    "type": "Annotation", 
+    "id": "annotation_637"
+},{
+    "on_instance": "instance_638", 
+    "h": "NA9370.R6", 
+    "on_work": "work_638", 
+    "institution": "obj_3229", 
+    "marcrType": "Holdings", 
+    "label": "_638", 
+    "type": "Annotation", 
+    "id": "annotation_638"
+},{
+    "on_instance": "instance_639", 
+    "h": "G1989.24.V46", 
+    "on_work": "work_639", 
+    "institution": "obj_3230", 
+    "marcrType": "Holdings", 
+    "label": "_639", 
+    "type": "Annotation", 
+    "id": "annotation_639"
+},{
+    "on_instance": "instance_640", 
+    "h": "HA201", 
+    "on_work": "work_640", 
+    "institution": "obj_3231", 
+    "marcrType": "Holdings", 
+    "label": "_640", 
+    "type": "Annotation", 
+    "id": "annotation_640"
+},{
+    "on_instance": "instance_641", 
+    "h": "MS2199", 
+    "on_work": "work_641", 
+    "institution": "obj_3232", 
+    "marcrType": "Holdings", 
+    "label": "_641", 
+    "type": "Annotation", 
+    "id": "annotation_641"
+},{
+    "on_instance": "instance_642", 
+    "on_work": "work_642", 
+    "institution": "obj_3233", 
+    "marcrType": "Holdings", 
+    "label": "_642", 
+    "type": "Annotation", 
+    "id": "annotation_642"
+},{
+    "on_instance": "instance_643", 
+    "h": "HN740.Z9", 
+    "on_work": "work_643", 
+    "institution": "obj_3234", 
+    "marcrType": "Holdings", 
+    "label": "_643", 
+    "type": "Annotation", 
+    "id": "annotation_643"
+},{
+    "on_instance": "instance_644", 
+    "h": "PQ1351", 
+    "on_work": "work_644", 
+    "institution": "obj_3235", 
+    "marcrType": "Holdings", 
+    "label": "_644", 
+    "type": "Annotation", 
+    "id": "annotation_644"
+},{
+    "on_instance": "instance_645", 
+    "h": "P40.45.I75", 
+    "on_work": "work_645", 
+    "institution": "obj_3236", 
+    "marcrType": "Holdings", 
+    "label": "_645", 
+    "type": "Annotation", 
+    "id": "annotation_645"
+},{
+    "on_instance": "instance_646", 
+    "h": "F2538", 
+    "on_work": "work_646", 
+    "institution": "obj_3237", 
+    "marcrType": "Holdings", 
+    "label": "_646", 
+    "type": "Annotation", 
+    "id": "annotation_646"
+},{
+    "on_instance": "instance_771", 
+    "on_work": "work_771", 
+    "institution": "obj_4012", 
+    "marcrType": "Holdings", 
+    "label": "_771", 
+    "type": "Annotation", 
+    "id": "annotation_771"
+},{
+    "on_instance": "instance_847", 
+    "h": "E 672 .M29 1869", 
+    "on_work": "work_847", 
+    "institution": "obj_4578", 
+    "marcrType": "Holdings", 
+    "label": "_847", 
+    "type": "Annotation", 
+    "id": "annotation_847"
+},{
+    "on_instance": "instance_848", 
+    "h": "PE653", 
+    "on_work": "work_848", 
+    "institution": "obj_4579", 
+    "marcrType": "Holdings", 
+    "label": "_848", 
+    "type": "Annotation", 
+    "id": "annotation_848"
+},{
+    "on_instance": "instance_849", 
+    "h": "QH 591 .M5", 
+    "on_work": "work_849", 
+    "institution": "obj_4580", 
+    "marcrType": "Holdings", 
+    "label": "_849", 
+    "type": "Annotation", 
+    "id": "annotation_849"
+},{
+    "on_instance": "instance_850", 
+    "h": "G 87 .S9 H44", 
+    "on_work": "work_850", 
+    "institution": "obj_4581", 
+    "marcrType": "Holdings", 
+    "label": "_850", 
+    "type": "Annotation", 
+    "id": "annotation_850"
+},{
+    "on_instance": "instance_851", 
+    "h": "AC 8", 
+    "on_work": "work_851", 
+    "institution": "obj_4582", 
+    "marcrType": "Holdings", 
+    "label": "_851", 
+    "type": "Annotation", 
+    "id": "annotation_851"
+},{
+    "on_instance": "instance_852", 
+    "h": "AC 8 .E8", 
+    "on_work": "work_852", 
+    "institution": "obj_4583", 
+    "marcrType": "Holdings", 
+    "label": "_852", 
+    "type": "Annotation", 
+    "id": "annotation_852"
+},{
+    "on_instance": "instance_853", 
+    "h": "AC 8 .E8 vol.28", 
+    "on_work": "work_853", 
+    "institution": "obj_4584", 
+    "marcrType": "Holdings", 
+    "label": "_853", 
+    "type": "Annotation", 
+    "id": "annotation_853"
+},{
+    "on_instance": "instance_854", 
+    "h": "JX 24 .H25 1923", 
+    "on_work": "work_854", 
+    "institution": "obj_4585", 
+    "marcrType": "Holdings", 
+    "label": "_854", 
+    "type": "Annotation", 
+    "id": "annotation_854"
+},{
+    "on_instance": "instance_855", 
+    "h": "PJ 3581 .D4 1912a", 
+    "on_work": "work_855", 
+    "institution": "obj_4586", 
+    "marcrType": "Holdings", 
+    "label": "_855", 
+    "type": "Annotation", 
+    "id": "annotation_855"
+},{
+    "on_instance": "instance_856", 
+    "h": "DA 20", 
+    "on_work": "work_856", 
+    "institution": "obj_4587", 
+    "marcrType": "Holdings", 
+    "label": "_856", 
+    "type": "Annotation", 
+    "id": "annotation_856"
+},{
+    "on_instance": "instance_857", 
+    "h": "PR 1502 .B49", 
+    "on_work": "work_857", 
+    "institution": "obj_4588", 
+    "marcrType": "Holdings", 
+    "label": "_857", 
+    "type": "Annotation", 
+    "id": "annotation_857"
+},{
+    "on_instance": "instance_858", 
+    "h": "PT1371", 
+    "on_work": "work_858", 
+    "institution": "obj_4589", 
+    "marcrType": "Holdings", 
+    "label": "_858", 
+    "type": "Annotation", 
+    "id": "annotation_858"
+},{
+    "on_instance": "instance_859", 
+    "h": "PR 1119 .A2 no.46", 
+    "on_work": "work_859", 
+    "institution": "obj_4590", 
+    "marcrType": "Holdings", 
+    "label": "_859", 
+    "type": "Annotation", 
+    "id": "annotation_859"
+},{
+    "on_instance": "instance_860", 
+    "h": "N 7604 .P55 1884", 
+    "on_work": "work_860", 
+    "institution": "obj_4591", 
+    "marcrType": "Holdings", 
+    "label": "_860", 
+    "type": "Annotation", 
+    "id": "annotation_860"
+},{
+    "on_instance": "instance_861", 
+    "h": "JX 4413 .P54", 
+    "on_work": "work_861", 
+    "institution": "obj_4592", 
+    "marcrType": "Holdings", 
+    "label": "_861", 
+    "type": "Annotation", 
+    "id": "annotation_861"
+},{
+    "on_instance": "instance_862", 
+    "h": "JX 6098 .A8", 
+    "on_work": "work_862", 
+    "institution": "obj_4593", 
+    "marcrType": "Holdings", 
+    "label": "_862", 
+    "type": "Annotation", 
+    "id": "annotation_862"
+},{
+    "on_instance": "instance_863", 
+    "h": "DC 348 .R3", 
+    "on_work": "work_863", 
+    "institution": "obj_4594", 
+    "marcrType": "Holdings", 
+    "label": "_863", 
+    "type": "Annotation", 
+    "id": "annotation_863"
+},{
+    "on_instance": "instance_864", 
+    "h": "PQ 7797 .L28 G6", 
+    "on_work": "work_864", 
+    "institution": "obj_4595", 
+    "marcrType": "Holdings", 
+    "label": "_864", 
+    "type": "Annotation", 
+    "id": "annotation_864"
+},{
+    "on_instance": "instance_865", 
+    "h": "JX 1913 .A4 A7", 
+    "on_work": "work_865", 
+    "institution": "obj_4596", 
+    "marcrType": "Holdings", 
+    "label": "_865", 
+    "type": "Annotation", 
+    "id": "annotation_865"
+},{
+    "on_instance": "instance_866", 
+    "h": "F 2809 .L5", 
+    "on_work": "work_866", 
+    "institution": "obj_4597", 
+    "marcrType": "Holdings", 
+    "label": "_866", 
+    "type": "Annotation", 
+    "id": "annotation_866"
+},{
+    "on_instance": "instance_867", 
+    "h": "P 959 .M35", 
+    "on_work": "work_867", 
+    "institution": "obj_4598", 
+    "marcrType": "Holdings", 
+    "label": "_867", 
+    "type": "Annotation", 
+    "id": "annotation_867"
+},{
+    "on_instance": "instance_868", 
+    "h": "TA 460 .K24", 
+    "on_work": "work_868", 
+    "institution": "obj_4599", 
+    "marcrType": "Holdings", 
+    "label": "_868", 
+    "type": "Annotation", 
+    "id": "annotation_868"
+},{
+    "on_instance": "instance_869", 
+    "h": "HD 1991 .A54", 
+    "on_work": "work_869", 
+    "institution": "obj_4600", 
+    "marcrType": "Holdings", 
+    "label": "_869", 
+    "type": "Annotation", 
+    "id": "annotation_869"
+},{
+    "on_instance": "instance_870", 
+    "h": "PG 3332 .Z3 1960", 
+    "on_work": "work_870", 
+    "institution": "obj_4601", 
+    "marcrType": "Holdings", 
+    "label": "_870", 
+    "type": "Annotation", 
+    "id": "annotation_870"
+},{
+    "on_instance": "instance_871", 
+    "h": "PG 3476 .F79 1960", 
+    "on_work": "work_871", 
+    "institution": "obj_4602", 
+    "marcrType": "Holdings", 
+    "label": "_871", 
+    "type": "Annotation", 
+    "id": "annotation_871"
+},{
+    "on_instance": "instance_872", 
+    "h": "PG 3011", 
+    "on_work": "work_872", 
+    "institution": "obj_4603", 
+    "marcrType": "Holdings", 
+    "label": "_872", 
+    "type": "Annotation", 
+    "id": "annotation_872"
+},{
+    "on_instance": "instance_873", 
+    "h": "JN 6598.8 .K66 1960", 
+    "on_work": "work_873", 
+    "institution": "obj_4604", 
+    "marcrType": "Holdings", 
+    "label": "_873", 
+    "type": "Annotation", 
+    "id": "annotation_873"
+},{
+    "on_instance": "instance_874", 
+    "h": "DS 38.9 .B52 1983", 
+    "on_work": "work_874", 
+    "institution": "obj_4605", 
+    "marcrType": "Holdings", 
+    "label": "_874", 
+    "type": "Annotation", 
+    "id": "annotation_874"
+},{
+    "on_instance": "instance_875", 
+    "h": "DT515.9.S6", 
+    "on_work": "work_875", 
+    "institution": "obj_4606", 
+    "marcrType": "Holdings", 
+    "label": "_875", 
+    "type": "Annotation", 
+    "id": "annotation_875"
+},{
+    "on_instance": "instance_876", 
+    "h": "DJK18", 
+    "on_work": "work_876", 
+    "institution": "obj_4607", 
+    "marcrType": "Holdings", 
+    "label": "_876", 
+    "type": "Annotation", 
+    "id": "annotation_876"
+},{
+    "on_instance": "instance_877", 
+    "h": "F1232", 
+    "on_work": "work_877", 
+    "institution": "obj_4608", 
+    "marcrType": "Holdings", 
+    "label": "_877", 
+    "type": "Annotation", 
+    "id": "annotation_877"
+},{
+    "on_instance": "instance_878", 
+    "h": "PG 3948", 
+    "on_work": "work_878", 
+    "institution": "obj_4609", 
+    "marcrType": "Holdings", 
+    "label": "_878", 
+    "type": "Annotation", 
+    "id": "annotation_878"
+},{
+    "on_instance": "instance_879", 
+    "h": "PJ 5152 .A1 K36 1982", 
+    "on_work": "work_879", 
+    "institution": "obj_4610", 
+    "marcrType": "Holdings", 
+    "label": "_879", 
+    "type": "Annotation", 
+    "id": "annotation_879"
+},{
+    "on_instance": "instance_880", 
+    "h": "ND 588", 
+    "on_work": "work_880", 
+    "institution": "obj_4611", 
+    "marcrType": "Holdings", 
+    "label": "_880", 
+    "type": "Annotation", 
+    "id": "annotation_880"
+},{
+    "on_instance": "instance_881", 
+    "h": "QA27.C5", 
+    "on_work": "work_881", 
+    "institution": "obj_4612", 
+    "marcrType": "Holdings", 
+    "label": "_881", 
+    "type": "Annotation", 
+    "id": "annotation_881"
+},{
+    "on_instance": "instance_882", 
+    "h": "ND 665", 
+    "on_work": "work_882", 
+    "institution": "obj_4613", 
+    "marcrType": "Holdings", 
+    "label": "_882", 
+    "type": "Annotation", 
+    "id": "annotation_882"
+},{
+    "on_instance": "instance_883", 
+    "h": "N7760", 
+    "on_work": "work_883", 
+    "institution": "obj_4614", 
+    "marcrType": "Holdings", 
+    "label": "_883", 
+    "type": "Annotation", 
+    "id": "annotation_883"
+},{
+    "on_instance": "instance_884", 
+    "h": "N 7443.4 .G47 1988", 
+    "on_work": "work_884", 
+    "institution": "obj_4615", 
+    "marcrType": "Holdings", 
+    "label": "_884", 
+    "type": "Annotation", 
+    "id": "annotation_884"
+},{
+    "on_instance": "instance_885", 
+    "h": "DS 115.5 .H56 1988", 
+    "on_work": "work_885", 
+    "institution": "obj_4616", 
+    "marcrType": "Holdings", 
+    "label": "_885", 
+    "type": "Annotation", 
+    "id": "annotation_885"
+},{
+    "on_instance": "instance_886", 
+    "h": "PT 67 .H3 G7 1988", 
+    "on_work": "work_886", 
+    "institution": "obj_4617", 
+    "marcrType": "Holdings", 
+    "label": "_886", 
+    "type": "Annotation", 
+    "id": "annotation_886"
+},{
+    "on_instance": "instance_887", 
+    "h": "QC 794.6 .F4 S356 1988", 
+    "on_work": "work_887", 
+    "institution": "obj_4618", 
+    "marcrType": "Holdings", 
+    "label": "_887", 
+    "type": "Annotation", 
+    "id": "annotation_887"
+},{
+    "on_instance": "instance_888", 
+    "h": "PF 4591 .B8 1988", 
+    "on_work": "work_888", 
+    "institution": "obj_4619", 
+    "marcrType": "Holdings", 
+    "label": "_888", 
+    "type": "Annotation", 
+    "id": "annotation_888"
+},{
+    "on_instance": "instance_889", 
+    "h": "QE576", 
+    "on_work": "work_889", 
+    "institution": "obj_4620", 
+    "marcrType": "Holdings", 
+    "label": "_889", 
+    "type": "Annotation", 
+    "id": "annotation_889"
+},{
+    "on_instance": "instance_890", 
+    "h": "Shelved alphabetically by title", 
+    "on_work": "work_890", 
+    "institution": "obj_4621", 
+    "marcrType": "Holdings", 
+    "label": "_890", 
+    "type": "Annotation", 
+    "id": "annotation_890"
+},{
+    "on_instance": "instance_891", 
+    "h": "ND 553 .M7 M57 1986", 
+    "on_work": "work_891", 
+    "institution": "obj_4622", 
+    "marcrType": "Holdings", 
+    "label": "_891", 
+    "type": "Annotation", 
+    "id": "annotation_891"
+},{
+    "on_instance": "instance_892", 
+    "h": "QA 3 .Q38 no.69", 
+    "on_work": "work_892", 
+    "institution": "obj_4623", 
+    "marcrType": "Holdings", 
+    "label": "_892", 
+    "type": "Annotation", 
+    "id": "annotation_892"
+},{
+    "on_instance": "instance_893", 
+    "h": "N 6537 .D43 A4 1984", 
+    "on_work": "work_893", 
+    "institution": "obj_4624", 
+    "marcrType": "Holdings", 
+    "label": "_893", 
+    "type": "Annotation", 
+    "id": "annotation_893"
+},{
+    "on_instance": "instance_894", 
+    "h": "PQ 653 .G6 1984", 
+    "on_work": "work_894", 
+    "institution": "obj_4625", 
+    "marcrType": "Holdings", 
+    "label": "_894", 
+    "type": "Annotation", 
+    "id": "annotation_894"
+},{
+    "on_instance": "instance_895", 
+    "h": "QA 276 .S27 1984", 
+    "on_work": "work_895", 
+    "institution": "obj_4626", 
+    "marcrType": "Holdings", 
+    "label": "_895", 
+    "type": "Annotation", 
+    "id": "annotation_895"
+},{
+    "on_instance": "instance_896", 
+    "h": "B 2948 .H44 1984", 
+    "on_work": "work_896", 
+    "institution": "obj_4627", 
+    "marcrType": "Holdings", 
+    "label": "_896", 
+    "type": "Annotation", 
+    "id": "annotation_896"
+},{
+    "on_instance": "instance_897", 
+    "h": "PS 508 .I2 K8", 
+    "on_work": "work_897", 
+    "institution": "obj_4628", 
+    "marcrType": "Holdings", 
+    "label": "_897", 
+    "type": "Annotation", 
+    "id": "annotation_897"
+},{
+    "on_instance": "instance_898", 
+    "h": "PT 7511 .D39 K3", 
+    "on_work": "work_898", 
+    "institution": "obj_4629", 
+    "marcrType": "Holdings", 
+    "label": "_898", 
+    "type": "Annotation", 
+    "id": "annotation_898"
+},{
+    "on_instance": "instance_899", 
+    "h": "PT 7511 .D24 I2", 
+    "on_work": "work_899", 
+    "institution": "obj_4630", 
+    "marcrType": "Holdings", 
+    "label": "_899", 
+    "type": "Annotation", 
+    "id": "annotation_899"
+},{
+    "on_instance": "instance_900", 
+    "h": "PT 7269 .E2 1933", 
+    "on_work": "work_900", 
+    "institution": "obj_4631", 
+    "marcrType": "Holdings", 
+    "label": "_900", 
+    "type": "Annotation", 
+    "id": "annotation_900"
+},{
+    "on_instance": "instance_901", 
+    "h": "PT 7453 .A94", 
+    "on_work": "work_901", 
+    "institution": "obj_4632", 
+    "marcrType": "Holdings", 
+    "label": "_901", 
+    "type": "Annotation", 
+    "id": "annotation_901"
+},{
+    "on_instance": "instance_902", 
+    "h": "PT7511.D38", 
+    "on_work": "work_902", 
+    "institution": "obj_4633", 
+    "marcrType": "Holdings", 
+    "label": "_902", 
+    "type": "Annotation", 
+    "id": "annotation_902"
+},{
+    "on_instance": "instance_903", 
+    "h": "BT 430 .C56", 
+    "on_work": "work_903", 
+    "institution": "obj_4634", 
+    "marcrType": "Holdings", 
+    "label": "_903", 
+    "type": "Annotation", 
+    "id": "annotation_903"
+},{
+    "on_instance": "instance_904", 
+    "h": "DD 3 .M8 A8 t.4 pars1", 
+    "on_work": "work_904", 
+    "institution": "obj_4635", 
+    "marcrType": "Holdings", 
+    "label": "_904", 
+    "type": "Annotation", 
+    "id": "annotation_904"
+},{
+    "on_instance": "instance_905", 
+    "h": "PA 2095 .H3 1878", 
+    "on_work": "work_905", 
+    "institution": "obj_4636", 
+    "marcrType": "Holdings", 
+    "label": "_905", 
+    "type": "Annotation", 
+    "id": "annotation_905"
+},{
+    "on_instance": "instance_906", 
+    "h": "PA 6558", 
+    "on_work": "work_906", 
+    "institution": "obj_4637", 
+    "marcrType": "Holdings", 
+    "label": "_906", 
+    "type": "Annotation", 
+    "id": "annotation_906"
+},{
+    "on_instance": "instance_907", 
+    "h": "PA 6296 .C2 R4 1882", 
+    "on_work": "work_907", 
+    "institution": "obj_4638", 
+    "marcrType": "Holdings", 
+    "label": "_907", 
+    "type": "Annotation", 
+    "id": "annotation_907"
+},{
+    "on_instance": "instance_908", 
+    "h": "BR 746 .B4 1882", 
+    "on_work": "work_908", 
+    "institution": "obj_4639", 
+    "marcrType": "Holdings", 
+    "label": "_908", 
+    "type": "Annotation", 
+    "id": "annotation_908"
+},{
+    "on_instance": "instance_909", 
+    "h": "PA 6802 .A1 C5 1883", 
+    "on_work": "work_909", 
+    "institution": "obj_4640", 
+    "marcrType": "Holdings", 
+    "label": "_909", 
+    "type": "Annotation", 
+    "id": "annotation_909"
+},{
+    "on_instance": "instance_910", 
+    "h": "DS777", 
+    "on_work": "work_910", 
+    "institution": "obj_4641", 
+    "marcrType": "Holdings", 
+    "label": "_910", 
+    "type": "Annotation", 
+    "id": "annotation_910"
+},{
+    "on_instance": "instance_911", 
+    "h": "GB322", 
+    "on_work": "work_911", 
+    "institution": "obj_4642", 
+    "marcrType": "Holdings", 
+    "label": "_911", 
+    "type": "Annotation", 
+    "id": "annotation_911"
+},{
+    "on_instance": "instance_912", 
+    "h": "E169", 
+    "on_work": "work_912", 
+    "institution": "obj_4643", 
+    "marcrType": "Holdings", 
+    "label": "_912", 
+    "type": "Annotation", 
+    "id": "annotation_912"
+},{
+    "on_instance": "instance_913", 
+    "h": "QA 611 .C37", 
+    "on_work": "work_913", 
+    "institution": "obj_4644", 
+    "marcrType": "Holdings", 
+    "label": "_913", 
+    "type": "Annotation", 
+    "id": "annotation_913"
+},{
+    "on_instance": "instance_914", 
+    "h": "HX39.K7", 
+    "on_work": "work_914", 
+    "institution": "obj_4645", 
+    "marcrType": "Holdings", 
+    "label": "_914", 
+    "type": "Annotation", 
+    "id": "annotation_914"
+},{
+    "on_instance": "instance_915", 
+    "h": "QA 551 .K8", 
+    "on_work": "work_915", 
+    "institution": "obj_4646", 
+    "marcrType": "Holdings", 
+    "label": "_915", 
+    "type": "Annotation", 
+    "id": "annotation_915"
+},{
+    "on_instance": "instance_916", 
+    "h": "PQ 2643 .I14 P4", 
+    "on_work": "work_916", 
+    "institution": "obj_4647", 
+    "marcrType": "Holdings", 
+    "label": "_916", 
+    "type": "Annotation", 
+    "id": "annotation_916"
+},{
+    "on_instance": "instance_917", 
+    "h": "DC 404 .B7", 
+    "on_work": "work_917", 
+    "institution": "obj_4648", 
+    "marcrType": "Holdings", 
+    "label": "_917", 
+    "type": "Annotation", 
+    "id": "annotation_917"
+},{
+    "on_instance": "instance_918", 
+    "h": "HJ1207", 
+    "on_work": "work_918", 
+    "institution": "obj_4649", 
+    "marcrType": "Holdings", 
+    "label": "_918", 
+    "type": "Annotation", 
+    "id": "annotation_918"
+},{
+    "on_instance": "instance_919", 
+    "h": "HD1491.R9", 
+    "on_work": "work_919", 
+    "institution": "obj_4650", 
+    "marcrType": "Holdings", 
+    "label": "_919", 
+    "type": "Annotation", 
+    "id": "annotation_919"
+},{
+    "on_instance": "instance_920", 
+    "h": "HD7035", 
+    "on_work": "work_920", 
+    "institution": "obj_4651", 
+    "marcrType": "Holdings", 
+    "label": "_920", 
+    "type": "Annotation", 
+    "id": "annotation_920"
+},{
+    "on_instance": "instance_921", 
+    "h": "HF3625", 
+    "on_work": "work_921", 
+    "institution": "obj_4652", 
+    "marcrType": "Holdings", 
+    "label": "_921", 
+    "type": "Annotation", 
+    "id": "annotation_921"
+},{
+    "on_instance": "instance_922", 
+    "h": "HB113.A2", 
+    "on_work": "work_922", 
+    "institution": "obj_4653", 
+    "marcrType": "Holdings", 
+    "label": "_922", 
+    "type": "Annotation", 
+    "id": "annotation_922"
+},{
+    "on_instance": "instance_923", 
+    "h": "HC336.2", 
+    "on_work": "work_923", 
+    "institution": "obj_4654", 
+    "marcrType": "Holdings", 
+    "label": "_923", 
+    "type": "Annotation", 
+    "id": "annotation_923"
+},{
+    "on_instance": "instance_924", 
+    "h": "HC335", 
+    "on_work": "work_924", 
+    "institution": "obj_4655", 
+    "marcrType": "Holdings", 
+    "label": "_924", 
+    "type": "Annotation", 
+    "id": "annotation_924"
+},{
+    "on_instance": "instance_925", 
+    "h": "N7428", 
+    "on_work": "work_925", 
+    "institution": "obj_4656", 
+    "marcrType": "Holdings", 
+    "label": "_925", 
+    "type": "Annotation", 
+    "id": "annotation_925"
+},{
+    "on_instance": "instance_926", 
+    "h": "PT2647.E77", 
+    "on_work": "work_926", 
+    "institution": "obj_4657", 
+    "marcrType": "Holdings", 
+    "label": "_926", 
+    "type": "Annotation", 
+    "id": "annotation_926"
+},{
+    "on_instance": "instance_927", 
+    "h": "DD126", 
+    "on_work": "work_927", 
+    "institution": "obj_4658", 
+    "marcrType": "Holdings", 
+    "label": "_927", 
+    "type": "Annotation", 
+    "id": "annotation_927"
+},{
+    "on_instance": "instance_928", 
+    "h": "PT2627.E78", 
+    "on_work": "work_928", 
+    "institution": "obj_4659", 
+    "marcrType": "Holdings", 
+    "label": "_928", 
+    "type": "Annotation", 
+    "id": "annotation_928"
+},{
+    "on_instance": "instance_929", 
+    "h": "PT 1513 .C78", 
+    "on_work": "work_929", 
+    "institution": "obj_4660", 
+    "marcrType": "Holdings", 
+    "label": "_929", 
+    "type": "Annotation", 
+    "id": "annotation_929"
+},{
+    "on_instance": "instance_930", 
+    "h": "PF 3988 .Z5 S45", 
+    "on_work": "work_930", 
+    "institution": "obj_4661", 
+    "marcrType": "Holdings", 
+    "label": "_930", 
+    "type": "Annotation", 
+    "id": "annotation_930"
+},{
+    "on_instance": "instance_931", 
+    "h": "CN 362 R9", 
+    "on_work": "work_931", 
+    "institution": "obj_4662", 
+    "marcrType": "Holdings", 
+    "label": "_931", 
+    "type": "Annotation", 
+    "id": "annotation_931"
+},{
+    "on_instance": "instance_932", 
+    "h": "PA 3433", 
+    "on_work": "work_932", 
+    "institution": "obj_4663", 
+    "marcrType": "Holdings", 
+    "label": "_932", 
+    "type": "Annotation", 
+    "id": "annotation_932"
+},{
+    "on_instance": "instance_933", 
+    "h": "PJ 5054 .S3 R4", 
+    "on_work": "work_933", 
+    "institution": "obj_4664", 
+    "marcrType": "Holdings", 
+    "label": "_933", 
+    "type": "Annotation", 
+    "id": "annotation_933"
+},{
+    "on_instance": "instance_934", 
+    "h": "BS715", 
+    "on_work": "work_934", 
+    "institution": "obj_4665", 
+    "marcrType": "Holdings", 
+    "label": "_934", 
+    "type": "Annotation", 
+    "id": "annotation_934"
+},{
+    "on_instance": "instance_935", 
+    "h": "DL 375 .H37 A4", 
+    "on_work": "work_935", 
+    "institution": "obj_4666", 
+    "marcrType": "Holdings", 
+    "label": "_935", 
+    "type": "Annotation", 
+    "id": "annotation_935"
+},{
+    "on_instance": "instance_936", 
+    "h": "ND 753 .O45 P7", 
+    "on_work": "work_936", 
+    "institution": "obj_4667", 
+    "marcrType": "Holdings", 
+    "label": "_936", 
+    "type": "Annotation", 
+    "id": "annotation_936"
+},{
+    "on_instance": "instance_937", 
+    "h": "E 841", 
+    "on_work": "work_937", 
+    "institution": "obj_4668", 
+    "marcrType": "Holdings", 
+    "label": "_937", 
+    "type": "Annotation", 
+    "id": "annotation_937"
+},{
+    "on_instance": "instance_938", 
+    "h": "ND 623 .C3 Z3", 
+    "on_work": "work_938", 
+    "institution": "obj_4669", 
+    "marcrType": "Holdings", 
+    "label": "_938", 
+    "type": "Annotation", 
+    "id": "annotation_938"
+},{
+    "on_instance": "instance_939", 
+    "h": "NA 5620 .Al G65", 
+    "on_work": "work_939", 
+    "institution": "obj_4670", 
+    "marcrType": "Holdings", 
+    "label": "_939", 
+    "type": "Annotation", 
+    "id": "annotation_939"
+},{
+    "on_instance": "instance_940", 
+    "h": "NA 7595 .A5 O5", 
+    "on_work": "work_940", 
+    "institution": "obj_4671", 
+    "marcrType": "Holdings", 
+    "label": "_940", 
+    "type": "Annotation", 
+    "id": "annotation_940"
+},{
+    "on_instance": "instance_941", 
+    "h": "N 7742", 
+    "on_work": "work_941", 
+    "institution": "obj_4672", 
+    "marcrType": "Holdings", 
+    "label": "_941", 
+    "type": "Annotation", 
+    "id": "annotation_941"
+},{
+    "on_instance": "instance_942", 
+    "h": "ND 616 .A5", 
+    "on_work": "work_942", 
+    "institution": "obj_4673", 
+    "marcrType": "Holdings", 
+    "label": "_942", 
+    "type": "Annotation", 
+    "id": "annotation_942"
+},{
+    "on_instance": "instance_943", 
+    "h": "PQ 4042 .S315", 
+    "on_work": "work_943", 
+    "institution": "obj_4674", 
+    "marcrType": "Holdings", 
+    "label": "_943", 
+    "type": "Annotation", 
+    "id": "annotation_943"
+},{
+    "on_instance": "instance_944", 
+    "h": "ND 623 .B94 B73 1963", 
+    "on_work": "work_944", 
+    "institution": "obj_4675", 
+    "marcrType": "Holdings", 
+    "label": "_944", 
+    "type": "Annotation", 
+    "id": "annotation_944"
+},{
+    "on_instance": "instance_945", 
+    "h": "PL861.H58", 
+    "on_work": "work_945", 
+    "institution": "obj_4676", 
+    "marcrType": "Holdings", 
+    "label": "_945", 
+    "type": "Annotation", 
+    "id": "annotation_945"
+},{
+    "on_instance": "instance_946", 
+    "h": "PA 6787 .A5 1963", 
+    "on_work": "work_946", 
+    "institution": "obj_4677", 
+    "marcrType": "Holdings", 
+    "label": "_946", 
+    "type": "Annotation", 
+    "id": "annotation_946"
+},{
+    "on_instance": "instance_947", 
+    "h": "PA 6207", 
+    "on_work": "work_947", 
+    "institution": "obj_4678", 
+    "marcrType": "Holdings", 
+    "label": "_947", 
+    "type": "Annotation", 
+    "id": "annotation_947"
+},{
+    "on_instance": "instance_948", 
+    "h": "PA 6445 .H8 A6", 
+    "on_work": "work_948", 
+    "institution": "obj_4679", 
+    "marcrType": "Holdings", 
+    "label": "_948", 
+    "type": "Annotation", 
+    "id": "annotation_948"
+},{
+    "on_instance": "instance_949", 
+    "h": "Z 115G .W3 1963 f", 
+    "on_work": "work_949", 
+    "institution": "obj_4680", 
+    "marcrType": "Holdings", 
+    "label": "_949", 
+    "type": "Annotation", 
+    "id": "annotation_949"
+},{
+    "on_instance": "instance_950", 
+    "h": "P 211 .T6", 
+    "on_work": "work_950", 
+    "institution": "obj_4681", 
+    "marcrType": "Holdings", 
+    "label": "_950", 
+    "type": "Annotation", 
+    "id": "annotation_950"
+},{
+    "on_instance": "instance_951", 
+    "h": "Z 6958 .C5 S52", 
+    "on_work": "work_951", 
+    "institution": "obj_4682", 
+    "marcrType": "Holdings", 
+    "label": "_951", 
+    "type": "Annotation", 
+    "id": "annotation_951"
+},{
+    "on_instance": "instance_952", 
+    "h": "PG 6640", 
+    "on_work": "work_952", 
+    "institution": "obj_4683", 
+    "marcrType": "Holdings", 
+    "label": "_952", 
+    "type": "Annotation", 
+    "id": "annotation_952"
+},{
+    "on_instance": "instance_953", 
+    "h": "BH 221 .B73 M4", 
+    "on_work": "work_953", 
+    "institution": "obj_4684", 
+    "marcrType": "Holdings", 
+    "label": "_953", 
+    "type": "Annotation", 
+    "id": "annotation_953"
+},{
+    "on_instance": "instance_954", 
+    "h": "NK 4670 .S48", 
+    "on_work": "work_954", 
+    "institution": "obj_4685", 
+    "marcrType": "Holdings", 
+    "label": "_954", 
+    "type": "Annotation", 
+    "id": "annotation_954"
+},{
+    "on_instance": "instance_955", 
+    "h": "PQ 9554 .M63", 
+    "on_work": "work_955", 
+    "institution": "obj_4686", 
+    "marcrType": "Holdings", 
+    "label": "_955", 
+    "type": "Annotation", 
+    "id": "annotation_955"
+},{
+    "on_instance": "instance_956", 
+    "h": "PG 3476 .N57 Z3 1963", 
+    "on_work": "work_956", 
+    "institution": "obj_4687", 
+    "marcrType": "Holdings", 
+    "label": "_956", 
+    "type": "Annotation", 
+    "id": "annotation_956"
+},{
+    "on_instance": "instance_957", 
+    "h": "PG 502 .G6", 
+    "on_work": "work_957", 
+    "institution": "obj_4688", 
+    "marcrType": "Holdings", 
+    "label": "_957", 
+    "type": "Annotation", 
+    "id": "annotation_957"
+},{
+    "on_instance": "instance_958", 
+    "h": "PG 3337", 
+    "on_work": "work_958", 
+    "institution": "obj_4689", 
+    "marcrType": "Holdings", 
+    "label": "_958", 
+    "type": "Annotation", 
+    "id": "annotation_958"
+},{
+    "on_instance": "instance_959", 
+    "h": "HD1992", 
+    "on_work": "work_959", 
+    "institution": "obj_4690", 
+    "marcrType": "Holdings", 
+    "label": "_959", 
+    "type": "Annotation", 
+    "id": "annotation_959"
+},{
+    "on_instance": "instance_960", 
+    "h": "NA 5951", 
+    "on_work": "work_960", 
+    "institution": "obj_4691", 
+    "marcrType": "Holdings", 
+    "label": "_960", 
+    "type": "Annotation", 
+    "id": "annotation_960"
+},{
+    "on_instance": "instance_961", 
+    "h": "GB276.Y8", 
+    "on_work": "work_961", 
+    "institution": "obj_4692", 
+    "marcrType": "Holdings", 
+    "label": "_961", 
+    "type": "Annotation", 
+    "id": "annotation_961"
+},{
+    "on_instance": "instance_962", 
+    "h": "PQ 7297 .C2 B7", 
+    "on_work": "work_962", 
+    "institution": "obj_4693", 
+    "marcrType": "Holdings", 
+    "label": "_962", 
+    "type": "Annotation", 
+    "id": "annotation_962"
+},{
+    "on_instance": "instance_963", 
+    "h": "DS 135 .P62 W32", 
+    "on_work": "work_963", 
+    "institution": "obj_4694", 
+    "marcrType": "Holdings", 
+    "label": "_963", 
+    "type": "Annotation", 
+    "id": "annotation_963"
+},{
+    "on_instance": "instance_964", 
+    "h": "HA4637.H85", 
+    "on_work": "work_964", 
+    "institution": "obj_4695", 
+    "marcrType": "Holdings", 
+    "label": "_964", 
+    "type": "Annotation", 
+    "id": "annotation_964"
+},{
+    "on_instance": "instance_965", 
+    "h": "Shelved alphabetically by title", 
+    "on_work": "work_965", 
+    "institution": "obj_4696", 
+    "marcrType": "Holdings", 
+    "label": "_965", 
+    "type": "Annotation", 
+    "id": "annotation_965"
+},{
+    "on_instance": "instance_966", 
+    "h": "F 2501 .E792", 
+    "on_work": "work_966", 
+    "institution": "obj_4697", 
+    "marcrType": "Holdings", 
+    "label": "_966", 
+    "type": "Annotation", 
+    "id": "annotation_966"
+},{
+    "on_instance": "instance_967", 
+    "h": "Shelved alphabetically by title", 
+    "on_work": "work_967", 
+    "institution": "obj_4698", 
+    "marcrType": "Holdings", 
+    "label": "_967", 
+    "type": "Annotation", 
+    "id": "annotation_967"
+},{
+    "on_instance": "instance_968", 
+    "on_work": "work_968", 
+    "institution": "obj_4699", 
+    "marcrType": "Holdings", 
+    "label": "_968", 
+    "type": "Annotation", 
+    "id": "annotation_968"
+},{
+    "on_instance": "instance_969", 
+    "on_work": "work_969", 
+    "institution": "obj_4700", 
+    "marcrType": "Holdings", 
+    "label": "_969", 
+    "type": "Annotation", 
+    "id": "annotation_969"
+},{
+    "on_instance": "instance_970", 
+    "on_work": "work_970", 
+    "institution": "obj_4701", 
+    "marcrType": "Holdings", 
+    "label": "_970", 
+    "type": "Annotation", 
+    "id": "annotation_970"
+},{
+    "on_instance": "instance_971", 
+    "on_work": "work_971", 
+    "institution": "obj_4702", 
+    "marcrType": "Holdings", 
+    "label": "_971", 
+    "type": "Annotation", 
+    "id": "annotation_971"
+},{
+    "on_instance": "instance_972", 
+    "on_work": "work_972", 
+    "institution": "obj_4703", 
+    "marcrType": "Holdings", 
+    "label": "_972", 
+    "type": "Annotation", 
+    "id": "annotation_972"
+},{
+    "on_instance": "instance_973", 
+    "on_work": "work_973", 
+    "institution": "obj_4704", 
+    "marcrType": "Holdings", 
+    "label": "_973", 
+    "type": "Annotation", 
+    "id": "annotation_973"
+},{
+    "on_instance": "instance_974", 
+    "on_work": "work_974", 
+    "institution": "obj_4705", 
+    "marcrType": "Holdings", 
+    "label": "_974", 
+    "type": "Annotation", 
+    "id": "annotation_974"
+},{
+    "on_instance": "instance_975", 
+    "h": "Shelved alphabetically by title", 
+    "on_work": "work_975", 
+    "institution": "obj_4706", 
+    "marcrType": "Holdings", 
+    "label": "_975", 
+    "type": "Annotation", 
+    "id": "annotation_975"
+},{
+    "on_instance": "instance_975", 
+    "on_work": "work_975", 
+    "institution": "obj_4707", 
+    "marcrType": "Holdings", 
+    "label": "_975", 
+    "type": "Annotation", 
+    "id": "annotation_975"
+},{
+    "on_instance": "instance_976", 
+    "h": "HD7057", 
+    "on_work": "work_976", 
+    "institution": "obj_4708", 
+    "marcrType": "Holdings", 
+    "label": "_976", 
+    "type": "Annotation", 
+    "id": "annotation_976"
+},{
+    "on_instance": "instance_977", 
+    "on_work": "work_977", 
+    "institution": "obj_4709", 
+    "marcrType": "Holdings", 
+    "label": "_977", 
+    "type": "Annotation", 
+    "id": "annotation_977"
+},{
+    "on_instance": "instance_978", 
+    "on_work": "work_978", 
+    "institution": "obj_4710", 
+    "marcrType": "Holdings", 
+    "label": "_978", 
+    "type": "Annotation", 
+    "id": "annotation_978"
+},{
+    "on_instance": "instance_979", 
+    "h": "Z 6514", 
+    "on_work": "work_979", 
+    "institution": "obj_4711", 
+    "marcrType": "Holdings", 
+    "label": "_979", 
+    "type": "Annotation", 
+    "id": "annotation_979"
+},{
+    "on_instance": "instance_980", 
+    "h": "G 64 .O7", 
+    "on_work": "work_980", 
+    "institution": "obj_4712", 
+    "marcrType": "Holdings", 
+    "label": "_980", 
+    "type": "Annotation", 
+    "id": "annotation_980"
+},{
+    "on_instance": "instance_981", 
+    "h": "HV 7242", 
+    "on_work": "work_981", 
+    "institution": "obj_4713", 
+    "marcrType": "Holdings", 
+    "label": "_981", 
+    "type": "Annotation", 
+    "id": "annotation_981"
+},{
+    "on_instance": "instance_982", 
+    "on_work": "work_982", 
+    "institution": "obj_4714", 
+    "marcrType": "Holdings", 
+    "label": "_982", 
+    "type": "Annotation", 
+    "id": "annotation_982"
+},{
+    "on_instance": "instance_983", 
+    "h": "N 6948 .S72", 
+    "on_work": "work_983", 
+    "institution": "obj_4715", 
+    "marcrType": "Holdings", 
+    "label": "_983", 
+    "type": "Annotation", 
+    "id": "annotation_983"
+},{
+    "on_instance": "instance_984", 
+    "on_work": "work_984", 
+    "institution": "obj_4716", 
+    "marcrType": "Holdings", 
+    "label": "_984", 
+    "type": "Annotation", 
+    "id": "annotation_984"
+},{
+    "on_instance": "instance_985", 
+    "h": "PC2", 
+    "on_work": "work_985", 
+    "institution": "obj_4717", 
+    "marcrType": "Holdings", 
+    "label": "_985", 
+    "type": "Annotation", 
+    "id": "annotation_985"
+},{
+    "on_instance": "instance_986", 
+    "h": "PERIODICAL", 
+    "on_work": "work_986", 
+    "institution": "obj_4718", 
+    "marcrType": "Holdings", 
+    "label": "_986", 
+    "type": "Annotation", 
+    "id": "annotation_986"
+},{
+    "on_instance": "instance_987", 
+    "on_work": "work_987", 
+    "institution": "obj_4719", 
+    "marcrType": "Holdings", 
+    "label": "_987", 
+    "type": "Annotation", 
+    "id": "annotation_987"
+},{
+    "on_instance": "instance_988", 
+    "on_work": "work_988", 
+    "institution": "obj_4720", 
+    "marcrType": "Holdings", 
+    "label": "_988", 
+    "type": "Annotation", 
+    "id": "annotation_988"
+},{
+    "on_instance": "instance_989", 
+    "h": "BM1", 
+    "on_work": "work_989", 
+    "institution": "obj_4721", 
+    "marcrType": "Holdings", 
+    "label": "_989", 
+    "type": "Annotation", 
+    "id": "annotation_989"
+},{
+    "on_instance": "instance_990", 
+    "on_work": "work_990", 
+    "institution": "obj_4722", 
+    "marcrType": "Holdings", 
+    "label": "_990", 
+    "type": "Annotation", 
+    "id": "annotation_990"
+},{
+    "on_instance": "instance_991", 
+    "on_work": "work_991", 
+    "institution": "obj_4723", 
+    "marcrType": "Holdings", 
+    "label": "_991", 
+    "type": "Annotation", 
+    "id": "annotation_991"
+},{
+    "on_instance": "instance_992", 
+    "on_work": "work_992", 
+    "institution": "obj_4724", 
+    "marcrType": "Holdings", 
+    "label": "_992", 
+    "type": "Annotation", 
+    "id": "annotation_992"
+},{
+    "on_instance": "instance_993", 
+    "on_work": "work_993", 
+    "institution": "obj_4725", 
+    "marcrType": "Holdings", 
+    "label": "_993", 
+    "type": "Annotation", 
+    "id": "annotation_993"
+},{
+    "on_instance": "instance_994", 
+    "h": "QA 1 .S12", 
+    "on_work": "work_994", 
+    "institution": "obj_4726", 
+    "marcrType": "Holdings", 
+    "label": "_994", 
+    "type": "Annotation", 
+    "id": "annotation_994"
+},{
+    "on_instance": "instance_995", 
+    "h": "F 2501 .E79", 
+    "on_work": "work_995", 
+    "institution": "obj_4727", 
+    "marcrType": "Holdings", 
+    "label": "_995", 
+    "type": "Annotation", 
+    "id": "annotation_995"
+},{
+    "on_instance": "instance_996", 
+    "on_work": "work_996", 
+    "institution": "obj_4728", 
+    "marcrType": "Holdings", 
+    "label": "_996", 
+    "type": "Annotation", 
+    "id": "annotation_996"
+},{
+    "on_instance": "instance_997", 
+    "on_work": "work_997", 
+    "institution": "obj_4729", 
+    "marcrType": "Holdings", 
+    "label": "_997", 
+    "type": "Annotation", 
+    "id": "annotation_997"
+},{
+    "on_instance": "instance_998", 
+    "on_work": "work_998", 
+    "institution": "obj_4730", 
+    "marcrType": "Holdings", 
+    "label": "_998", 
+    "type": "Annotation", 
+    "id": "annotation_998"
+},{
+    "on_instance": "instance_999", 
+    "h": "M 23 .C317 S6 1982", 
+    "on_work": "work_999", 
+    "institution": "obj_4731", 
+    "marcrType": "Holdings", 
+    "label": "_999", 
+    "type": "Annotation", 
+    "id": "annotation_999"
+},{
+    "on_instance": "instance_1000", 
+    "h": "M 1010 .S42", 
+    "on_work": "work_1000", 
+    "institution": "obj_4732", 
+    "marcrType": "Holdings", 
+    "label": "_1000", 
+    "type": "Annotation", 
+    "id": "annotation_1000"
+},{
+    "on_instance": "instance_1001", 
+    "h": "M 25 .S253 S6 1982", 
+    "on_work": "work_1001", 
+    "institution": "obj_4733", 
+    "marcrType": "Holdings", 
+    "label": "_1001", 
+    "type": "Annotation", 
+    "id": "annotation_1001"
+},{
+    "on_instance": "instance_1002", 
+    "h": "M 3 .H26 Ser.4 Bd.18", 
+    "on_work": "work_1002", 
+    "institution": "obj_4734", 
+    "marcrType": "Holdings", 
+    "label": "_1002", 
+    "type": "Annotation", 
+    "id": "annotation_1002"
+},{
+    "on_instance": "instance_1003", 
+    "h": "M452.H32", 
+    "on_work": "work_1003", 
+    "institution": "obj_4735", 
+    "marcrType": "Holdings", 
+    "label": "_1003", 
+    "type": "Annotation", 
+    "id": "annotation_1003"
+},{
+    "on_instance": "instance_1004", 
+    "h": "M1112", 
+    "on_work": "work_1004", 
+    "institution": "obj_4736", 
+    "marcrType": "Holdings", 
+    "label": "_1004", 
+    "type": "Annotation", 
+    "id": "annotation_1004"
+},{
+    "on_instance": "instance_1005", 
+    "h": "M 1529.4 .M44 L4 1982", 
+    "on_work": "work_1005", 
+    "institution": "obj_4737", 
+    "marcrType": "Holdings", 
+    "label": "_1005", 
+    "type": "Annotation", 
+    "id": "annotation_1005"
+},{
+    "on_instance": "instance_1006", 
+    "h": "M 1520 .B37 B3 1982", 
+    "on_work": "work_1006", 
+    "institution": "obj_4738", 
+    "marcrType": "Holdings", 
+    "label": "_1006", 
+    "type": "Annotation", 
+    "id": "annotation_1006"
+},{
+    "on_instance": "instance_1007", 
+    "h": "M 1495 .M87 1982", 
+    "on_work": "work_1007", 
+    "institution": "obj_4739", 
+    "marcrType": "Holdings", 
+    "label": "_1007", 
+    "type": "Annotation", 
+    "id": "annotation_1007"
+},{
+    "on_instance": "instance_1008", 
+    "h": "M 1497", 
+    "on_work": "work_1008", 
+    "institution": "obj_4740", 
+    "marcrType": "Holdings", 
+    "label": "_1008", 
+    "type": "Annotation", 
+    "id": "annotation_1008"
+},{
+    "on_instance": "instance_1009", 
+    "h": "M1500.W13", 
+    "on_work": "work_1009", 
+    "institution": "obj_4741", 
+    "marcrType": "Holdings", 
+    "label": "_1009", 
+    "type": "Annotation", 
+    "id": "annotation_1009"
+},{
+    "on_instance": "instance_1010", 
+    "h": "M 1620 .W85 M6 1982", 
+    "on_work": "work_1010", 
+    "institution": "obj_4742", 
+    "marcrType": "Holdings", 
+    "label": "_1010", 
+    "type": "Annotation", 
+    "id": "annotation_1010"
+},{
+    "on_instance": "instance_1011", 
+    "h": "ML 96.5", 
+    "on_work": "work_1011", 
+    "institution": "obj_4743", 
+    "marcrType": "Holdings", 
+    "label": "_1011", 
+    "type": "Annotation", 
+    "id": "annotation_1011"
+},{
+    "on_instance": "instance_1012", 
+    "h": "M 3 .H26 Ser.1 Bd.31 Suppl.", 
+    "on_work": "work_1012", 
+    "institution": "obj_4744", 
+    "marcrType": "Holdings", 
+    "label": "_1012", 
+    "type": "Annotation", 
+    "id": "annotation_1012"
+},{
+    "on_instance": "instance_1013", 
+    "h": "M 3 .M155 Bd.6", 
+    "on_work": "work_1013", 
+    "institution": "obj_4745", 
+    "marcrType": "Holdings", 
+    "label": "_1013", 
+    "type": "Annotation", 
+    "id": "annotation_1013"
+},{
+    "on_instance": "instance_1014", 
+    "h": "M 3 .H26", 
+    "on_work": "work_1014", 
+    "institution": "obj_4746", 
+    "marcrType": "Holdings", 
+    "label": "_1014", 
+    "type": "Annotation", 
+    "id": "annotation_1014"
+},{
+    "on_instance": "instance_1015", 
+    "h": "M 3 .M155 Bd.4", 
+    "on_work": "work_1015", 
+    "institution": "obj_4747", 
+    "marcrType": "Holdings", 
+    "label": "_1015", 
+    "type": "Annotation", 
+    "id": "annotation_1015"
+},{
+    "on_instance": "instance_1016", 
+    "h": "M 3 .H26 Ser.1 Bd.6 Suppl.", 
+    "on_work": "work_1016", 
+    "institution": "obj_4748", 
+    "marcrType": "Holdings", 
+    "label": "_1016", 
+    "type": "Annotation", 
+    "id": "annotation_1016"
+},{
+    "on_instance": "instance_1017", 
+    "h": "M3", 
+    "on_work": "work_1017", 
+    "institution": "obj_4749", 
+    "marcrType": "Holdings", 
+    "label": "_1017", 
+    "type": "Annotation", 
+    "id": "annotation_1017"
+},{
+    "on_instance": "instance_1018", 
+    "h": "M3", 
+    "on_work": "work_1018", 
+    "institution": "obj_4750", 
+    "marcrType": "Holdings", 
+    "label": "_1018", 
+    "type": "Annotation", 
+    "id": "annotation_1018"
+},{
+    "on_instance": "instance_1019", 
+    "h": "M 3 .M896", 
+    "on_work": "work_1019", 
+    "institution": "obj_4751", 
+    "marcrType": "Holdings", 
+    "label": "_1019", 
+    "type": "Annotation", 
+    "id": "annotation_1019"
+},{
+    "on_instance": "instance_1020", 
+    "h": "M 2 .C6436 no.4", 
+    "on_work": "work_1020", 
+    "institution": "obj_4752", 
+    "marcrType": "Holdings", 
+    "label": "_1020", 
+    "type": "Annotation", 
+    "id": "annotation_1020"
+},{
+    "on_instance": "instance_1021", 
+    "h": "M 12", 
+    "on_work": "work_1021", 
+    "institution": "obj_4753", 
+    "marcrType": "Holdings", 
+    "label": "_1021", 
+    "type": "Annotation", 
+    "id": "annotation_1021"
+},{
+    "on_instance": "instance_1022", 
+    "h": "M 3 .M896", 
+    "on_work": "work_1022", 
+    "institution": "obj_4754", 
+    "marcrType": "Holdings", 
+    "label": "_1022", 
+    "type": "Annotation", 
+    "id": "annotation_1022"
+},{
+    "on_instance": "instance_1023", 
+    "h": "M 3 .M896", 
+    "on_work": "work_1023", 
+    "institution": "obj_4755", 
+    "marcrType": "Holdings", 
+    "label": "_1023", 
+    "type": "Annotation", 
+    "id": "annotation_1023"
+},{
+    "on_instance": "instance_1024", 
+    "h": "M3", 
+    "on_work": "work_1024", 
+    "institution": "obj_4756", 
+    "marcrType": "Holdings", 
+    "label": "_1024", 
+    "type": "Annotation", 
+    "id": "annotation_1024"
+},{
+    "on_instance": "instance_1025", 
+    "h": "G 2340", 
+    "on_work": "work_1025", 
+    "institution": "obj_4757", 
+    "marcrType": "Holdings", 
+    "label": "_1025", 
+    "type": "Annotation", 
+    "id": "annotation_1025"
+},{
+    "on_instance": "instance_1026", 
+    "h": "G 2340", 
+    "on_work": "work_1026", 
+    "institution": "obj_4758", 
+    "marcrType": "Holdings", 
+    "label": "_1026", 
+    "type": "Annotation", 
+    "id": "annotation_1026"
+},{
+    "on_instance": "instance_1027", 
+    "h": "PN1997", 
+    "on_work": "work_1027", 
+    "institution": "obj_4759", 
+    "marcrType": "Holdings", 
+    "label": "_1027", 
+    "type": "Annotation", 
+    "id": "annotation_1027"
+},{
+    "on_instance": "instance_1028", 
+    "h": "PQ1829", 
+    "on_work": "work_1028", 
+    "institution": "obj_4760", 
+    "marcrType": "Holdings", 
+    "label": "_1028", 
+    "type": "Annotation", 
+    "id": "annotation_1028"
+},{
+    "on_instance": "instance_1029", 
+    "h": "M1500.V48", 
+    "on_work": "work_1029", 
+    "institution": "obj_4761", 
+    "marcrType": "Holdings", 
+    "label": "_1029", 
+    "type": "Annotation", 
+    "id": "annotation_1029"
+},{
+    "on_instance": "instance_1030", 
+    "h": "M1500.L58", 
+    "on_work": "work_1030", 
+    "institution": "obj_4762", 
+    "marcrType": "Holdings", 
+    "label": "_1030", 
+    "type": "Annotation", 
+    "id": "annotation_1030"
+},{
+    "on_instance": "instance_1031", 
+    "h": "DT555.45.M67", 
+    "on_work": "work_1031", 
+    "institution": "obj_4763", 
+    "marcrType": "Holdings", 
+    "label": "_1031", 
+    "type": "Annotation", 
+    "id": "annotation_1031"
+},{
+    "on_instance": "instance_1032", 
+    "h": "PC4121", 
+    "on_work": "work_1032", 
+    "institution": "obj_4764", 
+    "marcrType": "Holdings", 
+    "label": "_1032", 
+    "type": "Annotation", 
+    "id": "annotation_1032"
+},{
+    "on_instance": "instance_1033", 
+    "h": "MT720", 
+    "on_work": "work_1033", 
+    "institution": "obj_4765", 
+    "marcrType": "Holdings", 
+    "label": "_1033", 
+    "type": "Annotation", 
+    "id": "annotation_1033"
+},{
+    "on_instance": "instance_1034", 
+    "h": "PN1997", 
+    "on_work": "work_1034", 
+    "institution": "obj_4766", 
+    "marcrType": "Holdings", 
+    "label": "_1034", 
+    "type": "Annotation", 
+    "id": "annotation_1034"
+},{
+    "on_instance": "instance_1035", 
+    "h": "PN1997", 
+    "on_work": "work_1035", 
+    "institution": "obj_4767", 
+    "marcrType": "Holdings", 
+    "label": "_1035", 
+    "type": "Annotation", 
+    "id": "annotation_1035"
+},{
+    "on_instance": "instance_1036", 
+    "h": "PN1995.Y54", 
+    "on_work": "work_1036", 
+    "institution": "obj_4768", 
+    "marcrType": "Holdings", 
+    "label": "_1036", 
+    "type": "Annotation", 
+    "id": "annotation_1036"
+},{
+    "on_instance": "instance_1037", 
+    "h": "CD", 
+    "on_work": "work_1037", 
+    "institution": "obj_4769", 
+    "marcrType": "Holdings", 
+    "label": "_1037", 
+    "type": "Annotation", 
+    "id": "annotation_1037"
+},{
+    "on_instance": "instance_1038", 
+    "h": "CD", 
+    "on_work": "work_1038", 
+    "institution": "obj_4770", 
+    "marcrType": "Holdings", 
+    "label": "_1038", 
+    "type": "Annotation", 
+    "id": "annotation_1038"
+},{
+    "on_instance": "instance_1039", 
+    "h": "CD", 
+    "on_work": "work_1039", 
+    "institution": "obj_4771", 
+    "marcrType": "Holdings", 
+    "label": "_1039", 
+    "type": "Annotation", 
+    "id": "annotation_1039"
+},{
+    "on_instance": "instance_1040", 
+    "h": "CD", 
+    "on_work": "work_1040", 
+    "institution": "obj_4772", 
+    "marcrType": "Holdings", 
+    "label": "_1040", 
+    "type": "Annotation", 
+    "id": "annotation_1040"
+},{
+    "on_instance": "instance_1041", 
+    "h": "CD", 
+    "on_work": "work_1041", 
+    "institution": "obj_4773", 
+    "marcrType": "Holdings", 
+    "label": "_1041", 
+    "type": "Annotation", 
+    "id": "annotation_1041"
+},{
+    "on_instance": "instance_1042", 
+    "h": "CD", 
+    "on_work": "work_1042", 
+    "institution": "obj_4774", 
+    "marcrType": "Holdings", 
+    "label": "_1042", 
+    "type": "Annotation", 
+    "id": "annotation_1042"
+},{
+    "on_instance": "instance_1043", 
+    "h": "CD", 
+    "on_work": "work_1043", 
+    "institution": "obj_4775", 
+    "marcrType": "Holdings", 
+    "label": "_1043", 
+    "type": "Annotation", 
+    "id": "annotation_1043"
+},{
+    "on_instance": "instance_1044", 
+    "h": "CD", 
+    "on_work": "work_1044", 
+    "institution": "obj_4776", 
+    "marcrType": "Holdings", 
+    "label": "_1044", 
+    "type": "Annotation", 
+    "id": "annotation_1044"
+},{
+    "on_instance": "instance_1045", 
+    "h": "CD", 
+    "on_work": "work_1045", 
+    "institution": "obj_4777", 
+    "marcrType": "Holdings", 
+    "label": "_1045", 
+    "type": "Annotation", 
+    "id": "annotation_1045"
+},{
+    "on_instance": "instance_1046", 
+    "h": "CD", 
+    "on_work": "work_1046", 
+    "institution": "obj_4778", 
+    "marcrType": "Holdings", 
+    "label": "_1046", 
+    "type": "Annotation", 
+    "id": "annotation_1046"
+}] }
