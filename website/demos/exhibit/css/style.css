@@ -112,7 +112,8 @@ color: slategrey;
 /* annotation section */
 
 .accordion .accordion-group {
- margin-bottom: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
 }
 
 .accordion-body .accordion-inner {
