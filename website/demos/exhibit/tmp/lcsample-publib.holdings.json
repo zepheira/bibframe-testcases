@@ -14,7 +14,7 @@
     "institution": "inst_1",
     "holds": "instance_10",
     "access": "Available",
-    "shelving": "BR1713 .H337 2010",
+    "shelving": "E184.37.W45 A3 2000",
     "shelvingDetails": "Jefferson or Adams Building Reading Rooms"
 },
 {
@@ -23,7 +23,7 @@
     "institution": "inst_1",
     "holds": "instance_100",
     "access": "Available",
-    "shelving": "CT262 .M24 2001",
+    "shelving": "BR1713",
     "shelvingDetails": "Jefferson or Adams Building Reading Rooms"
 },
 {
@@ -32,7 +32,7 @@
     "institution": "inst_1",
     "holds": "instance_1000",
     "access": "Available",
-    "shelving": "E184.37.W45 A3 2000",
+    "shelving": "CT262 .M24 2001",
     "shelvingDetails": "Jefferson or Adams Building Reading Rooms"
 },
 {
