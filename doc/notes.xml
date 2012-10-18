@@ -42,4 +42,7 @@
   <annotation on='DigitalCarrier'>
     <p>Carriers of digital resources derived from the OCLC <a href = "http://purl.org/library/">library extension</a> to the schema.org vocabulary.</p>
   </annotation>
+  <annotation on='Title'> 
+    <p>Flagging open discussion that Title (as range of UniformTitle) is an Authority, Work, a light weight collection strategy or some combination of all.</p>
+  </annotation> 
 </annotations>

@@ -47,34 +47,6 @@
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='formSubdivision'>
-      <label>formSubdivision</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref></marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='generalSubdivsion'>
-      <label>generalSubdivsion</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref></marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='geographicSubdivision'>
-      <label>geographicSubdivision</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref></marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='chronologicalSubdivision'>
-      <label>chronologicalSubdivision</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref></marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='CreativeWork' isa='Resource'> 
@@ -1446,12 +1418,39 @@ v    </property>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
+    <property id='formSubdivision'>
+      <label>formSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>651 $v</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='generalSubdivsion'>
+      <label>generalSubdivsion</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>651 $x</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='chronologicalSubdivision'>
+      <label>chronologicalSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>651 $y</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='geographicSubdivision'>
+      <label>geographicSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>651 $z</marcref>
+      <rdaref></rdaref>
+    </property>
   </class>
 
   <class id='Organization' isa='Authority'> 
     <label>Organization</label>
     <tagline>Organized group of persons.</tagline>
-
     <property id='addressCountry'>
       <label>addressCountry</label>
       <typedesc>Literal</typedesc>
@@ -1513,6 +1512,27 @@ v    </property>
   <class id='Meeting' isa='Authority'> 
     <label>Meeting</label>
     <tagline>Gathering of persons for purpose.</tagline>
+    <property id='addressCountry'>
+      <label>addressCountry</label>
+      <typedesc>Literal</typedesc>
+      <description>The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='addressLocality'>
+      <label>addressLocality</label>
+      <typedesc>Literal</typedesc>
+      <description>The locality. For example, Washington.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='addressRegion'>
+      <label>addressRegion</label>
+      <typedesc>Literal</typedesc>
+      <description>The region. For example, DC.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
     <property id='hasIDLink'>
       <label>hasIDLink</label>
       <typedesc>URL</typedesc>
@@ -1525,6 +1545,34 @@ v    </property>
   <class id='Topic' isa='Authority'> 
     <label>Topic</label>
     <tagline>A Topic</tagline>
+    <property id='formSubdivision'>
+      <label>formSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>650 $v</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='generalSubdivsion'>
+      <label>generalSubdivsion</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>650 $x</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='geographicSubdivision'>
+      <label>geographicSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>650 $z</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='chronologicalSubdivision'>
+      <label>chronologicalSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>650 $y</marcref>
+      <rdaref></rdaref>
+    </property>
     <property id='hasIDLink'>
       <label>hasIDLink</label>
       <typedesc>URL</typedesc>
