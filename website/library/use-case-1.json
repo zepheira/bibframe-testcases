@@ -2,7 +2,6 @@
     "items" : [
 	{
 	   "id": "http://marcr.org/work/123",
-           "uniformTitle": "http://marcr.org/title/123",
 	   "title" : "Weaving the Web",
            "titleRemainder" : "the original design and ultimate destiny of the World Wide Web by its inventor",
 	   "type" : "Work",
@@ -46,7 +45,6 @@
          },         
   	 {
 	   "id": "http://marcr.org/work/123.2",
-           "uniformTitle": "http://marcr.org/title/123",
 	   "title" : "Weaving the Web",
            "titleRemainder" : "the original design and ultimate destiny of the World Wide Web by its inventor",
 	   "type" : "Work",
@@ -71,31 +69,32 @@
          {
          "id": "http://marcr.org/person/timbl", 
          "label": "Tim Berners-Lee",
+         "hasIDLink": "@@"
          },
          {
          "id": "http://marcr.org/person/markf",          
          "label": "Mark Fischetti",
+         "hasIDLink": "@@"
          },
          {
          "id": "http://marcr.org/place/sfo",
          "label": "San Fransisco",
+         "hasIDLink": "@@"
          },
          {
          "id": "http://marcr.org/place/london",
          "label": "London",
+         "hasIDLink": "@@"
          },
          {
          "id": "http://marcr.org/subject/www",
          "label": "World Wide Web",
+         "hasIDLink": "@@"
          },
          {
          "id": "http://marcr.org/subject/timbl",
          "label": "Tim Berners-Lee",
-         },
-         {
-         "id": "http://marcr.org/title/123",
-         "label": "Weaving the Web: the original design and ultimate destiny of the World Wide Web by its inventor",
+         "hasIDLink": "@@"
          }
-
-
-
+]
+}
