@@ -1632,8 +1632,8 @@ v    </property>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='name'>
-      <label>name</label>
+    <property id='creator'>
+      <label>creator</label>
       <typedesc>@Person or @Organization or @Meeting</typedesc>
       <description>The primary entity associated with the creation of this annotation.</description>
       <marcref></marcref>
