@@ -14,7 +14,7 @@ T0 = '''<!DOCTYPE html>
 <html lang="en">
   
   <head>
-    <title>MARC21 :: Link Data Vocabulary</title>
+    <title>BIBFRA.ME :: New Bibliographic Framework - Vocabulary</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link href="{base}/css/bootstrap.css" rel="stylesheet" />
@@ -36,9 +36,9 @@ T0 = '''<!DOCTYPE html>
       <div class="navbar-inner">
 
         <div class="container">
-          <a class="brand" href="#">MARCR.org
+          <a class="brand" href="/">BIBFRA.ME
             <span class="tagline">
-              <span style="padding-left: 20px; font-size: 70%; color: grey;">MARC Resources</span>
+              <span style="padding-left: 20px; font-size: 70%; color: grey;">New Bibliographic Framework</span>
             </span>
           </a> 
       
@@ -126,7 +126,7 @@ T0 = '''<!DOCTYPE html>
   
     <div class="footer">
       <div class="container">
-        <p>MARCR.org is a joint effort of <a href = "http://loc.gov/">US Library of Congress</a> and <a href="http://zepheira.com/">Zepheira</a> and <a href = "/contrib/">You!</a></p>
+        <p>BIBFRA.ME is a collaborative effort of <a href = "http://loc.gov/">US Library of Congress</a>, <a href="http://zepheira.com/">Zepheira</a> and <a href = "/contribute/">you!</a></p>
       </div>
     </div>
 
