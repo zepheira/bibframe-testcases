@@ -160,8 +160,12 @@ def process_008(info):
     #info = field008
     #ARE YOU FRIGGING KIDDING ME?! NON-Y2K SAFE?!
     year = info[0:2]
-    century = '19' if int(year) > 30 else '20' #I guess we can give an 18 year berth before this breaks ;)
-    yield 'date_008', '{}{}-{}-{}'.format(century, year, info[2:4], info[4:6])
+    try:
+        century = '19' if int(year) > 30 else '20' #I guess we can give an 18 year berth before this breaks ;)
+        yield 'date_008', '{}{}-{}-{}'.format(century, year, info[2:4], info[4:6])
+    except ValueError:
+        pass
+        #Completely Invalid date
     for i, field in enumerate(info):
         try:
             if i < 23 or field in ('#',  ' ', '|'):
