@@ -1,0 +1,52 @@
+{
+    "items" : [
+	{
+	   "id": "http://bibfra.me/work/u3",
+	   "type" : "Collection",
+           "editor": "http://bibfra.me/auth/person/ambrose_watts",
+           "honoree": "http://bibfra.me/auth/person/pauline_warner",
+           "title": "Our collective environment: essays in honor of Pauline Warner",
+           "subject": "http://bibfra.me/subject/natural_resources--management",
+           "language": "English",
+           "hasPart": "http://bibfra.me/work/u3-w1",           
+           "hasInstance": "http://bibfra.me/work/u3-i1"
+         },
+         {         
+           "id": "http://bibfra.me/work/u3-w1",
+	   "type" : "Essay",
+           "author": "http://bibfra.me/auth/person/marcelline_probst",
+           "title": "Some compelling biodiversity issues in natural resources management"
+           "subject": "http://bibfra.me/subject/natural_resources--management",
+           "language": "English",
+           "isPartOf": "http://bibfra.me/work/u3",
+         },
+         { 
+           "id": "http://marcr.org/instance/u3-i1",
+           "type": "HardcoverBook",
+           "date" : "2006",
+           "publisher" : [ "http://bibfra.me/auth/org/beacon_press" ],
+           "pages": "240",
+           "ISBN": "0723888560"
+         },
+         {
+         "id": "http://bibfra.me/auth/person/ambrose_watts",
+         "label": "Ambrose Watts",
+         "hasIDLink": "@@"
+         },
+         {
+         "id": "http://bibfra.me/auth/person/pauline_warner",
+         "label": "Pauline Warner",
+         "hasIDLink": "@@"
+         },
+         {
+         "id": "http://bibfra.me/auth/person/marcelline_probst",
+         "label": "Marcelline Probst",
+         "hasIDLink": "@@"
+         },
+         {
+         "id": "http://bibfra.me/subject/natural_resources--management",
+         "label": "Natural Resources--management",
+         "hasIDLink": "@@"
+         }
+]
+}

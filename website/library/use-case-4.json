@@ -1,0 +1,55 @@
+{
+    "items" : [
+	{
+	   "id": "http://bibfra.me/work/u4",
+           "type": ["Text", "ShortStory"],
+           "author": "Janet McEllison",
+           "title": "Folly remembered",
+           "language": "English"
+           "isBasisFor": "http://bibfra.me/work/u4-w2"
+        },
+	{
+	   "id": "http://bibfra.me/work/u4-w2",
+           "type": ["Screenplay"],
+           "adapter": "Margaret Adamson",
+           "author": "Janet McEllison",
+           "title": "Lilly's folly",
+           "language": "English"
+           "hasInstance": "http://bibfra.me/work/u4-w2-i1",
+           "isBasedOn": "http://bibfra.me/work/u4",
+           "isBasisFor": "http://bibfra.me/work/u4-w3"
+        },           
+        {
+	   "id": "http://bibfra.me/work/u4-w2-i1",
+           "place": "Fresno, NH",
+           "publisher": "Wilson College Repository",
+           "date": "2005",
+           "Media Type: text/html",
+           "extent": "120 pages",
+           "link": "http://hdl.handle.net/3465/7576"
+        },
+	{
+	   "id": "http://bibfra.me/work/u4-w3",
+           "type": "MotionPicture",
+           "director": "George Freehling",
+           "producer": "Amanda Martinez",
+           "actor": [ "Timothy Marchant", "Da'Shawn Gibbons", "Marianne Sims"
+           "title": "Folly remembered",
+           "language": "English",
+           "hasInstance": "http://bibfra.me/work/u4-w3-i1",
+           "isBasedOn": "http://bibfra.me/work/u4-w2"
+       },
+       {
+	   "id": "http://bibfra.me/work/u4-w3-i1",
+           "place": "Fresno, NH",
+           "publisher": "Wilson College Video Production Department",
+           "date": "2005",
+           "type": "DVD",
+           "extent": "1 disk"
+      }
+]
+}
+
+
+
+
