@@ -230,8 +230,8 @@
     </property>
     <property id='uniformTitle'>
       <label>uniformTitle</label>
-      <typedesc>@Title</typedesc>
-      <description>Uniform title printed or displayed</description>
+      <typedesc>@Collection</typedesc>
+      <description>An ad hoc collection mechanism for suporting multiple creative works that share the same title.</description>
       <marcref>130, 240, 243, 730, 830</marcref>
       <rdaref></rdaref>
     </property>
@@ -1467,6 +1467,27 @@ v    </property>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
+    <property id='latitude'>
+      <label>latitude</label>
+      <typedesc></typedesc>
+      <description>The latitude of a location.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='longitude'>
+      <label>longitude</label>
+      <typedesc>Text</typedesc>
+      <description>The longitude of a location.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='elevation'>
+      <label>elevation</label>
+      <typedesc></typedesc>
+      <description>The elevation of a location.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>    
   </class>
 
   <class id='Organization' isa='Authority'> 
@@ -1581,7 +1602,7 @@ v    </property>
     <property id='title'>
       <label>title</label>
       <typedesc>Literal</typedesc>
-      <description>An ad hoc collection mechanism for suporting multiple creative works that share the same title.</description>
+      <description>A uniform title.</description>
       <marcref>130, 240, 243, 730, 830 $a</marcref>
       <rdaref></rdaref>
     </property>
