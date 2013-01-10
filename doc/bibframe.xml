@@ -51,28 +51,28 @@
       <label>formSubdivision</label>
       <typedesc>Literal</typedesc>
       <description></description>
-      <marcref>651 $v</marcref>
+      <marcref>6xx $v</marcref>
       <rdaref></rdaref>
     </property>
     <property id='generalSubdivsion'>
       <label>generalSubdivsion</label>
       <typedesc>Literal</typedesc>
       <description></description>
-      <marcref>651 $x</marcref>
+      <marcref>6xx $x</marcref>
       <rdaref></rdaref>
     </property>
     <property id='chronologicalSubdivision'>
       <label>chronologicalSubdivision</label>
       <typedesc>Literal</typedesc>
       <description></description>
-      <marcref>651 $y</marcref>
+      <marcref>6xx $y</marcref>
       <rdaref></rdaref>
     </property>
     <property id='geographicSubdivision'>
       <label>geographicSubdivision</label>
       <typedesc>Literal</typedesc>
       <description></description>
-      <marcref>651 $z</marcref>
+      <marcref>6xx $z</marcref>
       <rdaref></rdaref>
     </property>
   </class>
@@ -1476,7 +1476,7 @@ v    </property>
     </property>
     <property id='latitude'>
       <label>latitude</label>
-      <typedesc></typedesc>
+      <typedesc>Text</typedesc>
       <description>The latitude of a location.</description>
       <marcref></marcref>
       <rdaref></rdaref>
@@ -1490,7 +1490,7 @@ v    </property>
     </property>
     <property id='elevation'>
       <label>elevation</label>
-      <typedesc></typedesc>
+      <typedesc>Text</typedesc>
       <description>The elevation of a location.</description>
       <marcref></marcref>
       <rdaref></rdaref>
