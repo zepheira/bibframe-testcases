@@ -794,6 +794,13 @@ v    </property>
       <marcref>260 $c</marcref>
       <rdaref></rdaref>
     </property>
+    <property id='isInstanceOf'>
+      <label>isInstanceOf</label>
+      <typedesc>@CreativeWork</typedesc>
+      <description>A creative work.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
   </class>
 
   <!-- Instance types -->
