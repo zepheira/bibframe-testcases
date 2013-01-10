@@ -2,17 +2,18 @@
     "items" : [
 	{
 	   "id": "http://bibfra.me/work/u4",
-           "type": ["Text", "ShortStory"],
-           "author": "Janet McEllison",
+           "type": "ShortStory",
+           "author": "http://bibfra.me/auth/person/janet_mcellison",
            "title": "Folly remembered",
-           "language": "English"
+           "language": "English",
+           "isPartOf": "http://bibfra.me/work/u4-c",
            "isBasisFor": "http://bibfra.me/work/u4-w2"
         },
 	{
 	   "id": "http://bibfra.me/work/u4-w2",
-           "type": ["Screenplay"],
-           "adapter": "Margaret Adamson",
-           "author": "Janet McEllison",
+           "type": "Screenplay",
+           "adapter": "http://bibfra.me/auth/person/margaret_adamson",
+           "author": "http://bibfra.me/auth/person/janet_mcellison",
            "title": "Lilly's folly",
            "language": "English"
            "hasInstance": "http://bibfra.me/work/u4-w2-i1",
@@ -21,19 +22,21 @@
         },           
         {
 	   "id": "http://bibfra.me/work/u4-w2-i1",
-           "place": "Fresno, NH",
-           "publisher": "Wilson College Repository",
+           "place": "http://bibfra.me/auth/place/fresno_nh",
+           "publisher": "http://bibfra.me/auth/org/wilson_college_repository",
            "date": "2005",
-           "Media Type: text/html",
+           "type: "HTML",
            "extent": "120 pages",
            "link": "http://hdl.handle.net/3465/7576"
         },
 	{
 	   "id": "http://bibfra.me/work/u4-w3",
            "type": "MotionPicture",
-           "director": "George Freehling",
-           "producer": "Amanda Martinez",
-           "actor": [ "Timothy Marchant", "Da'Shawn Gibbons", "Marianne Sims"
+           "director": "http://bibfra.me/auth/person/george_freehling",
+           "producer": "http://bibfra.me/auth/person/amanda_martinez",
+           "actor": [ "http://bibfra.me/auth/person/timothy_marchant", 
+                      "http://bibfra.me/auth/person/da'shawn_gibbons", 
+                      "http://bibfra.me/auth/person/marianne_sims"
            "title": "Folly remembered",
            "language": "English",
            "hasInstance": "http://bibfra.me/work/u4-w3-i1",
@@ -41,10 +44,12 @@
        },
        {
 	   "id": "http://bibfra.me/work/u4-w3-i1",
-           "place": "Fresno, NH",
-           "publisher": "Wilson College Video Production Department",
+           "place": "http://bibfra.me/auth/palce/fresno_nh",
+           "publisher": "http://bibfra.me/auth/org/wilson_college_video_production_department",
            "date": "2005",
            "type": "DVD",
+           "region": "1",
+           "note: "us version",
            "extent": "1 disk"
       }
 ]

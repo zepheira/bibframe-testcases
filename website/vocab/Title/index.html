@@ -56,7 +56,7 @@
           <ul class="breadcrumb">
             <li><a href = "/">Home</a> <span class="divider">/</span></li>
             <li><a href = "/vocab/">Vocab</a> <span class="divider">/</span></li>
-<li><a href="../Resource/index.html">Resource</a> <span class="divider">/</span></li><li><a href="../Authority/index.html">Authority</a> <span class="divider">/</span></li><li class="active">Title</li>
+<li><a href="../Resource/index.html">Resource</a> <span class="divider">/</span></li><li><a href="../CreativeWork/index.html">Creative Work</a> <span class="divider">/</span></li><li><a href="../Collection/index.html">Collection</a> <span class="divider">/</span></li><li class="active">Title</li>
           </ul>
         </div>
       </div>
@@ -64,7 +64,7 @@
       <div class="this row-fluid">
         <div class="span12">
           <h1 class="this-name">Title</h1>
-          <h3 class="this-description">A uniform authority title.</h3>
+          <h3 class="this-description">A uniform title.</h3>
           <br />
         </div>
       </div>
@@ -132,7 +132,8 @@
       
       <div class="span12">
         
-        <div class="section-text parent">Properties from <A href="../Authority/index.html">Authority</a></div>
+        <div class="section-text parent">Properties from <A href="../CreativeWork/index.html">Creative Work</a> <button class="btn btn-mini notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></button>
+</div>
         
         <table class="table table-striped table-bordered">
           <thead>
@@ -146,10 +147,174 @@
           </thead>
               <tbody>
 
-          <tr id="hasAuthorityLink">
-            <td>hasAuthorityLink</td>
-            <td>URL</td>
-            <td>A authoritative link to a MARCR authority record.</td>
+          <tr id="creator">
+            <td>creator <button class="btn btn-mini notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></button>
+                <button type="button" class="btn btn-mini" data-toggle="collapse" data-target="#refine-creator"><i class="icon-plus"></i></button>
+
+                <div id="refine-creator" class="collapse">
+                    <table class="table">
+                         <tr><td>architect</td></tr><tr><td>artist</td></tr><tr><td>author</td></tr><tr><td>cartographer</td></tr><tr><td>choreographer</td></tr><tr><td>cinematographer</td></tr><tr><td>compiler</td></tr><tr><td>composer</td></tr><tr><td>designer</td></tr><tr><td>director</td></tr><tr><td>librettist</td></tr><tr><td>lyricist</td></tr><tr><td>photographer</td></tr><tr><td>producer </td></tr><tr><td>arranger</td></tr><tr><td>editor</td></tr><tr><td>illustrator</td></tr><tr><td>performer</td></tr><tr><td>conductor</td></tr><tr><td>translator</td></tr>
+                    </table>
+                </div></td>
+            <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Meeting/index.html">Meeting</a></td>
+            <td>The entity (or entities) associated with the creation of the work.</td>
+            <td>100, 110, 111 / 700, 710, 711</td>
+            <td></td>
+          </tr>
+          <tr id="uniformTitle">
+            <td>uniformTitle</td>
+            <td><a href="/vocab/Title/index.html">Title</a></td>
+            <td>Uniform title printed or displayed</td>
+            <td>130, 240, 243, 730, 830</td>
+            <td></td>
+          </tr>
+          <tr id="title">
+            <td>title                <button type="button" class="btn btn-mini" data-toggle="collapse" data-target="#refine-title"><i class="icon-plus"></i></button>
+
+                <div id="refine-title" class="collapse">
+                    <table class="table">
+                         <tr><td>titleRemainder</td></tr><tr><td>titleStatement</td></tr><tr><td>titleInclusiveDates</td></tr><tr><td>titleNumberParts</td></tr><tr><td>titleNameParts</td></tr>
+                    </table>
+                </div></td>
+            <td>Literal</td>
+            <td>The title of the creative work.</td>
+            <td>245 $a</td>
+            <td></td>
+          </tr>
+          <tr id="language">
+            <td>language</td>
+            <td>Language</td>
+            <td>Language associated with the Creative Work.</td>
+            <td>008 / 35-37</td>
+            <td></td>
+          </tr>
+          <tr id="lcCallNumber">
+            <td>lcCallNumber</td>
+            <td>Literal (URL)</td>
+            <td>LC Classification of the Creative Work.</td>
+            <td>050 $a</td>
+            <td></td>
+          </tr>
+          <tr id="deweyNumber">
+            <td>deweyNumber</td>
+            <td>Literal (URL)</td>
+            <td>Dewey Decimal Classification of the Creative Work.</td>
+            <td>082 $a</td>
+            <td></td>
+          </tr>
+          <tr id="audience">
+            <td>audience</td>
+            <td>Literal</td>
+            <td>Intended audience of the Creative Work..</td>
+            <td>008 / 22</td>
+            <td></td>
+          </tr>
+          <tr id="genre">
+            <td>genre</td>
+            <td>Literal</td>
+            <td>Genre of the Creative Work.</td>
+            <td>008 / 22</td>
+            <td></td>
+          </tr>
+          <tr id="note">
+            <td>note                <button type="button" class="btn btn-mini" data-toggle="collapse" data-target="#refine-note"><i class="icon-plus"></i></button>
+
+                <div id="refine-note" class="collapse">
+                    <table class="table">
+                         <tr><td>summary</td></tr><tr><td>contents</td></tr><tr><td>abstract</td></tr>
+                    </table>
+                </div></td>
+            <td>Literal</td>
+            <td>Note that provides general information regarding the work.</td>
+            <td>5XX</td>
+            <td></td>
+          </tr>
+          <tr id="subject">
+            <td>subject</td>
+            <td><a href="/vocab/Person/index.html">Person</a> or <a href="/vocab/Place/index.html">Place</a> or <a href="/vocab/Organization/index.html">Organization</a> or <a href="/vocab/Topic/index.html">Topic</a></td>
+            <td>Subject associated with the Bibliographic Resource.</td>
+            <td>6XX</td>
+            <td></td>
+          </tr>
+          <tr id="place">
+            <td>place</td>
+            <td><a href="/vocab/Place/index.html">Place</a></td>
+            <td>Place associated with the creative work.</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="date">
+            <td>date</td>
+            <td>Date</td>
+            <td>Date associated with the creative work.</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="hasInstance">
+            <td>hasInstance</td>
+            <td><a href="/vocab/Instance/index.html">Instance</a></td>
+            <td>An instantiation of a creative work.</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="relatedTo">
+            <td>relatedTo <button class="btn btn-mini notes" data-toggle="modal" href="notes.html" data-target="#myModal"><i class="icon-comment"></i></button>
+                <button type="button" class="btn btn-mini" data-toggle="collapse" data-target="#refine-relatedTo"><i class="icon-plus"></i></button>
+
+                <div id="refine-relatedTo" class="collapse">
+                    <table class="table">
+                         <tr><td>isPartOf</td></tr><tr><td>hasPart</td></tr><tr><td>isVersionOf</td></tr><tr><td>hasVersion</td></tr><tr><td>isVariantOf</td></tr><tr><td>hasVariant</td></tr><tr><td>isBasedOn</td></tr><tr><td>isBasisFor</td></tr><tr><td>requires</td></tr><tr><td>isRequiredBy</td></tr><tr><td>isTranslationOf</td></tr><tr><td>hasTranslation</td></tr>
+                    </table>
+                </div></td>
+            <td><a href="/vocab/CreativeWork/index.html">Creative Work</a></td>
+            <td>A related Creative Work.</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+
+              </tbody>
+            </table>
+        
+      </div> <!-- span12 -->
+      
+    </div> <!-- vocabulary-display-section -->
+        <div class="row-fluid vocabulary-display-section">
+      
+      <div class="span12">
+        
+        <div class="section-text parent">Properties from <A href="../Collection/index.html">Collection</a></div>
+        
+        <table class="table table-striped table-bordered">
+          <thead>
+                <tr>
+        <th class="span2">Property</th>
+        <th class="span2">Expected Value</th>
+        <th class="span6">Description</th>
+        <th class="span2">Related MARC Code</th>
+        <th class="span2">Related RDA Code</th>
+                </tr>
+          </thead>
+              <tbody>
+
+          <tr id="collectionStatement">
+            <td>collectionStatement</td>
+            <td>Literal</td>
+            <td>Statement indicating the purpose of the collection.</td>
+            <td>490a</td>
+            <td></td>
+          </tr>
+          <tr id="hasWork">
+            <td>hasWork</td>
+            <td><a href="/vocab/CreativeWork/index.html">Creative Work</a></td>
+            <td>A creative work.</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="primaryWork">
+            <td>primaryWork</td>
+            <td><a href="/vocab/CreativeWork/index.html">Creative Work</a></td>
+            <td>A primacy relationship for a creative work.</td>
             <td></td>
             <td></td>
           </tr>
@@ -183,7 +348,7 @@
           <tr id="title">
             <td>title</td>
             <td>Literal</td>
-            <td>The title associated with the uniform title authority.</td>
+            <td>An ad hoc collection mechanism for suporting multiple creative works that share the same title.</td>
             <td>130, 240, 243, 730, 830 $a</td>
             <td></td>
           </tr>

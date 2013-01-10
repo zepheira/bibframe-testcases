@@ -43,8 +43,36 @@
     <property id='hasAuthorityLink'>
       <label>hasAuthorityLink</label>
       <typedesc>URL</typedesc>
-      <description>A authoritative link to a MARCR authority record.</description>
+      <description>A authoritative link to a BIBFRAME authority record.</description>
       <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='formSubdivision'>
+      <label>formSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>651 $v</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='generalSubdivsion'>
+      <label>generalSubdivsion</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>651 $x</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='chronologicalSubdivision'>
+      <label>chronologicalSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>651 $y</marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='geographicSubdivision'>
+      <label>geographicSubdivision</label>
+      <typedesc>Literal</typedesc>
+      <description></description>
+      <marcref>651 $z</marcref>
       <rdaref></rdaref>
     </property>
   </class>
@@ -319,6 +347,20 @@
       <marcref>6XX</marcref>
       <rdaref></rdaref>
     </property>
+    <property id='place'>
+      <label>place</label>
+      <typedesc>@Place</typedesc>
+      <description>Place associated with the creative work.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='date'>
+      <label>date</label>
+      <typedesc>Date</typedesc>
+      <description>Date associated with the creative work.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
     <property id='hasInstance'>
       <label>hasInstance</label>
       <typedesc>@Instance</typedesc>
@@ -413,10 +455,10 @@
   <class id='Collection' isa='CreativeWork'> 
     <label>Collection</label>
     <tagline>A collection of Creative Works. Examples of collections include continuing resources, journal serials, etc.</tagline>
-    <property id='seriesStatement'>
-      <label>seriesStatement</label>
+    <property id='collectionStatement'>
+      <label>collectionStatement</label>
       <typedesc>Literal</typedesc>
-      <description>Series statement for a series title.</description>
+      <description>Statement indicating the purpose of the collection.</description>
       <marcref>490a</marcref>
       <rdaref></rdaref>
     </property>
@@ -424,6 +466,13 @@
       <label>hasWork</label>
       <typedesc>@CreativeWork</typedesc>
       <description>A creative work.</description>
+      <marcref></marcref>
+      <rdaref></rdaref>
+    </property>
+    <property id='primaryWork'>
+      <label>primaryWork</label>
+      <typedesc>@CreativeWork</typedesc>
+      <description>A primacy relationship for a creative work.</description>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
@@ -1418,34 +1467,6 @@ v    </property>
       <marcref></marcref>
       <rdaref></rdaref>
     </property>
-    <property id='formSubdivision'>
-      <label>formSubdivision</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref>651 $v</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='generalSubdivsion'>
-      <label>generalSubdivsion</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref>651 $x</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='chronologicalSubdivision'>
-      <label>chronologicalSubdivision</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref>651 $y</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='geographicSubdivision'>
-      <label>geographicSubdivision</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref>651 $z</marcref>
-      <rdaref></rdaref>
-    </property>
   </class>
 
   <class id='Organization' isa='Authority'> 
@@ -1545,34 +1566,6 @@ v    </property>
   <class id='Topic' isa='Authority'> 
     <label>Topic</label>
     <tagline>A Topic</tagline>
-    <property id='formSubdivision'>
-      <label>formSubdivision</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref>650 $v</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='generalSubdivsion'>
-      <label>generalSubdivsion</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref>650 $x</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='geographicSubdivision'>
-      <label>geographicSubdivision</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref>650 $z</marcref>
-      <rdaref></rdaref>
-    </property>
-    <property id='chronologicalSubdivision'>
-      <label>chronologicalSubdivision</label>
-      <typedesc>Literal</typedesc>
-      <description></description>
-      <marcref>650 $y</marcref>
-      <rdaref></rdaref>
-    </property>
     <property id='hasIDLink'>
       <label>hasIDLink</label>
       <typedesc>URL</typedesc>
@@ -1582,13 +1575,13 @@ v    </property>
     </property>
   </class>
 
-  <class id='Title' isa='Authority'> 
+  <class id='Title' isa='Collection'> 
     <label>Title</label>
-    <tagline>A uniform authority title.</tagline>
+    <tagline>A uniform title.</tagline>
     <property id='title'>
       <label>title</label>
       <typedesc>Literal</typedesc>
-      <description>The title associated with the uniform title authority.</description>
+      <description>An ad hoc collection mechanism for suporting multiple creative works that share the same title.</description>
       <marcref>130, 240, 243, 730, 830 $a</marcref>
       <rdaref></rdaref>
     </property>
