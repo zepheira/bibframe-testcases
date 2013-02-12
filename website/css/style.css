@@ -1,5 +1,12 @@
 /* marcr.org style */
 
+body {
+    background: #fff url(../img/acl-member-site.png) 0 8em fixed no-repeat;
+    min-height: 240px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 .specific-types-display {
  padding-top: 10px;
 }
