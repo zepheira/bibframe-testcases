@@ -23,13 +23,20 @@ body.draft {
        counter-reset: sub-section;
 }
                                                        
-.section h2:before, .section h3:before { content: counter(section) "." counter(sub-section) " "; }
+/* .section h2:before, .section h3:before { content: counter(section) "." counter(sub-section) " "; }  */
+
+.section h2:before { content: counter(section) "." " "; }  
+
+.section .subsection h3:before { content: counter(section) "." counter(sub-section) "." " "; } 
+
+.section .subsection .subsubsection h4:before { content: counter(section) "." counter(sub-section) "." counter(sub-sub-section) "." " "; } 
 
 .section h3:before {
        counter-increment: sub-section;
 }
 
-.section h3:before, .section h4:before { content: counter(section) "." counter(sub-section) "." counter(sub-sub-section) " "; }
+/* .section h3:before, .section h4:before { content: counter(section) "." counter(sub-section) "." counter(sub-sub-section) "." " "; }  */
+
 
 .section h4:before {
        counter-increment: sub-sub-section;
