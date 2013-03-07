@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://bibframe.org/examples/vocab#">
+
+<Example rdf:about="http://bibframe.org/examples/test/bluebeard/test001.rdf">
+<status>OPEN</status>
+<discussion rdf:resource="http://listserv.loc.gov/cgi-bin/wa?A2=ind1303&L=bibframe&T=0&P=58"/>
+<resolution rdf:resource="http://listserv.loc.gov/cgi-bin/wa?A2=ind1303&L=bibframe&T=0&P=58"/>
+<illustration rdf:about="http://bibframe.org/examples/test/bluebeard/test001-illustration.png">
+<description>Simple descrition of Kurt Vonnegut's 'Bluebeard', hardcover, first edition.</description>
+<note>Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenarios</note>
+</Example>
+
+<Example rdf:about="http://bibframe.org/examples/test/bluebeard/test002.rdf">
+<status>OPEN</status>
+<discussion rdf:resource="http://listserv.loc.gov/cgi-bin/wa?A2=ind1303&L=bibframe&T=0&P=58"/>
+<resolution rdf:resource="http://listserv.loc.gov/cgi-bin/wa?A2=ind1303&L=bibframe&T=0&P=58"/>
+<illustration rdf:about="http://bibframe.org/examples/test/bluebeard/test001-illustration.png">
+<description>Simple descrition of Kurt Vonnegut's 'Bluebeard', paperback, translated in italian.</description>
+<note>Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenarios</note>
+</Example>
+
+<Example rdf:about="http://bibframe.org/examples/test/festscrift/test001.rdf">
+<status>OPEN</status>
+<discussion rdf:resource="http://listserv.loc.gov/cgi-bin/wa?A2=ind1303&L=bibframe&T=0&P=58"/>
+<resolution rdf:resource="http://listserv.loc.gov/cgi-bin/wa?A2=ind1303&L=bibframe&T=0&P=58"/>
+<illustration rdf:about="http://bibframe.org/examples/test/festscrift/test001-illustration.png">
+<description>This item is a festschrift in honor of an environmental activist who died young, containing contributions by a number of important writers in the field.</description>
+<note>Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenarios</note>
+</Example>
+
+</rdf:RDF>

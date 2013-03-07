@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://bibframe.org/vocab/">
+
+<Book rdf:about = "http://bibframe.org/examples/bluebeard/test001/w1">
+<title>Bluebeard</title>
+<titleRemainder>a novel</titleRemainder>
+<classification>025.3 M465f 2008</classification>
+<author rdf:resource ="http://bibfra.me/auth/person/kurt_vonnegut" />
+<subject rdf:resource = "http://bibfra.me/auth/subject/foo" />
+<subject rdf:resource = "http://bibfra.me/auth/subject/bar" />
+<language>english</language>
+<summary>Broad humor and bitter irony collide in this fictional autobiography of Rabo Karabekian, who, at age seventy-one, wants to be left alone on his Long Island estate with the secret he has locked inside his potato barn. But then a voluptuous young widow badgers Rabo into telling his life story—and Vonnegut in turn tells us the plain, heart-hammering truth about man’s careless fancy to create or destroy what he loves.</summary>
+<hasInstance rdf:resource = "http://bibframe.org/examples/bluebeard/test001/i1" />
+</Book>
+
+<HardcoverBook rdf:about = "http://bibframe.org/examples/bluebeard/test001/i1">
+<edition>1st</edition>
+<volumes>1</volumes>
+<pages>300</pages>
+<date>1987-09-02</date>
+<publisher rdf:resource = "http://bibfra.me/auth/org/delacorte_press" />
+<ISBN>9780385295901</ISBN>
+<image rdf:resource = "http://ecx.images-amazon.com/images/I/51vbo8zwJlL._SL160_.jpg" />
+</HardcoverBook>
+
+</rdf:RDF>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns="http://bibframe.org/vocab/">
+  <HardcoverBook rdf:about="http://bibframe.org/examples/festschrift/test001/i1">
+    <ISBN>0723888560</ISBN>
+    <date>2006</date>
+    <pages>240</pages>
+    <publisher rdf:resource="http://bibframe.org/auth/org/beacon_press"/>
+  </HardcoverBook>
+  <Collection rdf:about="http://bibframe.org/examples/festschrift/test001/w1">
+    <editor rdf:resource="http://bibframe.org/auth/person/ambrose_watts"/>
+    <hasInstance rdf:resource="http://bibframe.org/examples/festschrift/test001/i1"/>
+    <hasPart rdf:resource="http://bibframe.org/examples/festschrift/test001/w2"/>
+    <honoree rdf:resource="http://bibframe.org/auth/person/pauline_warner"/>
+    <language>English</language>
+    <subject rdf:resource="http://bibframe.org/subject/natural_resources--management"/>
+    <title>Our collective environment: essays in honor of Pauline Warner</title>
+  </Collection>
+  <Essay rdf:about="http://bibframe.org/examples/festschrift/test001/w2">
+    <author rdf:resource="http://bibframe.org/auth/person/marcelline_probst"/>
+    <isPartOf rdf:resource="http://bibframe.org/examples/festschrift/test001/w2"/>
+    <language>English</language>
+    <subject rdf:resource="http://bibframe.org/subject/natural_resources--management"/>
+    <title>Some compelling biodiversity issues in natural resources management</title>
+  </Essay>
+</rdf:RDF>
