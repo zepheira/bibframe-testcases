@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>BIBFRAME Test Case :: Annotation :: 001</title>    
+    <link rel="stylesheet" href="../../../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/style-testcase.css" type="text/css" />
+  </head>
+  
+  <body class="report testcase">
+    
+    <div class="row-fluid">
+      
+      <div class="offset1 span10">
+        
+        <div id="header">
+          <h2 class="title">BIBFRAME Test Case</h2>
+          <h3 class="subTitle"><span class="maincat">Annotation</span> <span class="num">001</span> <span class="date">2013-03-14</span></h3>
+        </div>
+
+        <hr />
+        <div class="navigate">
+          <ul class="nav nav-pills">
+            <li><a href = "#description">Description</a></li>
+            <li><a href = "#status">Status</a></li>
+            <li><a href = "#turtle">RDF / Turtle</a></li>
+            <li><a href = "#rdfxml">RDF / XML</a></li>
+            <li><a href = "#table">HTML</a></li>
+          </ul>
+        </div>
+        <hr />
+        
+        <div class="body">
+          
+          <div class="section">
+            
+            <a id="description" name="description" class="anchor"></a>
+
+            <h2>Description</h2>
+            
+            <p>Example annotation associating an image as the cover
+            art along with includes two different PublisherDescription annotations for a book. This example reflects section 3.2. of 'BIBFRAME Annotation
+            Model' document @AnnotationDoc. For completeness, the instance
+            data below includes Work, Instance, Authority and
+            Annotation data. </p>
+
+          </div>
+
+          <div class="section">
+            
+            <a id="status" name="status" class="anchor"></a>
+
+            <h2>Status</h2>
+            
+            <div class="state">OPEN</div>
+
+            <div class="context">
+              Dependency on modeling issues: @AnnotationIssue001, @AnnotationIssue002, @AnnotationIssue003, @AuthorityIssue001.
+            </div>
+              
+          </div>
+
+          <div class="section">
+            
+            <a id="turtle" name="turtle" class="anchor"></a>
+
+            <h2>BIBFRAME RDF test case metadata (Turtle)</h2>
+
+            <div class="data">
+              <a href = "./test001.turtle">data</a>
+            </div>
+
+              <pre class="code">
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bf: &lt;http://bibframe.org/vocab/> .
+@prefix identifiers: &lt;http://id.loc.gov/vocabulary/identifiers/> .
+@prefix cnt: &lt;http://www.w3.org/2011/content#> .
+@prefix dcterms: &lt;http://purl.org/dc/terms/> .
+
+&lt;http://id.loc.gov/resources/work/003442621/>
+    a bf:Monograph, bf:Work ;
+    bf:derivedFrom &lt;http://id.loc.gov/resources/bibs/11778563> ;
+    bf:title "Wildlife sanctuaries & the Audubon Society : places to hide and seek" ;
+    bf:variantTitle "Wildlife sanctuaries and the Audubon Society" ;
+    bf:authoritativeLabel "Anderson, John M. (John Merrick) Wildlife sanctuaries & the Audubon Society : places to hide and seek" ;
+    bf:hasInstance &lt;http://id.loc.gov/resources/instance/003442621/>.
+
+&lt;http://id.loc.gov/resources/instance/003442621/>
+    a bf:PaperbackBook, bf:Instance ;
+    bf:callNumber "QL84.2 .A53 2000" ;
+    bf:derivedFrom &lt;http://id.loc.gov/resources/bibs/11778563> ;
+    bf:dimensions "24 cm." ;
+    bf:edition "1st ed." ;
+    bf:extent "xix, 260 p. :" ;
+    bf:instanceOf &lt;http://id.loc.gov/resources/work/003442621> ;
+    bf:isbn "0292704984" ;
+    bf:isbnData "cloth : alk. paper" ;
+    bf:otherFeatures "ill. ;" ;
+    bf:paper "acid free" ;
+    bf:place &lt;http://entity.loc.gov/place/austin> ;
+    bf:provider &lt;http://entity.loc.gov/org/utpress> ;
+    bf:date "2000." ;
+    identifiers:dewey "333.95/416/0973" ;
+    identifiers:id "0292704984 (cloth : alk. paper)";
+    identifiers:lccn "99044164" ;
+    identifiers:syscontrolID "(DLC) 99044164".
+
+&lt;http://entity.loc.gov/org/utpress>
+    bf:label "University of Texas Press" ;
+    bf:hasID &lt;http://id.loc.gov/authorities/names/n83187627> ;
+    a bf:Organization.
+
+&lt;http://entity.loc.gov/place/austin>
+    bf:label "Austin" ;
+    bf:hasID &lt;http://id.loc.gov/authorities/names/nb2007024726> ;
+    a bf:Place.
+
+&lt;http://id.loc.gov/resources/illus/11778563>
+    a bf:CoverArt, bf:Annotation ;
+    bf:target &lt;http://id.loc.gov/resources/instance/003442621/> ;
+    bf:source &lt;http://loccatalog.loc.gov/media/loc.natlib.lcdb.11778563/thumb> ;
+    bf:author  &lt;http://entity.loc.gov/org/loc>.
+
+&lt;http://entity.loc.gov/org/loc>
+    bf:label "Library of Congress" ;
+    bf:hasID &lt;http://id.loc.gov/vocabulary/organizations/dlcmrc> ;
+    a bf:Organization.
+
+&lt;http://id.loc.gov/resources/illus/11778563/1>
+    a bf:PublisherDescription, bf:Annotation ;
+    bf:annotates &lt;http://id.loc.gov/resources/instance/003442621/> ;
+    bf:annotationBody "John M. 'Frosty' Anderson was one of the National Audubon Society's great 'living legends.' . . . No one has done more for wildlife than this modest man with the best sense of humor ever to come down the pike. --from the Foreword National Audubon Society sanctuaries across the United States preserve the unique combinations of plants, climates, soils, and water that endangered birds and other animals require to survive. Their success stories include the recovery of the common and snowy egrets, wood storks, Everglade kites, puffins, and sandhill cranes, to name only a few. In this book, Frosty Anderson describes the development of fifteen NAS sanctuaries from Maine to California and from the Texas coast to North Dakota. Drawn from the newsletter Places to Hide and Seek, which he edited during his tenure as Director/Vice President of the Wildlife Sanctuary Department of the NAS, these profiles offer a personal, often humorous look at the daily and longer-term activities involved in protecting bird habitats. Collectively, they record an era in conservation history in which ordinary people, without benefit of Ph.D.'s, became stewards of the habitats in which they had lived all their lives. It's a story worth preserving, and it's entertainingly told here by the man who knows it best." ;
+    bf:annotator &lt;http://entity.loc.gov/org/utpress>.
+
+&lt;http://id.loc.gov/resources/illus/11778563/2>
+    a bf:PublisherDescription, bf:Annotation ;
+    bf:annotates &lt;http://id.loc.gov/resources/instance/003442621/> ;
+    bf:hasBody [
+    a cnt:ContentAsText ;
+    dcterms:format "text/html" ;
+    cnt:chars """
+&lt;HTML>
+&lt;HEAD>
+&lt;TITLE>Publisher description for Library of Congress control number 99044164&lt;/TITLE>
+&lt;base href="http://www.loc.gov/catdir/description/texas041/99044164.html">
+&lt;meta name="description" content="Publisher description">
+&lt;meta name="keywords" CONTENT="Wildlife refuges United States, National Audubon Society">
+&lt;/HEAD>
+&lt;BODY>
+
+&lt;h2>Publisher description for Wildlife sanctuaries & the Audubon Society : places to hide and seek / John M. "Frosty" Anderson.&lt;/h2>
+&lt;P>&lt;br>
+Information from electronic data provided by the publisher.  May be incomplete or contain other coding.&lt;br>&lt;hr>&lt;img src="/cgi-bin/Count.cgi?sh=0|ft=1&dd=C|df=summary.dat"ALT="Counter">
+
+"John M. 'Frosty' Anderson was one of the National Audubon Society's great 'living legends.' . . . No one has done more for wildlife than this modest man with the best sense of humor ever to come down the pike."
+..from the Foreword
+
+National Audubon Society sanctuaries across the United States preserve the unique combinations of plants, climates, soils, and water that endangered birds and other animals require to survive. Their success stories include the recovery of the common and snowy egrets, wood storks, Everglade kites, puffins, and sandhill cranes, to name only a few.
+ In this book, Frosty Anderson describes the development of fifteen NAS sanctuaries from Maine to California and from the Texas coast to North Dakota. Drawn from the newsletter Places to Hide and Seek, which he edited during his tenure as Director/Vice President of the Wildlife Sanctuary Department of the NAS, these profiles offer a personal, often humorous look at the daily and longer-term activities involved in protecting bird habitats. Collectively, they record an era in conservation history in which ordinary people, without benefit of Ph.D.'s, became stewards of the habitats in which they had lived all their lives. It's a story worth preserving, and it's entertainingly told here by the man who knows it best.
+
+&lt;br>&lt;br>
+S
+subject headings for this publication: Wildlife refuges United States, National Audubon Society&lt;br>
+
+&lt;/BODY>
+&lt;/HTML>"""
+] ;
+    bf:annotator &lt;http://entity.loc.gov/org/utpress>.
+
+              </pre>
+            
+          </div>
+
+          <div class="section">
+            
+            <a id="rdfxml" name="rdfxml" class="anchor"></a>
+            
+            <h2>BIBFRAME RDF test case metadata (RDF/XML)</h2>
+
+            <div class="data">
+              <a href = "./test001.rdf.txt">data</a>
+            </div>
+
+            <pre class="code">
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;rdf:RDF
+   xmlns:bf="http://bibframe.org/vocab/"
+   xmlns:cnt="http://www.w3.org/2011/content#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  &lt;bf:Organization rdf:about="http://entity.loc.gov/org/loc">
+    &lt;bf:hasID rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+    &lt;bf:label>Library of Congress&lt;/bf:label>
+  &lt;/bf:Organization>
+  &lt;bf:Organization rdf:about="http://entity.loc.gov/org/utpress">
+    &lt;bf:hasID rdf:resource="http://id.loc.gov/authorities/names/n83187627"/>
+    &lt;bf:label>University of Texas Press&lt;/bf:label>
+  &lt;/bf:Organization>
+  &lt;bf:Place rdf:about="http://entity.loc.gov/place/austin">
+    &lt;bf:hasID rdf:resource="http://id.loc.gov/authorities/names/nb2007024726"/>
+    &lt;bf:label>Austin&lt;/bf:label>
+  &lt;/bf:Place>
+  &lt;bf:CoverArt rdf:about="http://id.loc.gov/resources/illus/11778563">
+    &lt;bf:author rdf:resource="http://entity.loc.gov/org/loc"/>
+    &lt;bf:source rdf:resource="http://loccatalog.loc.gov/media/loc.natlib.lcdb.11778563/thumb"/>
+    &lt;bf:target rdf:resource="http://id.loc.gov/resources/instance/003442621/"/>
+    &lt;rdf:type rdf:resource="http://bibframe.org/vocab/Annotation"/>
+  &lt;/bf:CoverArt>
+  &lt;bf:PublisherDescription rdf:about="http://id.loc.gov/resources/illus/11778563/1">
+    &lt;bf:annotates rdf:resource="http://id.loc.gov/resources/instance/003442621/"/>
+    &lt;bf:annotationBody>John M. 'Frosty' Anderson was one of the National Audubon Society's great 'living legends.' . . . No one has done more for wildlife than this modest man with the best sense of humor ever to come down the pike. --from the Foreword National Audubon Society sanctuaries across the United States preserve the unique combinations of plants, climates, soils, and water that endangered birds and other animals require to survive. Their success stories include the recovery of the common and snowy egrets, wood storks, Everglade kites, puffins, and sandhill cranes, to name only a few. In this book, Frosty Anderson describes the development of fifteen NAS sanctuaries from Maine to California and from the Texas coast to North Dakota. Drawn from the newsletter Places to Hide and Seek, which he edited during his tenure as Director/Vice President of the Wildlife Sanctuary Department of the NAS, these profiles offer a personal, often humorous look at the daily and longer-term activities involved in protecting bird habitats. Collectively, they record an era in conservation history in which ordinary people, without benefit of Ph.D.'s, became stewards of the habitats in which they had lived all their lives. It's a story worth preserving, and it's entertainingly told here by the man who knows it best.&lt;/bf:annotationBody>
+    &lt;bf:annotator rdf:resource="http://entity.loc.gov/org/utpress"/>
+    &lt;rdf:type rdf:resource="http://bibframe.org/vocab/Annotation"/>
+  &lt;/bf:PublisherDescription>
+  &lt;bf:PublisherDescription rdf:about="http://id.loc.gov/resources/illus/11778563/2">
+    &lt;bf:annotates rdf:resource="http://id.loc.gov/resources/instance/003442621/"/>
+    &lt;bf:annotator rdf:resource="http://entity.loc.gov/org/utpress"/>
+    &lt;bf:hasBody>
+      &lt;cnt:ContentAsText>
+        &lt;dcterms:format>text/html&lt;/dcterms:format>
+        &lt;cnt:chars>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;Publisher description for Library of Congress control number 99044164&lt;/TITLE&gt;
+&lt;base href="http://www.loc.gov/catdir/description/texas041/99044164.html"&gt;
+&lt;meta name="description" content="Publisher description"&gt;
+&lt;meta name="keywords" CONTENT="Wildlife refuges United States, National Audubon Society"&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+
+&lt;h2&gt;Publisher description for Wildlife sanctuaries &amp; the Audubon Society : places to hide and seek / John M. "Frosty" Anderson.&lt;/h2&gt;
+&lt;P&gt;&lt;br&gt;
+Information from electronic data provided by the publisher.  May be incomplete or contain other coding.&lt;br&gt;&lt;hr&gt;&lt;img src="/cgi-bin/Count.cgi?sh=0|ft=1&amp;dd=C|df=summary.dat"ALT="Counter"&gt;
+
+"John M. 'Frosty' Anderson was one of the National Audubon Society's great 'living legends.' . . . No one has done more for wildlife than this modest man with the best sense of humor ever to come down the pike."
+..from the Foreword
+
+National Audubon Society sanctuaries across the United States preserve the unique combinations of plants, climates, soils, and water that endangered birds and other animals require to survive. Their success stories include the recovery of the common and snowy egrets, wood storks, Everglade kites, puffins, and sandhill cranes, to name only a few.
+ In this book, Frosty Anderson describes the development of fifteen NAS sanctuaries from Maine to California and from the Texas coast to North Dakota. Drawn from the newsletter Places to Hide and Seek, which he edited during his tenure as Director/Vice President of the Wildlife Sanctuary Department of the NAS, these profiles offer a personal, often humorous look at the daily and longer-term activities involved in protecting bird habitats. Collectively, they record an era in conservation history in which ordinary people, without benefit of Ph.D.'s, became stewards of the habitats in which they had lived all their lives. It's a story worth preserving, and it's entertainingly told here by the man who knows it best.
+
+&lt;br&gt;&lt;br&gt;
+S
+subject headings for this publication: Wildlife refuges United States, National Audubon Society&lt;br&gt;
+
+&lt;/BODY&gt;
+&lt;/HTML&gt;&lt;/cnt:chars>
+      &lt;/cnt:ContentAsText>
+    &lt;/bf:hasBody>
+    &lt;rdf:type rdf:resource="http://bibframe.org/vocab/Annotation"/>
+  &lt;/bf:PublisherDescription>
+  &lt;bf:PaperbackBook rdf:about="http://id.loc.gov/resources/instance/003442621/">
+    &lt;bf:callNumber>QL84.2 .A53 2000&lt;/bf:callNumber>
+    &lt;bf:date>2000.&lt;/bf:date>
+    &lt;bf:derivedFrom rdf:resource="http://id.loc.gov/resources/bibs/11778563"/>
+    &lt;bf:dimensions>24 cm.&lt;/bf:dimensions>
+    &lt;bf:edition>1st ed.&lt;/bf:edition>
+    &lt;bf:extent>xix, 260 p. :&lt;/bf:extent>
+    &lt;bf:instanceOf rdf:resource="http://id.loc.gov/resources/work/003442621"/>
+    &lt;bf:isbn>0292704984&lt;/bf:isbn>
+    &lt;bf:isbnData>cloth : alk. paper&lt;/bf:isbnData>
+    &lt;bf:otherFeatures>ill. ;&lt;/bf:otherFeatures>
+    &lt;bf:paper>acid free&lt;/bf:paper>
+    &lt;bf:place rdf:resource="http://entity.loc.gov/place/austin"/>
+    &lt;bf:provider rdf:resource="http://entity.loc.gov/org/utpress"/>
+    &lt;identifiers:dewey>333.95/416/0973&lt;/identifiers:dewey>
+    &lt;identifiers:id>0292704984 (cloth : alk. paper)&lt;/identifiers:id>
+    &lt;identifiers:lccn>99044164&lt;/identifiers:lccn>
+    &lt;identifiers:syscontrolID>(DLC) 99044164&lt;/identifiers:syscontrolID>
+    &lt;rdf:type rdf:resource="http://bibframe.org/vocab/Instance"/>
+  &lt;/bf:PaperbackBook>
+  &lt;bf:Monograph rdf:about="http://id.loc.gov/resources/work/003442621/">
+    &lt;bf:authoritativeLabel>Anderson, John M. (John Merrick) Wildlife sanctuaries &amp; the Audubon Society : places to hide and seek&lt;/bf:authoritativeLabel>
+    &lt;bf:derivedFrom rdf:resource="http://id.loc.gov/resources/bibs/11778563"/>
+    &lt;bf:hasInstance rdf:resource="http://id.loc.gov/resources/instance/003442621/"/>
+    &lt;bf:title>Wildlife sanctuaries &amp; the Audubon Society : places to hide and seek&lt;/bf:title>
+    &lt;bf:variantTitle>Wildlife sanctuaries and the Audubon Society&lt;/bf:variantTitle>
+    &lt;rdf:type rdf:resource="http://bibframe.org/vocab/Work"/>
+  &lt;/bf:Monograph>
+&lt;/rdf:RDF>
+            </pre>
+            
+          </div>
+
+          <div class="section">
+            
+            <a id="table" name="table" class="anchor"></a>
+
+            <h2>BIBFRAME RDF test case metadata (HTML tables)</h2>
+
+            <p class="alert">Note: URIs in the following example may not resolve.</p>
+
+            <div class="htmltable">
+  <table class="table table-condensed table-striped">
+    <tr>
+      <th>Subject</th>
+      <th>Predicate</th>
+      <th>Object</th>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/work/003442621/">http://id.loc.gov/resources/work/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/Monograph">http://bibframe.org/vocab/Monograph</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/work/003442621/">http://id.loc.gov/resources/work/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/Work">http://bibframe.org/vocab/Work</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/work/003442621/">http://id.loc.gov/resources/work/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/derivedFrom">http://bibframe.org/vocab/derivedFrom</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/resources/bibs/11778563">http://id.loc.gov/resources/bibs/11778563</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/work/003442621/">http://id.loc.gov/resources/work/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/title">http://bibframe.org/vocab/title</a></span></td>
+      <td><span class="literal"><span class="value">Wildlife sanctuaries &amp; the Audubon Society : places to hide and seek</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/work/003442621/">http://id.loc.gov/resources/work/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/variantTitle">http://bibframe.org/vocab/variantTitle</a></span></td>
+      <td><span class="literal"><span class="value">Wildlife sanctuaries and the Audubon Society</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/work/003442621/">http://id.loc.gov/resources/work/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/authoritativeLabel">http://bibframe.org/vocab/authoritativeLabel</a></span></td>
+      <td><span class="literal"><span class="value">Anderson, John M. (John Merrick) Wildlife sanctuaries &amp; the Audubon Society : places to hide and seek</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/work/003442621/">http://id.loc.gov/resources/work/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/hasInstance">http://bibframe.org/vocab/hasInstance</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/PaperbackBook">http://bibframe.org/vocab/PaperbackBook</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/Instance">http://bibframe.org/vocab/Instance</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/callNumber">http://bibframe.org/vocab/callNumber</a></span></td>
+      <td><span class="literal"><span class="value">QL84.2 .A53 2000</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/derivedFrom">http://bibframe.org/vocab/derivedFrom</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/resources/bibs/11778563">http://id.loc.gov/resources/bibs/11778563</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/dimensions">http://bibframe.org/vocab/dimensions</a></span></td>
+      <td><span class="literal"><span class="value">24 cm.</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/edition">http://bibframe.org/vocab/edition</a></span></td>
+      <td><span class="literal"><span class="value">1st ed.</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/extent">http://bibframe.org/vocab/extent</a></span></td>
+      <td><span class="literal"><span class="value">xix, 260 p. :</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/instanceOf">http://bibframe.org/vocab/instanceOf</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/resources/work/003442621">http://id.loc.gov/resources/work/003442621</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/isbn">http://bibframe.org/vocab/isbn</a></span></td>
+      <td><span class="literal"><span class="value">0292704984</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/isbnData">http://bibframe.org/vocab/isbnData</a></span></td>
+      <td><span class="literal"><span class="value">cloth : alk. paper</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/otherFeatures">http://bibframe.org/vocab/otherFeatures</a></span></td>
+      <td><span class="literal"><span class="value">ill. ;</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/paper">http://bibframe.org/vocab/paper</a></span></td>
+      <td><span class="literal"><span class="value">acid free</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/place">http://bibframe.org/vocab/place</a></span></td>
+      <td><span class="uri"><a href="http://entity.loc.gov/place/austin">http://entity.loc.gov/place/austin</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/provider">http://bibframe.org/vocab/provider</a></span></td>
+      <td><span class="uri"><a href="http://entity.loc.gov/org/utpress">http://entity.loc.gov/org/utpress</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/date">http://bibframe.org/vocab/date</a></span></td>
+      <td><span class="literal"><span class="value">2000.</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/vocabulary/identifiers/dewey">http://id.loc.gov/vocabulary/identifiers/dewey</a></span></td>
+      <td><span class="literal"><span class="value">333.95/416/0973</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/vocabulary/identifiers/id">http://id.loc.gov/vocabulary/identifiers/id</a></span></td>
+      <td><span class="literal"><span class="value">0292704984 (cloth : alk. paper)</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/vocabulary/identifiers/lccn">http://id.loc.gov/vocabulary/identifiers/lccn</a></span></td>
+      <td><span class="literal"><span class="value">99044164</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/vocabulary/identifiers/syscontrolID">http://id.loc.gov/vocabulary/identifiers/syscontrolID</a></span></td>
+      <td><span class="literal"><span class="value">(DLC) 99044164</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://entity.loc.gov/org/utpress">http://entity.loc.gov/org/utpress</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/label">http://bibframe.org/vocab/label</a></span></td>
+      <td><span class="literal"><span class="value">University of Texas Press</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://entity.loc.gov/org/utpress">http://entity.loc.gov/org/utpress</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/hasID">http://bibframe.org/vocab/hasID</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/authorities/names/n83187627">http://id.loc.gov/authorities/names/n83187627</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://entity.loc.gov/org/utpress">http://entity.loc.gov/org/utpress</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/Organization">http://bibframe.org/vocab/Organization</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://entity.loc.gov/place/austin">http://entity.loc.gov/place/austin</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/label">http://bibframe.org/vocab/label</a></span></td>
+      <td><span class="literal"><span class="value">Austin</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://entity.loc.gov/place/austin">http://entity.loc.gov/place/austin</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/hasID">http://bibframe.org/vocab/hasID</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/authorities/names/nb2007024726">http://id.loc.gov/authorities/names/nb2007024726</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://entity.loc.gov/place/austin">http://entity.loc.gov/place/austin</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/Place">http://bibframe.org/vocab/Place</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563">http://id.loc.gov/resources/illus/11778563</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/CoverArt">http://bibframe.org/vocab/CoverArt</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563">http://id.loc.gov/resources/illus/11778563</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/Annotation">http://bibframe.org/vocab/Annotation</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563">http://id.loc.gov/resources/illus/11778563</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/target">http://bibframe.org/vocab/target</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563">http://id.loc.gov/resources/illus/11778563</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/source">http://bibframe.org/vocab/source</a></span></td>
+      <td><span class="uri"><a href="http://loccatalog.loc.gov/media/loc.natlib.lcdb.11778563/thumb">http://loccatalog.loc.gov/media/loc.natlib.lcdb.11778563/thumb</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563">http://id.loc.gov/resources/illus/11778563</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/author">http://bibframe.org/vocab/author</a></span></td>
+      <td><span class="uri"><a href="http://entity.loc.gov/org/loc">http://entity.loc.gov/org/loc</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://entity.loc.gov/org/loc">http://entity.loc.gov/org/loc</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/label">http://bibframe.org/vocab/label</a></span></td>
+      <td><span class="literal"><span class="value">Library of Congress</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://entity.loc.gov/org/loc">http://entity.loc.gov/org/loc</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/hasID">http://bibframe.org/vocab/hasID</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/vocabulary/organizations/dlcmrc">http://id.loc.gov/vocabulary/organizations/dlcmrc</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://entity.loc.gov/org/loc">http://entity.loc.gov/org/loc</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/Organization">http://bibframe.org/vocab/Organization</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563/1">http://id.loc.gov/resources/illus/11778563/1</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/PublisherDescription">http://bibframe.org/vocab/PublisherDescription</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563/1">http://id.loc.gov/resources/illus/11778563/1</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/Annotation">http://bibframe.org/vocab/Annotation</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563/1">http://id.loc.gov/resources/illus/11778563/1</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/annotates">http://bibframe.org/vocab/annotates</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563/1">http://id.loc.gov/resources/illus/11778563/1</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/annotationBody">http://bibframe.org/vocab/annotationBody</a></span></td>
+      <td><span class="literal"><span class="value">John M. 'Frosty' Anderson was one of the National Audubon Society's great 'living legends.' . . . No one has done more for wildlife than this modest man with the best sense of humor ever to come down the pike. --from the Foreword National Audubon Society sanctuaries across the United States preserve the unique combinations of plants, climates, soils, and water that endangered birds and other animals require to survive. Their success stories include the recovery of the common and snowy egrets, wood storks, Everglade kites, puffins, and sandhill cranes, to name only a few. In this book, Frosty Anderson describes the development of fifteen NAS sanctuaries from Maine to California and from the Texas coast to North Dakota. Drawn from the newsletter Places to Hide and Seek, which he edited during his tenure as Director/Vice President of the Wildlife Sanctuary Department of the NAS, these profiles offer a personal, often humorous look at the daily and longer-term activities involved in protecting bird habitats. Collectively, they record an era in conservation history in which ordinary people, without benefit of Ph.D.'s, became stewards of the habitats in which they had lived all their lives. It's a story worth preserving, and it's entertainingly told here by the man who knows it best.</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563/1">http://id.loc.gov/resources/illus/11778563/1</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/annotator">http://bibframe.org/vocab/annotator</a></span></td>
+      <td><span class="uri"><a href="http://entity.loc.gov/org/utpress">http://entity.loc.gov/org/utpress</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="blank">_:genid1</span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/2011/content#ContentAsText">http://www.w3.org/2011/content#ContentAsText</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="blank">_:genid1</span></td>
+      <td><span class="uri"><a href="http://purl.org/dc/terms/format">http://purl.org/dc/terms/format</a></span></td>
+      <td><span class="literal"><span class="value">text/html</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="blank">_:genid1</span></td>
+      <td><span class="uri"><a href="http://www.w3.org/2011/content#chars">http://www.w3.org/2011/content#chars</a></span></td>
+      <td><span class="literal"><span class="value">
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;Publisher description for Library of Congress control number 99044164&lt;/TITLE&gt;
+&lt;base href="http://www.loc.gov/catdir/description/texas041/99044164.html"&gt;
+&lt;meta name="description" content="Publisher description"&gt;
+&lt;meta name="keywords" CONTENT="Wildlife refuges United States, National Audubon Society"&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+
+&lt;h2&gt;Publisher description for Wildlife sanctuaries &amp; the Audubon Society : places to hide and seek / John M. "Frosty" Anderson.&lt;/h2&gt;
+&lt;P&gt;&lt;br&gt;
+Information from electronic data provided by the publisher.  May be incomplete or contain other coding.&lt;br&gt;&lt;hr&gt;&lt;img src="/cgi-bin/Count.cgi?sh=0|ft=1&amp;dd=C|df=summary.dat"ALT="Counter"&gt;
+
+"John M. 'Frosty' Anderson was one of the National Audubon Society's great 'living legends.' . . . No one has done more for wildlife than this modest man with the best sense of humor ever to come down the pike."
+..from the Foreword
+
+National Audubon Society sanctuaries across the United States preserve the unique combinations of plants, climates, soils, and water that endangered birds and other animals require to survive. Their success stories include the recovery of the common and snowy egrets, wood storks, Everglade kites, puffins, and sandhill cranes, to name only a few.
+ In this book, Frosty Anderson describes the development of fifteen NAS sanctuaries from Maine to California and from the Texas coast to North Dakota. Drawn from the newsletter Places to Hide and Seek, which he edited during his tenure as Director/Vice President of the Wildlife Sanctuary Department of the NAS, these profiles offer a personal, often humorous look at the daily and longer-term activities involved in protecting bird habitats. Collectively, they record an era in conservation history in which ordinary people, without benefit of Ph.D.'s, became stewards of the habitats in which they had lived all their lives. It's a story worth preserving, and it's entertainingly told here by the man who knows it best.
+
+&lt;br&gt;&lt;br&gt;
+S
+subject headings for this publication: Wildlife refuges United States, National Audubon Society&lt;br&gt;
+
+&lt;/BODY&gt;
+&lt;/HTML&gt;</span></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563/2">http://id.loc.gov/resources/illus/11778563/2</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/PublisherDescription">http://bibframe.org/vocab/PublisherDescription</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563/2">http://id.loc.gov/resources/illus/11778563/2</a></span></td>
+      <td><span class="uri"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/Annotation">http://bibframe.org/vocab/Annotation</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563/2">http://id.loc.gov/resources/illus/11778563/2</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/annotates">http://bibframe.org/vocab/annotates</a></span></td>
+      <td><span class="uri"><a href="http://id.loc.gov/resources/instance/003442621/">http://id.loc.gov/resources/instance/003442621/</a></span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563/2">http://id.loc.gov/resources/illus/11778563/2</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/hasBody">http://bibframe.org/vocab/hasBody</a></span></td>
+      <td><span class="blank">_:genid1</span></td>
+    </tr>
+    <tr class="triple">
+      <td><span class="uri"><a href="http://id.loc.gov/resources/illus/11778563/2">http://id.loc.gov/resources/illus/11778563/2</a></span></td>
+      <td><span class="uri"><a href="http://bibframe.org/vocab/annotator">http://bibframe.org/vocab/annotator</a></span></td>
+      <td><span class="uri"><a href="http://entity.loc.gov/org/utpress">http://entity.loc.gov/org/utpress</a></span></td>
+    </tr>
+  </table>
+  <p>Total number of triples: <span class="count">53</span>.</p>
+            </div>
+
+          </div>
+          
+        </div> <!-- body -->
+        
+        <div class="footer">
+          <hr />
+        </div>
+        
+      </div> <!-- span -->
+      
+    </div> <!-- row-fluid -->
+    
+  </body>
+
+</html>
