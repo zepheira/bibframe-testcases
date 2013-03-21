@@ -1,0 +1,18 @@
+{"items": [
+{
+    "id": "coverart_1", 
+    "type": "Annotation", 
+    "bfType": "CoverArt", 
+    "annotates": "ps_instance_1",
+    "annotator": "person_1",
+    "hasBody": "/demos/exhibit/tmp/ps_image_instance_1.png",
+    "thumbnailBody": "/demos/exhibit/tmp/ps_thumbnail_instance_1.png"
+},
+{
+    "id": "person_1", 
+    "type": "Person", 
+    "label": "Eric Miller",
+    "link": "http://zepheira.com/people/eric-miller" 
+}
+]
+}
