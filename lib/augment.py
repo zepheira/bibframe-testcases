@@ -1,7 +1,7 @@
 '''
 Routines for various data fix-ups & lookups
 '''
-import urllib, time, sys
+import os, urllib, time, sys
 
 #import requests # http://docs.python-requests.org/en/latest/index.html
 #import requests_cache # pip install requests_cache
@@ -18,6 +18,9 @@ H.follow_all_redirects = True
 
 VIAF_GUESS_FNAME = u'viafFromHeuristic'
 IDLC_GUESS_FNAME = u'idlcFromHeuristic'
+
+LIBTHINGAPIKEY = os.environ.get('LIBTHINGAPIKEY')
+ANNOTATIONS_DIR = os.environ.get('ANNOTATIONSDIR')
 
 
 def lucky_idlc_template(qpattern):
@@ -110,6 +113,30 @@ def finding_aid_lookup_template(qpattern):
                 work_item['fa_resolvedlink'] = resolvedlink
 
 
+def librarything_cover_template(qpattern):
+    '''
+    Used for searching LibraryThing for cover art
+    See also: http://www.librarything.com/blogs/librarything/2008/08/a-million-free-covers-from-librarything/
+    http://bibwild.wordpress.com/2008/03/19/think-you-can-use-amazon-api-for-library-service-book-covers/
+    '''
+    if not callable(qpattern):
+        qpattern = lambda item, qp=qpattern: qp.format(**dict([ (k, v.encode('utf-8')) for k, v in item.iteritems() ]))
+
+    def lucky_ltci(item):
+        if not LIBTHINGAPIKEY:
+            return None
+        q = qpattern(item)
+        query = urllib.quote(q)
+        url = 'http://covers.librarything.com/devkey/' + LIBTHINGAPIKEY + '/medium/isbn/' + query
+        #r = requests.head(url)
+        #print >> sys.stderr, url, item[u'code']
+        #answer = r.headers['X-URI']
+        #print >> sys.stderr, answer
+        response, content = H.request(url)
+        if not response.fromcache:
+            time.sleep(2) #Be polite! Kevin Ford says 1-2 secs pause is OK
+        return content #Problem: content is actually the cover image data
+    return lucky_ltci
 
 
 #Getting book covers: & other info
@@ -147,3 +174,8 @@ DEFAULT_AUGMENTATIONS = {
 
 }
 #852a': ('institution
+
+
+#def assert_cover_annotation():
+    #e.g. http://isbn.nu/9781906833213
+

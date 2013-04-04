@@ -76,7 +76,7 @@ def dcxml2json(source):
 
 #ISBNNU_PAT = 'http://isbn.nu/{0}.xml'
 ISBNNU_PAT = 'http://isbn.nu/{0}'
-OPENLIBRARY_COVER_PAT = 'http://covers.openlibrary.org/b/isbn/{0}-M.jpg'
+OPENLIBRARY_COVER_PAT = 'http://covers.openlibrary.org/b/isbn/{0}-M.jpg?default=false'
 #http://catalog.hathitrust.org/api/volumes/brief/json/isbn:0030110408 -> http://catalog.hathitrust.org/Record/000578050
 
 class subobjects(object):
@@ -118,11 +118,26 @@ class subobjects(object):
         return objid
 
 
-        #Work out the item's catalogue link
-        lcid = item.get(CATLINKFIELD)
-        if code == '010' and lcid:
-            item['catLink'] = 'http://lccn.loc.gov/' + ''.join(lcid.split())
+class annotations(object):
+    def __init__(self, exhibit_sink):
+        self.ix = 0
+        self.exhibit_sink = exhibit_sink
+        return
 
+    def add(self, props, sink=None):
+        sink = sink or self.exhibit_sink
+        annid = 'annotation_' + str(self.ix + 1)
+        item = {
+            u'id': annid,
+            u'label': annid,
+            u'type': 'Annotation',
+        }
+
+        item.update(props)
+        sink.send(item)
+        self.ix += 1
+        print >> sys.stderr, '*',
+        return annid
 
 
 #def records2json(recs, work_sink, instance_sink, stub_sink, objects_sink, annotations_sink, logger=logging):
@@ -131,6 +146,7 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
     
     '''
     subobjs = subobjects(objects_sink)
+    anns = annotations(annotations_sink)
     @coroutine
     def receive_items():
         '''
@@ -213,19 +229,12 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
                         object_props.update(object_subfields)
                         objectid = subobjs.add(object_props)
 
-                        annid = u'annotation' + recid
-                        annotation_item = {
-                            u'id': annid,
-                            u'label': recid,
-                            subst: objectid,
-                            u'type': u'Annotation',
-                            u'on_work': work_item[u'id'],
-                            u'on_instance': instance_item[u'id'],
-                        }
-                        annotation_item.update(extra_annotation_props)
-                        annotation_item.update(annotation_subfields)
+                        ann_props = {subst: objectid, u'on_work': work_item[u'id'], u'on_instance': instance_item[u'id'],}
+                        ann_props.update(extra_annotation_props)
+                        ann_props.update(annotation_subfields)
+                        annid = anns.add(ann_props)
+                        #Note, even though we have the returned annotation ID we do not use it. No link back from work/instance to annotation
 
-                        annotations_sink.send(annotation_item)
                         print >> sys.stderr, '.',
 
                         if code in INSTANCE_FIELDS:
@@ -241,7 +250,6 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
                         #instance_item.setdefault(subst, []).append(subid)
 
                         handled = True
-
 
 
                         #work_item.setdefault(FIELD_RENAMINGS.get(code, code), []).append(subid)
@@ -330,6 +338,11 @@ def records2json(recs, work_sink, instance_sink, objects_sink, annotations_sink,
                 subitem[u'isbnnu'] = isbnnu_url
                 #U(doc.xml_select(u'/rss/channel/item/link'))
                 subitem[u'openlibcover'] = OPENLIBRARY_COVER_PAT.format(inum)
+                #assert_cover_annotation(inum, )
+
+                #@@@@@@@@@@@@@@@@@@@@
+                #@@@@@@@@@@@@@@@@@@@@
+
                 #time.sleep(2) #Be polite!
 
                 #instance_item[u'isbn'] = isbns[0]
