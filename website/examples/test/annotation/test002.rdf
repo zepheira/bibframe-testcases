@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:bf="http://bibframe.org/vocab/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bf:Organization rdf:about="http://entity.loc.gov/org/loc">
+    <bf:hasID rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+    <bf:label>Library of Congress</bf:label>
+  </bf:Organization>
+  <bf:CoverArt rdf:about="http://id.loc.gov/resources/illus/11778563">
+    <bf:annotates rdf:resource="http://id.loc.gov/resources/instance/003442621/"/>
+    <bf:annotator rdf:resource="http://entity.loc.gov/org/loc"/>
+    <bf:hasBody rdf:resource="http://loccatalog.loc.gov/media/loc.natlib.lcdb.11778563/thumb"/>
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Annotation"/>
+  </bf:CoverArt>
+</rdf:RDF>

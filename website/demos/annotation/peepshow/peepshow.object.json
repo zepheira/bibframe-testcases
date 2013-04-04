@@ -1,0 +1,89 @@
+{"items": [
+{
+    "bfType": "Place", 
+    "code": "260", 
+    "type": "object", 
+    "id": "ps_obj_1", 
+    "label": "[Germany? :"
+},{
+    "bfType": "Organization", 
+    "code": "260", 
+    "type": "object", 
+    "id": "ps_obj_2", 
+    "label": "s.n.,"
+},{
+    "code": "260", 
+    "label": "ps_obj_3", 
+    "place": "(Nuremberg? :", 
+    "bfType": "Place", 
+    "type": "object", 
+    "id": "ps_obj_3"
+},{
+    "bfType": "Organization", 
+    "code": "260", 
+    "type": "object", 
+    "id": "ps_obj_4", 
+    "label": "G.W.F.)"
+},{
+    "code": "300", 
+    "dimensions": "18 x 23 x 44 cm folded to 18 x 23 x 2 cm.", 
+    "physicalDesc": "col. ill. ;", 
+    "label": "ps_obj_5", 
+    "extent": "1 item ([4] leaves) :", 
+    "bfType": "Measurement", 
+    "type": "object", 
+    "id": "ps_obj_5"
+},{
+    "code": "650", 
+    "formSubdivision": "Specimens.", 
+    "label": "Tunnel books", 
+    "bfType": "Topic", 
+    "type": "object", 
+    "id": "ps_obj_6"
+},{
+    "code": "610", 
+    "label": "Crystal Palace (London, England)", 
+    "v": "Pictorial works.", 
+    "bfType": "Organization", 
+    "type": "object", 
+    "id": "ps_obj_7"
+},{
+    "code": "651", 
+    "generalSubdivision": "History", 
+    "chronologicalSubdivision": "Victoria, 1837-1901", 
+    "formSubdivision": "Pictorial works.", 
+    "label": "Great Britain", 
+    "bfType": "Geographic", 
+    "type": "object", 
+    "id": "ps_obj_8"
+},{
+    "label": "Great Exhibition", 
+    "geographicSubdivision": "London, England)", 
+    "code": "611", 
+    "chronologicalSubdivision": "(1851 :", 
+    "formSubdivision": "Pictorial works.", 
+    "bfType": "Meeting", 
+    "type": "object", 
+    "id": "ps_obj_9"
+},{
+    "bfType": "Topic", 
+    "code": "650", 
+    "type": "object", 
+    "id": "ps_obj_10", 
+    "label": "Toy and movable books."
+},{
+    "code": "650", 
+    "chronologicalSubdivision": "1850-1860.", 
+    "label": "Peepshows", 
+    "2": "lctgm", 
+    "bfType": "Topic", 
+    "type": "object", 
+    "id": "ps_obj_11"
+},{
+    "code": "700", 
+    "e": "lithographer.", 
+    "label": "Faber, G. W.,", 
+    "bfType": "Person", 
+    "type": "object", 
+    "id": "ps_obj_12"
+}] }

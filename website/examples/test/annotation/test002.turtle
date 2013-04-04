@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bf: <http://bibframe.org/vocab/> .
+
+<http://id.loc.gov/resources/illus/11778563>
+    a bf:CoverArt, bf:Annotation ;
+    bf:annotates <http://id.loc.gov/resources/instance/003442621/> ;
+    bf:hasBody <http://loccatalog.loc.gov/media/loc.natlib.lcdb.11778563/thumb> ;
+    bf:annotator <http://entity.loc.gov/org/loc>.
+
+<http://entity.loc.gov/org/loc>
+    bf:label "Library of Congress" ;
+    bf:hasID <http://id.loc.gov/vocabulary/organizations/dlcmrc> ;
+    a bf:Organization.
+
+
