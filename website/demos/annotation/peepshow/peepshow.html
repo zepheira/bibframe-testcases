@@ -14,15 +14,17 @@
     <link rel="exhibit/data" href="peepshow.object.json" />
 
     <link rel="exhibit/data" href="peepshow.pictures.json" />
+    <link rel="exhibit/data" href="peepshow.review.json" />
 
     <link rel="exhibit/data" href="schema.json" />
 
     <script src="http://api.simile.zepheira.com/exhibit/3.0.0/exhibit-api.js"></script>
 
     <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/js/bootstrap-collapse.js"></script>
-
-  </head>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-popover.js"></script>
+</head>
   
   <body>
     
@@ -111,8 +113,18 @@
               
               <!-- Work display lens -->
 	      <div ex:role="lens" ex:itemTypes="Work" style="display: none">
-		  
+
 		<h3 class="titleWork"><span ex:content=".title"></span> <span ex:content=".titleRemainder"></span> <span ex:content=".titleInclusiveDate"></span></h3>
+                
+                <!-- annotation pane -->
+                
+                <span ex:if="contains(!annotates.bfType, 'Review')" class="bf-annotation well">
+                  <div class="alert alert-info bf-annotation-body literal">
+                    <span ex:content="!annotates.hasBodyLiteral"></span>
+                    <a ex:href-content="!annotates.annotator.link"><span ex:content="!annotates.annotator.label"></span></a>
+                  </div>
+                </span>                
+                
 		<br />
 		
 		<table class="table table-condensed">
@@ -222,8 +234,8 @@
 
                                 <!-- annotation pane -->
 
-                                <span ex:if="contains(!annotates.bfType, 'CoverArt')" class="accordion-group well">
-                                  <div class="thumbnail">
+                                <span ex:if="contains(!annotates.bfType, 'CoverArt')" class="bf-annotation well">
+                                  <div class="bf-annotation-body thumbnail">
                                     <a ex:href-content="!annotates.hasBody"><img ex:src-content="!annotates.thumbnailBody" /></a><br />
                                     <span>credit: <a ex:href-content="!annotates.annotator.link"><span ex:content="!annotates.annotator.label"></span></a></span>
                                   </div>
