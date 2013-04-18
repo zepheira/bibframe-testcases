@@ -1,0 +1,9 @@
+{
+"id": "kvb2013i",
+"tag": [ "example", "foo", "bar" ],
+"status": "open",
+"created": "2013-03-13",
+"issues": [ "issue001", "issue002" ], 
+"illustration": "http://bibframe.org/test/bluebeard/test001-illustration.png",
+"description": "Simple description of Kurt Vonnegut's 'Bluebeard', hardcover, first edition."
+}

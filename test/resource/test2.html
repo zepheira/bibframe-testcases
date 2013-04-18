@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>BIBFRAME Test Case :: Annotation :: kvb2013i</title>    
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style-testcase.css" type="text/css" />
+  </head>
+  
+  <body class="report testcase">
+    
+    <div class="row-fluid">
+      
+      <div class="offset1 span10">
+        
+        <div id="header">
+          <h2 class="title">BIBFRAME Test Case</h2>
+          <h3 class="subTitle"><span class="maincat">Annotation</span> <span class="num">kvb2013i</span> <span class="date">2013-03-13</span></h3>
+        </div>
+
+        <hr />
+        <div class="navigate">
+          <ul class="nav nav-pills">
+            <li><a href = "#description">Description</a></li>
+            <li><a href = "#status">Status</a></li>
+            <li><a href = "#turtle">RDF/Turtle</a></li>
+            <li><a href = "#rdfxml">RDF/XML</a></li>
+            <li><a href = "#rdfa">RDF/HTML (RDFa)</a></li>
+          </ul>
+        </div>
+        <hr />
+        
+        <div class="body">
+          
+          <div class="section">
+            
+            <a id="description" name="description" class="anchor"></a>
+
+            <h2>Description</h2>
+            
+            <p>Simple description of Kurt Vonnegut's 'Bluebeard', hardcover, first edition.</p>
+
+          </div>
+
+          <div class="section">
+            
+            <a id="status" name="status" class="anchor"></a>
+
+            <h2>Status</h2>
+            
+            <div class="state">open</div>
+
+            <div class="context">
+              Related issues: <a href = "@@">issue001</a>, <a href = "@@">issue002</a>, 
+            </div>
+              
+          </div>
+
+          <div class="section">
+            
+            <a id="turtle" name="turtle" class="anchor"></a>
+
+            <h2>BIBFRAME RDF test case metadata (Turtle)</h2>
+
+            <div class="data">
+              <a href = "@@ Annotation URL for RDF/turtle @@">data</a>
+            </div>
+
+              <pre class="code">
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : &lt;http://bibframe.org/vocab/> .
+
+&lt;http://bibframe.org/examples/bluebeard/test001/i1>
+    :ISBN "9780385295901" ;
+    :date "1987-09-02" ;
+    :edition "1st" ;
+    :image &lt;http://ecx.images-amazon.com/images/I/51vbo8zwJlL._SL160_.jpg> ;
+    :pages "300" ;
+    :publisher &lt;http://bibfra.me/auth/org/delacorte_press> ;
+    :volumes "1" ;
+    a :HardcoverBook .
+
+&lt;http://bibframe.org/examples/bluebeard/test001/w1>
+    :author &lt;http://bibfra.me/auth/person/kurt_vonnegut> ;
+    :classification "025.3 M465f 2008" ;
+    :hasInstance &lt;http://bibframe.org/examples/bluebeard/test001/i1> ;
+    :language "english" ;
+    :subject &lt;http://bibfra.me/auth/subject/bar>, &lt;http://bibfra.me/auth/subject/foo> ;
+    :summary "Broad humor and bitter irony collide in this fictional autobiography of Rabo Karabekian, who, at age seventy-one, wants to be left alone on his Long Island estate with the secret he has locked inside his potato barn. But then a voluptuous young widow badgers Rabo into telling his life story—and Vonnegut in turn tells us the plain, heart-hammering truth about man’s careless fancy to create or destroy what he loves." ;
+    :title "Bluebeard" ;
+    :titleRemainder "a novel" ;
+    a :Book .
+              </pre>
+            
+          </div>
+
+          <div class="section">
+            
+            <a id="rdfxml" name="rdfxml" class="anchor"></a>
+            
+            <h2>BIBFRAME RDF test case metadata (RDF/XML)</h2>
+
+            <div class="data">
+              <a href = "@@ Annotation URL for RDF/XML @@">data</a>
+            </div>
+
+            <pre class="code">
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns="http://bibframe.org/vocab/">
+  &lt;HardcoverBook rdf:about="http://bibframe.org/examples/bluebeard/test001/i1">
+    &lt;ISBN>9780385295901&lt;/ISBN>
+    &lt;date>1987-09-02&lt;/date>
+    &lt;edition>1st&lt;/edition>
+    &lt;image rdf:resource="http://ecx.images-amazon.com/images/I/51vbo8zwJlL._SL160_.jpg"/>
+    &lt;pages>300&lt;/pages>
+    &lt;publisher rdf:resource="http://bibfra.me/auth/org/delacorte_press"/>
+    &lt;volumes>1&lt;/volumes>
+  &lt;/HardcoverBook>
+  &lt;Book rdf:about="http://bibframe.org/examples/bluebeard/test001/w1">
+    &lt;author rdf:resource="http://bibfra.me/auth/person/kurt_vonnegut"/>
+    &lt;classification>025.3 M465f 2008&lt;/classification>
+    &lt;hasInstance rdf:resource="http://bibframe.org/examples/bluebeard/test001/i1"/>
+    &lt;language>english&lt;/language>
+    &lt;subject rdf:resource="http://bibfra.me/auth/subject/bar"/>
+    &lt;subject rdf:resource="http://bibfra.me/auth/subject/foo"/>
+    &lt;summary>Broad humor and bitter irony collide in this fictional autobiography of Rabo Karabekian, who, at age seventy-one, wants to be left alone on his Long Island estate with the secret he has locked inside his potato barn. But then a voluptuous young widow badgers Rabo into telling his life story—and Vonnegut in turn tells us the plain, heart-hammering truth about man’s careless fancy to create or destroy what he loves.&lt;/summary>
+    &lt;title>Bluebeard&lt;/title>
+    &lt;titleRemainder>a novel&lt;/titleRemainder>
+  &lt;/Book>
+&lt;/rdf:RDF>
+            </pre>
+            
+          </div>
+
+          <div class="section">
+            
+            <a id="rdfa" name="rdfa" class="anchor"></a>
+
+            <h2>BIBFRAME RDF test case metadata (RDFa)</h2>
+
+            <div class="data">
+              <a href = "@@ Annotation URL for RDFa @@">data</a>
+            </div>
+
+            <div class="rdfa">
+              @@ Annotation RDFa (escaped for HTML) @@
+            </div>
+
+          </div>
+          
+        </div> <!-- body -->
+        
+        <div class="footer">
+          <hr />
+        </div>
+        
+      </div> <!-- span -->
+      
+    </div> <!-- row-fluid -->
+    
+  </body>
+
+</html>
