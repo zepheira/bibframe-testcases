@@ -172,6 +172,14 @@ margin-left: 25px;
   background-position: -24px -72px;
 }
 
+.icon-Geographic {                                   /* icon-map-marker */
+  background-position: -24px -72px;
+}
+
+.icon-Meeting {                                   /* icon-briefcase */
+  background-position: -432px -144px;
+}
+
 
 /* icons for MARCR types */
 
@@ -212,6 +220,10 @@ margin-left: 25px;
 }
 
 
+.icon-PopupBook {                         /* icon-book */
+  background-position: -48px -48px;
+}
+
 .icon-PhysicalResource-null {                         /* icon-book */
   background-position: -48px -48px;
 }
@@ -234,5 +246,40 @@ margin-left: 25px;
 .icon-HardcoverBook-Volume {                         /* icon-book */
   background-position: -48px -48px;
 }
+
+
+/* exhibit */
+
+.titleWork {
+  line-height: 120%;
+  font-weight: bold;
+  font-size: 140%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.titleInstance {
+  font-weight: bold;
+  font-size: 120%;                 
+  line-height: 120%;
+  padding-bottom: 5px;
+}
+
+.table {
+  margin-top: 10px;
+}
+
+
+/* font awsome mappings to bibframe classes */
+
+.icon-bf-Topic:before                  { content: "\f02b"; }
+.icon-bf-Genre:before                 { content: "\f008"; }
+.icon-bf-Place:before           { content: "\f041"; }
+.icon-bf-Organization:before                 { content: "\f015"; }
+.icon-bf-Person:before                 { content: "\f007"; }
+.icon-bf-Instance:before             { content: "\f0ec"; }
+
+
+
 
 
