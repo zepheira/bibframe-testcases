@@ -25,6 +25,7 @@ TURTLE_TOP_TEMPLATE = u'''@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-
 @prefix identifiers: <http://id.loc.gov/vocabulary/identifiers/> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix btest: <http://bibframe.org/test/> .
 
 '''
 
@@ -54,10 +55,28 @@ HTML_TRIPLE_TEMPLATE = u'''
 '''
 
 
-def run(text=None, dest=''):
-    stem = os.path.splitext(os.path.split(text)[-1])[0]
-    text = open(text, 'r').read()
-    h = markdown.markdown(text.decode('utf-8'))
+FIELDS_TO_SHRED = [u'tag', u'issues']
+
+def shred_if_needed(key, value):
+    if key in FIELDS_TO_SHRED:
+        return [ i.strip() for i in value.split(',') ]
+    else:
+        return value
+
+
+def run(sourcefname=None, dest=''):
+    stem, ext = os.path.splitext(os.path.split(sourcefname)[-1])
+    print stem, ext
+    text = open(sourcefname, 'r').read()
+    if ext == '.ttl':
+        from_turtle(text, dest, stem)
+    else:
+        turtle = from_markdown(text, dest, stem)
+        from_turtle(turtle, dest, stem)
+
+
+def from_markdown(md, dest, stem):
+    h = markdown.markdown(md.decode('utf-8'))
     doc = html.markup_fragment(inputsource.text(h.encode('utf-8')))
     #print doc.xml_encode()
     output = TURTLE_TOP_TEMPLATE
@@ -67,9 +86,21 @@ def run(text=None, dest=''):
     testinfof = open(testinfofname, 'w')
     top_section_fields = U(doc.xml_select(u'//h1/preceding-sibling::p'))
     fields = dict(map(lambda y: [part.strip() for part in y.split(u':', 1)], top_section_fields.split(u'\n')))
-    testinfo = fields
+    testinfo = fields.copy()
+    for k, v in testinfo.items():
+        testinfo[k] = shred_if_needed(k, v)
     json.dump(testinfo, testinfof, indent=4)
     testinfof.close()
+
+    output += TURTLE_RESOURCE_TEMPLATE.format(rid=TEST_ID_BASE + fields[u'id'])
+    output += u'    a bf:TestCase ;\n'
+    for k, v in fields.items():
+        if matches_uri_syntax(v):
+            output += u'    bf:{k} <{v}> ;\n'.format(k=k, v=v)
+        else:
+            output += u'    bf:{k} "{v}" ;\n'.format(k=k, v=v)
+    output = output.rsplit(u';\n', 1)[0]
+    output += u'.\n'
 
     sections = doc.xml_select(u'//h1')
     for sect in sections:
@@ -102,9 +133,12 @@ def run(text=None, dest=''):
     turtlef = open(turtlefname, 'w')
     turtlef.write(output)
     turtlef.close()
+    return output
 
+
+def from_turtle(turtle, dest, stem):
     g = rdflib.Graph()
-    result = g.parse(turtlefname, format='n3')
+    result = g.parse(data=turtle, format='n3')
 
     rdfxfname = os.path.join(dest, stem + os.path.extsep + 'rdf')
     rdfxf = open(rdfxfname, 'w')
@@ -140,11 +174,11 @@ if __name__ == '__main__':
     #parser.add_argument('testspec', metavar='testspec', type=argparse.FileType('r'),
     #                    help='The test spec')
     parser.add_argument('testspec', metavar='testspec',
-                        help='The test spec')
+                        help='The test spec file')
     parser.add_argument('-d', '--dest', metavar="TEST_FILES_DEST", dest="dest", default='.',
                         help="Destination folder for test files")
     args = parser.parse_args()
-    run(text=args.testspec, dest=args.dest)
+    run(sourcefname=args.testspec, dest=args.dest)
     #indoc = bindery.parse(sys.argv[1])
     #args.testspec.close()
 
