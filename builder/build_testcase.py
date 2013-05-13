@@ -2,10 +2,11 @@
 
 import sys
 import os
-import re
-import itertools
+#import re
+#import itertools
+#import copy
 
-from amara import bindery
+#from amara import bindery
 from amara.bindery import html
 from amara.lib import U, inputsource
 from amara.lib.iri import absolutize, matches_uri_syntax
@@ -84,10 +85,21 @@ def from_markdown(md, dest, stem):
     #The top section contains all the test metadata
     testinfofname = os.path.join(dest, stem + os.path.extsep + 'json')
     testinfof = open(testinfofname, 'w')
-    top_section_fields = U(doc.xml_select(u'//h1/preceding-sibling::p'))
-    fields = dict(map(lambda y: [part.strip() for part in y.split(u':', 1)], top_section_fields.split(u'\n')))
+    top_section_fields = doc.xml_select(u'//h1/preceding-sibling::p')
+
+    #Note: Top level fields are rendered into dicts, others are turned into lists of tuples
+    fields = dict(map(lambda y: [part.strip() for part in y.split(u':', 1)], U(top_section_fields).split(u'\n')))
+    subsections = top_section_fields[0].xml_select(u'following-sibling::h2')
+    for s in subsections:
+        property = U(s).strip()
+        value = s.xml_select(u'./following-sibling::p')
+        if value:
+            #Encoding to XML makes it a string again, so turn it back to Unicode
+            fields[property] = value[0].xml_encode().decode('utf-8')
+
     testinfo = fields.copy()
     for k, v in testinfo.items():
+        #testinfo.append(shred_if_needed(k, v))
         testinfo[k] = shred_if_needed(k, v)
     json.dump(testinfo, testinfof, indent=4)
     testinfof.close()
@@ -106,11 +118,16 @@ def from_markdown(md, dest, stem):
     for sect in sections:
         rtype = U(sect)
         fields = U(sect.xml_select(u'following-sibling::p'))
-        fields = dict(map(lambda y: [part.strip() for part in y.split(u':', 1)], fields.split(u'\n')))
+        fields = map(lambda y: [part.strip() for part in y.split(u':', 1)], fields.split(u'\n'))
         desc = U(sect.xml_select(u'following-sibling::h2[.="Description"]/following-sibling::p'))
         note = U(sect.xml_select(u'following-sibling::h2[.="Note"]/following-sibling::p'))
-        rid = absolutize(fields[u'id'], TEST_ID_BASE)
-        del fields[u'id']
+        to_remove = []
+        for k, v in fields:
+            if k == u'id':
+                rid = absolutize(v, TEST_ID_BASE)
+                to_remove.append([k, v])
+        for pair in to_remove:
+            fields.remove(pair)
         atype = None
         output += TURTLE_RESOURCE_TEMPLATE.format(rid=rid)
         if rtype.startswith(u'Annotation'):
@@ -121,7 +138,7 @@ def from_markdown(md, dest, stem):
             output += u'    a bf:{rtype} ;\n'.format(rtype=rtype)
 
         #print fields
-        for k, v in fields.items():
+        for k, v in fields:
             if matches_uri_syntax(v):
                 output += u'    bf:{k} <{v}> ;\n'.format(k=k, v=v)
             else:
@@ -131,7 +148,7 @@ def from_markdown(md, dest, stem):
 
     turtlefname = os.path.join(dest, stem + os.path.extsep + 'ttl')
     turtlef = open(turtlefname, 'w')
-    turtlef.write(output)
+    turtlef.write(output.encode('utf-8'))
     turtlef.close()
     return output
 
@@ -153,13 +170,13 @@ def from_turtle(turtle, dest, stem):
         tr = ''
         for part in stmt:
             if isinstance(part, rdflib.URIRef):
-                tr += '<td><span class="uri"><a href="{0}">{1}</a></span></td>'.format(part, part)
+                tr += u'<td><span class="uri"><a href="{0}">{1}</a></span></td>'.format(part, part)
             else:
-                tr += '<td><span class="literal"><span class="value">{0}</a></span></span></td>'.format(part)
+                tr += u'<td><span class="literal"><span class="value">{0}</a></span></span></td>'.format(part)
         output += HTML_TRIPLE_TEMPLATE.format(tr)
 
         print stmt
-    htmlf.write(output)
+    htmlf.write(output.encode('utf-8'))
     htmlf.close()
     #print "Generated", len(g), "triples:"
     #for stmt in g: print stmt

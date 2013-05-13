@@ -4,9 +4,18 @@ issues: issue001, issue002
 status: open
 created: 2013-03-13
 illustration: http://bibframe.org/test/bluebeard/test001-illustration.png
-description: Simple description of Kurt Vonnegut's 'Bluebeard', hardcover, first edition.
-note: Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenarios
-summary: Broad humor and bitter irony collide in this fictional autobiography of Rabo Karabekian, who, at age seventy-one, wants to be left alone on his Long Island estate with the secret he has locked inside his potato barn. But then a voluptuous young widow badgers Rabo into telling his life story—and Vonnegut in turn tells us the plain, heart-hammering truth about man’s careless fancy to create or destroy what he loves.
+
+## description
+
+Simple description of Kurt Vonnegut's 'Bluebeard', hardcover, first edition.
+
+## note
+
+Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenarios
+
+## summary
+
+Broad humor and bitter irony collide in this fictional autobiography of Rabo Karabekian, who, at age seventy-one, wants to be left alone on his Long Island estate with the secret he has locked inside his potato barn. But then a voluptuous young widow badgers Rabo into telling his life story—and Vonnegut in turn tells us the plain, heart-hammering truth about man’s careless fancy to create or destroy what he loves.
 
 # Book
 
