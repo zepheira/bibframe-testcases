@@ -104,15 +104,15 @@ def from_markdown(md, dest, stem):
     json.dump(testinfo, testinfof, indent=4)
     testinfof.close()
 
-    output += TURTLE_RESOURCE_TEMPLATE.format(rid=TEST_ID_BASE + fields[u'id'])
-    output += u'    a bf:TestCase ;\n'
-    for k, v in fields.items():
-        if matches_uri_syntax(v):
-            output += u'    bf:{k} <{v}> ;\n'.format(k=k, v=v)
-        else:
-            output += u'    bf:{k} "{v}" ;\n'.format(k=k, v=v)
-    output = output.rsplit(u';\n', 1)[0]
-    output += u'.\n'
+    #output += TURTLE_RESOURCE_TEMPLATE.format(rid=TEST_ID_BASE + fields[u'id'])
+    #output += u'    a bf:TestCase ;\n'
+    #for k, v in fields.items():
+    #    if matches_uri_syntax(v):
+    #        output += u'    bf:{k} <{v}> ;\n'.format(k=k, v=v)
+    #    else:
+    #        output += u'    bf:{k} "{v}" ;\n'.format(k=k, v=v)
+    #output = output.rsplit(u';\n', 1)[0]
+    #output += u'.\n'
 
     sections = doc.xml_select(u'//h1')
     for sect in sections:
