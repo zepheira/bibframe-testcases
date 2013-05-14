@@ -31,10 +31,9 @@ open
 
 Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenarios
 
-# Book
+# Monograph
 
 * id: http://bibframe.org/examples/bluebeard/test001/w1
-* type: http://bibframe.org/vocab/Monograph
 * author: http://bibframe.org/auth/person/kurt_vonnegut
 * classification: 025.3 M465f 2008
 * language: english
@@ -48,7 +47,6 @@ Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenario
 # HardcoverBook
 
 * id: http://bibframe.org/examples/bluebeard/test001/i1
-* type: http://bibframe.org/vocab/HardcoverBook
 * ISBN: 9780385295901
 * date: 1987-09-02
 * edition: 1st
@@ -60,13 +58,11 @@ Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenario
 # Annotation CoverArt
 
 * id: http://bibframe.org/examples/bluebeard/test001/a1
-* type: http://bibframe.org/vocab/CoverArt
 * image: image: http://ecx.images-amazon.com/images/I/51vbo8zwJlL._SL160_.jpg
 
 # Person
 
 * id: http://bibframe.org/auth/person/kurt_vonnegut
-* type: http://bibframe.org/vocab/Person
 * label: Kurt Vonnegut
 * hasIDLink: http://id.loc.gov/123345
 * hasVIAFLink: http://viaf.org/12334
@@ -74,21 +70,18 @@ Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenario
 # Topic
 
 * id: http://bibframe.org/auth/subject/foo
-* type: http://bibframe.org/vocab/Topic
 * label: Love
 * hasIDLink: http://id.loc.gov/123
 
 # Topic
 
 * id: http://bibframe.org/auth/subject/bar
-* type: http://bibframe.org/vocab/Topic
 * label: Insanity
 * hasIDLink: http://id.loc.gov/124
 
 # Publisher
 
 * id: http://bibframe.org/auth/org/delacorte_press
-* type: http://bibframe.org/vocab/Publisher
 * label: Delacorte Press
 * hasIDLink: http://id.loc.gov/5605
 

@@ -111,13 +111,13 @@ def from_markdown(md, dest, stem, index):
     output = TURTLE_TOP_TEMPLATE
 
     #The top section contains all the test metadata
-    top_section_fields = doc.xml_select(u'//h1[not(.="Header")]/preceding-sibling::h2')
+    top_section_fields = results_until(doc.xml_select(u'//h1[1]/following-sibling::h2'), u'self::h1')
 
     #Note: Top level fields are rendered into dicts, others are turned into lists of tuples
     #fields = dict(map(lambda y: [part.strip() for part in y.split(u':', 1)], U(top_section_fields).split(u'\n')))
     fields = {}
-    subsections = top_section_fields[0].xml_select(u'following-sibling::h2')
-    for s in subsections:
+    #subsections = top_section_fields[0].xml_select(u'following-sibling::h2')
+    for s in top_section_fields:
         prop = U(s).strip()
         value = s.xml_select(u'./following-sibling::p|following-sibling::ul')
         if value:
@@ -161,7 +161,7 @@ def from_markdown(md, dest, stem, index):
         for s in subsections:
             prop = U(s).strip()
             value = s.xml_select(u'./following-sibling::p|following-sibling::ul')
-            print (prop, value)
+            #print (prop, value)
             if value:
                 #Encoding to XML makes it a string again, so turn it back to Unicode
                 #fields[property] = value[0].xml_encode().decode('utf-8')
@@ -173,7 +173,6 @@ def from_markdown(md, dest, stem, index):
 
         #desc = U(sect.xml_select(u'following-sibling::h2[.="Description"]/following-sibling::p'))
         #note = U(sect.xml_select(u'following-sibling::h2[.="Note"]/following-sibling::p'))
-        print fields
         to_remove = []
         for k, v in fields:
             if k == u'id':
@@ -192,7 +191,6 @@ def from_markdown(md, dest, stem, index):
 
         #print fields
         for k, v in fields:
-            print (k, v)
             if matches_uri_syntax(v):
                 output += u'    bf:{k} <{v}> ;\n'.format(k=k, v=v)
             else:
