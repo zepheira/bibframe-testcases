@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>BIBFRAME Test Case :: Annotation :: @@ AnnotationID @@</title>    
+    <title>BIBFRAME Test Case :: {id}</title>
     <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="/css/style-testcase.css" type="text/css" />
   </head>
@@ -15,7 +15,7 @@
         
         <div id="header">
           <h2 class="title">BIBFRAME Test Case</h2>
-          <h3 class="subTitle"><span class="maincat">Annotation</span> <span class="num">@@ AnnotationID @@</span> <span class="date">@@ Creation Date @@</span></h3>
+          <h3 class="subTitle"><span class="maincat">Annotation</span> <span class="num">{id}</span> <span class="date">{created}</span></h3>
         </div>
 
         <hr />
@@ -25,7 +25,6 @@
             <li><a href = "#status">Status</a></li>
             <li><a href = "#turtle">RDF/Turtle</a></li>
             <li><a href = "#rdfxml">RDF/XML</a></li>
-            <li><a href = "#rdfa">RDF/HTML (RDFa)</a></li>
           </ul>
         </div>
         <hr />
@@ -38,7 +37,7 @@
 
             <h2>Description</h2>
             
-            <p>@@ Description @@</p>
+            <p>{description}</p>
 
           </div>
 
@@ -48,10 +47,10 @@
 
             <h2>Status</h2>
             
-            <div class="state">@@ Status @@</div>
+            <div class="state">{status}</div>
 
             <div class="context">
-              Related issues: [ @@ Issues @@ ]
+              Related issues: [ {issues} ]
             </div>
               
           </div>
@@ -60,16 +59,24 @@
             
             <a id="turtle" name="turtle" class="anchor"></a>
 
+            <h2>BIBFRAME RDF test case data: raw triples</h2>
+
+            {html}
+
+          </div>
+
+          <div class="section">
+
+            <a id="turtle" name="turtle" class="anchor"></a>
+
             <h2>BIBFRAME RDF test case metadata (Turtle)</h2>
 
             <div class="data">
-              <a href = "@@ Annotation URL for RDF/turtle @@">data</a>
+              <a href = "{stem}.ttl">data</a>
             </div>
 
-              <pre class="code">
-                @@ Annotation RDF/tutle (escaped for HTML) @@
-              </pre>
-            
+              <pre class="code">{turtle}</pre>
+
           </div>
 
           <div class="section">
@@ -79,31 +86,13 @@
             <h2>BIBFRAME RDF test case metadata (RDF/XML)</h2>
 
             <div class="data">
-              <a href = "@@ Annotation URL for RDF/XML @@">data</a>
+              <a href = "{stem}.rdf">data</a>
             </div>
 
-            <pre class="code">
-              @@ Annotation RDF/XML (escaped for HTML) @@
-            </pre>
+            <pre class="code">{turtle}</pre>
             
           </div>
 
-          <div class="section">
-            
-            <a id="rdfa" name="rdfa" class="anchor"></a>
-
-            <h2>BIBFRAME RDF test case metadata (RDFa)</h2>
-
-            <div class="data">
-              <a href = "@@ Annotation URL for RDFa @@">data</a>
-            </div>
-
-            <div class="rdfa">
-              @@ Annotation RDFa (escaped for HTML) @@
-            </div>
-
-          </div>
-          
         </div> <!-- body -->
         
         <div class="footer">

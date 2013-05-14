@@ -2,6 +2,7 @@
 
 import sys
 import os
+import cgi
 #import re
 #import itertools
 #import copy
@@ -14,6 +15,8 @@ from amara.thirdparty import json
 
 import markdown
 import rdflib
+
+from bibframe.testcases.data_path import data_path
 
 TEST_ID_BASE = 'http://bibframe.org/test/'
 
@@ -58,6 +61,9 @@ HTML_TRIPLE_TEMPLATE = u'''
 
 FIELDS_TO_SHRED = [u'tag', u'issues']
 
+HTML_MAIN_TEMPLATE = open(os.path.join(data_path, 'test-template.html')).read().decode('utf-8')
+
+
 def shred_if_needed(key, value):
     if key in FIELDS_TO_SHRED:
         return [ i.strip() for i in value.split(',') ]
@@ -84,8 +90,8 @@ def run(sourcefname=None, dest=''):
         if ext == '.ttl':
             from_turtle(text, dest, stem)
         elif ext == '.md':
-            turtle = from_markdown(text, dest, stem, index)
-            from_turtle(turtle, dest, stem)
+            turtle, tcinfo = from_markdown(text, dest, stem, index)
+            from_turtle(turtle, dest, stem, tcinfo)
 
     if os.path.isdir(sourcefname):
         for fname in os.listdir(sourcefname):
@@ -105,7 +111,6 @@ def run(sourcefname=None, dest=''):
 
 def from_markdown(md, dest, stem, index):
     h = markdown.markdown(md.decode('utf-8'))
-    print h
     doc = html.markup_fragment(inputsource.text(h.encode('utf-8')))
     #print doc.xml_encode()
     output = TURTLE_TOP_TEMPLATE
@@ -202,10 +207,13 @@ def from_markdown(md, dest, stem, index):
     turtlef = open(turtlefname, 'w')
     turtlef.write(output.encode('utf-8'))
     turtlef.close()
-    return output
+    return output, testinfo
 
 
-def from_turtle(turtle, dest, stem):
+def from_turtle(turtle, dest, stem, tcinfo):
+    tcinfo['turtle'] = cgi.escape(turtle)
+    tcinfo['stem'] = stem.decode('utf-8')
+    tcinfo['dest'] = dest.decode('utf-8')
     g = rdflib.Graph()
     result = g.parse(data=turtle, format='n3')
 
@@ -213,11 +221,10 @@ def from_turtle(turtle, dest, stem):
     rdfxf = open(rdfxfname, 'w')
     g.serialize(rdfxf, format='xml')
     rdfxf.close()
+    tcinfo['rdf'] = cgi.escape(open(rdfxfname).read()).decode('utf-8')
 
     tbody = ''
     output = HTML_RAPTOR_TEMPLATE.format(tbody)
-    htmlfname = os.path.join(dest, stem + os.path.extsep + 'html')
-    htmlf = open(htmlfname, 'w')
     for stmt in g:
         tr = ''
         for part in stmt:
@@ -228,8 +235,14 @@ def from_turtle(turtle, dest, stem):
         output += HTML_TRIPLE_TEMPLATE.format(tr)
 
         print stmt
-    htmlf.write(output.encode('utf-8'))
+
+    tcinfo['html'] = output
+    htmlfname = os.path.join(dest, stem + os.path.extsep + 'html')
+    htmlf = open(htmlfname, 'w')
+
+    htmlf.write(HTML_MAIN_TEMPLATE.format(**tcinfo).encode('utf-8'))
     htmlf.close()
+
     #print "Generated", len(g), "triples:"
     #for stmt in g: print stmt
 

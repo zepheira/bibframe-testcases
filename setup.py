@@ -8,9 +8,12 @@ setup(
     author = 'Uche Ogbuji',
     author_email = 'uche@zepheira.com',
     url = 'http://zepheira.com/',
-    #package_dir={'bibframe.testcases': 'lib'},
-    #packages = ['bibframe', 'bibframe.contrib'],
-    scripts = ['builder/build_testcase.py'],
+    #Botstrap until we have a main BTF package
+    package_dir={'bibframe.testcases': 'lib', 'bibframe': 'bootstrap'},
+    packages = ['bibframe', 'bibframe.testcases'],
+    scripts = ['cmdline/build_testcase.py'],
+    package_data={'bibframe.testcases': ['resource/*']},  # http://docs.python.org/2/distutils/setupscript.html#installing-package-data
+    #data_files=[('bibframe.testcases/resource', ['resource/test-template.html'])],  # http://docs.python.org/2/distutils/setupscript.html#installing-additional-files
     #http://packages.python.org/distribute/setuptools.html#declaring-dependencies
 #    install_requires = ['amara >= 2', 'uritemplate >= 0.5.1'],
 )
