@@ -1,0 +1,21 @@
+{
+    "items": [
+        {
+            "status": "open", 
+            "description": "Simple description of Kurt Vonnegut's 'Bluebeard', hardcover, first edition.",
+            "note": "Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenarios", 
+            "created": "2013-03-13", 
+            "tags": [
+                "example", 
+                "foo", 
+                "bar"
+            ], 
+            "id": "kvb2013ii", 
+            "label": "kvb2013ii", 
+            "issues": [
+                "issue001", 
+                "issue002"
+            ]
+        }
+    ]
+}

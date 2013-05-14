@@ -1,0 +1,84 @@
+/* rscamp.us style */
+
+body {
+  padding-bottom: 40px;
+}
+
+.brand {
+  text-align: center;
+}
+
+.place-label {
+font-size: 150%;
+line-height: 130%;
+padding-top: 10px;
+padding-bottom: 3px;
+}
+.place-address {
+font-size: 120%;
+color: slategrey;
+}
+
+.exhibit-collectionSummaryWidget-results {
+display: none;
+}
+
+.exhibit-ui-protection div {
+}
+
+.exhibit-viewPanel-viewSelection {
+font-size: 200%;
+color: slategrey;
+padding-bottom: 20px;
+}
+
+.exhibit-ui-protection .exhibit-viewPanel-viewContainer {
+padding-top: 30px;
+}
+
+.gallery .lightbox-content {
+padding: 10px;
+}
+
+.gallery .thumbnail {
+  margin: 0.9em;
+  padding: 0.9em;
+}
+
+.gallery .thumbnail img {
+width: 240px;
+height: 180px;
+}
+
+.quote blockquote p {
+    padding-top: 20px;
+    overflow: hidden; /* clearfix alternative */
+    line-height: 50px;
+    color: #454545;
+}
+
+blockquote p {
+font-size: 320%;
+font-family: "Vintage";
+}
+
+blockquote:before {
+    display: block;
+    float: left;
+    margin: 10px 15px 0 0;
+    font-size: 100px; /* let's make it a big quote! */
+    content: open-quote; /* here we define our :before as a smart quote. It could be any content, even the HTML entity alternative to this opening quote, that is “ */
+    color: #bababa;
+    text-shadow: 0 1px 1px #909090;
+}
+blockquote:after {
+    content: none;
+    /* could be content:close-quote; but lets keep it clean*/
+}
+
+
+/* bootstrap interaction with google v3 exhibit problem ... override locally */
+/* https://github.com/twitter/bootstrap/issues/1552 */
+
+#viewpane label { width: auto; display:inline; }
+#viewpane img { max-width: none; }
