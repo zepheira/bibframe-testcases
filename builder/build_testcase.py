@@ -65,44 +65,75 @@ def shred_if_needed(key, value):
         return value
 
 
+#FIXME: Isn't this just itertools.islice?
+def results_until(items, end_criteria):
+    for node in items:
+        if node.xml_select(end_criteria):
+            break
+        else:
+            yield node
+
+
 def run(sourcefname=None, dest=''):
-    stem, ext = os.path.splitext(os.path.split(sourcefname)[-1])
-    print stem, ext
-    text = open(sourcefname, 'r').read()
-    if ext == '.ttl':
-        from_turtle(text, dest, stem)
+    index = []
+    indexstem = 'index'
+    def process_file(fname):
+        stem, ext = os.path.splitext(os.path.split(fname)[-1])
+        print stem, ext
+        text = open(fname, 'r').read()
+        if ext == '.ttl':
+            from_turtle(text, dest, stem)
+        elif ext == '.md':
+            turtle = from_markdown(text, dest, stem, index)
+            from_turtle(turtle, dest, stem)
+
+    if os.path.isdir(sourcefname):
+        for fname in os.listdir(sourcefname):
+            fname = os.path.join(sourcefname, fname)
+            print "Processing", fname
+            process_file(fname)
     else:
-        turtle = from_markdown(text, dest, stem)
-        from_turtle(turtle, dest, stem)
+        stem, ext = os.path.splitext(os.path.split(sourcefname)[-1])
+        indexstem = stem
+        process_file(sourcefname)
+
+    testinfofname = os.path.join(dest, indexstem  + os.path.extsep + 'json')
+    testinfof = open(testinfofname, 'w')
+    json.dump({u'items': index}, testinfof, indent=4)
+    testinfof.close()
 
 
-def from_markdown(md, dest, stem):
+def from_markdown(md, dest, stem, index):
     h = markdown.markdown(md.decode('utf-8'))
+    print h
     doc = html.markup_fragment(inputsource.text(h.encode('utf-8')))
     #print doc.xml_encode()
     output = TURTLE_TOP_TEMPLATE
 
     #The top section contains all the test metadata
-    testinfofname = os.path.join(dest, stem + os.path.extsep + 'json')
-    testinfof = open(testinfofname, 'w')
-    top_section_fields = doc.xml_select(u'//h1/preceding-sibling::p')
+    top_section_fields = doc.xml_select(u'//h1[not(.="Header")]/preceding-sibling::h2')
 
     #Note: Top level fields are rendered into dicts, others are turned into lists of tuples
-    fields = dict(map(lambda y: [part.strip() for part in y.split(u':', 1)], U(top_section_fields).split(u'\n')))
+    #fields = dict(map(lambda y: [part.strip() for part in y.split(u':', 1)], U(top_section_fields).split(u'\n')))
+    fields = {}
     subsections = top_section_fields[0].xml_select(u'following-sibling::h2')
     for s in subsections:
-        property = U(s).strip()
-        value = s.xml_select(u'./following-sibling::p')
+        prop = U(s).strip()
+        value = s.xml_select(u'./following-sibling::p|following-sibling::ul')
         if value:
             #Encoding to XML makes it a string again, so turn it back to Unicode
-            fields[property] = value[0].xml_encode().decode('utf-8')
+            #fields[property] = value[0].xml_encode().decode('utf-8')
+            #Use XPath to strip markup
+            if value[0].xml_local == u'ul':
+                fields[prop] = [ li.xml_select(u'string(.)') for li in value[0].xml_select(u'./li') ]
+            else:
+                fields[prop] = value[0].xml_select(u'string(.)')
 
     testinfo = fields.copy()
-    for k, v in testinfo.items():
+    #for k, v in testinfo.items():
         #testinfo.append(shred_if_needed(k, v))
-        testinfo[k] = shred_if_needed(k, v)
-    json.dump(testinfo, testinfof, indent=4)
-    testinfof.close()
+    #    testinfo[k] = shred_if_needed(k, v)
+    index.append(testinfo)
 
     #output += TURTLE_RESOURCE_TEMPLATE.format(rid=TEST_ID_BASE + fields[u'id'])
     #output += u'    a bf:TestCase ;\n'
@@ -114,18 +145,40 @@ def from_markdown(md, dest, stem):
     #output = output.rsplit(u';\n', 1)[0]
     #output += u'.\n'
 
-    sections = doc.xml_select(u'//h1')
+    sections = doc.xml_select(u'//h1[not(.="Header")]')
     for sect in sections:
         rtype = U(sect)
-        fields = U(sect.xml_select(u'following-sibling::p'))
-        fields = map(lambda y: [part.strip() for part in y.split(u':', 1)], fields.split(u'\n'))
-        desc = U(sect.xml_select(u'following-sibling::h2[.="Description"]/following-sibling::p'))
-        note = U(sect.xml_select(u'following-sibling::h2[.="Note"]/following-sibling::p'))
+        #fields = U(sect.xml_select(u'following-sibling::p'))
+        field_list = sect.xml_select(u'following-sibling::ul')[0]
+        fields = []
+        #fields = map(lambda y: [part.strip() for part in y.split(u':', 1)], fields.split(u'\n'))
+        for li in field_list.xml_select(u'./li'):
+            if U(li).strip():
+                prop, val = [ part.strip() for part in U(li.xml_select(u'string(.)')).split(u':', 1) ]
+                fields.append((prop, val))
+
+        subsections = results_until(sect.xml_select(u'./following-sibling::h2'), u'self::h1')
+        for s in subsections:
+            prop = U(s).strip()
+            value = s.xml_select(u'./following-sibling::p|following-sibling::ul')
+            print (prop, value)
+            if value:
+                #Encoding to XML makes it a string again, so turn it back to Unicode
+                #fields[property] = value[0].xml_encode().decode('utf-8')
+                #Use XPath to strip markup
+                if value[0].xml_local == u'ul':
+                    fields.append((prop, [ U(li.xml_select(u'string(.)')) for li in value[0].xml_select(u'./li') ]))
+                else:
+                    fields.append((prop, U(value[0].xml_select(u'string(.)'))))
+
+        #desc = U(sect.xml_select(u'following-sibling::h2[.="Description"]/following-sibling::p'))
+        #note = U(sect.xml_select(u'following-sibling::h2[.="Note"]/following-sibling::p'))
+        print fields
         to_remove = []
         for k, v in fields:
             if k == u'id':
                 rid = absolutize(v, TEST_ID_BASE)
-                to_remove.append([k, v])
+                to_remove.append((k, v))
         for pair in to_remove:
             fields.remove(pair)
         atype = None
@@ -139,6 +192,7 @@ def from_markdown(md, dest, stem):
 
         #print fields
         for k, v in fields:
+            print (k, v)
             if matches_uri_syntax(v):
                 output += u'    bf:{k} <{v}> ;\n'.format(k=k, v=v)
             else:
@@ -191,7 +245,7 @@ if __name__ == '__main__':
     #parser.add_argument('testspec', metavar='testspec', type=argparse.FileType('r'),
     #                    help='The test spec')
     parser.add_argument('testspec', metavar='testspec',
-                        help='The test spec file')
+                        help='Test spec file, or a directory with only such files')
     parser.add_argument('-d', '--dest', metavar="TEST_FILES_DEST", dest="dest", default='.',
                         help="Destination folder for test files")
     args = parser.parse_args()
