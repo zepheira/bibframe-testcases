@@ -39,16 +39,18 @@ TURTLE_RESOURCE_TEMPLATE = u'''
 
 
 HTML_RAPTOR_TEMPLATE = u'''<body>
-  <table id="triples" border="1">
+  <table class="table table-striped table-bordered" id="triples">
+    <thead>
     <tr>
-      <th>Subject</th>
-      <th>Predicate</th>
-      <th>Object</th>
+      <th class="span4">Subject</th>
+      <th class="span4">Predicate</th>
+      <th class="span4">Object</th>
     </tr>
+    </thead>
+    <tbody>
     {0}
+    </tbody>
   </table>
-</body>
-</html>
 '''
 
 
@@ -224,7 +226,6 @@ def from_turtle(turtle, dest, stem, tcinfo):
     tcinfo['rdf'] = cgi.escape(open(rdfxfname).read()).decode('utf-8')
 
     tbody = ''
-    output = HTML_RAPTOR_TEMPLATE.format(tbody)
     for stmt in g:
         tr = ''
         for part in stmt:
@@ -232,9 +233,11 @@ def from_turtle(turtle, dest, stem, tcinfo):
                 tr += u'<td><span class="uri"><a href="{0}">{1}</a></span></td>'.format(part, part)
             else:
                 tr += u'<td><span class="literal"><span class="value">{0}</a></span></span></td>'.format(part)
-        output += HTML_TRIPLE_TEMPLATE.format(tr)
+        tbody += HTML_TRIPLE_TEMPLATE.format(tr)
 
         print stmt
+
+    output = HTML_RAPTOR_TEMPLATE.format(tbody)
 
     tcinfo['html'] = output
     htmlfname = os.path.join(dest, stem + os.path.extsep + 'html')
