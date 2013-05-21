@@ -12,6 +12,7 @@ kvb2013ii
 
 * issue001
 * issue002
+* issue006
 
 ## tags 
 
