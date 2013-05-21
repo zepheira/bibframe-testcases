@@ -105,10 +105,11 @@ def run(sourcefname=None, dest=''):
         indexstem = stem
         process_file(sourcefname)
 
-    testinfofname = os.path.join(dest, indexstem  + os.path.extsep + 'json')
+    testinfofname = os.path.join(dest, indexstem + os.path.extsep + 'json')
     testinfof = open(testinfofname, 'w')
     json.dump({u'items': index}, testinfof, indent=4)
     testinfof.close()
+    return
 
 
 def from_markdown(md, dest, stem, index):
@@ -209,7 +210,8 @@ def from_markdown(md, dest, stem, index):
     turtlef = open(turtlefname, 'w')
     turtlef.write(output.encode('utf-8'))
     turtlef.close()
-    return output, testinfo
+    #Copying testinfo because from_turtle will modify it in place
+    return output, testinfo.copy()
 
 
 def from_turtle(turtle, dest, stem, tcinfo):
