@@ -2,11 +2,11 @@
 
 ## description
 
-Example use case - Mobile Reading (Instances by Type)
+Example use case - Searching an Artist (BIBFRAME Authorities)
 
 ## id
 
-test4
+test6
 
 ## issues
 
@@ -16,7 +16,7 @@ test4
 ## tags
 
 * use case
-* instance by type
+* authority search
 
 ## created
 

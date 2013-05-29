@@ -2,11 +2,11 @@
 
 ## description
 
-Example use case - Mobile Reading (Instances by Type)
+Example use case - Books near me (Identify holdings of Instance)
 
 ## id
 
-test4
+test7
 
 ## issues
 

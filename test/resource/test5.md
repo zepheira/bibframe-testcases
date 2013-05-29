@@ -2,11 +2,11 @@
 
 ## description
 
-Example use case - Mobile Reading (Instances by Type)
+Example use case - Broadening Discovery (Adaptions of a Work)
 
 ## id
 
-test4
+test5
 
 ## issues
 
@@ -16,7 +16,7 @@ test4
 ## tags
 
 * use case
-* instance by type
+* related works
 
 ## created
 
