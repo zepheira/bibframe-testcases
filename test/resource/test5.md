@@ -49,5 +49,3 @@ open
 * summary:his lavish adaptation of Homer's ancient epic--replete with exotic Maltese and Turkish locations, state-of-the-art special effects, and many bronzed muscles gleaming with sweat--chronicles the voyage home of a Trojan hero, Odysseus King of Ithaca, and includes many more scenes of his faithful, beautiful wife Penelope dodging leering suitors at home than Homer ever composed! 
 * basedOn:* id: http://bibframe.org/examples/homer/test001/w1
 
-
-THE ODYSSEY (1997) Armand Assante, Gretta Scacchi DVD (1997)
