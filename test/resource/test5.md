@@ -28,20 +28,26 @@ open
 
 # Monograph
 
-* id: http://bibframe.org/examples/darwin/test001/w1
-* author: <http://bibfra.me/auth/person/charles_robert_darwin>
+* id: http://bibframe.org/examples/homer/test001/w1
+* author: <http://bibframe.me/auth/person/homer>
+* translator: <http://bibframe.me/auth/person/Fagles>
 * language: english
-* subject: http://bibfra.me/auth/subject/bar
-* subject: http://bibfra.me/auth/subject/foo
-* title: Darwin's Origin of Species
-* hasInstance: http://bibframe.org/examples/darwin/test001/i1
-* summary: This clothbound edition includes over one hundred delicately detailed and informative contemporary illustrations, many of them relating to the discoveries Darwin made during the second voyage of the research ship, H.M.S. Beagle. A truly beautiful and highly collectible edition in its own slipcase.
+* subject: http://bibframe.org/auth/subject/Epic_poetry_Greek
+* title: The Odyssey
+* hasInstance: http://bibframe.org/examples/homer/test001/i1
+* summary: The Odyssey is literature's grandest evocation of everyman's journey through life. In the myths and legends that are retold here, renowned translator Robert Fagles has captured the energy and poetry of Homer's original in a bold, contemporary idiom and given us an Odyssey to read aloud, to savor, and to treasure for its sheer lyrical mastery. This is an Odyssey to delight both the classicist and the general reader, and to captivate a new generation of Homer's students.
 
-# HardcoverBook
+# Film
 
-* id: http://bibframe.org/examples/darwin/test001/i1
-* ISBN: 9780613174213
-* date: 1999
-* publisher: http://bibfra.me/auth/org/delacorte_press
-* isInstanceOf: http://bibframe.org/examples/darwin/test001/w1
+* id: http://bibframe.org/examples/homer/test001/w1
+* director: <http://bibframe.me/auth/person/konchalovskiy>
+* contributor: <http://bibframe.me/auth/person/assante>
+* language: english (subtitles)
+* subject: http://bibframe.org/auth/subject/Epic_poetry_Greek
+* title: The Odyssey
+* hasInstance: http://bibframe.org/examples/konchalovskiy/test001/i1
+* summary:his lavish adaptation of Homer's ancient epic--replete with exotic Maltese and Turkish locations, state-of-the-art special effects, and many bronzed muscles gleaming with sweat--chronicles the voyage home of a Trojan hero, Odysseus King of Ithaca, and includes many more scenes of his faithful, beautiful wife Penelope dodging leering suitors at home than Homer ever composed! 
+* basedOn:* id: http://bibframe.org/examples/homer/test001/w1
 
+
+THE ODYSSEY (1997) Armand Assante, Gretta Scacchi DVD (1997)
