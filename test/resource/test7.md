@@ -29,7 +29,7 @@ open
 # Monograph
 
 * id: http://bibframe.org/examples/juster/test001/w1
-* author: <http://bibfra.me/auth/person/norton_juster>
+* author: <http://bibframe.org/auth/person/norton_juster>
 * language: english
 * title: The Phantom Tollbooth
 * hasInstance: http://bibframe.org/examples/juster/test001/i1
