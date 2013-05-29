@@ -59,7 +59,7 @@ Based on sample RDA cataloging - http://dublincore.org/dcmirdataskgroup/Scenario
 # Annotation CoverArt
 
 * id: http://bibframe.org/examples/bluebeard/test001/a1
-* image: image: http://ecx.images-amazon.com/images/I/51vbo8zwJlL._SL160_.jpg
+* image: http://ecx.images-amazon.com/images/I/51vbo8zwJlL._SL160_.jpg
 
 # Person
 
