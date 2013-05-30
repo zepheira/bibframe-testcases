@@ -43,7 +43,6 @@ open
 * date: 1989
 * publisher: http://bibfra.me/auth/org/bullseye_books
 * isInstanceOf: http://bibframe.org/examples/darwin/test001/w1
-* 
 
 # Holdings
 
