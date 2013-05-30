@@ -42,6 +42,6 @@ open
 * id: <http://bibframe.org/examples/darwin/test001/i1>
 * ISBN: 9780613174213
 * date: 1999
-* publisher: <http://bibfra.me/auth/org/delacorte_press>
+* publisher: <http://bibframe.org/auth/org/delacorte_press>
 * isInstanceOf: <http://bibframe.org/examples/darwin/test001/w1>
 
