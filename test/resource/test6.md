@@ -47,4 +47,4 @@ open
 * title: Fantastic stories
 * targetAudience: juvenile
 * hasInstance: <http://bibframe.org/examples/jones/test002/i1>
-* summary: A collection of stories, mostly original fairy tales, including "The Dragon on the Roof," "Eyes-All-Over," "The Flying King," and "Touch the Moon."
+* summary: A collection of stories, mostly original fairy tales, including 'The Dragon on the Roof', 'Eyes-All-Over', 'The Flying King' and 'Touch the Moon'.
