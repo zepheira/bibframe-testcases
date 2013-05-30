@@ -28,20 +28,21 @@ open
 
 # Monograph
 
-* id: http://bibframe.org/examples/darwin/test001/w1
-* author: <http://bibfra.me/auth/person/charles_robert_darwin>
+* id: http://bibframe.org/examples/bradbury/test001/w1
+* author: <http://bibframe.org/auth/person/ray_bradbury>
 * language: english
-* subject: http://bibfra.me/auth/subject/bar
-* subject: http://bibfra.me/auth/subject/foo
-* title: Darwin's Origin of Species
-* hasInstance: http://bibframe.org/examples/darwin/test001/i1
-* summary: This clothbound edition includes over one hundred delicately detailed and informative contemporary illustrations, many of them relating to the discoveries Darwin made during the second voyage of the research ship, H.M.S. Beagle. A truly beautiful and highly collectible edition in its own slipcase.
+* subject: <http://bibframe.org/auth/subject/State-sponsored_terrorism>
+* subject: http://bibframe.org/auth/subject/book_burningFiction>
+* title: Fahrenheit 451: A Novel
+* hasInstance: http://bibframe.org/examples/bradbury/test001/i1
+* summary: Guy Montag is a fireman. In his world, where television rules and literature is on the brink of extinction, firemen start fires rather than put them out. His job is to destroy the most illegal of commodities, the printed book, along with the houses in which they are hidden. 
 
-# HardcoverBook
 
-* id: http://bibframe.org/examples/darwin/test001/i1
-* ISBN: 9780613174213
-* date: 1999
-* publisher: http://bibfra.me/auth/org/delacorte_press
-* isInstanceOf: http://bibframe.org/examples/darwin/test001/w1
+# EBook
+
+* id: http://bibframe.org/examples/bradbury/test001/i1
+* ISBN: 1451673310
+* date: 2012
+* publisher: http://bibframe.org/auth/org/Simon_schuster
+* isInstanceOf: http://bibframe.org/examples/bradbury/test001/w1
 
