@@ -31,8 +31,8 @@ open
 * id: http://bibframe.org/examples/bradbury/test001/w1
 * author: <http://bibframe.org/auth/person/ray_bradbury>
 * language: english
-* subject: http://bibframe.org/auth/subject/State-sponsored_terrorism
-* subject: http://bibframe.org/auth/subject/book_burningFiction.
+* subject: <http://bibframe.org/auth/subject/State-sponsored_terrorism>
+* subject: http://bibframe.org/auth/subject/book_burningFiction>
 * title: Fahrenheit 451: A Novel
 * hasInstance: http://bibframe.org/examples/bradbury/test001/i1
 * summary: Guy Montag is a fireman. In his world, where television rules and literature is on the brink of extinction, firemen start fires rather than put them out. His job is to destroy the most illegal of commodities, the printed book, along with the houses in which they are hidden. 
