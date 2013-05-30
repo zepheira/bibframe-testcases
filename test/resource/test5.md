@@ -29,8 +29,8 @@ open
 # Monograph
 
 * id: http://bibframe.org/examples/homer/test001/w1
-* author: <http://bibframe.me/auth/person/homer>
-* translator: <http://bibframe.me/auth/person/Fagles>
+* author: <http://bibframe.org/auth/person/homer>
+* translator: <http://bibframe.org/auth/person/Fagles>
 * language: english
 * subject: <http://bibframe.org/auth/subject/Epic_poetry_Greek>
 * title: The Odyssey
@@ -41,8 +41,8 @@ open
 # Film
 
 * id: http://bibframe.org/examples/homer/test001/w2
-* director: <http://bibframe.me/auth/person/konchalovskiy>
-* contributor: <http://bibframe.me/auth/person/assante>
+* director: <http://bibframe.org/auth/person/konchalovskiy>
+* contributor: <http://bibframe.org/auth/person/assante>
 * language: english (subtitles)
 * subject: <http://bibframe.org/auth/subject/Epic_poetry_Greek>
 * title: The Odyssey
