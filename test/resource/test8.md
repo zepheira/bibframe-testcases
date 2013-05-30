@@ -2,11 +2,11 @@
 
 ## description
 
-descirption
+Use Case document: Find a Work for cataloging (Local annotation)
 
 ## id
 
-testXXX
+test8
 
 ## issues
 
@@ -15,12 +15,12 @@ testXXX
 
 ## tags
 
-* tag001
-* tag002
+* Use Cases
+* Annotation
 
 ## created
 
-yyyy-mm-dd
+2013-05-30
 
 ## status
 
