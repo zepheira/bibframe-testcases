@@ -28,7 +28,7 @@ open
 
 # Monograph
 
-* id: http://bibframe.org/examples/homer/test001/w1
+* id: <http://bibframe.org/examples/homer/test001/w1>
 * author: <http://bibframe.org/auth/person/homer>
 * translator: <http://bibframe.org/auth/person/Fagles>
 * language: english
@@ -40,7 +40,7 @@ open
 
 # Film
 
-* id: http://bibframe.org/examples/homer/test001/w2
+* id: <http://bibframe.org/examples/homer/test001/w2>
 * director: <http://bibframe.org/auth/person/konchalovskiy>
 * contributor: <http://bibframe.org/auth/person/assante>
 * language: english (subtitles)
