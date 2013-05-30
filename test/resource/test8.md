@@ -31,7 +31,7 @@ open
 * id: http://bibframe.org/examples/sedaris/test001/w1
 * author: <http://bibframe.org/auth/person/david_sedaris>
 * language: english
-* title: Let's Explore Diabetes with Owls
+* title: Lets Explore Diabetes with Owls
 * hasInstance: http://bibframe.org/examples/sedaris/test001/i1
  
 
@@ -48,7 +48,6 @@ open
 
 * id: http://library.local.org/annotation/i1
 * annotates: <http://bibframe.org/examples/sedaris/test001/i1>
-* bodyLiteral: 'Signed by author'
-* assertedBy <http://library.local.org/people/sue>
-
-    :date "2013-01-23".
+* bodyLiteral: Signed by author
+* assertedBy: <http://library.local.org/people/sue>
+* date: 2013-01-23
