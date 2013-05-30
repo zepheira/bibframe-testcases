@@ -31,13 +31,13 @@ open
 * id: http://bibframe.org/examples/sedaris/test001/w1
 * author: <http://bibframe.org/auth/person/david_sedaris>
 * language: english
-* title: Lets Explore Diabetes with Owls
+* title: Let's Explore Diabetes with Owls
 * hasInstance: http://bibframe.org/examples/sedaris/test001/i1
  
 
 # Hardcover Book
 
-* id: http://bibframe.org/examples/darwin/test001/i1
+* id: http://bibframe.org/examples/sedaris/test001/i1
 * ISBN: 9780316154697
 * date: 2013
 * publisher: <http://bibframe.org/auth/org/delacorte_press>
