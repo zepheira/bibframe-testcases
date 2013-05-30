@@ -46,7 +46,7 @@ open
 
 # Annotation
 
-* <id: http://library.local.org/annotation/i1>
+* id: <http://library.local.org/annotation/i1>
 * annotates: <http://bibframe.org/examples/sedaris/test001/i1>
 * bodyLiteral: Signed by author
 * assertedBy: <http://library.local.org/people/sue>
