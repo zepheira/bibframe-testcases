@@ -10,7 +10,7 @@ Simple description of Kurt Vonnegut's 'Bluebeard', hardcover, first edition.
 
 ## id
 
-kvb2013ii
+test1
 
 ## issues
 
