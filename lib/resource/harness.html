@@ -84,29 +84,42 @@
 
 	      <div ex:role="lens" class="item-display">
                 
-                <h3><a ex:href-subcontent="{{.label}}.html"><span ex:content=".label"></span></a></h3>
-                
-                <table class="table table-condensed table-striped">
-                  <tbody>
-                  <tr>
-                    <td><div class="property">Description</div></td>
-                    <td><div ex:content=".description"></div></td>
-                  </tr>
-                  <tr>
-                    <td><div class="property">Tags</div></td>
-                    <td><div ex:content=".tags"></div></td>
-                  </tr>
-                  <tr>
-                    <td><div class="property">Created</div></td>
-                    <td><div ex:content=".created"></div></td>
-                  </tr>
-                  <tr>
-                    <td><div class="property">Status</div></td>
-                    <td><div ex:content=".status"></div></td>
-                  </tr>
-                  </tbody>
-                </table>
-                
+                <h3><a ex:href-subcontent="{{.fileroot}}.html"><span ex:content=".label"></span></a></h3>
+
+
+                <div class="container">
+                  <div class="row">
+                    
+                    <table class="table table-condensed table-striped">
+                      <thead>
+                        <tr>
+                          <th class="span2"></th>
+                          <th class="span8"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><div class="property">Description</div></td>
+                          <td><div ex:content=".description"></div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="property">Tags</div></td>
+                          <td><div ex:content=".tags"></div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="property">Created</div></td>
+                          <td><div ex:content=".created"></div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="property">Status</div></td>
+                          <td><div ex:content=".status"></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    
+                  </div>
+                </div>
+                                
               </div>
 
 	    </div>

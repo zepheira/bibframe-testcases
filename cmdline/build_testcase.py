@@ -146,6 +146,9 @@ def from_markdown(md, dest, stem, index):
             else:
                 fields[prop] = value[0].xml_select(u'string(.)')
 
+    # add fileroot to exhibit json                
+    fields['fileroot'] = stem
+                
     testinfo = fields.copy()
     #for k, v in testinfo.items():
         #testinfo.append(shred_if_needed(k, v))
