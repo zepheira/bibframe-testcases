@@ -2,7 +2,7 @@
 
 ## label
 
-Bluebeard
+Sample
 
 ## description
 
