@@ -1,5 +1,9 @@
 # Header
 
+## label
+
+Searching Authorities
+
 ## description
 
 Example use case - Searching an Artist (BIBFRAME Authorities)

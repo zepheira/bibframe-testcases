@@ -65,6 +65,7 @@ FIELDS_TO_SHRED = [u'tag', u'issues']
 
 HTML_MAIN_TEMPLATE = open(os.path.join(data_path, 'test-template.html')).read().decode('utf-8')
 
+EXHIBIT_MAIN_TEMPLATE = open(os.path.join(data_path, 'harness.html')).read().decode('utf-8')
 
 def shred_if_needed(key, value):
     if key in FIELDS_TO_SHRED:
@@ -85,6 +86,8 @@ def results_until(items, end_criteria):
 def run(sourcefname=None, dest=''):
     index = []
     indexstem = 'index'
+    harness = 'harness'
+
     def process_file(fname):
         stem, ext = os.path.splitext(os.path.split(fname)[-1])
         print stem, ext
@@ -109,6 +112,12 @@ def run(sourcefname=None, dest=''):
     testinfof = open(testinfofname, 'w')
     json.dump({u'items': index}, testinfof, indent=4)
     testinfof.close()
+ 
+    harnessfname = os.path.join(dest, harness + os.path.extsep + 'html')
+    harnessf = open(harnessfname, 'w')
+    harnessf.write(EXHIBIT_MAIN_TEMPLATE)
+    harnessf.close()
+
     return
 
 

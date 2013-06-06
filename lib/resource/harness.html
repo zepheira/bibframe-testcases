@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <title>BIBFRAME.org :: Test suite harness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" />
+    
+    <link rel="exhibit/data" href="./index.json" />
+
+    <script src="http://api.simile.zepheira.com/exhibit/3.0.0/exhibit-api.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> 
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+  </head>
+  
+  <body>
+
+    <!-- nav bar -->
+    <div class="navbar navbar-fixed-top">
+      
+      <div class="navbar-inner">
+
+        <div class="container">
+          <a class="brand" href="#">BIBFRAME.org
+            <span class="tagline">
+              <span style="padding-left: 20px; font-size: 70%; color: grey;">New Bibliographic Framework</span>
+            </span>
+          </a> 
+	  
+          <ul class="nav pull-right">
+            <li><a href="/">Overview</a></li>
+            <li><a href="/documentation/">Docs</a></li>
+            <li><a href="/vocab/">Vocab</a></li>
+            <li><a href="/vocab/">Demo</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/contribute/">Contribute</a></li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="body container-fluid">
+
+      <div class="this-nav row-fluid">
+        <div class="span12" style="margin-top: 50px;">
+          <ul class="breadcrumb">
+            <li><a href="/index.html">Home</a> <span class="divider">/</span></li>
+            <li><a href="/tools/">Tools</a> <span class="divider">/</span></li>
+            <li class="active">Test Suite Harness</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h2>BIBFRAME Test Suite Harness</h2>
+      <br />
+      
+      <div class="row-fluid">
+
+        <div class="span3">
+          
+          <div class="well facets">
+
+            <div ex:role="facet" ex:facetclass="TextSearch" ex:facetLabel="Search"></div>
+            <br />
+
+            <div ex:role="facet" ex:expression=".tags" ex:facetLabel="Tags" ex:sortMode="count"></div>
+
+            <div ex:role="facet" ex:expression=".status" ex:facetLabel="Status" ex:sortMode="count"></div>
+
+          </div>
+          
+        </div>
+
+        <div class="span9">
+
+          <div class="results" ex:role="viewPanel">
+
+            <div ex:role="view" 
+                 ex:label="What">
+
+	      <div ex:role="lens" class="item-display">
+                
+                <h3><a ex:href-subcontent="{{.label}}.html"><span ex:content=".label"></span></a></h3>
+                
+                <table class="table table-condensed table-striped">
+                  <tbody>
+                  <tr>
+                    <td><div class="property">Description</div></td>
+                    <td><div ex:content=".description"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="property">Tags</div></td>
+                    <td><div ex:content=".tags"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="property">Created</div></td>
+                    <td><div ex:content=".created"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="property">Status</div></td>
+                    <td><div ex:content=".status"></div></td>
+                  </tr>
+                  </tbody>
+                </table>
+                
+              </div>
+
+	    </div>
+              
+          </div> <!-- viewPanel -->
+          
+        </div> <!-- span9 -->
+        
+      </div> <!-- row fluid -->
+      
+    </div> <!-- container -->
+    
+    <div class="footer">
+      <div class="container">
+        <p>BIBFRA.ME is a collaborative effort of <a href = "http://loc.gov/">US Library of Congress</a>, <a href="http://zepheira.com/">Zepheira</a> and <a href = "/contribute/">you!</a></p>
+      </div>
+    </div>
+    
+  </body>
+</html>

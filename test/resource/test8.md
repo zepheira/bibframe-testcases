@@ -1,8 +1,12 @@
 # Header
 
+## label
+
+copy cataloging / annotation
+
 ## description
 
-Use Case document: Find a Work for cataloging (Local annotation)
+Use Case document - Find a Work for cataloging (Local annotation)
 
 ## id
 
@@ -34,7 +38,6 @@ open
 * title: Let's Explore Diabetes with Owls
 * hasInstance: <http://bibframe.org/examples/sedaris/test001/i1>
 
-
 # HardcoverBook
 
 * id: <http://bibframe.org/examples/sedaris/test001/i1>
@@ -43,11 +46,12 @@ open
 * publisher: <http://bibframe.org/auth/org/delacorte_press>
 * isInstanceOf: <http://bibframe.org/examples/sedaris/test001/w1>
 
-
-# Annotation
+# Annotation Holdings
 
 * id: <http://library.local.org/annotation/i1>
 * annotates: <http://bibframe.org/examples/sedaris/test001/i1>
 * bodyLiteral: Signed by author
 * assertedBy: <http://library.local.org/people/sue>
 * date: 2013-01-23
+
+

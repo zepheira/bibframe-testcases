@@ -1,12 +1,16 @@
 # Header
 
+## label
+
+Linking
+
 ## description
 
-descirption
+Example use case - Cataloging new Instance (Linking)
 
 ## id
 
-testXXX
+test9
 
 ## issues
 
@@ -15,12 +19,12 @@ testXXX
 
 ## tags
 
-* tag001
-* tag002
+* use case 
+* linking instances
 
 ## created
 
-yyyy-mm-dd
+2012-05-31
 
 ## status
 
@@ -28,20 +32,26 @@ open
 
 # Monograph
 
-* id: http://bibframe.org/examples/darwin/test001/w1
-* author: <http://bibfra.me/auth/person/charles_robert_darwin>
+* id: http://bibframe.org/examples/shusterman/test001/w1
+* author: <http://bibfra.me/auth/person/neal_shusterman>
 * language: english
-* subject: http://bibfra.me/auth/subject/bar
-* subject: http://bibfra.me/auth/subject/foo
-* title: Darwin's Origin of Species
-* hasInstance: http://bibframe.org/examples/darwin/test001/i1
-* summary: This clothbound edition includes over one hundred delicately detailed and informative contemporary illustrations, many of them relating to the discoveries Darwin made during the second voyage of the research ship, H.M.S. Beagle. A truly beautiful and highly collectible edition in its own slipcase.
+* title: The Shadow Club
+* targetAudience: <http://bibframe.org/auth/audiences/juvenile> 
+* hasInstance: http://bibframe.org/examples/shusterman/test001/i1
+* summary: When a junior high school boy and his friends decide to form a club of 'second bests' and play anonymous tricks on each other's arch rivals, the harmless pranks escalate until they become life-threatening.
 
 # EBook
 
-* id: http://bibframe.org/examples/darwin/test001/i1
-* ISBN: 9780613174213
-* date: 1999
-* publisher: http://bibfra.me/auth/org/delacorte_press
-* isInstanceOf: http://bibframe.org/examples/darwin/test001/w1
+* id: http://bibframe.org/examples/shusterman/test001/i1
+* ISBN: 9780142500897
+* date: 2003
+* publisher: http://bibfra.me/auth/org/speak
+* isInstanceOf: http://bibframe.org/examples/shusterman/test001/w1
 
+
+# Annotation Holdings
+
+* id: <http://library.local.org/annotation/i1>
+* annotates: <http://bibframe.org/examples/shusterman/test001/i1>
+* assertedBy: <http://library.local.org/people/mary>
+* date: 2013-05-30
