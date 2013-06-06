@@ -136,6 +136,8 @@ def from_markdown(md, dest, stem, index):
                 fields[prop] = [ li.xml_select(u'string(.)') for li in value[0].xml_select(u'./li') ]
             else:
                 fields[prop] = value[0].xml_select(u'string(.)')
+                if prop.lower() == "description":
+                    fields["label"] = value[0].xml_select(u'string(.)')
 
     testinfo = fields.copy()
     #for k, v in testinfo.items():
