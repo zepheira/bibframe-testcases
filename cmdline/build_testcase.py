@@ -190,7 +190,7 @@ def from_markdown(md, dest, stem, index):
             fields.remove(pair)
         atype = None
         output += TURTLE_RESOURCE_TEMPLATE.format(rid=rid)
-        if rtype.startswith(u'Annotation'):
+        if rtype.startswith(u'Annotation') and ' ' in rtype:
             #Derive the actual annotation type
             rtype, atype = rtype.split()
             output += u'    a bf:{atype}, bf:{rtype} ;\n'.format(rtype=rtype, atype=atype)
