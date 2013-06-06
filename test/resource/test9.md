@@ -38,7 +38,7 @@ open
 * title: The Shadow Club
 * targetAudience: <http://bibframe.org/auth/audiences/juvenile> 
 * hasInstance: http://bibframe.org/examples/shadow/test001/i1
-* summary: When a junior high school boy and his friends decide to form a club of "second bests" and play anonymous tricks on each other's arch rivals, the harmless pranks escalate until they become life-threatening.
+* summary: When a junior high school boy and his friends decide to form a club of 'second bests' and play anonymous tricks on each other's arch rivals, the harmless pranks escalate until they become life-threatening.
 
 # EBook
 
