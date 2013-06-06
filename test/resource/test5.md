@@ -1,5 +1,9 @@
 # Header
 
+## label
+
+Adaptations of a Work
+
 ## description
 
 Example use case - Broadening Discovery (Adaptions of a Work)
