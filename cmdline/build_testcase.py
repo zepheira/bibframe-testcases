@@ -136,14 +136,14 @@ def from_markdown(md, dest, stem, index):
                 fields[prop] = [ li.xml_select(u'string(.)') for li in value[0].xml_select(u'./li') ]
             else:
                 fields[prop] = value[0].xml_select(u'string(.)')
-                if prop.lower() == "description":
-                    fields["label"] = value[0].xml_select(u'string(.)')
+                # if prop.lower() == "description":
+                #    fields["label"] = value[0].xml_select(u'string(.)')
                 if prop.lower() == "id":
                     fields["test-id"] = value[0].xml_select(u'string(.)')
 
-    # add fileroot to exhibit json                
+    # add fileroot to exhibit json
     fields['fileroot'] = stem
-                
+
     testinfo = fields.copy()
     #for k, v in testinfo.items():
         #testinfo.append(shred_if_needed(k, v))
