@@ -2,11 +2,11 @@
 
 ## label
 
-Darwin
+King
 
 ## description
 
-Will add description soon
+Acquistions - Cataloging (Record Update Notification)
 
 ## id
 
@@ -19,12 +19,12 @@ tes10
 
 ## tags
 
-* tag001
-* tag002
+* Use Cases
+* Notification Services
 
 ## created
 
-yyyy-mm-dd
+2013-06-20
 
 ## status
 
@@ -32,20 +32,21 @@ open
 
 # Monograph
 
-* id: http://bibframe.org/examples/darwin/test001/w1
-* author: <http://bibfra.me/auth/person/charles_robert_darwin>
+* id: http://bibframe.org/examples/king/test001/w1
+* author: <http://bibfra.me/auth/person/steven_king>
 * language: english
-* subject: http://bibfra.me/auth/subject/bar
-* subject: http://bibfra.me/auth/subject/foo
-* title: Darwin's Origin of Species
-* hasInstance: http://bibframe.org/examples/darwin/test001/i1
-* summary: This clothbound edition includes over one hundred delicately detailed and informative contemporary illustrations, many of them relating to the discoveries Darwin made during the second voyage of the research ship, H.M.S. Beagle. A truly beautiful and highly collectible edition in its own slipcase.
+* title: Joyland
+* subject: <http://bibframe.org/auth/subject/City and town life -- North Carolina -- Fiction.>
+* subject: <http://bibframe.org/auth/subject/Amusement parks -- Fiction.>
+* subject: <http://bibframe.org/auth/subject/Nineteen seventies -- Fiction.>
+* hasInstance: http://bibframe.org/examples/king/test001/i1
+* summary: Set in a small-town North Carolina amusement park in 1973, Joyland tells the story of the summer in which college student Devin Jones comes to work as a carny and confronts the legacy of a vicious murder, the fate of a dying child, and the ways both will change his life forever.
 
-# EBook
+# Hardcover
 
-* id: http://bibframe.org/examples/darwin/test001/i1
+* id: http://bibframe.org/examples/king/test001/i1
 * ISBN: 9780613174213
-* date: 1999
-* publisher: http://bibfra.me/auth/org/delacorte_press
-* isInstanceOf: http://bibframe.org/examples/darwin/test001/w1
+* date: 2013
+* publisher: http://bibfra.me/auth/org/hardcase_crime
+* isInstanceOf: http://bibframe.org/examples/kingtest001/w1
 
