@@ -42,7 +42,7 @@ open
 * hasInstance: http://bibframe.org/examples/king/test001/i1
 * summary: Set in a small-town North Carolina amusement park in 1973, Joyland tells the story of the summer in which college student Devin Jones comes to work as a carny and confronts the legacy of a vicious murder, the fate of a dying child, and the ways both will change his life forever.
 
-# Hardcover
+# Paperback
 
 * id: http://bibframe.org/examples/king/test001/i1
 * ISBN: 9780613174213
