@@ -50,19 +50,19 @@ open
 
 # Annotation Holdings
 
-* id: http://bibframe.org/examples/annotation/test001/1
-* holds: http://bibframe.org/examples/juster/test001/i1
-* heldBy: http://bibframe.org/library/worthington_public
+* id: http://library.local.org/examples/annotation/test001/1
+* holds: http://library.local.org/examples/juster/test001/i1
+* heldBy: http://library.local.org/library/worthington_public
 * callNo: J FICTION JUSTER NORTON
-* assertedBy: http://bibframe.org/library/columbus_metro
+* assertedBy: http://library.local.org/library/columbus_metro
  
 # Annotation Holdings
 
-* id: http://bibframe.org/examples/annotation/test001/2
-* holds: http://bibframe.org/examples/juster/test001/i1
-* heldBy: http://bibframe.org/library/dublin_public
+* id: http://library.local.org/examples/annotation/test001/2
+* holds: http://library.local.org/examples/juster/test001/i1
+* heldBy: http://library.local.org/library/dublin_public
 * callNo: J FICTION JUSTER NORTON
-* assertedBy: http://bibframe.org/library/columbus_metro
+* assertedBy: http://library.local/library/columbus_metro
 
 
 
