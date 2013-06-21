@@ -37,12 +37,17 @@ Support Use Case: Collapsing Multiple records
 
 # Monograph
 
-* id: http://bibframe.org/examples/groening/test001/w1
+* id: http://shelbyville.library.org/examples/groening/test001/w1
 * author: http://bibframe.org/auth/person/matt_groening
 * language: english
 * subject: http://bibframe.org/auth/subject/comic_strips
 * subject: http://bibframe.org/auth/subject/simpsons
 * title: Simpsons comics big bonanza
 * summary: A collection of four comics featuring the famous animated family and their friends and acquaintances.
-* hasInstance: http://bibframe.org/examples/groening/test001/i1
 
+#M onograph 
+
+* id: http://springfield.library.org/examples/groening/test001/w1
+* author: http://bibframe.org/auth/person/matt_groening
+* language: english
+* title: Simpsons comics big bonanza
