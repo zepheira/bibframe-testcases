@@ -26,6 +26,7 @@ TEST_ID_BASE = 'http://bibframe.org/test/'
 
 TURTLE_TOP_TEMPLATE = u'''@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix bf: <http://bibframe.org/vocab/> .
+@prefix bfp: <http://bibframe.org/vocab-proposed/> .
 @prefix identifiers: <http://id.loc.gov/vocabulary/identifiers/> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -197,7 +198,7 @@ def from_markdown(md, dest, stem, index):
             fields.remove(pair)
         atype = None
         output += TURTLE_RESOURCE_TEMPLATE.format(rid=rid)
-        if rtype.startswith(u'Annotation') and ' ' in rtype:
+        if ' ' in rtype:
             #Derive the actual annotation type
             rtype, atype = rtype.split()
             output += u'    a bf:{atype}, bf:{rtype} ;\n'.format(rtype=rtype, atype=atype)
@@ -208,6 +209,8 @@ def from_markdown(md, dest, stem, index):
         for k, v in fields:
             if matches_uri_syntax(v):
                 output += u'    bf:{k} <{v}> ;\n'.format(k=k, v=v)
+            elif v.startswith("["):
+                output += u'    bf:{k} {v} ;\n'.format(k=k, v=v)
             else:
                 output += u'    bf:{k} "{v}" ;\n'.format(k=k, v=v)
         output = output.rsplit(u';\n', 1)[0]
