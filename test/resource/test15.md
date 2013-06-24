@@ -12,6 +12,10 @@ Alternate representation of Holdings.  Simpler.  No item.
 
 test15
 
+## relatedtests
+
+* test11
+
 ## issues
 
 * modeling holdings
