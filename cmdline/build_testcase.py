@@ -61,6 +61,10 @@ HTML_TRIPLE_TEMPLATE = u'''
     </tr>
 '''
 
+TESTS_LINKS_TEMPLATE = u'''
+    <a href="{0}.html">{0}</a>
+'''
+
 
 FIELDS_TO_SHRED = [u'tag', u'issues']
 
@@ -126,6 +130,7 @@ def from_markdown(md, dest, stem, index):
     #fields = dict(map(lambda y: [part.strip() for part in y.split(u':', 1)], U(top_section_fields).split(u'\n')))
     fields = {}
     #subsections = top_section_fields[0].xml_select(u'following-sibling::h2')
+    fields["relatedtests"] = ""
     for s in top_section_fields:
         prop = U(s).strip()
         value = s.xml_select(u'./following-sibling::p|following-sibling::ul')
@@ -135,6 +140,13 @@ def from_markdown(md, dest, stem, index):
             #Use XPath to strip markup
             if value[0].xml_local == u'ul':
                 fields[prop] = [ li.xml_select(u'string(.)') for li in value[0].xml_select(u'./li') ]
+                if prop == "relatedtests":
+                    issues_links = ""
+                    for i in fields[prop]:
+                        issues_links += TESTS_LINKS_TEMPLATE.format(i) + ", "
+                    if issues_links.endswith(', '):
+                        issues_links = issues_links[:-2]
+                    fields[prop] = issues_links
             else:
                 fields[prop] = value[0].xml_select(u'string(.)')
                 # if prop.lower() == "description":
