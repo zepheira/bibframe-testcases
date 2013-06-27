@@ -6,17 +6,17 @@ Providers
 
 ## description
 
-Providers as events.  Type is class.  Complex, but coherent.
+Providers as events, take 2.  Type is class.  Complex, but coherent.
 
 ## id
 
-test17
+test19
 
 ## relatedtests
 
 * test16
+* test17
 * test18
-* test19
 
 ## issues
 
@@ -70,17 +70,17 @@ open
 * isbn10: 0394856309
 * isbn13: 9780394856308
 * note: Based on the Charles M. Schulz characters --P. 4 of cover. On board pages.
-* event: <http://bibframe.org/resources/providers/1234>
-* event: <http://bibframe.org/resources/providers/5678>
+* publication: <http://bibframe.org/resources/providers/1234>
+* manufacture: <http://bibframe.org/resources/providers/5678>
 
-# Event Publication 
+# Event ProviderEvent 
 
 * id: <http://bibframe.org/resources/providers/1234>
 * eventActor: Random House
 * eventPlace: New York
 * eventDate: c1983
 
-# Event Manufacture
+# Event ProviderEvent
 
 * id: <http://bibframe.org/resources/providers/5678>
 * eventActor: Printed at JH Bufford's
