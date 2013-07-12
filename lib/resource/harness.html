@@ -67,9 +67,9 @@
             <div ex:role="facet" ex:facetclass="TextSearch" ex:facetLabel="Search"></div>
             <br />
 
-            <div ex:role="facet" ex:expression=".issues" ex:facetLabel="Issues" ex:sortMode="count"></div>
-            <div ex:role="facet" ex:expression=".tags" ex:facetLabel="BF Resources" ex:sortMode="count"></div>
-            <div ex:role="facet" ex:expression=".status" ex:facetLabel="Status" ex:sortMode="count"></div>
+            <div id="f1" ex:role="facet" ex:expression=".issues" ex:facetLabel="Issues" ex:sortMode="count"></div>
+            <div id="f2" ex:role="facet" ex:expression=".tags" ex:facetLabel="BF Resources" ex:sortMode="count"></div>
+            <div id="f3" ex:role="facet" ex:expression=".status" ex:facetLabel="Status" ex:sortMode="count"></div>
 
           </div>
 
@@ -77,7 +77,7 @@
 
         <div class="span9">
 
-          <div class="results" ex:role="viewPanel">
+          <div class="results" ex:role="viewPanel" id="tests">
 
             <div ex:role="view"
                  ex:label="What">

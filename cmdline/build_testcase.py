@@ -16,6 +16,10 @@ from amara.thirdparty import json
 import markdown
 import rdflib
 
+import time
+import random
+import base64
+
 from bibframe.testcases.data_path import data_path
 
 TEST_ID_BASE = 'http://bibframe.org/test/'
@@ -65,6 +69,10 @@ TESTS_LINKS_TEMPLATE = u'''
     <a href="{0}.html">{0}</a>
 '''
 
+JSON2BASE64ENCODE = '{"normalized":true,"title":"BIBFRAME :: Test Suite Harness","url":"/tools/tests/","hash":".//tools/tests/index.html?&_suid=%ID%","data":{"components":{"f1":{"type":"facet","state":{"selection":["%F1VAL%"],"selectMissing":false}},"f2":{"type":"facet","state":{"selection":["%F2VAL%"],"selectMissing":false}},"f3":{"type":"facet","state":{"selection":["%F3VAL%"],"selectMissing":false}},"tile-default-0":{"type":"view","state":{"orderedViewFrame":{"orders":[{"property":"label","forward":true,"ascending":true}],"showAll":true,"showDuplicates":false,"grouped":true,"page":0}}},"tests":{"type":"viewPanel","state":{"viewIndex":0}}},"state":1,"lengthy":true},"id":"%ID%","cleanUrl":"/tools/tests/","hashedUrl":"/tools/tests//tools/tests/index.html?&_suid=%ID%"}'
+BASE64_LINK = u'''
+    <a href="index.html#%BASE64%">%LABEL%</a>
+'''
 
 FIELDS_TO_SHRED = [u'tag', u'issues']
 
@@ -147,6 +155,40 @@ def from_markdown(md, dest, stem, index):
                     if issues_links.endswith(', '):
                         issues_links = issues_links[:-2]
                     fields[prop] = issues_links
+                elif prop == "issues":
+                    issues_links = ""
+                    for i in fields[prop]:
+                        tid = time.time() + random.randint(1,1000)
+                        tid = str(tid).replace('.', '')
+                        json = JSON2BASE64ENCODE
+                        json = json.replace('%ID', tid)
+                        json = json.replace('%F1VAL%', i)
+                        json = json.replace('"%F2VAL%"', '')
+                        json = json.replace('"%F3VAL%"', '')
+                        link = BASE64_LINK
+                        link = link.replace('%BASE64%', base64.b64encode(json))
+                        link = link.replace('%LABEL%', i)
+                        issues_links += link + ", "
+                    if issues_links.endswith(', '):
+                        issues_links = issues_links[:-2]
+                    fields["issueslinks"] = issues_links
+                elif prop == "status":
+                    issues_links = ""
+                    for i in fields[prop]:
+                        tid = time.time() + random.randint(1,1000)
+                        tid = str(tid).replace('.', '')
+                        json = JSON2BASE64ENCODE
+                        json = json.replace('%ID', tid)
+                        json = json.replace('"%F1VAL%"', '')
+                        json = json.replace('"%F2VAL%"', '')
+                        json = json.replace('%F3VAL%', i)
+                        link = BASE64_LINK
+                        link = link.replace('%BASE64%', base64.b64encode(json))
+                        link = link.replace('%LABEL%', i)
+                        issues_links += link + ", "
+                    if issues_links.endswith(', '):
+                        issues_links = issues_links[:-2]
+                    fields["statuslinks"] = issues_links
             else:
                 fields[prop] = value[0].xml_select(u'string(.)')
                 # if prop.lower() == "description":
