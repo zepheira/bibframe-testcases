@@ -16,6 +16,14 @@ from amara.thirdparty import json
 import markdown
 import rdflib
 
+# See below
+# from rdfextras.tools import rdf2dot
+# import pydot
+# import codecs
+
+import subprocess
+from subprocess import Popen
+
 import time
 import random
 import base64
@@ -290,6 +298,35 @@ def from_turtle(turtle, dest, stem, tcinfo):
     g.serialize(rdfxf, format='xml')
     rdfxf.close()
     tcinfo['rdf'] = cgi.escape(open(rdfxfname).read()).decode('utf-8')
+
+    # The below totally works, but not what I was expecting.BASE64
+    # Resulting visualization is just CRAAAAAZY!
+    # But, who knows, perhaps there is something that could be done
+    # try:
+    #    dotfname = os.path.join(dest, stem + os.path.extsep + 'dot')
+    #    # dotf = open(dotfname, 'w')
+    #    dotf = codecs.open(dotfname, "w", "utf-8")
+    #    rdf2dot.rdf2dot(g, dotf)
+    #    dotf.close()
+    #except:
+    #    print 'PROBLEM CREATING dot FILE FOR ' + stem
+
+    #try:
+    #    pngfname = os.path.join(dest, stem + os.path.extsep + 'png')
+    #    dot = pydot.graph_from_dot_file(dotfname)
+    #    dot.write_png(pngfname)
+    #except:
+    #    print 'PROBLEM CREATING png FROM dot FILE FOR ' + stem
+
+    dotfname = os.path.join(dest, stem + os.path.extsep + 'dot')
+    rapperCmd = "rapper -i rdfxml -o dot " + rdfxfname + " > " + dotfname
+    print rapperCmd
+    xresult, xerrors = Popen([rapperCmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).communicate()
+
+    pngfname = os.path.join(dest, stem + os.path.extsep + 'png')
+    dotCmd = "dot -Tpng " + dotfname + " > " + pngfname
+    print dotCmd
+    xresult, xerrors = Popen([dotCmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).communicate()
 
     tbody = ''
     for stmt in g:
