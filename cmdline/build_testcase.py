@@ -117,7 +117,9 @@ def run(sourcefname=None, dest=''):
             from_turtle(turtle, dest, stem, tcinfo)
 
     if os.path.isdir(sourcefname):
-        for fname in os.listdir(sourcefname):
+        files = os.listdir(sourcefname)
+        files.sort()
+        for fname in files:
             fname = os.path.join(sourcefname, fname)
             print "Processing", fname
             process_file(fname)
