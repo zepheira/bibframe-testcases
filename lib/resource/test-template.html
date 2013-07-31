@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="/css/style-testcase.css" type="text/css" />
   </head>
-  
+
   <body class="report testcase">
-    
+
     <div class="row-fluid">
-      
+
       <div class="offset1 span10">
-        
+
         <div id="header">
           <h2 class="title">BIBFRAME Test Case</h2>
           <h3 class="subTitle"><span class="num">{id}</span>, Created: <span class="date">{created}</span></h3>
@@ -29,25 +29,25 @@
           </ul>
         </div>
         <hr />
-        
+
         <div class="body">
-          
+
           <div class="section">
-            
+
             <a id="description" name="description" class="anchor"></a>
 
             <h2>Description</h2>
-            
+
             <p>{description}</p>
 
           </div>
 
           <div class="section">
-            
+
             <a id="status" name="status" class="anchor"></a>
 
             <h2>Status</h2>
-            
+
             <div class="state">
 				Statuses: [ {statuslinks} ]
 			</div>
@@ -57,7 +57,15 @@
             <div class="context">
               Related issues: [ {issueslinks} ]
             </div>
-              
+
+          </div>
+
+          <div class="section" style="width: 100% !important; height: auto !important;">
+            <a id="graphviz" name="graphviz" class="anchor"></a>
+            <h2>BIBFRAME RDF test case visualization</h2>
+            <div class="graphvizimage" style="width: 100% important!; height: 100% important!;">
+              <a href = "{stem}.png"><img src="{stem}.png" style="max-width: 100%; height: auto !important;"/></a>
+            </div>
           </div>
 
           <div class="section">
@@ -75,9 +83,9 @@
           </div>
 
           <div class="section">
-            
+
             <a id="rdfxml" name="rdfxml" class="anchor"></a>
-            
+
             <h2>BIBFRAME RDF test case metadata (RDF/XML)</h2>
 
             <div class="data">
@@ -85,11 +93,11 @@
             </div>
 
             <pre class="code">{rdf}</pre>
-            
+
           </div>
-          
+
           <div class="section">
-            
+
             <a id="triples" name="triples" class="anchor"></a>
 
             <h2>BIBFRAME RDF test case metadata (Raw Triples)</h2>
@@ -99,15 +107,15 @@
           </div>
 
         </div> <!-- body -->
-        
+
         <div class="footer">
           <hr />
         </div>
-        
+
       </div> <!-- span -->
-      
+
     </div> <!-- row-fluid -->
-    
+
   </body>
 
 </html>
