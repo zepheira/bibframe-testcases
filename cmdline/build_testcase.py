@@ -140,6 +140,7 @@ def from_markdown(md, dest, stem, index):
     doc = html.markup_fragment(inputsource.text(h.encode('utf-8')))
     #print doc.xml_encode()
     output = TURTLE_TOP_TEMPLATE
+    graphoutput = TURTLE_TOP_TEMPLATE
 
     #The top section contains all the test metadata
     top_section_fields = results_until(doc.xml_select(u'//h1[1]/following-sibling::h2'), u'self::h1')
@@ -279,11 +280,29 @@ def from_markdown(md, dest, stem, index):
                 output += u'    bf:{k} "{v}" ;\n'.format(k=k, v=v)
         output = output.rsplit(u';\n', 1)[0]
         output += u'.\n'
+        
+        # Create RDf that only includes resource-resource relations
+        # for graphical display
+        graphoutput += TURTLE_RESOURCE_TEMPLATE.format(rid=rid)
+        #print fields
+        for k, v in fields:
+            if matches_uri_syntax(v):
+                graphoutput += u'    bf:{k} <{v}> ;\n'.format(k=k, v=v)
+            elif v.startswith("["):
+                graphoutput += u'    bf:{k} {v} ;\n'.format(k=k, v=v)
+        graphoutput = graphoutput.rsplit(u';\n', 1)[0]
+        graphoutput += u'.\n'
 
     turtlefname = os.path.join(dest, stem + os.path.extsep + 'ttl')
     turtlef = open(turtlefname, 'w')
     turtlef.write(output.encode('utf-8'))
     turtlef.close()
+    
+    eyecandyfname = os.path.join(dest, stem + "-eyecandy" + os.path.extsep + 'ttl')
+    eyecandyf = open(eyecandyfname, 'w')
+    eyecandyf.write(graphoutput.encode('utf-8'))
+    eyecandyf.close()
+    
     #Copying testinfo because from_turtle will modify it in place
     return output, testinfo.copy()
 
@@ -301,16 +320,16 @@ def from_turtle(turtle, dest, stem, tcinfo):
     rdfxf.close()
     tcinfo['rdf'] = cgi.escape(open(rdfxfname).read()).decode('utf-8')
 
-    # The below totally works, but not what I was expecting.BASE64
+    # The below totally works, but not what I was expecting.
     # Resulting visualization is just CRAAAAAZY!
     # But, who knows, perhaps there is something that could be done
-    # try:
+    #try:
     #    dotfname = os.path.join(dest, stem + os.path.extsep + 'dot')
     #    # dotf = open(dotfname, 'w')
     #    dotf = codecs.open(dotfname, "w", "utf-8")
     #    rdf2dot.rdf2dot(g, dotf)
     #    dotf.close()
-    #except:
+    #xcept:
     #    print 'PROBLEM CREATING dot FILE FOR ' + stem
 
     #try:
@@ -320,8 +339,9 @@ def from_turtle(turtle, dest, stem, tcinfo):
     #except:
     #    print 'PROBLEM CREATING png FROM dot FILE FOR ' + stem
 
+    eyecandyfname = os.path.join(dest, stem + "-eyecandy" + os.path.extsep + 'ttl')
     dotfname = os.path.join(dest, stem + os.path.extsep + 'dot')
-    rapperCmd = "rapper -i rdfxml -o dot " + rdfxfname + " > " + dotfname
+    rapperCmd = "rapper -i turtle -o dot " + eyecandyfname + " > " + dotfname
     print rapperCmd
     xresult, xerrors = Popen([rapperCmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).communicate()
 
